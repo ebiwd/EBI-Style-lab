@@ -1,0 +1,24 @@
+.building-block-preview {
+  position: relative;
+}
+
+.bb-media-stats {
+  color: $dark-blue;
+  font-size: rem-calc(16);
+  font-weight: $global-weight-semibold;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.building-block-description {
+  background: $blue-gray;
+  color: $medium-blue;
+  font-weight: $global-weight-semibold;
+  padding-top: rem-calc(15);
+  text-align: center;
+  width: 100%;
+}
