@@ -66,6 +66,6 @@ PATHS:
     - "node_modules/handlebars/dist/handlebars.min.js"
     - "node_modules/lodash/lodash.min.js"
     # Paths to your own project code are here
-    - "src/assets/js/utils/*.js"
-    - "src/assets/js/!(app).js"
-    - "src/assets/js/app.js"
+    - "assets_site/js/utils/*.js"
+    - "assets_site/js/!(app).js"
+    - "assets_site/js/app.js"

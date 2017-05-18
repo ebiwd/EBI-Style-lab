@@ -84,10 +84,10 @@ function buildingBlockIframe() {
   return gulp.src(PATHS.build + '/blocks/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
-      layouts: 'src/layouts/building-blocks/iframe/',
+      layouts: 'assets_site/layouts/building-blocks/iframe/',
       partials: 'src/building-blocks/*',
       data: ['src/data/', PATHS.build + '/data'],
-      helpers: 'panini-helpers/'
+      helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.rename(function (path) {
       path.basename += "-iframe";
@@ -101,10 +101,10 @@ function buildingBlockPage() {
   return gulp.src(PATHS.build + '/blocks/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
-      layouts: 'src/layouts/building-blocks/page/',
-      partials: 'src/partials',
+      layouts: 'assets_site/layouts/building-blocks/page/',
+      partials: 'assets_site/partials',
       data: ['src/data/', PATHS.build + '/data'],
-      helpers: 'panini-helpers/'
+      helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
     .pipe(gulp.dest(PATHS.dist + "/blocks/"));
@@ -120,10 +120,10 @@ function kitsPages() {
   return gulp.src(PATHS.build + '/kits/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
-      layouts: 'src/layouts/kits/page/',
-      partials: 'src/partials',
+      layouts: 'assets_site/layouts/kits/page/',
+      partials: 'assets_site/partials',
       data: ['src/data/', PATHS.build + '/data'],
-      helpers: 'panini-helpers/'
+      helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
     .pipe(gulp.dest(PATHS.dist + "/kits/"));

@@ -1,9 +1,10 @@
+<!-- {{#set-bb-data this}} -->
 <!doctype html>
 <html class="no-js" lang="en">
 <head>
   <meta charset="utf-8" />
-  <title>{{meta-title}} | Foundationxx 6</title>
-  <meta name="description" content="{{kit.description}}">
+  <title>EBI Style Lab < {{meta-title}}</title>
+  <meta name="description" content="{{block.description}}"><!-- Describe what this page is about -->
   <meta name="keywords" content="bioinformatics, europe, institute" /><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
   <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
   <meta name="HandheldFriendly" content="true" />
@@ -16,22 +17,19 @@
   <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
   <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
   <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
-  <meta name="twitter:title" content="{{kit.name}}">
-  <meta name="og:title" content="{{kit.name}}">
+  <meta name="twitter:title" content="{{block.name}}">
+  <meta name="og:title" content="{{block.name}}">
   <meta name="og:type" content="website">
   <meta name="twitter:description" content="{{block.description}}">
   <meta name="og:description" content="{{block.description}}">
-  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits/{{kit.datakey}}/{{kit.images.hero}}">
-  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits/{{kit.datakey}}/{{kit.images.hero}}">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/{{block.thumb}}">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/{{block.thumb}}">
 
   <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
   <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
   <link rel="icon" href="{{root}}assets/img/favicon/foundation-favicon.ico" type="image/x-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   <link rel="stylesheet" href="{{root}}assets/css/app.css?rev=@@hash">
-  <meta name="rootpath" content="{{root}}">
-  <meta name="bbfile" content="{{root}}data/building-blocks.json">
-  <meta name="kitfile" content="{{root}}data/kits.json">
 
   <!-- If you have custom icon, replace these as appropriate.
        You can generate them at realfavicongenerator.net -->
@@ -51,9 +49,24 @@
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
+
+  <!-- Use this CSS file for any custom styling -->
+  <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+  -->
+
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+
+  <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="all" />
+  <!-- end CSS-->
 </head>
-<body class="{{#ifpage 'index' 'kits'}} background-alt {{/ifpage}}">
+<body class="level2"><!-- add any of your classes or IDs -->
   <div id="skip-to">
     <ul>
       <li><a href="#content">Skip to main content</a></li>
@@ -68,11 +81,11 @@
       <ul id="global-nav" class="menu">
         <!-- set active class as appropriate -->
         <li class="home-mobile"><a href="//www.ebi.ac.uk"></a></li>
-        <li class="home active"><a href="//www.ebi.ac.uk">EMBL-EBI</a></li>
+        <li class="home"><a href="//www.ebi.ac.uk">EMBL-EBI</a></li>
         <li class="services"><a href="//www.ebi.ac.uk/services">Services</a></li>
         <li class="research"><a href="//www.ebi.ac.uk/research">Research</a></li>
         <li class="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
-        <li class="about"><a href="//www.ebi.ac.uk/about">About us</a></li>
+        <li class="about active"><a href="//www.ebi.ac.uk/about">About us</a></li>
         <li class="search">
           <a href="#" data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>
           <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
@@ -112,38 +125,38 @@
         </div>
 
         <div class="">
-
           <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
             {{> offcanvas-menulists}}
           </div>
 
           <div class="off-canvas-content" data-off-canvas-content>
-            {{> info-banner}}
-            {{#if filter-nav}}
-              {{> filter-nav}}
-            {{/if}}
-            {{#if filter-dropdowns}}
-              {{> filter-dropdowns}}
-            {{/if}}
             <div class="page-container">
-              <div id="main-results-container">
-                {{> body}}
-                {{#ifpage 'index'}}
-                  {{> pagination}}
-                {{/ifpage}}
-              </div>
-              <div id="search-results-container">
-                <div class="kit-container"></div>
-                <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+
+              {{> building-block-header}}
+
+              {{> building-block-preview}}
+
+<!-- This is indented on purpose -->
+{{> building-block-code}}
+
+              <div class="building-block-related">
+                <div class="row column">
+                  <h2 class="bb-related-title">Similar Building Blocks</h2>
+                </div>
+                <div class="row small-up-1 medium-up-2 large-up-3 scroll-container">
+                  {{#random-related-blocks this 3}}
+                  <div class="column column-block scroll-x">
+                    {{> building-block-card currentBlock}}
+                  </div>
+                  {{/random-related-blocks}}
                 </div>
               </div>
-              {{> preview-modal}}
             </div>
           </div>
 
-          {{{partial-as-script 'building-block-card' 'building-block/building-block-card-with-column.html'}}}
-          {{{partial-as-script 'kit-card' 'kit/kit-card-with-column.html'}}}
-
+          <div class="row">
+            <div class="smedium-4 columns"></div>
+          </div>
         </div>
 
       </div>
@@ -159,6 +172,7 @@
   </div>
   <!-- End suggested layout containers / #content -->
   {{> footer_global}}
-  <script src="{{root}}assets/js/app.js?rev=@@hash"></script>
+  <script src="{{root}}assets_site/js/app.js?rev=@@hash"></script>
 </body>
 </html>
+{{/set-bb-data}}

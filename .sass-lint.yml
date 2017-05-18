@@ -6,7 +6,7 @@ options:
 files:
   include: '**/*.s+(a|c)ss'
   ignore:
-    - 'src/assets/scss/vendor/**/*.*'
+    - 'assets_site/scss/vendor/**/*.*'
 rules:
   # Extends
   extends-before-mixins: 1

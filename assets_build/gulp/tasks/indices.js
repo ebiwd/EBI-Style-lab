@@ -66,10 +66,10 @@ function buildingBlocksCategoryPages() {
   return gulp.src([PATHS.build + '/*.html'])
     .pipe(panini({
       root: '_build/',
-      layouts: 'src/layouts/building-blocks/index',
-      partials: 'src/partials/',
+      layouts: 'assets_site/layouts/building-blocks/index',
+      partials: 'assets_site/partials/',
       data: 'src/data/',
-      helpers: 'panini-helpers/'
+      helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
     .pipe(gulp.dest(PATHS.dist));
