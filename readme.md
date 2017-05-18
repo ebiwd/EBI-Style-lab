@@ -1,26 +1,27 @@
 # EBI Style Lab
 This is a collaborative effort. The EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
 
-## How to use a pattern
+## What is this, exactly?
+The EBI Style Lab is a collaborative space that also shares the latest guidance on how and what should be used to build visually and textually compliant EMBL-EBI websites, documents, and texts. It's partly about reinforcing our shared identity, but it's mostly about leveraging the best tools to build things faster and with fewer bugs, errors, and user experience issues.
 
-Building Blocks are made to drop into any EMBL-EBI project and work. Therefore the EBI Visual Framework is a dependency.
+### Contents of the EBI Style Lab
+- General styling
+  - Our basic style guide (to be added)
+  - Microsoft Word and PowerPoint templates (to be added)
+  - Poster templates (to be added)
+  - EMBL-EBI Logos  (to be added)
+  - Fonts & icons (to be added)
+  - Social media guidelines (to be added)
+- Website specific
+  - How to get started with the EBI Visual Framework (add link to guide)
+  - How to use the EBI Icon fonts on a website (add link)
+  - Boilerplate templates to get started (add link)
+  - Reusable patterns (add link)
+    - How to add a patter (See the guide at how-to.html)
 
-#### Copy it
+--
 
-Like a Building Block? You can copy the HTML and CSS/SCSS and JS (if applicable) from the Building Block detail page. You’ll see a responsive preview and description at the top of the page. Below the preview you’ll find the code for the component.
-
-#### or Download a ZIP
-You can can download the files needed for the Building Block. Click the download button and you’ll get:
-- Individual HTML files
-- Individual CSS files for each
-- Individual SCSS files in case you want to manually add them to a Sass project
-- Individual JS files (if applicable)
-
----
-
-### How to add a building block?
-
-See the guide at how-to.html
+# Are you a web developer?
 
 ### How do I develop on my local machine
 
@@ -51,10 +52,7 @@ http://localhost:8000
 
 To deploy, run `npm run deploy`.
 
-### Making your own pattern library
-Fork this repo or create a sub- or super-set of pattern functionality, and add colors and components in their respective directories.
+--
 
-The easiest way to see the changes is to view through Github Pages, alternatively you can build the Jekyll on your local [machine](https://jekyllrb.com/docs/usage/).
-
-## Credit
+# Credit
 The base CMS configuration and code examples are forked from ZURB Foundation Building Blocks.
