@@ -19,7 +19,7 @@ function loadConfig() {
 }
 
 function buildingBlockCombineMeta() {
-  return gulp.src('content/patterns/**/*.{yml,yaml}')
+  return gulp.src('content/websites/patterns/**/*.{yml,yaml}')
     .pipe($.yaml())
     .pipe($.jsoncombine('building-blocks.json', function(files) {
       var output = {};
@@ -155,7 +155,7 @@ gulp.task('add-git-meta', function() {
     var output = {};
     var dateRegex = /Date:\s+(.*)/;
     async.eachOf(data['building-blocks'], (value, key, callback) => {
-      var filename = 'content/patterns/' + key + '/' + key + '.yml';
+      var filename = 'content/websites/patterns/' + key + '/' + key + '.yml';
       $.git.exec({args: 'log -n 1 ' + filename}, function(err, stdout) {
         if (err) throw err;
         output[key] = value;

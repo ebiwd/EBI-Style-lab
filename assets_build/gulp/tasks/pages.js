@@ -62,7 +62,7 @@ function defaultTemplate(filename, blockname) {
 
 // Create building block layouts
 function buildingBlockFrameLayouts() {
-  return gulp.src(['content/patterns/*', '!content/patterns/*.scss'])
+  return gulp.src(['content/websites/patterns/*', '!content/websites/patterns/*.scss'])
   .pipe($.foreach(function(stream, file) {
     var fileName = file.path.substr(file.path.lastIndexOf(path.sep) + 1);
       var layout = file.path + "/layout.html";
@@ -85,7 +85,7 @@ function buildingBlockIframe() {
     .pipe(getNewPanini({
       root: PATHS.build,
       layouts: 'assets_site/layouts/building-blocks/iframe/',
-      partials: 'content/patterns/*',
+      partials: 'content/websites/patterns/*',
       data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
