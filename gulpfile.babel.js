@@ -60,26 +60,10 @@ gulp.task('static',
 
 gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-indices', 'building-block-pages'));
 
-gulp.task('bb-iframe',
-  gulp.series(clean,'build','building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images));
-
 // Create Building Blocks
 gulp.task('bb',
-gulp.series('bb-iframe', server, watch ));
-
-gulp.task('rsync', function() {
-  return gulp.src('dist/**/*')
-    .pipe($.prompt.confirm('Make sure everything looks right before you deploy.'))
-    .pipe($.rsync({
-      root: './dist',
-      hostname: 'deployer@72.32.134.77',
-      destination: '/home/deployer/sites/building-blocks'
-    }));
-});
-
-// Uploads the documentation to the live server
-gulp.task('deploy', gulp.series('bb-iframe',  'rsync'));
-
+  gulp.series(clean,'build','building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images, server, watch )
+);
 
 // Delete the "dist" folder
 // This happens every time a build starts
