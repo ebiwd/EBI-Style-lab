@@ -20,9 +20,9 @@
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="all" />
 
   {{#ifequal block.grid 'float'}}
-    <!-- <link rel="stylesheet" href="{{root}}building-block/app-float.css?rev=@@hash"> -->
+    <!-- <link rel="stylesheet" href="{{root}}websites/patterns/app-float.css?rev=@@hash"> -->
   {{else}}
-    <!-- <link rel="stylesheet" href="{{root}}building-block/app.css?rev=@@hash"> -->
+    <!-- <link rel="stylesheet" href="{{root}}websites/patterns/app.css?rev=@@hash"> -->
   {{/ifequal}}
   <style>
     body {
@@ -42,14 +42,14 @@
       }
     }
   </style>
-  <link rel="stylesheet" href="{{root}}building-block/{{page}}/layout.css?rev=@@hash">
-  <link rel="stylesheet" href="{{root}}building-block/{{page}}/{{page}}.css?rev=@@hash">
+  <link rel="stylesheet" href="{{root}}websites/patterns/{{page}}/layout.css?rev=@@hash">
+  <link rel="stylesheet" href="{{root}}websites/patterns/{{page}}/{{page}}.css?rev=@@hash">
 </head>
 <body>
   {{> body}}
   <!-- <script src="{{root}}assets_site/js/app.js?rev=@@hash"></script> -->
 
-  <script src="{{root}}building-block/{{page}}/{{page}}.js"></script>
+  <script src="{{root}}websites/patterns/{{page}}/{{page}}.js"></script>
   <!-- JavaScript -->
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <!--

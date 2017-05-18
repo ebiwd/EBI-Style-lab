@@ -62,7 +62,7 @@ function defaultTemplate(filename, blockname) {
 
 // Create building block layouts
 function buildingBlockFrameLayouts() {
-  return gulp.src(['src/building-blocks/*', '!src/building-blocks/*.scss'])
+  return gulp.src(['src/patterns/*', '!src/patterns/*.scss'])
   .pipe($.foreach(function(stream, file) {
     var fileName = file.path.substr(file.path.lastIndexOf(path.sep) + 1);
       var layout = file.path + "/layout.html";
@@ -71,21 +71,21 @@ function buildingBlockFrameLayouts() {
         .pipe($.rename(function(path) {
           path.basename = fileName;
          }))
-        .pipe(gulp.dest(PATHS.build + '/blocks/'));
+        .pipe(gulp.dest(PATHS.build + '/websites/patterns/'));
       } else {
         return defaultTemplate(fileName + '.html', fileName)
-        .pipe(gulp.dest(PATHS.build + '/blocks/'));
+        .pipe(gulp.dest(PATHS.build + '/websites/patterns/'));
       }
     }));
 }
 
 // Create a building block
 function buildingBlockIframe() {
-  return gulp.src(PATHS.build + '/blocks/*.{html,hbs,handlebars}')
+  return gulp.src(PATHS.build + '/websites/patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
       layouts: 'assets_site/layouts/building-blocks/iframe/',
-      partials: 'src/building-blocks/*',
+      partials: 'src/patterns/*',
       data: ['src/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
@@ -93,12 +93,12 @@ function buildingBlockIframe() {
       path.basename += "-iframe";
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
-    .pipe(gulp.dest(PATHS.dist + "/blocks/"));
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
   }
 
 // Compiles the building block pages
 function buildingBlockPage() {
-  return gulp.src(PATHS.build + '/blocks/*.{html,hbs,handlebars}')
+  return gulp.src(PATHS.build + '/websites/patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
       layouts: 'assets_site/layouts/building-blocks/page/',
@@ -107,7 +107,7 @@ function buildingBlockPage() {
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
-    .pipe(gulp.dest(PATHS.dist + "/blocks/"));
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
 }
 
 function kitsStarters(cb) {

@@ -3,7 +3,7 @@ module.exports = function(page) {
   try {
     if(page) {
       var baseName = page.split('.')[0]
-      return fs.readFileSync('dist/building-block/' + baseName + "/" + baseName + '.css', 'utf-8');
+      return fs.readFileSync('dist/websites/patterns/' + baseName + "/" + baseName + '.css', 'utf-8');
     }
   }
   catch(ex) {

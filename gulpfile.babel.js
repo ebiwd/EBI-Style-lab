@@ -104,8 +104,8 @@ function copyData() {
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copyBBImages() {
-  return gulp.src('src/building-blocks/**/*.{png,jpg}')
-    .pipe(gulp.dest(PATHS.dist + '/assets/img/building-block/'));
+  return gulp.src('src/patterns/**/*.{png,jpg}')
+    .pipe(gulp.dest(PATHS.dist + '/assets/img/websites/patterns/'));
   }
 
 function copyKitImages() {
@@ -115,7 +115,7 @@ function copyKitImages() {
 
 
 function copyBBFiles() {
-  return gulp.src(['src/building-blocks/**/*.{html,js,scss}', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
+  return gulp.src(['src/patterns/**/*.{html,js,scss}', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
     .pipe(gulp.dest(PATHS.dist + '/files/building-blocks/'));
 }
 
@@ -149,7 +149,7 @@ function pages() {
   }
 
 function buildingBlockBaseStyles() {
-  return gulp.src(['src/building-blocks/app.scss', 'src/building-blocks/app-float.scss'])
+  return gulp.src(['src/patterns/app.scss', 'src/patterns/app-float.scss'])
     .pipe($.sass({
       includePaths: PATHS.sass
     })
@@ -160,13 +160,13 @@ function buildingBlockBaseStyles() {
     // Comment in the pipe below to run UnCSS in production
     //.pipe($.if(PRODUCTION, $.uncss(UNCSS_OPTIONS)))
     .pipe($.if(PRODUCTION, $.cssnano()))
-    .pipe(gulp.dest(PATHS.dist + "/building-block/"))
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"))
     .pipe(browser.reload({ stream: true }));
 }
 // Compiles the Sass for the building blocks
 function buildingBlockSass() {
   var blocks = JSON.parse(fs.readFileSync(PATHS.build + '/data/building-blocks.json', 'utf8'));
-  return gulp.src(['src/building-blocks/**/*.scss'])
+  return gulp.src(['src/patterns/**/*.scss'])
     .pipe($.insert.transform(function(contents, file){
       var pieces = file.path.split('/');
       var bbName = pieces[pieces.length - 2];
@@ -188,13 +188,13 @@ function buildingBlockSass() {
     .pipe($.autoprefixer({
       browsers: COMPATIBILITY
     }))
-    .pipe(gulp.dest(PATHS.dist + "/building-block/"))
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"))
 }
 
 // Moves JS from the Building Blocks into the dist
 function buildingBlockJS() {
-  return gulp.src('src/building-blocks/**/*.js')
-    .pipe(gulp.dest(PATHS.dist + "/building-block/"));
+  return gulp.src('src/patterns/**/*.js')
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
 }
 
 // Load updated HTML templates and partials into Panini
@@ -275,11 +275,11 @@ function watch() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch(['assets_site/pages/*.html', 'assets_site/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
   gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(kitIndex, 'dynamic-pages',  reload));
-  gulp.watch('src/building-blocks/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
-  gulp.watch('src/building-blocks/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
-  gulp.watch('src/building-blocks/**/*.js').on('all', gulp.series(buildingBlockJS, 'building-block-pages', reload));
-  gulp.watch(['src/building-blocks/**/*.png', 'src/kits/**/*.png']).on('all', gulp.series('copy', reload));
-  gulp.watch('src/building-blocks/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
+  gulp.watch('src/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
+  gulp.watch('src/patterns/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
+  gulp.watch('src/patterns/**/*.js').on('all', gulp.series(buildingBlockJS, 'building-block-pages', reload));
+  gulp.watch(['src/patterns/**/*.png', 'src/kits/**/*.png']).on('all', gulp.series('copy', reload));
+  gulp.watch('src/patterns/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('src/kits/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, buildingBlockSass, reload));
   gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
