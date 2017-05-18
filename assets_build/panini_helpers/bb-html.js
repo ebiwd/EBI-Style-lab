@@ -3,7 +3,7 @@ module.exports = function(page) {
   if(page) {
     var baseName = page.split('.')[0]
     try {
-      return fs.readFileSync('src/patterns/' + baseName + "/" + baseName + '.html', 'utf-8');
+      return fs.readFileSync('content/patterns/' + baseName + "/" + baseName + '.html', 'utf-8');
     } catch(ex) {
       return '';
     }

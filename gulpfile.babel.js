@@ -104,18 +104,18 @@ function copyData() {
 // Copy files out of the assets folder
 // This task skips over the "img", "js", and "scss" folders, which are parsed separately
 function copyBBImages() {
-  return gulp.src('src/patterns/**/*.{png,jpg}')
+  return gulp.src('content/patterns/**/*.{png,jpg}')
     .pipe(gulp.dest(PATHS.dist + '/assets/img/websites/patterns/'));
   }
 
 function copyKitImages() {
-  return gulp.src('src/kits/**/*.{png,jpg}')
+  return gulp.src('content/kits/**/*.{png,jpg}')
     .pipe(gulp.dest(PATHS.dist + '/assets/img/kits/'));
 }
 
 
 function copyBBFiles() {
-  return gulp.src(['src/patterns/**/*.{html,js,scss}', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
+  return gulp.src(['content/patterns/**/*.{html,js,scss}', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
     .pipe(gulp.dest(PATHS.dist + '/files/building-blocks/'));
 }
 
@@ -126,7 +126,7 @@ function kitIndex() {
       root: 'assets_site/pages/',
       layouts: 'assets_site/layouts/',
       partials: 'assets_site/partials/',
-      data: ['src/data/', PATHS.build + '/data'],
+      data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
@@ -142,14 +142,14 @@ function pages() {
       root: 'assets_site/pages/',
       layouts: 'assets_site/layouts/',
       partials: 'assets_site/partials/',
-      data: 'src/data/',
+      data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe(gulp.dest(PATHS.dist));
   }
 
 function buildingBlockBaseStyles() {
-  return gulp.src(['src/patterns/app.scss', 'src/patterns/app-float.scss'])
+  return gulp.src(['content/patterns/app.scss', 'content/patterns/app-float.scss'])
     .pipe($.sass({
       includePaths: PATHS.sass
     })
@@ -166,7 +166,7 @@ function buildingBlockBaseStyles() {
 // Compiles the Sass for the building blocks
 function buildingBlockSass() {
   var blocks = JSON.parse(fs.readFileSync(PATHS.build + '/data/building-blocks.json', 'utf8'));
-  return gulp.src(['src/patterns/**/*.scss'])
+  return gulp.src(['content/patterns/**/*.scss'])
     .pipe($.insert.transform(function(contents, file){
       var pieces = file.path.split('/');
       var bbName = pieces[pieces.length - 2];
@@ -193,7 +193,7 @@ function buildingBlockSass() {
 
 // Moves JS from the Building Blocks into the dist
 function buildingBlockJS() {
-  return gulp.src('src/patterns/**/*.js')
+  return gulp.src('content/patterns/**/*.js')
     .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
 }
 
@@ -205,9 +205,9 @@ function resetPages(done) {
 
 // Generate a style guide from the Markdown content and HTML template in styleguide/
 function styleGuide(done) {
-  sherpa('src/styleguide/index.md', {
+  sherpa('content/styleguide/index.md', {
     output: PATHS.dist + '/styleguide.html',
-    template: 'src/styleguide/template.html'
+    template: 'content/styleguide/template.html'
   }, done);
 }
 
@@ -248,7 +248,7 @@ function javascript() {
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
-  return gulp.src('src/assets/img/**/*')
+  return gulp.src('content/assets/img/**/*')
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
@@ -274,25 +274,25 @@ function reload(done) {
 function watch() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch(['assets_site/pages/*.html', 'assets_site/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(kitIndex, 'dynamic-pages',  reload));
-  gulp.watch('src/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
-  gulp.watch('src/patterns/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
-  gulp.watch('src/patterns/**/*.js').on('all', gulp.series(buildingBlockJS, 'building-block-pages', reload));
-  gulp.watch(['src/patterns/**/*.png', 'src/kits/**/*.png']).on('all', gulp.series('copy', reload));
-  gulp.watch('src/patterns/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
-  gulp.watch('src/kits/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
+  gulp.watch('content/{layouts,partials}/**/*.html').on('all', gulp.series(kitIndex, 'dynamic-pages',  reload));
+  gulp.watch('content/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
+  gulp.watch('content/patterns/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
+  gulp.watch('content/patterns/**/*.js').on('all', gulp.series(buildingBlockJS, 'building-block-pages', reload));
+  gulp.watch(['content/patterns/**/*.png', 'content/kits/**/*.png']).on('all', gulp.series('copy', reload));
+  gulp.watch('content/patterns/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
+  gulp.watch('content/kits/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, buildingBlockSass, reload));
   gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
-  gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, reload));
-  gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, reload));
+  gulp.watch('content/assets/img/**/*').on('all', gulp.series(images, reload));
+  gulp.watch('content/styleguide/**').on('all', gulp.series(styleGuide, reload));
 }
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watchStatic() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch('assets_site/pages/**/*.html').on('all', gulp.series(pages, reload));
-  gulp.watch('src/{layouts,partials}/**/*.html').on('all', gulp.series(pages, reload));
+  gulp.watch('content/{layouts,partials}/**/*.html').on('all', gulp.series(pages, reload));
   gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, reload));
   gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
-  gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, reload));
-  gulp.watch('src/styleguide/**').on('all', gulp.series(styleGuide, reload));
+  gulp.watch('content/assets/img/**/*').on('all', gulp.series(images, reload));
+  gulp.watch('content/styleguide/**').on('all', gulp.series(styleGuide, reload));
 }

@@ -10,7 +10,7 @@ COMPATIBILITY:
 # UnCSS will use these settings
 UNCSS_OPTIONS:
   html:
-    - "src/**/*.html"
+    - "content/**/*.html"
   ignore:
     - !!js/regexp .foundation-mq
     - !!js/regexp ^\.is-.*
@@ -22,8 +22,8 @@ PATHS:
   build: "_build"
   # Paths to static assets that aren't images, CSS, or JavaScript
   assets:
-    - "src/assets/**/*"
-    - "!src/assets/{img,js,scss}/**/*"
+    - "content/assets/**/*"
+    - "!content/assets/{img,js,scss}/**/*"
   # Paths to Sass libraries, which can then be loaded with @import
   sass:
     - "node_modules/highlight.js/"

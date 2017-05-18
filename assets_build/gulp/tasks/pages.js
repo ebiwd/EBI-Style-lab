@@ -62,7 +62,7 @@ function defaultTemplate(filename, blockname) {
 
 // Create building block layouts
 function buildingBlockFrameLayouts() {
-  return gulp.src(['src/patterns/*', '!src/patterns/*.scss'])
+  return gulp.src(['content/patterns/*', '!content/patterns/*.scss'])
   .pipe($.foreach(function(stream, file) {
     var fileName = file.path.substr(file.path.lastIndexOf(path.sep) + 1);
       var layout = file.path + "/layout.html";
@@ -85,8 +85,8 @@ function buildingBlockIframe() {
     .pipe(getNewPanini({
       root: PATHS.build,
       layouts: 'assets_site/layouts/building-blocks/iframe/',
-      partials: 'src/patterns/*',
-      data: ['src/data/', PATHS.build + '/data'],
+      partials: 'content/patterns/*',
+      data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.rename(function (path) {
@@ -103,7 +103,7 @@ function buildingBlockPage() {
       root: PATHS.build,
       layouts: 'assets_site/layouts/building-blocks/page/',
       partials: 'assets_site/partials',
-      data: ['src/data/', PATHS.build + '/data'],
+      data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
@@ -122,7 +122,7 @@ function kitsPages() {
       root: PATHS.build,
       layouts: 'assets_site/layouts/kits/page/',
       partials: 'assets_site/partials',
-      data: ['src/data/', PATHS.build + '/data'],
+      data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
