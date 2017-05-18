@@ -127,7 +127,7 @@ function kitIndex() {
       layouts: 'src/layouts/',
       partials: 'src/partials/',
       data: ['src/data/', PATHS.build + '/data'],
-      helpers: 'src/panini-helpers/'
+      helpers: 'panini-helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
     .pipe(gulp.dest(PATHS.dist));
@@ -143,7 +143,7 @@ function pages() {
       layouts: 'src/layouts/',
       partials: 'src/partials/',
       data: 'src/data/',
-      helpers: 'src/panini-helpers/'
+      helpers: 'panini-helpers/'
     }))
     .pipe(gulp.dest(PATHS.dist));
   }

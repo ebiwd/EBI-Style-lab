@@ -69,7 +69,7 @@ function buildingBlocksCategoryPages() {
       layouts: 'src/layouts/building-blocks/index',
       partials: 'src/partials/',
       data: 'src/data/',
-      helpers: 'src/panini-helpers/'
+      helpers: 'panini-helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
     .pipe(gulp.dest(PATHS.dist));
