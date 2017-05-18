@@ -1,0 +1,12 @@
+name: 'Code highlighting'
+tags:
+  - typography
+  - code
+category: media
+description: If you need to showcase snippets of code, here's how to.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

@@ -1,0 +1,12 @@
+name: 'Data tables'
+tags:
+  - tables
+  - data visulisation
+category: media
+description: Showcase a lot or a little amount of numbers, images, graphics.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

@@ -1,0 +1,27 @@
+{{#markdown}}
+
+<a href="https://github.com/jshjohnson/Choices">Choices.js</a> is a lightweight, configurable select box/text input plugin. Similar to Select2 and Selectize but without the jQuery dependency.
+
+To use:
+
+- Include these two files:
+<div class="callout" markdown="1">
+``` html
+<link rel="stylesheet" href="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/Choices/assets/styles/css/choices.min.css">
+<script src="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/Choices/assets/scripts/dist/choices.min.js"></script>
+```
+</div>
+- On the `<select>` element, add class `.form-control`
+- Invoke with the `Choices` function (view the source)
+- For further configuration options, visit the <a href="https://github.com/jshjohnson/Choices">Choices GitHub repo</a>.
+
+Known caveats:
+
+- If you use `optgroup`, all `option` elements must be inside groups
+- `label` elements [cannot](https://github.com/jshjohnson/Choices/issues/57) wrap the `select`
+
+<div class="row"><div class="column">
+{{> select-box}}
+</div></div>
+
+{{/markdown}}

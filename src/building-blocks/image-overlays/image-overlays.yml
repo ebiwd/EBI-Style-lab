@@ -1,0 +1,13 @@
+name: 'Images with tinting'
+tags:
+  - visuals
+  - layout
+  - images
+category: media
+description: You can enhance the "Images with captions" pattern by adding class .with-overlay for a darkened effect with a text overlay.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

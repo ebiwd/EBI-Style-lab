@@ -1,0 +1,12 @@
+name: 'Tables'
+tags:
+  - typography
+  - tables
+category: media
+description: A table is a table, and sometimes, you just need to use a table.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

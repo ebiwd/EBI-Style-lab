@@ -1,0 +1,13 @@
+name: 'Button grid'
+tags:
+  - buttons
+  - links
+  - layout
+category: media
+description: Build an arangement of buttons as a clickable matrix.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

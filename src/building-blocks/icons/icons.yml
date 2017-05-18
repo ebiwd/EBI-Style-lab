@@ -1,0 +1,12 @@
+name: 'Icons'
+tags:
+  - typography
+  - visuals
+category: media
+description: The fonts.css stylesheet automatically loads a range of icon fonts that you can use
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

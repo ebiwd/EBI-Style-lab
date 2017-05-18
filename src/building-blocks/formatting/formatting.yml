@@ -1,0 +1,12 @@
+name: 'Formatting'
+tags:
+  - typography
+  - writing
+category: media
+description: A quick index of styles. With a variety of text comes the need for many formatting styles, use this table as a helper.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

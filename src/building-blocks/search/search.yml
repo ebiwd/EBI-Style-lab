@@ -1,0 +1,11 @@
+name: 'Search'
+tags:
+  - search
+category: media
+description: Use these patterns to add search your project or subsite.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

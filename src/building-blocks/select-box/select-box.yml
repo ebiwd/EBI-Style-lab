@@ -1,0 +1,11 @@
+name: 'Select box'
+tags:
+  - forms
+category: media
+description: Configurable select box/text input
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

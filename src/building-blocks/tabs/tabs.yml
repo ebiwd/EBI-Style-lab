@@ -1,0 +1,12 @@
+name: 'Tabs'
+tags:
+  - layout
+  - navigation
+category: media
+description: Here's a simple tab implementation.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

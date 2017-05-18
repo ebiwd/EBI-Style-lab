@@ -1,0 +1,13 @@
+name: 'Menus'
+tags:
+  - navigation
+  - layout
+  - lists
+category: media
+description: Horizontal, vertical, and tree types of menus.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

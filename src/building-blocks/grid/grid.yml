@@ -1,0 +1,12 @@
+name: 'Grid'
+tags:
+  - grid
+  - layout
+category: media
+description: Formatting content layout
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

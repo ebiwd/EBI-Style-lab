@@ -1,0 +1,12 @@
+name: 'Badges'
+tags:
+  - feed
+  - news
+category: media
+description: The badge is one of the most common atoms in the ecosystem and has several variants.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

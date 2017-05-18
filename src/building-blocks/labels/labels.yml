@@ -1,0 +1,11 @@
+name: 'Labels'
+tags:
+  - labels
+category: media
+description: Use a label to signify a section.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

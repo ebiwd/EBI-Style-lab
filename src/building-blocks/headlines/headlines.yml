@@ -1,0 +1,12 @@
+name: 'Headlines'
+tags:
+  - typography
+  - writing
+category: media
+description: How big you typography should be.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

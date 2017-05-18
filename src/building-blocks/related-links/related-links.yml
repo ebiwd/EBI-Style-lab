@@ -1,0 +1,12 @@
+name: 'Related links box'
+tags:
+  - links
+  - navigation
+category: media
+description: Formerly the "popular" box
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

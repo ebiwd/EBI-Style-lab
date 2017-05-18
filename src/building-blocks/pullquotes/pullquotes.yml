@@ -1,0 +1,11 @@
+name: 'Pullquotes'
+tags:
+  - typography
+category: media
+description: Also known as a "blockquote", use this to draw attention to text
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

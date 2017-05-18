@@ -1,0 +1,11 @@
+name: 'Responsive tables'
+tags:
+  - tables
+category: media
+description: Want to make your table mo-betta on small screens?
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

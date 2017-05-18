@@ -1,0 +1,12 @@
+name: 'Tags'
+tags:
+  - labels
+  - typography
+category: media
+description: Evolved from a label, is a tag. Meant to be linked and used in sequence.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98

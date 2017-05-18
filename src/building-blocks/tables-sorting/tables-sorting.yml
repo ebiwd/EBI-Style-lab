@@ -1,0 +1,11 @@
+name: 'Sorting tables'
+tags:
+  - tables
+category: media
+description: A prescriped solution to sort your tables.
+versions:
+  - 6.3.2
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98
