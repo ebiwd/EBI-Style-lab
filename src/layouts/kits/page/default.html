@@ -1,0 +1,129 @@
+{{#set-kit-data this}}
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EBI Style Lab < {{kit.name}}</title>
+  <meta name="description" content="{{kit.description}}">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="{{kit.name}}">
+  <meta name="og:title" content="{{kit.name}}">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="{{block.description}}">
+  <meta name="og:description" content="{{block.description}}">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits/{{kit.datakey}}/{{kit.images.hero}}">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits/{{kit.datakey}}/{{kit.images.hero}}">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <link rel="icon" href="{{root}}assets/img/favicon/foundation-favicon.ico" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{root}}assets/css/app.css?rev=@@hash">
+
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
+
+  <!-- Use this CSS file for any custom styling -->
+  <!--
+    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
+  -->
+
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+
+  <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="all" />
+  <!-- end CSS-->
+</head>
+<body class="{{#ifpage 'index' 'kits'}} background-alt {{/ifpage}}">
+
+  <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
+    {{> offcanvas-menulists}}
+  </div>
+
+  <div class="off-canvas-content" data-off-canvas-content>
+    {{> info-banner}}
+    {{> global-nav-mobile}}
+    {{> global-navigation}}
+    <!--fixed backround with image-->
+    <div class="kit-header"style="{{#if kit.images.hero}}background-image: url('{{@root.root}}assets/img/kits/{{kit.datakey}}/{{kit.images.hero}}');{{/if}}{{#if kit.background}}background-color: {{kit.background}};{{/if}}">
+    </div>
+    <div class="page-container">
+      {{#if filter-nav}}
+        {{> filter-nav}}
+      {{/if}}
+      {{#if filter-dropdowns}}
+        {{> filter-dropdowns}}
+      {{/if}}
+      {{> kit-description kit}}
+      <!--kit building blocks-->
+      <div class="page-background-alt building-block-related kit-building-blocks">
+        <div class="row kit-details-header">
+        <div class="columns kit-details-header-text">
+          <h2 class="kit-details-header-text-heading">Building Blocks In This Kit</h2>
+        </div>
+        <div class="columns shrink kit-details-action">
+          <a class="kit-details-search" data-toggle="bb-search-bar">
+            <span class="kit-details-search-text">Find More Building Blocks</span>
+            <img class="inject-me kit-details-search-icon" src="{{root}}assets/img/icons/filter-search.svg" alt="Search">
+          </a>
+        </div>
+        {{> search-bar type="kits"}}
+
+      </div>
+        <div id="main-results-container">
+          <div class="row small-up-1 medium-up-2 large-up-3">
+            {{#each kit.blocks}}
+            <div class="column column-block card-block">
+              {{> building-block-card this}}
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+      <div id="search-results-container" class="bb-search-results">
+        <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+        </div>
+      </div>
+      {{> preview-modal}}
+    </div>
+    {{> footer}}
+  </div>
+
+  {{{partial-as-script 'building-block-card' 'building-block/building-block-card-with-column.html'}}}
+  {{{partial-as-script 'kit-card' 'kit/kit-card-with-column.html'}}}
+  <script src="{{root}}assets/js/app.js?rev=@@hash"></script>
+</body>
+</html>
+{{/set-kit-data}}
