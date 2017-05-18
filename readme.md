@@ -1,5 +1,5 @@
-# EBI Style lab
-This is a collaborative effort. The EBI Style lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
+# EBI Style Lab
+This is a collaborative effort. The EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
 
 ## How to use a pattern
 
@@ -18,7 +18,7 @@ You can can download the files needed for the Building Block. Click the download
 
 ---
 
-### How to share a building block?
+### How to add a building block?
 
 See the guide at how-to.html
 
