@@ -19,7 +19,7 @@ The EBI Style Lab is a collaborative space that also shares the latest guidance 
   - Reusable patterns (add link)
     - How to add a patter (See the guide at how-to.html)
 
---
+---
 
 # Are you a web developer?
 
@@ -52,7 +52,7 @@ http://localhost:8000
 
 To deploy, run `npm run deploy`.
 
---
+---
 
 # Credit
 The base CMS configuration and code examples are forked from ZURB Foundation Building Blocks.
