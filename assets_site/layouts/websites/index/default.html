@@ -80,33 +80,27 @@
       <!-- <div class="row columns">
         {{> bb-breadcrumbs}}
       </div> -->
-      <div class="">
-        <div class="off-canvas-content" data-off-canvas-content>
-          <div class="page-container">
-            {{> filter-nav}}
+      <div class="page-container row">
+        <h2>Web patterns</h2>
+        <div class="columns medium-10 medium-push-2">
+          <div id="main-results-container">
             {{> filter-dropdowns}}
-            <div class="page-container">
-              <div id="main-results-container">
-                <div class="row small-up-1 medium-up-2 large-up-3 card-container">
-                  {{#each blocks}}
-                    {{> building-block-card-with-column this}}
-                  {{/each}}
-                </div>
-                {{> pagination}}
-              </div>
-              <div id="search-results-container">
-                <div class="kit-container"></div>
-                <div class="row small-up-1 medium-up-2 large-up-3 card-container">
-                </div>
-              </div>
-              {{> preview-modal}}
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+              {{#each blocks}}
+                {{> building-block-card-with-column this}}
+              {{/each}}
             </div>
-
+            {{> pagination}}
           </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          {{> preview-modal}}
         </div>
-
-        <div class="row">
-          <div class="smedium-4 columns"></div>
+        <div class="columns medium-2 medium-pull-10">
+          {{> filter-nav}}
         </div>
       </div>
     </section>
@@ -115,7 +109,6 @@
     <footer id="local-footer" class="local-footer" role="local-footer">
       {{> footer}}
     </footer>
-
     <!-- End optional local footer -->
   </div>
   <!-- End suggested layout containers / #content -->

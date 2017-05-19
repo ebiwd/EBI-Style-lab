@@ -1,22 +1,24 @@
 <div class="filter-nav-container">
-  <div class="row filter-nav">
+  <div class="filter-nav">
     <!-- search -->
-    <div class="columns medium-122 align-right fast">
+    <div class="fast">
       <button class="bb-search-button" data-toggle="bb-search-bar bb-filter-icons-container"><img src="/{{root}}assets/img/icons/filter-search.svg" class="inject-me bb-search-icon" height="" title="Search Building Blocks" width="30" alt="Search icon"><span></span></button>
     </div>
     <!--search container-->
     {{> search-bar type="blocks"}}
 
-    <ul class="columns medium-12 menu">
-      {{#each global.filter-nav}}
-      <li>
-        <a href="{{@root.root}}{{page}}.html" class="filter-nav-button {{classes}} {{#ifequal @root.datakey page}}active{{/ifequal}}">
-          <img src="/{{root}}{{img}}" class="inject-me bb-filter-icons" height="" title="{{title}}" width="" alt="{{alt}}">
-          {{title}}
-        </a>
-      </li>
-      {{/each}}
-    </ul>
+    <div class="">
+      <ul class="menu vertical">
+        {{#each global.filter-nav}}
+        <li>
+          <a href="{{@root.root}}{{page}}.html" class="filter-nav-button {{classes}} {{#ifequal @root.datakey page}}active{{/ifequal}}">
+            <img src="/{{root}}{{img}}" class="inject-me bb-filter-icons" height="" title="{{title}}" width="" alt="{{alt}}">
+            {{title}}
+          </a>
+        </li>
+        {{/each}}
+      </ul>
+    </div>
   </div>
 </div>
 
