@@ -6,19 +6,8 @@
   <title>EBI Style Lab < {{meta-title}}</title>
   <meta name="description" content="{{kit.description}}">
 
-  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
-  <!-- <link rel="dns-prefetch" href="//www.ebi.ac.uk" /> -->
-  <link rel="icon" href="{{root}}assets/img/favicon/foundation-favicon.ico" type="image/x-icon">
-  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"> -->
-  <!-- <link rel="stylesheet" href="{{root}}assets/css/app.css?rev=@@hash"> -->
-
-  <!-- CSS: implied media=all -->
-  <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="all" />
-
+  {{> meta}}
+  
   {{#ifequal block.grid 'float'}}
     <!-- <link rel="stylesheet" href="{{root}}websites/patterns/app-float.css?rev=@@hash"> -->
   {{else}}
