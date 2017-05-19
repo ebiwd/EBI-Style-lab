@@ -62,7 +62,7 @@ gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'bu
 
 // Create Building Blocks
 gulp.task('bb',
-  gulp.series(clean,'build','building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images, server, watch )
+  gulp.series(clean, 'build', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images, server, watch)
 );
 
 // Delete the "dist" folder
@@ -96,7 +96,6 @@ function copyKitImages() {
   return gulp.src('content/kits/**/*.{png,jpg}')
     .pipe(gulp.dest(PATHS.dist + '/assets/img/kits/'));
 }
-
 
 function copyBBFiles() {
   return gulp.src(['content/websites/patterns/**/*.{html,js,scss}', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
@@ -281,7 +280,6 @@ function reload(done) {
   browser.reload(['**/*', '!**/*-iframe.html']);
   done();
 }
-
 
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {

@@ -30,12 +30,12 @@
   <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
   <link rel="icon" href="{{root}}assets/img/favicon/foundation-favicon.ico" type="image/x-icon">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-  <link rel="stylesheet" href="{{root}}assets/css/app.css?rev=@@hash">
-  <meta name="bbfile" content="{{root}}data/building-blocks.json">
-  <meta name="kitfile" content="{{root}}data/kits.json">
-  <meta name="datafile" content="{{root}}data/{{datafile}}">
-  <meta name="rootpath" content="{{root}}">
-  <meta name="datakey" content="{{datakey}}">
+  <link rel="stylesheet" href="/{{root}}assets/css/app.css?rev=@@hash">
+  <meta name="bbfile" content="/{{root}}data/building-blocks.json">
+  <meta name="kitfile" content="/{{root}}data/kits.json">
+  <meta name="datafile" content="/{{root}}data/{{datafile}}">
+  <meta name="rootpath" content="/{{root}}">
+  <meta name="datakey" content="/{{datakey}}">
 
   <!-- If you have custom icon, replace these as appropriate.
        You can generate them at realfavicongenerator.net -->
@@ -135,11 +135,6 @@
 
           <div class="off-canvas-content" data-off-canvas-content>
             <div class="page-container">
-              <div class="row">
-                <div class="columns">
-                  {{> intro}}
-                </div>
-              </div>
               {{> filter-nav}}
               {{> filter-dropdowns}}
               <div class="page-container">

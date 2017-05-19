@@ -33,6 +33,11 @@
   <meta name="bbfile" content="{{root}}data/building-blocks.json">
   <meta name="kitfile" content="{{root}}data/kits.json">
 
+
+  <meta name="datafile" content="{{root}}data/{{datafile}}">
+  <meta name="rootpath" content="{{root}}">
+  <meta name="datakey" content="{{datakey}}">
+
   <!-- If you have custom icon, replace these as appropriate.
        You can generate them at realfavicongenerator.net -->
   <link rel="icon" type="image/x-icon" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/favicon.ico" />
@@ -107,12 +112,9 @@
     <section id="main-content-area" class="" role="main">
       <div id="main-content-area" class="">
 
-        <div class="row columns">
-          {{> bb-breadcrumbs}}
-        </div>
+        <div class="row columns">{{> bb-breadcrumbs}}</div>
 
         <div class="">
-
           <div class="off-canvas position-left" id="offCanvas" data-off-canvas>
             {{> offcanvas-menulists}}
           </div>
@@ -143,7 +145,6 @@
 
           {{{partial-as-script 'building-block-card' 'websites/patterns/building-block-card-with-column.html'}}}
           {{{partial-as-script 'kit-card' 'kit/kit-card-with-column.html'}}}
-
         </div>
 
       </div>

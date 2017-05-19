@@ -72,7 +72,7 @@ function buildingBlocksCategoryPages() {
       helpers: 'assets_build/panini_helpers/'
     }))
     .pipe($.if(PRODUCTION, $.revTimestamp()))
-    .pipe(gulp.dest(PATHS.dist));
+    .pipe(gulp.dest(PATHS.dist+'/websites/patterns'));
   }
 
 gulp.task('building-blocks-categories', buildingBlocksCategoryPages);
