@@ -1,9 +1,9 @@
 <!-- flattened version of building block with wrapper for use on client -->
 <div class="column column-block">
   <div class="hover-wrapper">
-    <a href="{{@root.root}}{{href}}" class="card-imghover-overlay">
+    <a href="/{{@root.root}}{{href}}" class="card-imghover-overlay">
       <div class="card card-building-block">
-        <div class="card-img" style="background-image: url({{@root.root}}{{thumb}});">
+        <div class="card-img" style="background-image: url(/{{@root.root}}{{thumb}});">
           <div class="card-category">{{#if category}}{{category}}{{else}}Category{{/if}}</div>
         </div>
         <div class="card-divider align-justify">
@@ -20,7 +20,7 @@
             <span class="card-author">by {{#if author.name}}{{author.name}}{{else}}Jack Bauer{{/if}}</span>
           </div>
           <div class="card-actions">
-            <!-- <div class="card-views"><img src="{{@root.root}}assets/img/icons/bb-card-view.svg" class="inject-me bb-card-social-icon" height="" width="" alt=""><span>98</span></div> -->
+            <!-- <div class="card-views"><img src="/{{@root.root}}assets/img/icons/bb-card-view.svg" class="inject-me bb-card-social-icon" height="" width="" alt=""><span>98</span></div> -->
           </div>
         </div>
       </div>

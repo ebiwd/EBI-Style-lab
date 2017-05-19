@@ -84,7 +84,7 @@ function buildingBlockIframe() {
   return gulp.src(PATHS.build + '/websites/patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
-      layouts: 'assets_site/layouts/building-blocks/iframe/',
+      layouts: 'assets_site/layouts/websites/iframe/',
       partials: 'content/websites/patterns/*',
       data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
@@ -101,7 +101,7 @@ function buildingBlockPage() {
   return gulp.src(PATHS.build + '/websites/patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
       root: PATHS.build,
-      layouts: 'assets_site/layouts/building-blocks/page/',
+      layouts: 'assets_site/layouts/websites/page/',
       partials: 'assets_site/partials',
       data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'

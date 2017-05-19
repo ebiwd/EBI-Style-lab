@@ -66,7 +66,7 @@ function buildingBlocksCategoryPages() {
   return gulp.src([PATHS.build + '/*.html'])
     .pipe(panini({
       root: '_build/',
-      layouts: 'assets_site/layouts/building-blocks/index',
+      layouts: 'assets_site/layouts/websites/index',
       partials: 'assets_site/partials/',
       data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
