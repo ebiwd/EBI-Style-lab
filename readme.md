@@ -1,3 +1,10 @@
+### todo
+
+1. Import rendered fonts
+2. 
+
+---
+
 # EBI Style Lab
 This is a collaborative effort. The EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
 
