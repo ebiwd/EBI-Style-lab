@@ -14,6 +14,7 @@ import gulpRename   from 'gulp-rename';
 import _            from 'lodash';
 import requireDir   from 'require-dir';
 import stripCssComments from 'gulp-strip-css-comments';
+import download     from 'gulp-download-stream';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -31,6 +32,25 @@ function loadConfig() {
   let ymlFile = fs.readFileSync('config.yml', 'utf8');
   return yaml.load(ymlFile);
 }
+
+// Get the latest icon font list
+// Todo: make a partial in the font repo to use
+gulp.task('updateIconFonts', function () {
+  return download({
+    file: "fonts.html",
+    url: "http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html"
+  })
+  //
+  // return download("http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html")
+  // .pipe(replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1'))
+  // .pipe(replace(/.[\s\S]*?<section id="intro".*?>(.[\s\S]*?)/i, '$1'))
+  // .pipe(replace('</body>', ''))
+  // .pipe(replace('</html>', ''))
+  // .pipe(replace(/<footer.[\s\S]*?/g, '</div>'))
+    // <\/body>.[\s\S]*?html>
+    // .pipe(replace(/.*?<body.*?>(.*?)<\/body>.*?/g, 'testng $1'))
+    .pipe(gulp.dest("assets_site/partials/fonts"));
+});
 
 // Lint task
 gulp.task('lint', function () {
@@ -56,7 +76,7 @@ gulp.task('build',
 
 // Build the site, run the server, and watch for file changes
 gulp.task('static',
-  gulp.series('build', server, watchStatic));
+  gulp.series('updateIconFonts', 'build', server, watchStatic));
 
 gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-indices', 'building-block-pages'));
 
@@ -281,9 +301,8 @@ function reload(done) {
   done();
 }
 
-// Watch for changes to static assets, pages, Sass, and JavaScript
 
- //  'build', 'building-block-meta',  'dynamic-pages', 'copy', 'zip', sass, javascript, images, server, watch
+// Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch(['assets_site/pages/*.html', 'assets_site/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
