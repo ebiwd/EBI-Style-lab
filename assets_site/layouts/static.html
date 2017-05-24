@@ -53,10 +53,9 @@
         <div class="page-container">
           <div id="main-results-container" class="row">
             {{> submenu-navigation this}}
-            <a class="button small secondary" href="https://github.com/ebiwd/EBI-Style-lab/tree/master/assets_site/pages{{location}}/{{page}}.html">Edit page</a>
-            <a class="button small secondary" href="https://github.com/ebiwd/EBI-Style-lab/tree/master/assets_site/layouts/{{layout}}.html">Edit layout</a>
 
-            {{location}}/{{page}}.html
+            {{{edit-button location 'page'}}}
+            {{{edit-button layout 'layout'}}}
             <div class="intro">
               <h2>{{title}}</h2>
               <p class="lead">{{cta}}</p>

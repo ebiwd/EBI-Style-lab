@@ -2,24 +2,15 @@ var fs = require('fs')
 module.exports = function(path, type) {
   try {
     var githubpath = 'https://github.com/ebiwd/EBI-Style-lab/edit/master';
-    return '<a class="button small secondary edit-button" href="' + githubpath + path + '">Edit ' + type + '</a>';
-    // console.log(page);
-    // var baseName = page.split('.')[0]
-    // return JSON.stringify(page) + 'test';
-    // if(page) {
-    //
-    //   // return fs.readFileSync('dist/websites/patterns/' + baseName + "/" + baseName + '.css', 'utf-8');
-    // }
+
+    if (type === 'section')
+      return '<a class="button small secondary edit-button" targe="_blank" href="' + githubpath + '/assets_site/partials/' + path + '">Edit ' + type + '</a>';
+    if (type === 'layout')
+      return '<a class="button small secondary edit-button" targe="_blank" href="' + githubpath + '/assets_site/layouts/' + path + '.html">Edit ' + type + '</a>';
+    if (type === 'page')
+      return '<a class="button small secondary edit-button" targe="_blank" href="' + githubpath + '/assets_site/pages/' + path + '/index.html">Edit ' + type + '</a>';
   }
   catch(ex) {
     return null;
   }
 }
-//
-//
-// // Example file src/helpers/bold.js
-// module.exports = function(options) {
-//   // options.fn(this) = Handelbars content between {{#bold}} HERE {{/bold}}
-//   var bolder = '<strong>' + options.fn(this) + '</strong>';
-//   return bolder;
-// }
