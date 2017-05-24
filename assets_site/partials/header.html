@@ -34,13 +34,18 @@
   <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
     <div class="masthead-inner row">
       <!-- local-title -->
-      <div class="columns medium-12" id="local-title">
+      <div class="columns medium-6" id="local-title">
         <h1><a href="/" title="Back to EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EBI Style Lab</a></h1>
+      </div>
+      <div class="columns medium-6 text-right">
+        <div class="padding-top-large">
+          {{> info-banner}}
+        </div>
       </div>
       <!-- /local-title -->
       <!-- local-nav -->
       <nav>
-        {{> global-navigation}}
+        {{> global-navigation this}}
       </nav>
       <!-- /local-nav -->
     </div>
