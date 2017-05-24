@@ -1,0 +1,20 @@
+language: node_js
+
+node_js:
+  - 6.x
+
+install:
+  - npm install
+
+before_script:
+  - bower install
+
+script: npm run build
+
+deploy:
+  provider: pages
+  skip_cleanup: true
+  target_branch: gh-pages
+  github_token: $GITHUB_TOKEN # Set in travis-ci.org dashboard
+  on:
+    branch: master

@@ -1,7 +1,7 @@
 {
-  "name": "foundation-building-blocks",
+  "name": "ebi-style-lab",
   "version": "1.0.0",
-  "description": "Building Blocks Repository for Foundation for Sites.",
+  "description": "EBI Style Lab.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp bb",
@@ -10,7 +10,7 @@
     "fonts": "gulp updateIconFonts",
     "static": "gulp static"
   },
-  "author": "ZURB <foundation@zurb.com>",
+  "author": "EMBL-EBI <www-dev@ebi.ac.uk>",
   "license": "MIT",
   "devDependencies": {
     "async": "^2.2.0",
