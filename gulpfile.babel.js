@@ -70,14 +70,14 @@ function getNewPanini(options) {
 
 gulp.task('copy', gulp.parallel(copyAssets, copyData, copyBBImages, copyBBFiles, copyKitImages));
 
-// Build the "dist" folder by running all of the below tasks
-gulp.task('build',
-  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'copy', 'zip', sass, javascript, images,
-    gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets),
-  styleGuide));
-
 // Build the site, run the server, and watch for file changes
 gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-indices', 'building-block-pages'));
+
+// Build the "dist" folder by running all of the below tasks
+gulp.task('build',
+  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images,
+    gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets),
+  styleGuide));
 
 // Create Building Blocks
 gulp.task('bb',
