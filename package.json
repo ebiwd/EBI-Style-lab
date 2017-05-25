@@ -7,8 +7,7 @@
     "start": "gulp bb",
     "build": "gulp build --production",
     "bb": "gulp bb",
-    "fonts": "gulp updateIconFonts",
-    "static": "gulp static"
+    "fonts": "gulp updateIconFonts"
   },
   "author": "EMBL-EBI <www-dev@ebi.ac.uk>",
   "license": "MIT",

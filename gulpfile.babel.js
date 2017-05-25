@@ -72,17 +72,16 @@ gulp.task('copy', gulp.parallel(copyAssets, copyData, copyBBImages, copyBBFiles,
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
- gulp.series(clean, 'lint', gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets), styleGuide));
+  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images,
+    gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets),
+  styleGuide));
 
 // Build the site, run the server, and watch for file changes
-gulp.task('static',
-  gulp.series('updateIconFonts', 'build', server, watchStatic));
-
 gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-indices', 'building-block-pages'));
 
 // Create Building Blocks
 gulp.task('bb',
-  gulp.series(clean, 'build', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images, server, watch)
+  gulp.series(clean, 'build', server, watch)
 );
 
 // Delete the "dist" folder
@@ -315,17 +314,6 @@ function watch() {
   gulp.watch('content/websites/patterns/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('content/kits/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, buildingBlockSass, reload));
-  gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
-  gulp.watch('content/assets/img/**/*').on('all', gulp.series(images, reload));
-  gulp.watch('content/styleguide/**').on('all', gulp.series(styleGuide, reload));
-}
-// Watch for changes to static assets, pages, Sass, and JavaScript
-function watchStatic() {
-  gulp.watch(PATHS.assets, gulp.series('copy', reload));
-  gulp.watch('assets_site/pages/**/*.html').on('all', gulp.series(pages, reload));
-  gulp.watch('content/websites/meta-patterns/*.html').on('all', gulp.series(metaPatternsPages, reload));
-  gulp.watch(['content/sections/*.html', 'assets_site/{layouts,partials}/**/*.html']).on('all', gulp.series(pages, reload));
-  gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, reload));
   gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
   gulp.watch('content/assets/img/**/*').on('all', gulp.series(images, reload));
   gulp.watch('content/styleguide/**').on('all', gulp.series(styleGuide, reload));
