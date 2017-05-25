@@ -128,7 +128,7 @@ function kitIndex() {
     .pipe(getNewPanini({
       root: 'assets_site/pages/',
       layouts: 'assets_site/layouts/',
-      partials: 'assets_site/partials/',
+      partials: ['assets_site/partials/','content/sections'],
       data: ['assets_site/data/', PATHS.build + '/data'],
       helpers: 'assets_build/panini_helpers/'
     }))
@@ -144,7 +144,7 @@ function pages() {
     .pipe(getNewPanini({
       root: 'assets_site/pages/',
       layouts: 'assets_site/layouts/',
-      partials: 'assets_site/partials/',
+      partials: ['assets_site/partials/','content/sections'],
       data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
     }))
@@ -157,7 +157,7 @@ function metaPatterns() {
   .pipe(getNewPanini({
     root: 'assets_site/pages/',
     layouts: 'assets_site/layouts/',
-    partials: 'assets_site/partials/',
+    partials: ['assets_site/partials/','content/sections'],
     data: ['assets_site/data/', PATHS.build + '/data'],
     helpers: 'assets_build/panini_helpers/'
   }))
@@ -173,7 +173,7 @@ function metaPatternsPages() {
     .pipe(getNewPanini({
       root: 'assets_site/pages/',
       layouts: 'assets_site/layouts/',
-      partials: 'assets_site/partials/',
+      partials: ['assets_site/partials/','content/sections'],
       data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
     }))

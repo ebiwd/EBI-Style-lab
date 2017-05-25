@@ -6,7 +6,7 @@ module.exports = function(path, type) {
     var classes = 'button small secondary edit-button float-right';
 
     if (type === 'section')
-      return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/assets_site/partials/' + path + '">Edit ' + type + '</a>';
+      return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/content/sections/partials/' + path + '">Edit ' + type + '</a>';
     if (type === 'layout')
       return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/assets_site/layouts/' + path + '.html">Edit ' + type + '</a>';
     if (type === 'page')
