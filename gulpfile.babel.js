@@ -72,7 +72,7 @@ gulp.task('copy', gulp.parallel(copyAssets, copyData, copyBBImages, copyBBFiles,
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images,
+  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'copy', 'zip', sass, javascript, images,
     gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets),
   styleGuide));
 
