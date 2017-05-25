@@ -307,7 +307,7 @@ function watch() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch(['assets_site/pages/*.html', 'assets_site/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
   gulp.watch('content/websites/meta-patterns/*.html').on('all', gulp.series('meta-patterns', metaPatternsPages, metaPatterns, reload));
-  gulp.watch('assets_site/{layouts,partials}/**/*.html').on('all', gulp.series(pages, metaPatternsPages, kitIndex, 'dynamic-pages',  reload));
+  gulp.watch(['content/sections/*.html', 'assets_site/{layouts,partials}/**/*.html']).on('all', gulp.series(pages, metaPatternsPages, kitIndex, 'dynamic-pages',  reload));
   gulp.watch('content/websites/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
   gulp.watch('content/websites/patterns/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
   gulp.watch('content/websites/patterns/**/*.js').on('all', gulp.series(buildingBlockJS, 'building-block-pages', reload));
@@ -324,7 +324,7 @@ function watchStatic() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch('assets_site/pages/**/*.html').on('all', gulp.series(pages, reload));
   gulp.watch('content/websites/meta-patterns/*.html').on('all', gulp.series(metaPatternsPages, reload));
-  gulp.watch('assets_site/{layouts,partials}/**/*.html').on('all', gulp.series(pages, reload));
+  gulp.watch(['content/sections/*.html', 'assets_site/{layouts,partials}/**/*.html']).on('all', gulp.series(pages, reload));
   gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, reload));
   gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
   gulp.watch('content/assets/img/**/*').on('all', gulp.series(images, reload));
