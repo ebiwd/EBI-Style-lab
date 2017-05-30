@@ -1,7 +1,7 @@
 ### todo
 
 1. Import rendered fonts
-2. 
+2.
 
 ---
 
@@ -32,32 +32,20 @@ The EBI Style Lab is a collaborative space that also shares the latest guidance 
 
 ### How do I develop on my local machine
 
-Your computer needs:
-
-- [NodeJS](https://nodejs.org/en/)
-- [Git](https://git-scm.com/)
-
-First download it with Git:
-
-```bash
-git clone https://github.com/ebiwd/ebi-style-lab.git
-```
-
-Then open the folder in your command line, and install the needed dependencies:
-
-```bash
-cd EBI-Style-lab
-npm i
-bower i
-```
-
-Finally, run `npm start` to start the project and watch for changes. It will open in your browser at:
-
-```
-http://localhost:8000
-```
-
-To deploy, run `npm run deploy`.
+1. Your computer needs:
+  - [NodeJS](https://nodejs.org/en/)
+  - [Git](https://git-scm.com/)
+2. Get the git repo: `git clone https://github.com/ebiwd/ebi-style-lab.git`
+  - If you've not yet installed bower (you may need to run with sudo): `npm install -g bower`
+3. Then open the folder in your command line, and install the needed dependencies:
+    ```bash
+    cd EBI-Style-lab
+    npm i
+    bower i
+    ```
+4. Finally:
+  - To develop: run `npm start` to start the project and watch for changes. It will open in your browser at http://localhost:8000.
+  - To build for deployment: run `npm run build`
 
 ---
 
