@@ -1,80 +1,35 @@
-.filter-nav-container {
-}
 
 .filter-nav {
 
-  .bb-search-button {
-    display: flex;
-    padding: rem-calc(30) 0 rem-calc(30) rem-calc(30);
-
-    .bb-search-icon {
-      height: 15px;
-      width: 15px;
-
-      * {
-        fill: $dark-blue;
-      }
-    }
-  }
-
   .filter-nav-button {
-    color: $dark-blue;
 
     .bb-filter-icons {
       height: .75rem;
-
-      * {
-        fill: $dark-blue;
-      }
     }
 
     &.active {
       border-radius: 0;
       box-shadow: 0 -4px inset;
       box-sizing: border-box;
-      color: $dark-blue;
 
-      .bb-filter-icons {
-        * {
-          fill: $dark-blue;
-        }
-      }
     }
 
-    &:hover {
-      background: $pale-blue;
-      color: $dark-blue;
-
-      .bb-filter-icons {
-        * {
-          fill: $dark-blue;
-        }
-      }
-    }
-
-    span {
-      font-size: rem-calc(14);
-      font-weight: $global-weight-semibold;
-    }
   }
 }
 
 .bb-search-bar-container {
   background-color: white;
   border-bottom: 1px solid $dark-blue;
-  display: none;
   height: 100%;
   margin: 0 auto;
   max-width: $global-width;
   width: 100%;
 
   .close-button {
-    @include vertical-center;
     color: $medium-blue;
   }
 
   .bb-search-bar {
-    @include vertical-center;
     background-color: $white;
     border: 0;
     box-shadow: none;

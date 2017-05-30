@@ -32,10 +32,6 @@ var setupFilterable = function($current, $links, updateMethod) {
 }
 var params = getParams();
 if($searchInput.is('*')) {
-  if(params.q) {
-    $('#bb-search-bar').removeClass('is-hidden').show();
-    $searchInput.focus();
-  }
   window.search = new Search({
     input: $('input[type="search"]'),
     searchContainer: $('#search-results-container .card-container'),
@@ -61,10 +57,7 @@ if($searchInput.is('*')) {
   var $currentFilter = $('[data-filter-current]');
   var $filterLinks = $('[data-filter]');
   setupFilterable($currentFilter, $filterLinks, window.search.setFilter.bind(window.search));
-  $('#bb-search-bar').on('close.zf.trigger', function() {
-    $searchInput.val('');
-    window.search.updateSearch();
-  }).on('toggle.zf.trigger', function() {
+  $('#bb-search-bar').on('toggle.zf.trigger', function() {
     setTimeout( () => { $searchInput.focus();window.search.updateSearch();}, 1)
   });
 }
