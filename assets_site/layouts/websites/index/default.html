@@ -29,13 +29,13 @@
   <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
   <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
-  <meta name="bbfile" content="/{{root}}data/building-blocks.json">
-  <meta name="kitfile" content="/{{root}}data/kits.json">
-  <meta name="datafile" content="/{{root}}data/{{datafile}}">
-  <meta name="rootpath" content="/{{root}}">
-  <meta name="datakey" content="/{{datakey}}">
+  <meta name="bbfile" content="../../{{root}}data/building-blocks.json">
+  <meta name="kitfile" content="../../{{root}}data/kits.json">
+  <meta name="datafile" content="../../{{root}}data/{{datafile}}">
+  <meta name="rootpath" content="../../{{root}}">
+  <meta name="datakey" content="{{datakey}}">
 
-  <link rel="stylesheet" href="/{{root}}assets/css/app.css?rev=@@hash">
+  <link rel="stylesheet" href="../../{{root}}assets/css/app.css?rev=@@hash">
   {{> meta}}
 </head>
 <body class="level2"><!-- add any of your classes or IDs -->
@@ -81,7 +81,7 @@
   {{> footer_global}}
   {{{partial-as-script 'building-block-card' 'websites/patterns/building-block-card-with-column.html'}}}
   {{{partial-as-script 'kit-card' 'kit/kit-card-with-column.html'}}}
-  <script src="/{{root}}assets_site/js/app.js?rev=@@hash"></script>
+  <script src="../../assets_site/js/app.js?rev=@@hash"></script>
 </body>
 
 </body>
