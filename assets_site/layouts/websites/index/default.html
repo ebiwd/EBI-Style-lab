@@ -35,6 +35,7 @@
   <meta name="rootpath" content="/{{root}}">
   <meta name="datakey" content="/{{datakey}}">
 
+  <link rel="stylesheet" href="/{{root}}assets/css/app.css?rev=@@hash">
   {{> meta}}
 </head>
 <body class="level2"><!-- add any of your classes or IDs -->
@@ -80,7 +81,7 @@
   {{> footer_global}}
   {{{partial-as-script 'building-block-card' 'websites/patterns/building-block-card-with-column.html'}}}
   {{{partial-as-script 'kit-card' 'kit/kit-card-with-column.html'}}}
-  <script src="{{root}}assets_site/js/app.js?rev=@@hash"></script>
+  <script src="/{{root}}assets_site/js/app.js?rev=@@hash"></script>
 </body>
 
 </body>
