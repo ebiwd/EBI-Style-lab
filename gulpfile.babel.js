@@ -71,7 +71,7 @@ function getNewPanini(options) {
 gulp.task('copy', gulp.parallel(copyAssets, copyData, copyBBImages, copyBBFiles, copyKitImages));
 
 // Build the site, run the server, and watch for file changes
-gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-indices', 'building-block-pages'));
+gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-pages', 'building-block-indices'));
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
