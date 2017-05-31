@@ -91,6 +91,10 @@ layout: blank
     margin-top: .75rem;
     clear: none;
   }
+  .masthead.compact-for-data.compact-disabled .masthead-inner > nav.column {
+    width: 100%;
+    left: 0;
+  }
   </style>
 
   <header id="masthead-black-bar" class="clearfix masthead-black-bar">
@@ -118,14 +122,17 @@ layout: blank
   </header>
   <div xdata-sticky-container>
     <header id="masthead" class="masthead compact-for-data" xdata-sticky data-sticky-on="large" xdata-top-anchor="content:top" xdata-btm-anchor="content:bottom">
-      <div class="masthead-inner row">
+      <div class="masthead-inner row collapse">
         <!-- local-title -->
         <div class="columns medium-7 large-3" id="local-title">
-          <h1><a href="../../" title="Back to [service-name] homepage">EBI Framework</a></h1>
+          <h1><a href="#" title="Back to [service-name] homepage">
+            <img style="height: 40px;" class="padding-bottom-small" src="http://www.ebi.ac.uk/QuickGO-Beta/images/quickgo-logo3.622656dc.png" />
+            Optional title
+          </a></h1>
         </div>
         <!-- /local-title -->
 
-        <div class="column medium-5 large-3 large-push-6">
+        <div class="column medium-5 large-3 large-push-5">
           <form id="ebi_search" action="/ebisearch/search.ebi">
             <fieldset>
               <div class="input-group margin-bottom-none margin-top-large">
@@ -145,19 +152,17 @@ layout: blank
         </div>
 
         <!-- local-nav -->
-        <div class="column large-6 large-pull-3">
-          <nav>
-            <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
-              <li><a href="../../">Overview</a></li>
-              <li><a data-open="modal-download">Download</a></li>
-              <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
-            </ul>
-            <ul class="dropdown menu float-right" data-description="tasks">
-              <li><a href="#"><span class="icon icon-functional" data-icon="l"></span> Login</a></li>
-            </ul>
-          </nav>
-          <!-- /local-nav -->
-        </div>
+        <nav class="column large-6 large-pull-3">
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li><a href="{{root}}">Overview</a></li>
+            <li><a data-open="modal-download">Download</a></li>
+            <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
+          </ul>
+          <ul class="dropdown menu float-right" data-description="tasks">
+            <li><a href="#"><span class="icon icon-functional" data-icon="l"></span> Login</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
       </div>
     </header>
   </div>
@@ -260,44 +265,7 @@ layout: blank
     </div>
     <!-- End suggested layout containers / #content -->
 
-    <footer>
-      <div id="global-footer" class="global-footer">
-        <nav id="global-nav-expanded" class="global-nav-expanded row">
-          <!-- Footer will be automatically inserted by footer.js -->
-        </nav>
-        <section id="ebi-footer-meta" class="ebi-footer-meta row">
-          <!-- Footer meta will be automatically inserted by footer.js -->
-        </section>
-      </div>
-    </footer>
-  <!-- JavaScript -->
-  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
-  <!--
-  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
-  -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <!-- Your custom JavaScript file scan go here... change names accordingly -->
-  <!--
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
-  -->
+    {{> footer_global}}
 
-  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js"></script>
-  <!-- The Foundation theme JavaScript -->
-  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/js/foundation.js"></script>
-  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foundationExtendEBI.js"></script>
-  <script type="text/JavaScript">$(document).foundation();</script>
-  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
-
-  <!-- Google Analytics details... -->
-  <!-- Change UA-XXXXX-X to be your site's ID -->
-  <!--
-  <script>
-    window._gaq = [['_setAccount','UAXXXXXXXX1'],['_trackPageview'],['_trackPageLoadTime']];
-    Modernizr.load({
-      load: ('https:' == location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js'
-    });
-  </script>
-  -->
 </body>
 </html>
