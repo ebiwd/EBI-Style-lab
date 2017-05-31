@@ -123,9 +123,9 @@ function copyBBFiles() {
 
 // Copy page templates into finished HTML files
 function kitIndex() {
-  return gulp.src(['assets_site/pages/*.html,assets_site/pages/**/*.html'])
+  return gulp.src(['content/pages/*.html,content/pages/**/*.html'])
     .pipe(getNewPanini({
-      root: 'assets_site/pages/',
+      root: 'content/pages/',
       layouts: 'assets_site/layouts/',
       partials: ['assets_site/partials/','content/sections'],
       data: ['assets_site/data/', PATHS.build + '/data'],
@@ -139,9 +139,9 @@ gulp.task('kit-index', kitIndex)
 
 // Copy page templates into finished HTML files
 function pages() {
-  return gulp.src('assets_site/pages/**/*.{html,hbs,handlebars}')
+  return gulp.src('content/pages/**/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
-      root: 'assets_site/pages/',
+      root: 'content/pages/',
       layouts: 'assets_site/layouts/',
       partials: ['assets_site/partials/','content/sections'],
       data: 'assets_site/data/',
@@ -154,7 +154,7 @@ function pages() {
 function metaPatterns() {
   return gulp.src('content/websites/meta-patterns/*.html')
   .pipe(getNewPanini({
-    root: 'assets_site/pages/',
+    root: 'content/pages/',
     layouts: 'assets_site/layouts/',
     partials: ['assets_site/partials/','content/sections'],
     data: ['assets_site/data/', PATHS.build + '/data'],
@@ -170,7 +170,7 @@ gulp.task('meta-patterns', metaPatterns)
 function metaPatternsPages() {
   return gulp.src('content/websites/meta-patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
-      root: 'assets_site/pages/',
+      root: 'content/pages/',
       layouts: 'assets_site/layouts/',
       partials: ['assets_site/partials/','content/sections'],
       data: 'assets_site/data/',
@@ -304,7 +304,7 @@ function reload(done) {
 // Watch for changes to static assets, pages, Sass, and JavaScript
 function watch() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
-  gulp.watch(['assets_site/pages/*.html', 'assets_site/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
+  gulp.watch(['content/pages/*.html', 'content/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
   gulp.watch('content/websites/meta-patterns/*.html').on('all', gulp.series('meta-patterns', metaPatternsPages, metaPatterns, reload));
   gulp.watch(['content/sections/*.html', 'assets_site/{layouts,partials}/**/*.html']).on('all', gulp.series(pages, metaPatternsPages, kitIndex, 'dynamic-pages',  reload));
   gulp.watch('content/websites/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
