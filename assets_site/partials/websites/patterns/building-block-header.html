@@ -4,38 +4,23 @@
       <div class="building-block-header-name-section">
         <h2 class="">{{block.name}}</h2>
         <h3 class="building-block-author">{{#if block.author.github}}<img src="https://github.com/{{block.author.github}}.png?size=30" class="avatar content-right" height="" width="" alt="">{{/if}}By
-          {{#if block.author.foundation-forum}}
-            <a href="http://foundation.zurb.com/forum/{{block.author.foundation-forum}}">{{block.author.name}}</a>
-          {{ else }}
-            {{block.author.name}}
-          {{/if}}
+          <a href="https://github.com/{{block.author.github}}">{{block.author.name}}</a>
         </h3>
       </div>
-      <div class="header-icon-row">
+      <div class="padding-bottom-medium">
+        {{#tag-links block.tags}}
+        <a href="{{../root}}?q={{this.name}}" class="tag margin-left-small">{{this.name}}</a>
+        {{/tag-links}}
+        <small>Requires EBI Visual Framework</small> 
         {{#each block.major-versions}}
-        <span class="version-badge">F{{this.major}}</span>
+        <span class="label">{{this.minors}}</span>
         {{/each}}
-        <div class="version-menu" data-toggle="building-block-header-dropdown">
-        <img src="{{root}}assets/img/icons/three-dots.svg" alt="#" >
-        </div>
-        <div class="dropdown-pane bb-dropdown-pane" id="building-block-header-dropdown" data-dropdown data-hover="true" data-hover-pane="true">
-          {{#each block.major-versions}}
-            <strong>Foundation {{this.major}}</strong>
-            <p>{{this.minors}}</p>
-          {{/each}}
-        </div>
-        <img class="inject-me bb-divider"   src="{{root}}assets/img/icons/vertical-line.svg" alt="">
-        <div class="building-block-tag-container">
-          {{#tag-links block.tags}}
-          <a href="{{../root}}?q={{this.name}}" class="building-block-tag">{{this.name}}</a>
-          {{/tag-links}}
-        </div>
       </div>
+      <p>{{block.description}}</p>
     </div>
     <div class="column small-12 medium-5 large-4 bb-actions">
       <div>
-        <button class="kit-card-primary blue float-right hide-for-small-only" type="button" data-toggle="example-dropdown">Download<div class="arrow-down white"></div></button>
-        <a class="bb-help-link" href="{{root}}how-to.html#use">How do I use This?</a>
+        <button class="button float-right hide-for-small-only" type="button" data-toggle="example-dropdown">Download<div class="arrow-down white"></div></button>
         {{> block-dropdown block}}
       </div>
     </div>

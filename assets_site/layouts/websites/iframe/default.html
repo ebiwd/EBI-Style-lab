@@ -9,21 +9,10 @@
   <link rel="stylesheet" href="{{root}}assets/css/app.css?rev=@@hash">
   {{> meta}}
 
-  {{#ifequal block.grid 'float'}}
-    <!-- <link rel="stylesheet" href="{{root}}websites/patterns/app-float.css?rev=@@hash"> -->
-  {{else}}
-    <!-- <link rel="stylesheet" href="{{root}}websites/patterns/app.css?rev=@@hash"> -->
-  {{/ifequal}}
   <style>
     body {
-      background-color: #E6E8EB;
       padding: 16px;
-    }
-
-    @media screen and (min-width: 40em) {
-      body {
-        padding: 20px;
-      }
+      border-top: 1px solid #ccc;
     }
 
     @media screen and (min-width: 64em) {
@@ -36,6 +25,7 @@
   <link rel="stylesheet" href="{{root}}websites/patterns/{{page}}/{{page}}.css?rev=@@hash">
 </head>
 <body>
+  <h3>Demonsatraion and documentation</h3>
   {{> body}}
   <!-- <script src="{{root}}assets_site/js/app.js?rev=@@hash"></script> -->
 
