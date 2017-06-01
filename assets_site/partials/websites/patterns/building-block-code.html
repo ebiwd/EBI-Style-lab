@@ -1,18 +1,6 @@
 <div class="building-block-code">
   <!-- Code Menu -->
-  <div class="flex-container align-center">
-    <ul class="code-menu menu">
-      <li class="code-menu-item is-active" data-toggle-HTML>
-        <a href="#">HTML</a>
-      </li>
-      <li class="code-menu-item" data-toggle-styles>
-        <a href="#">SCSS</a>
-      </li>
-      <li class="code-menu-item" data-toggle-JS>
-        <a href="#">JS</a>
-      </li>
-    </ul>
-  </div>
+  {{{bb-code-buttons page}}}
 
   <!-- Code Preview -->
   <div class="row expanded">
@@ -23,11 +11,6 @@
         <button class="button docs-code-copy" data-clipboard>Copy</button>
       </div>
       <div class="code-box-script">
-{{#if "html"}}
-test
-{{/if}}
-
-
 {{#code "html"}}
 {{{bb-html page}}}
 {{/code}}
