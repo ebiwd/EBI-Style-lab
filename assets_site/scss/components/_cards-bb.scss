@@ -1,5 +1,5 @@
 $card-hover-link-height: rem-calc(92);
-$card-height: rem-calc(347);
+$card-height: rem-calc(287);
 
 .column-block {
   margin-bottom: 2rem;
@@ -21,7 +21,6 @@ $card-height: rem-calc(347);
   @include transition(all 0.1s ease-out);
 
   border: 0;
-  border-radius: rem-calc(5);
   height: $card-height;
   width: 100%;
 
@@ -41,71 +40,11 @@ $card-height: rem-calc(347);
   width: 100%;
 }
 
-.card-divider {
-  align-items: center;
-  display: flex;
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p,
-  a,
-  .button {
-    margin-bottom: 0;
-  }
-}
-
-.card-actions {
-  align-items: center;
-  display: flex;
-  vertical-align: baseline;
-
-  span {
-    color: $medium-gray;
-    font-size: rem-calc(12);
-    font-weight: $global-weight-bold;
-    transition: all 0.1s ease-out;
-  }
-
-  .card-views {
-    margin-right: rem-calc(22);
-  }
-}
-
 .card-img {
-  background: $blue-gray;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto 100%;
-  border-radius: rem-calc(5) rem-calc(5) 0 0;
-  flex: 1 0 auto;
+  height: 200px;
   position: relative;
-}
-
-// card fonts and text styles
-.card-category {
-  color: $muted-blue;
-  font-size: rem-calc(14);
-  font-weight: $global-weight-bold;
-  opacity: 0.4;
-  position: absolute;
-  right: rem-calc(12);
-  text-transform: uppercase;
-  top: rem-calc(12);
-}
-
-.card-author {
-  color: $medium-gray;
-  font-size: rem-calc(12);
-  font-weight: $global-weight-semibold;
-  text-transform: capitalize;
-  transition: all 0.1s ease-out;
-}
-
-.bb-card-social-icon {
-  margin-right: rem-calc(5);
-  transition: all 0.1s ease-out;
+  border: 1px solid #eee;
 }

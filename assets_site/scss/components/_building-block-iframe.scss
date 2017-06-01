@@ -13,5 +13,5 @@
 
   /* To fix iframe scrolling on ios */
   -webkit-overflow-scrolling: touch;
-  overflow-y: scroll;
+  overflow: hidden;
 }
