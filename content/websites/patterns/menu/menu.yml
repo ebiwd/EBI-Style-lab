@@ -3,7 +3,7 @@ tags:
   - built-in
   - navigation
   - layout
-  - lists
+  - menus
 category: navigation
 description: Basic horizontal, vertical and simple vertical (tree) menus.
 versions:
