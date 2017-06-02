@@ -5,15 +5,9 @@
       <div class="card card-building-block">
         <div class="card-img" style="background-image: url(../../{{thumb}});">
         </div>
-        <div class="card-divider align-justify">
-          <h3 class="card-title">{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h3>
-          <div class="card-category">{{#if category}}{{category}}{{else}}Category{{/if}}</div>
-          <!-- <span class="version-badge">{{#if badge}}{{else}}F6{{/if}}</span> -->
-        </div>
-        <div class="card-divider align-justify">
-          <div class="card-actions">
-            <!-- <div class="card-views"><img src="/{{@root.root}}assets/img/icons/bb-card-view.svg" class="inject-me bb-card-social-icon" height="" width="" alt=""><span>98</span></div> -->
-          </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
         </div>
       </div>
     </a>
