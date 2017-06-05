@@ -1,10 +1,12 @@
 name: 'Sorting tables'
 tags:
   - tables
-category: media
+  - interactive
+category: containers
 description: A prescriped solution to sort your tables.
 versions:
-  - 6.3.2
+  - 1.1.0
+  - 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

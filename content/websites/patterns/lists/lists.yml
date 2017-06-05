@@ -1,11 +1,11 @@
 name: 'Lists'
 tags:
-  - typography
   - lists
-category: media
-description: To come.
+  - built-in
+category: typography
+description: A useful and diverse category, use one of these list types for your content. View the code source for the implementation technique.
 versions:
-  - 6.3.2
+  - 1.1.0, 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

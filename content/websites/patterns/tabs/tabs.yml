@@ -2,10 +2,12 @@ name: 'Tabs'
 tags:
   - layout
   - navigation
-category: media
+  - buttons
+category: forms
 description: Here's a simple tab implementation.
 versions:
-  - 6.3.2
+  - 1.1.0
+  - 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

@@ -2,10 +2,10 @@ name: 'Tables'
 tags:
   - typography
   - tables
-category: media
+category: containers
 description: A table is a table, and sometimes, you just need to use a table.
 versions:
-  - 6.3.2
+  - 1.1.0, 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

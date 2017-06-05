@@ -1,11 +1,12 @@
 name: 'Related links box'
 tags:
   - links
-  - navigation
-category: media
+  - shortcuts
+category: navigation
 description: Formerly the "popular" box
 versions:
-  - 6.3.2
+  - 1.1.0
+  - 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

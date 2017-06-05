@@ -6,7 +6,7 @@ tags:
 category: media
 description: For images inserted inside text areas, you can use make a div.thumbnail wrap an image and a div.caption to add subtle padding and spacing.
 versions:
-  - 6.3.2
+  - 1.1.0
 author:
   name: Ken Hawkins
   github: khawkins98

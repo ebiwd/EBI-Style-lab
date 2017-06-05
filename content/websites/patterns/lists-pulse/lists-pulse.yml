@@ -2,10 +2,10 @@ name: 'Lists - pulse'
 tags:
   - typography
   - lists
-category: media
-description: .
+category: containers
+description: Building atop list styling you can fashion "Pulse lists" to feature a series of items or updates. Although these may not appear to be lists at first glance, a list structure provides the basic scaffolding.
 versions:
-  - 6.3.2
+  - 1.1.0, 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

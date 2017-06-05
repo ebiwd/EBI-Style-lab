@@ -2,10 +2,10 @@ name: 'Live filtering'
 tags:
 - typography
 - search
-category: media
+category: forms
 description: If you have mutliple rows of data you'd like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin
 versions:
-  - 6.3.2
+  - 1.1.0, 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

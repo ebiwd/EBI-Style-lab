@@ -5,11 +5,17 @@ filter-nav:
     page: 'index'
     alt: All items icon
     classes:
+  # -
+  #   img: assets/img/icons/filter-featured.svg
+  #   title: Kits
+  #   page: 'kits'
+  #   alt: kits icon
+  #   classes:
   -
-    img: assets/img/icons/filter-featured.svg
-    title: Kits
-    page: 'kits'
-    alt: kits icon
+    img: assets/img/icons/filter-navigation.svg
+    title: Typography
+    page: 'typography'
+    alt: typography icon
     classes:
   -
     img: assets/img/icons/filter-navigation.svg

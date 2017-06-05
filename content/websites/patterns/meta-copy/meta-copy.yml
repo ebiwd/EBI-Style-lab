@@ -3,10 +3,11 @@ tags:
 - search
 - writing
 - visuals
-category: media
-description: To come
+category: typography
+description: Meta copy is the content of meta tags in a page - keywords and description. Ideally, words from your meta copy should be repeated in the macro copy of your page. Apart from being clear, this may help the page ranking in search engines.
 versions:
-  - 6.3.2
+  - 1.1.0
+  - 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

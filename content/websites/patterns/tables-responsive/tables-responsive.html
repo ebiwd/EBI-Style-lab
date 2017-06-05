@@ -1,4 +1,56 @@
-{{#markdown}}
-  ``` html
-  ```
-{{/markdown}}
+<h4>Stacking table</h4>
+<p>Squeeze your browser to see the effect of <code>.stack</code>.</p>
+
+<table class="hover stack">
+  <thead>
+    <tr>
+      <th width="200">Table Header</th>
+      <th>Table Header</th>
+      <th width="150">Table Header</th>
+      <th width="150">Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4>Responsive table</h4>
+<p>Add the class <code>.responsive-table</code> to the <code>table</code> tag, and you'll be able to make use of <a href="#grid">the grid system of clases</a>, such as <code>.show-for-large</code>.</p>
+<p>Note that this requires jQuery, as it will propogate the <code>th</code> classes to each <code>td</code>.</p>
+
+<table class="responsive-table">
+  <thead>
+    <tr>
+      <th class="show-for-small-only">Compact</th>
+      <th class="show-for-large">Shown for large</th>
+      <th>Table Header</th>
+      <th>Table Header</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+    <tr>
+      <td>Content Goes Here</td>
+      <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+      <td>Content Goes Here</td>
+      <td>Content Goes Here</td>
+    </tr>
+  </tbody>
+</table>

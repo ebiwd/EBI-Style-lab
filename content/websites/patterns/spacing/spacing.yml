@@ -2,10 +2,11 @@ name: 'Custom spacing'
 tags:
   - grid
   - layout
-category: media
+category: containers
 description: Utility classes to space out your elements
 versions:
-  - 6.3.2
+  - 1.1.0
+  - 1.2.0
 author:
   name: Ken Hawkins
   github: khawkins98

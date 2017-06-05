@@ -1,4 +1,7 @@
-<div class="bb-search-bar-container " id="bb-search-bar">
-  <input type="search" data-type="{{type}}" placeholder="{{#ifequal type "kits"}}FIND MORE BUILDING BLOCKS{{else}}Search for a building block...{{/ifequal}}" class="bb-search-bar">
+<div class="bb-search-bar-container" id="bb-search-bar">
+  <div class="input-group">
+    <span class="input-group-label"><i data-icon="1" class="icon icon-functional"></i></span>
+    <input type="search" data-type="{{type}}" placeholder="{{#ifequal type "kits"}}FIND MORE BUILDING BLOCKS{{else}}Find a pattern{{/ifequal}}" class="filter clearable input-group-field bb-search-bar">
+  </div>
   <p class="bb-search-subtext"><span id="result-count">0</span> Results</p>
 </div>
