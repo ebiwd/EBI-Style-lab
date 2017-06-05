@@ -1,0 +1,12 @@
+name: 'Table of contents'
+tags:
+  - typography
+  - lists
+category: Navigation
+description: Programatically insert a table of contents.
+versions:
+  - 1.1.0, 1.2.0
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98
