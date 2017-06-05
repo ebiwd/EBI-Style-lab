@@ -5,13 +5,13 @@
 
 ---
 
-# EBI Style Lab
-This is a collaborative effort. The EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
+# EMBL-EBI Style Lab
+This is a collaborative effort. The EMBL-EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
 
 ## What is this, exactly?
-The EBI Style Lab is a collaborative space that also shares the latest guidance on how and what should be used to build visually and textually compliant EMBL-EBI websites, documents, and texts. It's partly about reinforcing our shared identity, but it's mostly about leveraging the best tools to build things faster and with fewer bugs, errors, and user experience issues.
+The EMBL-EBI Style Lab is a collaborative space that also shares the latest guidance on how and what should be used to build visually and textually compliant EMBL-EBI websites, documents, and texts. It's partly about reinforcing our shared identity, but it's mostly about leveraging the best tools to build things faster and with fewer bugs, errors, and user experience issues.
 
-### Contents of the EBI Style Lab
+### Contents of the EMBL-EBI Style Lab
 - General styling
   - Our basic style guide (to be added)
   - Microsoft Word and PowerPoint templates (to be added)

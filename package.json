@@ -1,7 +1,7 @@
 {
   "name": "ebi-style-lab",
   "version": "1.0.0",
-  "description": "EBI Style Lab.",
+  "description": "EMBL-EBI Style Lab.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp bb",
