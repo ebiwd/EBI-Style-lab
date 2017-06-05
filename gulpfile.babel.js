@@ -154,7 +154,7 @@ function pages() {
 function metaPatterns() {
   return gulp.src('content/websites/meta-patterns/*.html')
   .pipe(getNewPanini({
-    root: 'content/pages/',
+    root: 'content/pages/meta-patterns/',
     layouts: 'assets_site/layouts/',
     partials: ['assets_site/partials/','content/sections'],
     data: ['assets_site/data/', PATHS.build + '/data'],
@@ -170,7 +170,7 @@ gulp.task('meta-patterns', metaPatterns)
 function metaPatternsPages() {
   return gulp.src('content/websites/meta-patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
-      root: 'content/pages/',
+      root: '/',
       layouts: 'assets_site/layouts/',
       partials: ['assets_site/partials/','content/sections'],
       data: 'assets_site/data/',
