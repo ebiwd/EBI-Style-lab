@@ -139,4 +139,4 @@ $("#main-content-area h2, #main-content-area h3").each(function() {
 
 output +="</ul></nav>";
 
-$(".table-of-contents").prepend(output);
+$(".table-of-contents").html(output);
