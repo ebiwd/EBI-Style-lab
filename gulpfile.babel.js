@@ -15,6 +15,7 @@ import _            from 'lodash';
 import requireDir   from 'require-dir';
 import stripCssComments from 'gulp-strip-css-comments';
 import download     from 'gulp-download-stream';
+// import gtb          from 'gulp-typescript-babel';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -75,7 +76,7 @@ gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'bu
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, 'dynamic-pages', 'copy', 'zip', sass, javascript, images,
+  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, buildingBlockTS, buildingBlockApp, 'dynamic-pages', 'copy', 'zip', sass, javascript, images,
     gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets),
   styleGuide));
 
@@ -117,7 +118,7 @@ function copyKitImages() {
 }
 
 function copyBBFiles() {
-  return gulp.src(['content/websites/patterns/**/*.{html,js,scss}', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
+  return gulp.src(['content/websites/patterns/**/*.{html,js,scss,css,ts}','content/websites/patterns/**/app/*', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
     .pipe(gulp.dest(PATHS.dist + '/files/building-blocks/'));
 }
 
@@ -228,6 +229,20 @@ function buildingBlockJS() {
     .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
 }
 
+// Moves TS from the Building Blocks into the dist
+function buildingBlockTS() {
+  return gulp.src('content/websites/patterns/**/*.ts')
+    // .pipe(gtb({incremental: true, configFile: 'tsconfig.json'},
+    //           {presets: ['es2015']}))
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
+}
+
+// Moves any /app assets from the Building Blocks into the dist
+function buildingBlockApp() {
+  return gulp.src('content/websites/patterns/**/app/*.*')
+    .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
+}
+
 // Load updated HTML templates and partials into Panini
 function resetPages(done) {
   panini.refresh();
@@ -310,6 +325,7 @@ function watch() {
   gulp.watch('content/websites/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
   gulp.watch('content/websites/patterns/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
   gulp.watch('content/websites/patterns/**/*.js').on('all', gulp.series(buildingBlockJS, 'building-block-pages', reload));
+  gulp.watch('content/websites/patterns/**/*.ts').on('all', gulp.series(buildingBlockTS, 'building-block-pages', reload));
   gulp.watch(['content/websites/patterns/**/*.png', 'content/kits/**/*.png']).on('all', gulp.series('copy', reload));
   gulp.watch('content/websites/patterns/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('content/kits/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));

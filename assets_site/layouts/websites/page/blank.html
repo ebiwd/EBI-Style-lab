@@ -1,0 +1,86 @@
+<!-- {{#set-bb-data this}} -->
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < {{meta-title}}</title>
+  <meta name="description" content="{{block.description}}"><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- A few keywords that relate to the content of THIS PAGE (not the whol project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="{{block.name}}">
+  <meta name="og:title" content="{{block.name}}">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="{{block.description}}">
+  <meta name="og:description" content="{{block.description}}">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/{{block.thumb}}">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/{{block.thumb}}">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+
+  <link rel="stylesheet" href="{{root}}assets/css/app.css?rev=@@hash">
+  {{> meta}}
+</head>
+<body class="level2"><!-- add any of your classes or IDs -->
+  {{> header}}
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+        {{> bb-breadcrumbs}}
+      </div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+
+          {{> building-block-header}}
+
+          {{> building-block-preview}}
+
+          <div class="row column">
+            <p>This pattern uses a more complex framework. Instead <a class="readmore" href="{{root}}files/building-blocks/{{block.datakey}}.zip">download the zip</a></p>
+          </div>
+
+          <div class="building-block-related">
+            <div class="row column">
+              <h2 class="bb-related-title">Similar Building Blocks</h2>
+            </div>
+            <div class="row small-up-1 medium-up-2 large-up-3 scroll-container">
+              {{#random-related-blocks this 3}}
+              <div class="column column-block scroll-x">
+                {{> building-block-card currentBlock}}
+              </div>
+              {{/random-related-blocks}}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="smedium-4 columns"></div>
+      </div>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      {{> footer}}
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  {{> footer_global}}
+  <script src="{{root}}assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>
+{{/set-bb-data}}
