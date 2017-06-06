@@ -1,3 +1,4 @@
+title: Menu dividers
 name: 'Menu dividers'
 tags:
   - menus
@@ -5,6 +6,7 @@ category: navigation
 description: If you want to add a break-line to your local masthead "Also in this section" dropddown, here's how.
 versions:
   - 1.2.0
+layout: test
 author:
   name: Ken Hawkins
   github: khawkins98

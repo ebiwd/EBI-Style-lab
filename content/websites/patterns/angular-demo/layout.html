@@ -1,0 +1,37 @@
+---
+title: Angular demo
+layout: blank
+---
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <title>Angular Tour of Heroes</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="angular-demo/angular-demo.css">
+
+    <!-- Polyfills -->
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+
+    <script src="https://unpkg.com/zone.js@0.8.4?main=browser"></script>
+    <script src="https://unpkg.com/systemjs@0.19.39/dist/system.src.js"></script>
+
+    <script src="angular-demo/systemjs.config.js"></script>
+    <script>
+      System.import('angular-demo/main.ts').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    An integration of https://angular.io/resources/live-examples/toh-6/ts/eplnkr.html
+    <my-app>Loading...</my-app>
+  </body>
+</html>
+
+
+<!--
+Copyright 2017 Google Inc. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+-->
