@@ -1,0 +1,13 @@
+name: 'Conditional elements'
+tags:
+  - interactive
+  - conditional
+  - forms
+category: control
+description: If you want to show form elements depending on user responses, or any thing else.
+versions:
+  - 1.2.0
+author:
+  name: Ken Hawkins
+  github: khawkins98
+  twitter: khawkins98
