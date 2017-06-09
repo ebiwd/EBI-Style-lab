@@ -76,8 +76,8 @@ gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'bu
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
-  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, buildingBlockTS, buildingBlockApp, 'dynamic-pages', 'copy', 'zip', sass, javascript, images,
-    gulp.parallel(pages, metaPatternsPages, sass, javascript, images, copyAssets),
+  gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, buildingBlockTS, buildingBlockApp, 'dynamic-pages', 'copy', 'zip',
+    gulp.parallel(pages, metaPatternsPages, libraries, sass, javascript, images, copyAssets),
   styleGuide));
 
 // Create Building Blocks
@@ -291,6 +291,15 @@ function javascript() {
     .pipe(gulp.dest(PATHS.dist + '/assets_site/js'));
 }
 
+// Copy libraries to the "dist" folder
+function libraries() {
+  return gulp.src('assets_site/libraries/**/*')
+    .pipe($.if(PRODUCTION, $.imagemin({
+      progressive: true
+    })))
+    .pipe(gulp.dest(PATHS.dist + '/assets/libraries'));
+}
+
 // Copy images to the "dist" folder
 // In production, the images are compressed
 function images() {
@@ -331,6 +340,7 @@ function watch() {
   gulp.watch('content/kits/**/*.yml').on('all', gulp.series('building-block-meta', 'dynamic-pages', reload));
   gulp.watch('assets_site/scss/**/*.scss').on('all', gulp.series(sass, buildingBlockSass, reload));
   gulp.watch('assets_site/js/**/*.js').on('all', gulp.series(javascript, reload));
+  gulp.watch('assets_site/libraries/**/*').on('all', gulp.series(libraries, reload));
   gulp.watch('content/assets/img/**/*').on('all', gulp.series(images, reload));
   gulp.watch('content/styleguide/**').on('all', gulp.series(styleGuide, reload));
 }
