@@ -92,8 +92,8 @@ gulp.task('pageJson', function(cb) {
       var title = text.match(/<title>(.*?)<\/title>/gi) + ' ';
         title = title.replace(/<title>(.*?)<\/title>/gi, '$1');
 
-      var body = text.match(/<body.*?>(.[\s\S]*?)body>/gi) + ' ';
-        body = body.replace(/<body.*?>(.[\s\S]*?)<\/body>/gi, '$1');
+      var body = text.match(/<body.[\s\S]*?>(.[\s\S]*?)body>/gi) + ' ';
+        body = body.replace(/<body.[\s\S]*?>(.[\s\S]*?)<\/body>/gi, '$1');
         body = striptags(body);
         body = body.replace(/\r?\n|\r/g, ''); // remove white space
         body = body.replace(/    /g, ' '); // remove white space
@@ -102,7 +102,7 @@ gulp.task('pageJson', function(cb) {
 
       // text = text.replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1');
 
-      gutil.log(gutil.colors.green(body));
+      // gutil.log(gutil.colors.green(body));
 
 
       output += endOfLine + '{"title": "'+title+'", "text": "'+body+'", "tags": "", ';
