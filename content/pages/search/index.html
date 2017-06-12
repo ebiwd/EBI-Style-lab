@@ -8,24 +8,14 @@ layout: static
 location: /search
 ---
 
-<link rel="stylesheet" href="{{root}}assets/libraries/tipuesearch/css/tipuesearch.css">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
 <script defer="defer" src="{{root}}assets_site/search_data.js"></script>
 <script defer="defer" src="{{root}}assets/libraries/tipuesearch/tipuesearch_set.js"></script>
-<script defer="defer" src="{{root}}assets/libraries/tipuesearch/tipuesearch.min.js"></script>
+<script defer="defer" src="{{root}}assets/libraries/tipuesearch/tipuesearch.js"></script>
 
-<form action="{{root}}search/index.html">
-<div class="tipue_search_left"><img src="{{root}}assets/libraries/tipuesearch/search.png" class="tipue_search_icon"></div>
-<div class="tipue_search_right"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required></div>
-<div style="clear: both;"></div>
-</form>
+<div id="tipue_search_content"><em>Loading, stand by...</em></div>
 
-<div id="tipue_search_content"></div>
-
-<script>
-$(document).ready(function() {
-     $('#tipue_search_input').tipuesearch();
+<script defer="defer">
+document.addEventListener("DOMContentLoaded", function(){
+  $('#tipue_search_input').tipuesearch();
 });
 </script>
