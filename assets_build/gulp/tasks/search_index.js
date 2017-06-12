@@ -67,17 +67,15 @@ function loadConfig() {
 //     return cb(null, file);
 //   });
 // }
-gulp.task('pageJson', function(cb) {
-  var fileName = './dist/search_data.json';
+function pageJson() {
+  var fileName = './dist/assets_site/search_data.js';
   var endOfLine = '\r\n';
   gutil.log(gutil.colors.green('Prepping search JSON'));
-  var output = '{"pages": [';
+  var output = 'var tipuesearch = {"pages": [';
 
   return gulp.src(['./dist/**/*.html'])
     .pipe(through.obj(function (file, enc, cb) {
       gutil.log(gutil.colors.green('Processing: ',file.path));
-
-
 
       // .pipe(replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1'))
       // .pipe(replace(/.[\s\S]*?<section id="intro".*?>(.[\s\S]*?)/i, '$1'))
@@ -99,11 +97,11 @@ gulp.task('pageJson', function(cb) {
         body = body.replace(/    /g, ' '); // remove white space
         body = body.replace(/   /g, ' '); // remove white space
         body = body.replace(/  /g, ' '); // remove white space
+        body = body.replace(/"/g, '\''); // remove double quotes
 
       // text = text.replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1');
 
       // gutil.log(gutil.colors.green(body));
-
 
       output += endOfLine + '{"title": "'+title+'", "text": "'+body+'", "tags": "", ';
 
@@ -128,7 +126,7 @@ gulp.task('pageJson', function(cb) {
 
 
   return output;
-});
+}
 
 // gulp.task('pageJson', function () {
 //     return gulp.src('./dist/**/*.html')
@@ -144,3 +142,4 @@ gulp.task('pageJson', function(cb) {
 // });
 
 // gulp.task('zip', gulp.series(zipBlocks, zipKits));
+gulp.task('build-search', gulp.series(pageJson));

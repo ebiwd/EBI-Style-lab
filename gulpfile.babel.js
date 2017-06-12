@@ -78,7 +78,7 @@ gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'bu
 gulp.task('build',
   gulp.series(clean, 'lint', 'building-block-meta',  buildingBlockBaseStyles, buildingBlockSass, buildingBlockJS, buildingBlockTS, buildingBlockApp, 'dynamic-pages', 'copy', 'zip',
     gulp.parallel(pages, metaPatternsPages, libraries, sass, javascript, images, copyAssets),
-  styleGuide));
+  styleGuide, 'build-search'));
 
 // Create Building Blocks
 gulp.task('bb',
