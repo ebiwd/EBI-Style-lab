@@ -118,7 +118,7 @@ function copyKitImages() {
 }
 
 function copyBBFiles() {
-  return gulp.src(['content/websites/patterns/**/*.{html,js,scss,css,ts}','content/websites/patterns/**/app/*', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
+  return gulp.src(['content/websites/patterns/**/*.{html,js,scss,css,ts,json,component,module}','content/websites/patterns/**/app/*', 'dist/building-blocks/**/*.css', '!dist/building-blocks/**/layout.css'])
     .pipe(gulp.dest(PATHS.dist + '/files/building-blocks/'));
 }
 
@@ -231,7 +231,7 @@ function buildingBlockJS() {
 
 // Moves TS from the Building Blocks into the dist
 function buildingBlockTS() {
-  return gulp.src('content/websites/patterns/**/*.ts')
+  return gulp.src('content/websites/patterns/**/*.{html,js,scss,css,ts,json,component,module}')
     // .pipe(gtb({incremental: true, configFile: 'tsconfig.json'},
     //           {presets: ['es2015']}))
     .pipe(gulp.dest(PATHS.dist + "/websites/patterns/"));
