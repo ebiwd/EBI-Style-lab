@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  templateUrl: './tax/src/app/app.component.html',
+  styleUrls: ['./tax/src/app/app.component.css']
 })
 export class AppComponent {
   title = 'Taxonomy Lookup';

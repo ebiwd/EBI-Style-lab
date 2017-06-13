@@ -4,8 +4,8 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { TypeaheadModule } from 'ngx-bootstrap';
 
-import { AppComponent } from './app.component';
-import { TaxLookupComponent } from './tax-lookup/tax-lookup.component';
+import { AppComponent } from './app.component.ts';
+import { TaxLookupComponent } from './tax-lookup/tax-lookup.component.ts';
 
 @NgModule({
   declarations: [

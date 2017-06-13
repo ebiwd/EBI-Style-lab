@@ -9,8 +9,8 @@ import { environment } from "environments/environment";
 
 @Component({
   selector: 'app-tax-lookup',
-  templateUrl: './tax-lookup.component.html',
-  styleUrls: ['./tax-lookup.component.css']
+  templateUrl: './tax/src/app/tax-lookup/tax-lookup.component.html',
+  styleUrls: ['./tax/src/app/tax-lookup/tax-lookup.component.css']
 })
 export class TaxLookupComponent implements OnInit {
   public asyncSelected: string;
