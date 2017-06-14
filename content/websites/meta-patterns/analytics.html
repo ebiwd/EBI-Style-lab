@@ -2,7 +2,7 @@
 meta-title: Analytics
 title: Analytics
 description: When and how best to use Google Analytics, Piwik, or server side tracking
-cta: Call to action
+cta: Analytics present a great opportunity for insight into service utilisation and user behaviour.
 hero-class: hero-building-blocks
 hero: true
 filter-nav: false
@@ -11,30 +11,30 @@ layout: static
 ---
 
 {{#markdown}}
-Analytics present a great opportunity for insight into service utilisation and user behaviour.
-
 But what tools are best to use to answer which questions? And how to use them with the EBI Visual Framework?
 
 We can't hope to answer all those questions, but we can help you to gain insight into initial strategy and next steps.
-
-<div class="callout medium-7 float-right margin-left-xlarge">
-  <h3>A note on server side analytics</h3>
+{{/markdown}}
+<div class="callout medium-7 float-right margin-left-xlarge" markdown="1">
+  {{#markdown}}
+  ### A note on server side analytics
 
   <p>This document focusses where where the EBI Visual Framework functions: the browser.</p>
 
   <p>Not addressed much are server-side logs that record all transactions on EMBL-EBI services and make for a rich, granular and comprehensive resource on <em>all</em> utilisation. They are ideal for incident tracking, usage accounting, and other grant-level reporting. <a class="readmore" href="http://tsc.ebi.ac.uk/article/web-production/web-administration/where-find-web-traffic-reports">The web production team has more information on making the most of server resource</a></p>
 
-  <p>Client-side tracking (Google Analytics, et al.) is a different species, offering further insights into user behaviour on pages: where did the user scroll to, what did they hover on, which of two links to the same HTML page did the user click?</p>
+  Client-side tracking (Google Analytics, et al.) is a different species, offering further insights into user behaviour on pages: where did the user scroll to, what did they hover on, which of two links to the same HTML page did the user click?
 
-  <p>It is possible to development methods to do these tasks with server-side analytics, but much as client-side analytics are poor to gain server insight, server-side analytics are often detached from client-side behaviours.</p>
+  It is possible to development methods to do these tasks with server-side analytics, but much as client-side analytics are poor to gain server insight, server-side analytics are often detached from client-side behaviours.
+  {{/markdown}}
 </div>
 
-
+{{#markdown}}
 ### What website analytics tool is right for you?
 
 There are two widely chosen options for web analytics: [Google Analytics](https://www.google.com/url?q=http://www.google.com/analytics/&sa=D&ust=1490357443796000&usg=AFQjCNGJrMzPPlqR0fYgffvYWymfeNPSYw) (GA) or [Piwik](https://www.google.com/url?q=http://piwik.org/&sa=D&ust=1490357443797000&usg=AFQjCNG0ErNwERCnDn7y8-hTT5s2xkMh3Q). While there are other, less ubiquitous options such as [Clicky](https://www.google.com/url?q=https://clicky.com/&sa=D&ust=1490357443798000&usg=AFQjCNE99aQMQKDa4_js_IDTqAn-oHPBbw), [Open Web Analytics](https://www.google.com/url?q=http://www.openwebanalytics.com/&sa=D&ust=1490357443798000&usg=AFQjCNFbJQngsX49Em74JX2Tc_DwUDzQpg), or [eAnalytics](https://www.google.com/url?q=http://www.eanalytics.de/&sa=D&ust=1490357443799000&usg=AFQjCNGis-bMNmSJ2ChTz5ylQgb-YptBEQ), this article will focus solely on GA and Piwik.
 
-To investigate the difference between these two options, Web Development ran a side by side test of GA and Piwik on intranet.ebi.ac.uk. The numbers presented in here are from a one week period, 18/11/15-26/11/15\.
+To investigate the difference between these two options, Web Development ran a side by side test of GA and Piwik on intranet.ebi.ac.uk. The numbers presented in here are from a one week period, 2015.11.18 to 26.
 
 <table><tbody>
 <tr>
