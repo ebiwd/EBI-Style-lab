@@ -4,6 +4,7 @@ tags:
   - layout
   - images
   - built-in
+  - depreciated
 category: media
 description: You can enhance the "Images with captions" pattern by adding class .with-overlay for a darkened effect with a text overlay.
 versions:
