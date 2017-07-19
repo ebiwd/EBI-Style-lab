@@ -5,7 +5,7 @@
         {{#each global.filter-nav}}
         <li>
           <a href="{{@root.root}}{{page}}.html" class="filter-nav-button {{classes}} {{#ifequal @root.datakey page}}active{{/ifequal}}">
-            <img src="/{{root}}{{img}}" class="inject-me bb-filter-icons" height="" title="{{title}}" width="" alt="{{alt}}">
+            <img src="../../{{@root.root}}{{img}}" class="inject-me bb-filter-icons" height="" title="{{title}}" width="" alt="{{alt}}">
             {{title}}
           </a>
         </li>
