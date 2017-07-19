@@ -1,9 +1,0 @@
-select {
-    width: auto !important;
-}
-
-.inliner {
-  font-size: 20px;
-  float: left;
-  display: inline;
-}
