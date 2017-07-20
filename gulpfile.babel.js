@@ -170,14 +170,14 @@ function pages() {
 function metaPatternsPages() {
   return gulp.src('content/websites/meta-patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
-      root: 'content/',
+      root: 'content/', // point to relative path to homepage
       layouts: 'assets_site/layouts/',
       partials: ['assets_site/partials/','content/sections'],
       data: ['assets_site/data/', PATHS.build + '/data'],
       // data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
     }))
-    .pipe(gulp.dest(PATHS.dist+''));
+    .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'));
 }
 
 gulp.task('meta-patterns', metaPatternsPages)
