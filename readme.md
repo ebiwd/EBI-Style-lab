@@ -1,10 +1,3 @@
-### todo
-
-1. Import rendered fonts
-2.
-
----
-
 # EMBL-EBI Style Lab
 This is a collaborative effort. The EMBL-EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
 
@@ -28,7 +21,7 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
 
 ---
 
-# Are you a web developer?
+## Are you a web developer?
 
 ### How do I develop on my local machine
 
@@ -49,5 +42,13 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
 
 ---
 
-# Credit
+## Versioning
+
+Relases are versioned according to the EBI Visual Framework being used. That is: while we uses the EBI Visual Framework v1.2, all EBI Style Lab releases will be v1.2.X
+
+
+
+---
+
+## Credit
 The base CMS configuration and code examples are forked from ZURB Foundation Building Blocks.
