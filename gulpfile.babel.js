@@ -72,7 +72,7 @@ function getNewPanini(options) {
 gulp.task('copy', gulp.parallel(copyAssets, copyData, copyBBImages, copyBBFiles, copyKitImages));
 
 // Build the site, run the server, and watch for file changes
-gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatterns, 'building-block-pages', 'building-block-indices'));
+gulp.task('dynamic-pages', gulp.series(kitIndex, 'kits-pages', metaPatternsPages, 'building-block-pages', 'building-block-indices'));
 
 // Build the "dist" folder by running all of the below tasks
 gulp.task('build',
@@ -152,33 +152,35 @@ function pages() {
 }
 
 // Copy meta-patterns templates into finished HTML files
-function metaPatterns() {
-  return gulp.src('content/websites/meta-patterns/*.html')
-  .pipe(getNewPanini({
-    root: 'content/pages/meta-patterns/',
-    layouts: 'assets_site/layouts/',
-    partials: ['assets_site/partials/','content/sections'],
-    data: ['assets_site/data/', PATHS.build + '/data'],
-    helpers: 'assets_build/panini_helpers/'
-  }))
-  .pipe($.if(PRODUCTION, $.revTimestamp()))
-  .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'));
-}
-
-gulp.task('meta-patterns', metaPatterns)
+// function metaPatterns() {
+//   return gulp.src('content/websites/meta-patterns/*.html')
+//   .pipe(getNewPanini({
+//     root: 'content/pages/meta-patterns/',
+//     layouts: 'assets_site/layouts/',
+//     partials: ['assets_site/partials/','content/sections'],
+//     data: ['assets_site/data/', PATHS.build + '/data'],
+//     helpers: 'assets_build/panini_helpers/'
+//   }))
+//   .pipe($.if(PRODUCTION, $.revTimestamp()))
+//   .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'));
+// }
+//
 
 // Copy meta-patterns templates into finished HTML files
 function metaPatternsPages() {
   return gulp.src('content/websites/meta-patterns/*.{html,hbs,handlebars}')
     .pipe(getNewPanini({
-      root: '/',
+      root: 'content/',
       layouts: 'assets_site/layouts/',
       partials: ['assets_site/partials/','content/sections'],
-      data: 'assets_site/data/',
+      data: ['assets_site/data/', PATHS.build + '/data'],
+      // data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
     }))
-    .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'));
+    .pipe(gulp.dest(PATHS.dist+''));
 }
+
+gulp.task('meta-patterns', metaPatternsPages)
 
 function buildingBlockBaseStyles() {
   return gulp.src(['content/websites/patterns/app.scss', 'content/websites/patterns/app-float.scss'])
@@ -329,7 +331,7 @@ function reload(done) {
 function watch() {
   gulp.watch(PATHS.assets, gulp.series('copy', reload));
   gulp.watch(['content/pages/*.html', 'content/pages/**/*.html']).on('all', gulp.series('kit-index', pages, kitIndex, reload));
-  gulp.watch('content/websites/meta-patterns/*.html').on('all', gulp.series('meta-patterns', metaPatternsPages, metaPatterns, reload));
+  gulp.watch('content/websites/meta-patterns/*.html').on('all', gulp.series('meta-patterns', metaPatternsPages, reload));
   gulp.watch(['content/sections/*.html', 'assets_site/{layouts,partials}/**/*.html']).on('all', gulp.series(pages, metaPatternsPages, kitIndex, 'dynamic-pages',  reload));
   gulp.watch('content/websites/patterns/**/*.html').on('all', gulp.series( 'building-block-pages', 'building-block-indices', reload));
   gulp.watch('content/websites/patterns/**/*.scss').on('all', gulp.series(buildingBlockSass,  'building-block-pages',reload));
