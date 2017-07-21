@@ -1,8 +1,9 @@
 name: 'Taxonomy lookup'
 tags:
-  - angular
-category: status
-description: testing
+  - Angular
+  - search
+category: forms
+description: This pattern is an example integration of an Angular pattern.
 versions:
   - 1.2.0
 author:
