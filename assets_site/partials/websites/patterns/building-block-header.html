@@ -9,9 +9,9 @@
       </div>
       <div class="padding-bottom-medium">
         {{#tag-links block.tags}}
-        <a href="{{../root}}?q={{this.name}}" class="tag margin-left-small">{{this.name}}</a>
+        <a href="{{../root}}websites/patterns?q={{this.name}}" class="tag margin-left-small">{{this.name}}</a>
         {{/tag-links}}
-        <small>Requires EBI Visual Framework</small> 
+        <small>Requires EBI Visual Framework</small>
         {{#each block.major-versions}}
         <span class="label">{{this.minors}}</span>
         {{/each}}
