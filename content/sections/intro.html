@@ -238,14 +238,30 @@ document.addEventListener('DOMContentLoaded', function(){
 
 
 <!-- Load our test visulisation -->
-<script type="text/javascript" src="http://localhost:99/3rd/three.min.js"></script>
-<script type="text/javascript" src="http://localhost:99/grayscott/grayscott.js"></script>
-<!-- <script type="text/javascript" src="https://khawkins98.github.io/jsexp/3rd/three.min.js"></script> -->
-<!-- <script type="text/javascript" src="https://khawkins98.github.io/jsexp/grayscott/grayscott.js"></script> -->
+<!-- <script type="text/javascript" src="http://localhost:99/3rd/three.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://localhost:99/grayscott/grayscott.js"></script> -->
+<script type="text/javascript" src="https://khawkins98.github.io/jsexp/3rd/three.min.js"></script>
+<script type="text/javascript" src="https://khawkins98.github.io/jsexp/grayscott/grayscott.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function(){
-  initDiffusion('#masthead',[0,124,131,.19],[0,124,131,.2],[255,255,255,.9],1);
-  initDiffusion('.visulisation',[255,255,255,.19],[255,255,255,.2],[0,124,131,.9],.9);
+  var settings = {
+    target: '#masthead',
+    color1: [0,124,131,.19],
+    color2: [0,124,131,.2],
+    color3: [255,255,255,.9],
+    opacity: 1.0,
+    drawingType: 6
+  }
+  DiffusionVis.init(settings);
+  var settings2 = {
+    target: '.visulisation',
+    color1: [255,255,255,.19],
+    color2: [255,255,255,.2],
+    color3: [0,124,131,.9],
+    opacity: 0.9,
+    drawingType: 4
+  }
+  DiffusionVis.init(settings2);
 }, false);
 </script>
 
