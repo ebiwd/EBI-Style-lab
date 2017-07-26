@@ -5,7 +5,7 @@ The lab is partly about reinforcing our shared identity, but it's mostly about l
 
 <div class="row">
 
-<div class="columns medium-9 visulisation">
+<div class="columns medium-9">
 <div class="row">
 
 <!-- <span class="label padding-left-xlarge margin-left-large">Contents of the EMBL-EBI Style Lab</span> -->
@@ -243,28 +243,41 @@ document.addEventListener('DOMContentLoaded', function(){
 <script type="text/javascript" src="https://khawkins98.github.io/reaction-diffusion/3rd/three.min.js"></script>
 <script type="text/javascript" src="https://khawkins98.github.io/reaction-diffusion/grayscott.js"></script>
 <script>
+// select a random vis
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+var visInt = getRandomInt(0,9);
+console.log('showing vis type:',visInt);
+
+
 document.addEventListener('DOMContentLoaded', function(){
-  var settings = {
+  var vis1 = new DiffusionVis({
     target: '#masthead',
     color1: [0,124,131,.19],
     color2: [0,124,131,.2],
     color3: [255,255,255,.9],
     opacity: 1.0,
-    drawingType: 6
-  }
-  DiffusionVis.init(settings);
-  var settings2 = {
-    target: '.visulisation',
+    timelimit: 100000,
+    drawingType: visInt,
+    position: 'middle',
+    dynamicResize: true
+  });
+  var vis2 = new DiffusionVis({
+    target: '.diffusion-visulisation',
     color1: [255,255,255,.19],
     color2: [255,255,255,.2],
     color3: [0,124,131,.9],
+    timelimit: 20000,
     opacity: 0.9,
-    drawingType: 6
-  }
-  DiffusionVis.init(settings2);
+    drawingType: visInt,
+    position: 'sides',
+    dynamicResize: false
+  });
 }, false);
 </script>
-
-
 
 {{{{/raw}}}}
