@@ -22,3 +22,74 @@
 <!-- Google Analytics details... -->
 <!-- Change UA-XXXXX-X to be your site's ID -->
 <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+
+<!-- Load our test visulisation -->
+<!-- <script type="text/javascript" src="http://localhost:99/3rd/three.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://localhost:99/grayscott.js"></script> -->
+<script type="text/javascript" src="https://khawkins98.github.io/reaction-diffusion/3rd/three.min.js"></script>
+<script type="text/javascript" src="https://khawkins98.github.io/reaction-diffusion/grayscott.js"></script>
+<script>
+// select a random vis
+function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max + 1);
+  return Math.floor(Math.random() * (max - min)) + min; //The maximum is exclusive and the minimum is inclusive
+}
+
+var visInt = getRandomInt(0,9);
+console.log('showing vis type:',visInt);
+// visInt = 0;
+
+
+document.addEventListener('DOMContentLoaded', function(){
+  // var vis1 = new DiffusionVis({
+  //   target: '#masthead',
+  //   color1: [233,180,0,.19],
+  //   color2: [233,180,0,.2],
+  //   color3: [255,255,255,.9],
+  //   opacity: 1.0,
+  //   timelimit: 100000,
+  //   drawingType: visInt,
+  //   position: 'middle',
+  //   dynamicResize: true
+  // });
+  // var vis1 = new DiffusionVis({
+  //   target: '#masthead',
+  //   color1: [0,0,0,.17],
+  //   color2: [0,0,0,.2],
+  //   color3: [233,180,0,.5],
+  //   opacity: 1.0,
+  //   timelimit: 100000,
+  //   drawingType: visInt,
+  //   position: 'middle',
+  //   dynamicResize: true
+  // });
+  // show in masthead
+  $('.masthead').css('background','none'); // turn off masthead background
+  var vis1 = new DiffusionVis({
+    target: '#masthead',
+    color1: [0,0,0,.19],
+    color2: [0,0,0,.2],
+    color3: [0,124,131,.4],
+    opacity: 1.0,
+    timelimit: 100000,
+    drawingType: visInt,
+    position: 'middle',
+    dynamicResize: true
+  });
+
+  // show when a page has a div.diffusion-visulisation
+  var vis2 = new DiffusionVis({
+    target: '.diffusion-visulisation',
+    color1: [255,255,255,.15],
+    color2: [255,255,255,.16],
+    color3: [0,124,131,.9],
+    timelimit: 20000,
+    opacity: 0.9,
+    drawingType: visInt,
+    position: 'sides',
+    dynamicResize: false
+  });
+}, false);
+</script>
