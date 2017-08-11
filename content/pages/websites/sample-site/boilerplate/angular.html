@@ -1,11 +1,13 @@
 ---
 meta-title: Tocome
 title: Tocome
-layout: blank
+layout: angular
 ---
 <!doctype html>
 <html lang="en">
 <head>
+
+  <base href="/">
   <meta charset="utf-8" />
   <title>The European Bioinformatics Institute &lt; EMBL-EBI</title>
   <meta name="description" content="EMBL-EBI" /><!-- Describe what this page is about -->
@@ -23,7 +25,7 @@ layout: blank
   <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
 
   <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
-  <link rel="dns-prefetch" href="//embl.de" />
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
 
   <!-- If you have custom icon, replace these as appropriate.
        You can generate them at realfavicongenerator.net -->
@@ -40,7 +42,10 @@ layout: blank
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
+  <!-- <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" /> -->
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation-lite.min.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation-extras.min.css" type="text/css" media="all" />
+
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" media="all" />
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
 
@@ -54,6 +59,7 @@ layout: blank
   <meta name="ebi:masthead-color" content="#000" />
   <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
   -->
+
   <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
   <link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" type="text/css" media="all" />
@@ -81,7 +87,7 @@ layout: blank
         <li class="training"><a href="//www.ebi.ac.uk/training">Training</a></li>
         <li class="about"><a href="//www.ebi.ac.uk/about">About us</a></li>
         <li class="search">
-          <a href="#" data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>
+          <a data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>
           <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
           <!-- The dropdown menu will be programatically added by script.js -->
           </div>
@@ -94,148 +100,51 @@ layout: blank
     </nav>
   </header>
 
+  <!-- Suggested layout containers -->
   <div id="content">
-    <div data-sticky-container>
-      <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
-        <div class="masthead-inner row">
+    <app-root>Loading...</app-root>
 
-          <!-- local-title -->
-          <div class="columns medium-7" id="local-title">
-            <h1><a href="../../" title="Back to [service-name] homepage">EBI Framework</a></h1>
-
-          </div>
-          <!-- /local-title -->
-
-          <div class="column medium-5">
-            <form id="ebi_search" action="/ebisearch/search.ebi">
-              <fieldset>
-                <div class="input-group margin-bottom-none margin-top-large">
-                  <input id="query" class="input-group-field" title="EB-eye Search" tabindex="1" type="text" name="query" value="" size="35" maxlength="2048" placeholder="Search service" />
-                  <div class="input-group-button">
-                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1" />
-                    <input id="allebi" type="hidden" name="db" value="allebi" checked="checked" />
-                    <input type="hidden" name="requestFrom" value="ebi_index" />
-                  </div>
-                </div>
-              </fieldset>
-              <p id="example" class="small">
-                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
-                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
-              </p>
-            </form>
-          </div>
-          <!-- local-nav -->
-          <nav >
-            <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
-              <li><a href="../../">Overview</a></li>
-              <li><a data-open="modal-download">Download</a></li>
-              <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
-            </ul>
-            <ul class="dropdown menu float-right" data-description="tasks">
-              <li><a href="#"><span class="icon icon-functional" data-icon="l"></span> Login</a></li>
-            </ul>
-          </nav>
-          <!-- /local-nav -->
-        </div>
-      </header>
-    </div>
-
-      <!-- Suggested layout containers -->
-      <section id="main-content-area" class="row" role="main">
-
-        <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
-        <nav aria-label="You are here:" role="navigation">
-          <ul class="breadcrumbs">
-            <li><a href="../../">EBI Framework</a></li>
-            <li><a href="../">Sample pages</a></li>
-            <li>
-              <span class="show-for-sr">Current: </span> Right sidebar boilerplate
-            </li>
-          </ul>
-        </nav>
-
-        <div id="main-content-area" class="row">
-          <div class="small-12 medium-9 columns">
-
-            <section>
-              <h2>[page-title]</h2>
-              <p>Your content</p>
-            </section>
-
-            <section>
-              <h3>Level 3 heading</h3>
-              <p>More content in a full-width container.</p>
-
-              <h4>Level 4 heading</h4>
-              <p>More content in a full-width container.</p>
-            </section>
-
-          </div> <!-- /medium-9 -->
-
-          <div class="small-12 medium-3 columns sidebar" data-sticky-container>
-
-            <div class="sticky" data-sticky data-anchor="main-content-area"  data-options="marginTop:4;">
-              <h4>Right sidebar</h4>
-              <p>This is a sample item with a vertical menu.</p>
-              <div>
-                <ul class="menu vertical">
-                  <li><a href="//github.com/ebiwd/EBI-Framework">Sample link</a></li>
-                  <li><a href="//github.com/ebiwd/EBI-Framework/issues">Sample link</a></li>
-                  <li><a class="active" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/sample-site/">Active link</a></li>
-                  <li><a href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/fonts/index.html">Sample link</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div> <!-- /medium-3 -->
-
-        </div>
-
-      </section>
-      <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
-      <!--
-      <footer id="local-footer" class="local-footer" role="local-footer">
-        <div class="row">
-          <span class="reference">How to reference this page: ...</span>
-        </div>
-      </footer>
-      -->
-      <!-- End optional local footer -->
-    </div>
-    <!-- End suggested layout containers / #content -->
-
-    <footer>
-      <div id="global-footer" class="global-footer">
-        <nav id="global-nav-expanded" class="global-nav-expanded row">
-          <!-- Footer will be automatically inserted by footer.js -->
-        </nav>
-        <section id="ebi-footer-meta" class="ebi-footer-meta row">
-          <!-- Footer meta will be automatically inserted by footer.js -->
-        </section>
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <!--
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <span class="reference">How to reference this page: ...</span>
       </div>
     </footer>
-  <!-- JavaScript -->
+    -->
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
 
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+
+  <!-- JavaScript -->
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <!--
   <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
   -->
 
-
   <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js"></script>
 
   <!-- The Foundation theme JavaScript -->
   <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/js/foundation.js"></script>
   <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foundationExtendEBI.js"></script>
-  <script type="text/JavaScript">$(document).foundation();</script>
-  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
-
+  <!-- As per instructions here (http://foundation.zurb.com/forum/posts/39392#comment_39096), in main component, invoke:
+        $(document).foundation();
+        $(document).foundationExtendEBI(); -->
 
   <!-- Google Analytics details... -->
   <!-- Change UA-XXXXX-X to be your site's ID -->
-  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
-
-
+  <!--script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script-->
 </body>
 </html>
