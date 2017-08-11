@@ -1,23 +1,28 @@
+[![Build Status](https://travis-ci.org/ebiwd/EBI-Style-lab.svg?branch=master)](https://travis-ci.org/ebiwd/EBI-Style-lab)
+[![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
+
 # EMBL-EBI Style Lab
 This is a collaborative effort. The EMBL-EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
+
+There's not much to see on this page, [check out the site at www.ebi.ac.uk/style-lab/](https://www.ebi.ac.uk/style-lab/)
 
 ## What is this, exactly?
 The EMBL-EBI Style Lab is a collaborative space that also shares the latest guidance on how and what should be used to build visually and textually compliant EMBL-EBI websites, documents, and texts. It's partly about reinforcing our shared identity, but it's mostly about leveraging the best tools to build things faster and with fewer bugs, errors, and user experience issues.
 
 ### Contents of the EMBL-EBI Style Lab
-- General styling
-  - Our basic style guide (to be added)
-  - Microsoft Word and PowerPoint templates (to be added)
-  - Poster templates (to be added)
-  - EMBL-EBI Logos  (to be added)
-  - Fonts & icons (to be added)
-  - Social media guidelines (to be added)
-- Website specific
-  - How to get started with the EBI Visual Framework (add link to guide)
-  - How to use the EBI Icon fonts on a website (add link)
-  - Boilerplate templates to get started (add link)
-  - Reusable patterns (add link)
-    - How to add a patter (See the guide at how-to.html)
+- [General styling](http://www.ebi.ac.uk/style-lab/)
+  - [Our basic style guide](https://www.ebi.ac.uk/style-lab/general/)
+  - [Microsoft Word and PowerPoint templates](https://www.ebi.ac.uk/style-lab/general/templates/)
+  - [Poster templates](https://www.ebi.ac.uk/style-lab/general/templates/)
+  - [EMBL-EBI Logos](https://www.ebi.ac.uk/style-lab/general/templates/)
+  - [Fonts & icons](https://www.ebi.ac.uk/style-lab/general/fonts/)
+  - [Social media guidelines](https://www.ebi.ac.uk/style-lab/general/social/)
+- [Website specific](https://www.ebi.ac.uk/style-lab/websites/)
+  - [How to get started with the EBI Visual Framework](https://www.ebi.ac.uk/style-lab/websites/#implementing)
+  - [How to use the EBI Icon fonts on a website](https://www.ebi.ac.uk/style-lab/general/fonts/)
+  - [Boilerplate templates to get started](https://www.ebi.ac.uk/style-lab/websites/sample-site/)
+  - [Reusable web interface patterns](https://www.ebi.ac.uk/style-lab/websites/patterns/)
+    - [How to add a pattern](https://www.ebi.ac.uk/style-lab/websites/patterns/howto/)
 
 ---
 
