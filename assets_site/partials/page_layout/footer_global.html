@@ -79,17 +79,19 @@ document.addEventListener('DOMContentLoaded', function(){
     dynamicResize: true
   });
 
-  // show when a page has a div.diffusion-visulisation
-  var vis2 = new DiffusionVis({
-    target: '.diffusion-visulisation',
-    color1: [255,255,255,.15],
-    color2: [255,255,255,.16],
-    color3: [0,124,131,.9],
-    timelimit: 20000,
-    opacity: 0.9,
-    drawingType: visInt,
-    position: 'sides',
-    dynamicResize: false
-  });
+  // show footer vis after a couple of seconds (wait for strap and user to get to bottom)
+  setTimeout(function() {
+    var vis2 = new DiffusionVis({
+      target: '.global-footer',
+      color1: [255,255,255,.15],
+      color2: [255,255,255,.16],
+      color3: [0,124,131,.9],
+      timelimit: 20000,
+      opacity: 0.9,
+      drawingType: visInt,
+      position: 'sides',
+      dynamicResize: false
+    });
+  }, 3000);
 }, false);
 </script>
