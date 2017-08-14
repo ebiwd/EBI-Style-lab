@@ -14,7 +14,7 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
   - [Our basic style guide](https://www.ebi.ac.uk/style-lab/general/)
   - [Microsoft Word and PowerPoint templates](https://www.ebi.ac.uk/style-lab/general/templates/)
   - [Poster templates](https://www.ebi.ac.uk/style-lab/general/templates/)
-  - [EMBL-EBI Logos](https://www.ebi.ac.uk/style-lab/general/templates/)
+  - [Logos](https://www.ebi.ac.uk/style-lab/general/templates/)
   - [Fonts & icons](https://www.ebi.ac.uk/style-lab/general/fonts/)
   - [Social media guidelines](https://www.ebi.ac.uk/style-lab/general/social/)
 - [Website specific](https://www.ebi.ac.uk/style-lab/websites/)
@@ -50,8 +50,6 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
 ## Versioning
 
 Relases are versioned according to the EBI Visual Framework being used. That is: while we uses the EBI Visual Framework v1.2, all EBI Style Lab releases will be v1.2.X
-
-
 
 ---
 
