@@ -7,4 +7,4 @@ setTimeout(function() {
 
     e.preventDefault();
   });
-}, 900); // give a second tol load if GA was slow to load
+}, 900); // wait a moment for GA to load
