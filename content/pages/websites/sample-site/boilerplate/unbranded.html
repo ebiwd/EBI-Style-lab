@@ -82,7 +82,7 @@ layout: blank
             </div>
           </li> -->
           <li class="float-right show-for-medium">
-            <button class="button" type="button" data-toggle="mastehad-dropdown">Selector</button>
+            <button class="button secondary-background" type="button" data-toggle="mastehad-dropdown">Selector</button>
             <div id="mastehad-dropdown" class="dropdown-pane" data-dropdown data-auto-focus="true">
               <p>Dropdown</p>
             </div>
@@ -149,13 +149,8 @@ layout: blank
 
     <section id="main-content-area" class="row" role="main">
       <h2>Unbranded implementation of the EBI Visual Framework</h2>
-      <p>This is a development implementation of the EBI Visual Framework v1.3; for more information:</p>
-      <ul>
-        <li><a href="https://github.com/ebiwd/EBI-Framework/tree/v1.3" class="readmore">Check out the GitHub branch</a></li>
-        <li><a href="https://github.com/ebiwd/EBI-Framework/issues/61" class="readmore">Read and discuss the roadmap</a></li>
-        <li><a href="https://github.com/ebiwd/EBI-Framework/issues/61" class="readmore">Join one of the bi-weekly drop-in clinics</a></li>
-        <li><a href="http://www.ebi.ac.uk/style-lab/websites/sample-site/" class="readmore">Check out the boilerplate templates</a></li>
-      </ul>
+      <p>This is a development implementation of the EBI Visual Framework v1.3.</p>
+      <p>This provides a way to utilise the strucutural functionaltiy and pattern sharing of the EBI Visual Framework, without utilising the whole look and feel. We've not done too much theming in this example, but it's easy with a bit of CSS.</p>
     </section>
 
     <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
@@ -181,13 +176,17 @@ layout: blank
 
   <!-- JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-  <script defer="defer" src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- You don't need to utilise script.js, but we've used it here to set the background of the header -->
+  <script src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+  <script type="text/JavaScript">ebiFrameworkAssignImageByMetaTags();</script>
 
   <!-- The Foundation theme JavaScript -->
   <script src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
   <script src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
   <script type="text/JavaScript">$(document).foundation();</script>
   <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
 
   <!-- Google Analytics details... -->
   <!-- Change UA-XXXXX-X to be your site's ID -->
