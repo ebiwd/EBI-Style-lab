@@ -27,5 +27,9 @@ To enabele we add the responsive `.columns` classes and `.compact-for-data` is a
 Some guidance:
 - Only use this pattern on data orient pages. So don't use it on the landing page or about page.
 - We don't recommend using the `data-sticky-container` on the masthead, after all the focus is meant to be on the data.
-- Tou may want to add `.colapse` to `.masthead-inner.row` to remove margins on the child columns.
+- You may want to add `.colapse` to `.masthead-inner.row` to remove margins on the child columns.
+- Don't use the sticky property for the global header
+
+In v1.2 we've [already shaved 10px off the black bar](https://github.com/ebiwd/EBI-Framework/issues/21), but the need remains for a yet-thinner `div#masthead` on inside pages that are search-result or data focused. In all it's 56% thinner than the current look.
+
 {{/markdown}}
