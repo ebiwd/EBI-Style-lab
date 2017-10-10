@@ -134,7 +134,10 @@ $("#main-content-area h2, #main-content-area h3").each(function() {
   if (el.attr("id") == undefined) {
     el.attr("id", title.split(" ").join("-").toLowerCase());
   }
-  output += "<li><a href='#" + el.attr("id") + "'>" + title + "</a></li>";
+  // don't insert the page title and TOC header in TOC
+  if (!(el.parent().hasClass('intro')) && !(el.parent().hasClass('table-of-contents')) && !(el.hasClass('ignore-for-table-of-contents'))) {
+    output += "<li><a href='#" + el.attr("id") + "'>" + title + "</a></li>";
+  }
 });
 
 output +="</ul></nav>";

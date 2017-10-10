@@ -2,7 +2,7 @@
 meta-title: Search guidelines
 title: Search guidelines
 description: These guideline and recommendations help users to use all the search services at EMBl-EBI with consistency and fewer interface-driven complexities. This speeds development and increase the overall user experience (UX).
-cta: Call to action
+cta: Several studies and books have been written on the subject of search and this list of guideline and recommendations simply represents a summary of what any search developer/designer at the EBI should know or at least be aware of.
 hero-class: hero-building-blocks
 hero: true
 filter-nav: false
@@ -12,24 +12,34 @@ pagetype: meta-pattern
 location: search-guidelines.html
 ---
 
+<div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+
 {{#markdown}}
 ### <a name="globalvslocal" id="globalvslocal"></a> Global search vs Local search
+{{/markdown}}
 
 <div class="row">
 <div class="columns medium-6">
 <div class="callout" markdown="1">
+{{#markdown}}
 
-##### Global search: provided by EBI Search and covers all EBI indexed resources
+##### Global search
+
+Provided by EBI Search and covers all EBI indexed resources
 
 <img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/about_us_header.png" alt="Global search box" title="Global search box">
 By default, the EBI search box appears in the `#global-masthead` and all searches are directed to EBI Search.
+{{/markdown}}
 </div>
 </div>
 
 <div class="columns medium-6">
 <div class="callout" markdown="1">
+{{#markdown}}
 
-##### Local search: a search technology developed or picked by a service
+##### Local search
+
+A search technology developed or picked by a service
 
 <img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/interpro_header.png" alt="Local search" title="Local search">
 For local searach, a search box should be included in the `#local-masthead` and the search box in the global header disappears. All searches in the search box search the *local* resource.
@@ -37,10 +47,12 @@ For local searach, a search box should be included in the `#local-masthead` and 
 Including a local search box will disable the global EBI Search in the `#global-masthead`.
 
 <a href="/EBI-Pattern-library/patterns/search/" class="readmore">Further guidance on local search boxes</a>
+{{/markdown}}
 </div>
 </div>
 </div>
 
+{{#markdown}}
 
 #### Expanded guidance on a local service search
 - **Filters:** Any filters or facets should appear on the left hand menu. (<a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/ebeye_search_result.png" target="\_blank">sample</a>)
@@ -53,16 +65,19 @@ Including a local search box will disable the global EBI Search in the `#global-
 
 Search is usually the primary or secondary means of navigating a website. This is particularly true for the EBI with the huge amount of biological data available. Search is the only way users can access some of this information and they need to feel like they are always heading in the right direction.
 
-Several studies and books have been written on the subject of search and this list of guideline and recommendations simply represents a summary of what any search developer/designer at the EBI should know or at least be aware of.
+{{/markdown}}
 
 <div class="callout columns medium-6 float-right" markdown="1">
+{{#markdown}}
 For more on the search best practices and search patterns
 
 - [Search Patterns](http://searchpatterns.org) Peter Morville, Jeffery Callender <span class="label">Book</span>
 - [Search User Interfaces](http://searchuserinterfaces.com) Marti A. Hearst <span class="label">Book</span>
 - [Information Interaction](http://isquared.wordpress.com) <span class="label">Blog</span>
 - [The TwigKit Blog](http://twigkit.com/blog/) <span class="label">Blog</span>
+{{/markdown}}
 </div>
+{{#markdown}}
 
 #### Four principles to guide the user search experience
 
@@ -127,7 +142,7 @@ For more on the search best practices and search patterns
 
    Sometimes users also misuse the search interface and try to search with inappropriate query input (e.g. binary data, full dna sequences). In these situations, a good practice is to give them some hints about why the search can't work and possibly reference additional resources which could be more appropriate for the requested type of search.
 
-### <a name="Presentingresult" id="Presentingresult"></a> Presenting result
+### Presenting result
 
 For guidance on how to present results to the users, see the <a class="readmore" href="//ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/search-results.html">search result boilerplate page</a>
 {{/markdown}}
