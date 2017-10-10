@@ -49,7 +49,7 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
 
 ## Versioning
 
-Relases are versioned according to the EBI Visual Framework being used. That is: while we uses the EBI Visual Framework v1.2, all EBI Style Lab releases will be v1.2.X
+Releases are versioned according to the EBI Visual Framework being used. That is: while we uses the EBI Visual Framework v1.2, all EBI Style Lab releases will be v1.2.X
 
 ---
 
