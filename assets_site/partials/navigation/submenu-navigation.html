@@ -1,4 +1,13 @@
 <ul id="" class="menu horizontal no-underline" data-description="navigational">
+{{#ifequal pagetype 'meta-pattern'}}
+  <li class="{{#ifpage 'accessibility'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/accessibility.html">Accessibility</a></li>
+  <li class="{{#ifpage 'analytics'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/analytics.html">Analytics</a></li>
+  <li class="{{#ifpage 'browser-compatibility'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/browser-compatibility.html">Browser and screen compatibility</a></li>
+  <li class="{{#ifpage 'page-structure'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/page-structure.html">Page structure</a></li>
+  <li class="{{#ifpage 'sample-site'}}active{{/ifpage}}"><a href="{{root}}websites/sample-site/">Sample pages</a></li>
+  <li class="{{#ifpage 'search-guidelines'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
+  <li class="{{#ifpage 'usability'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/usability.html">Usability</a></li>
+{{/ifequal}}
 {{#ifequal submenu 'general'}}
 <li><a href="writing">Writing</a></li>
 <li><a href="templates">Templates: Word, PowerPoint and more</a></li>
