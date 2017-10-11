@@ -1,69 +1,46 @@
 {{{edit-button 'websites_about.html' 'section'}}}
 {{#markdown}}
-This is a living guide that implements the broad range of interface functionality in the <a href="https://github.com/ebiwd/EBI-Framework">EMBL-EBI Visual Framework</a>. This site will guide on how you should make your page elements look and function.
 {{/markdown}}
 
 <section id="overview" data-magellan-target="overview" >
 
 {{#markdown}}
-You won't find prescriptive solutions for every scenario, but examples and guidance on a wide range of pull quotes, form boxes, menus, and more to show you how things should be done, including more complex things like analytics[_coming soon_] and [page structure](/EBI-Pattern-library/meta-patterns/page-structure/).
+You won't find prescriptive solutions for every scenario, but examples and guidance on a wide range of pull quotes, form boxes, menus, and more to show you how things should be done, including more complex things like [analytics]({{root}}websites/meta-patterns/analytics.html) and [page structure]({{root}}websites/meta-patterns/page-structure.html).
 {{/markdown}}
 
-<div class="row">
-  <div class="columns callout medium-10 medium-push-1">
-    <h3><i class="icon icon-generic padding-right-medium" data-icon="i"></i>Quick info</h3>
-
-    <p>This is a collection of JS, CSS, icons, coding conventions, and templated components that will help you build robust reliable web content faster than if you were to make it all from scratch.</p>
-
-    <div class="columns medium-up-3 row" data-equalizer data-equalize-on="medium">
-      <div class="column">
-        <a data-equalizer-watch class="industry-background button" href="meta-patterns/page-structure.html">
-          <h6 class="white-color text-left">About the EMBL-EBI page structure</h6>
-        </a>
-      </div>
-      <div class="column">
-        <a data-equalizer-watch class="industry-background button" href="patterns">
-          <h6 class="white-color text-left">View all EBI Visual Framework patterns</h6>
-        </a>
-      </div>
-      <div class="column">
-        <a data-equalizer-watch class="industry-background button" target="_blank" href="http://foundation.zurb.com/sites/docs/global.html">
-          <h6 class="white-color text-left">Consult the Foundation 6 patterns <i class="icon icon-generic" data-icon="x"></i></h6>
-        </a>
-      </div>
-    </div>
-
-  </div>
-</div>
+<div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
 
 {{#markdown}}
 
 ## Implementing
 
-There are two likely scenarios:
-
-<div class="float-right columns callout medium-5"><h5>Using Drupal?</h5> There is <a href="https://github.com/ebiwd/drupal_7_ebi_framework">a Drupal 7 theme you can use</a>.</div>
-
 **Implementing a new project?**
-: If you're starting from scratch, check out the collection of boilerplate code, check out the source, and get going. <a href="sample-site" class="readmore">To the sample pages</a> <a href="meta-patterns/page-structure.html" class="readmore">About the EMBL-EBI page structure</a>
+- Check out the collection of boilerplate code, check out the source, and get going. <a href="sample-site" class="readmore">To the sample pages</a> <a href="meta-patterns/page-structure.html" class="readmore">About the EMBL-EBI page structure</a>
 
 **Updating an existing site?**
-: If you're updating an EBI Compliance theme site, you'll just need to replace a few JS/CSS files, change some layout classes, and make minore tweaks. It could take as little as 30 minutes. <a href="https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js" class="readmore">Run your own sample auto-migration</a>
+- If you're updating an EBI Compliance theme site, you'll just need to replace a few JS/CSS files, change some layout classes, and make minore tweaks. It could take as little as 30 minutes.
+  - <a href="https://github.com/ebiwd/EBI-Framework/blob/gh-pages/sample-site/migrations/testMigration.js" class="readmore">Run a migration from the EBI-Compliance theme to v1.1</a>
+  - <a href="https://github.com/ebiwd/EBI-Framework/issues/85" class="readmore">Updating from v1.1 to v1.2</a>
+
+**Using a CMS?**
+- For Drupal there is <a href="https://github.com/ebiwd/drupal_7_ebi_framework">a Drupal 7 theme you can use</a>.
+- For [WordPress there's also a theme](https://github.com/ebiwd/wordpress-ebi-visual-framework).
+- And if you like static sites and GitHub, [there's a Jekyll boilerplate](https://github.com/ebiwd/EBI-Boilerplate-Jekyll).
 
 ## Requirements and what you get
 
 <blockquote class="float-right lead quote ebi-color">
-  Do as I do, not as I say.
+  <span class="size-150">Do as I do, not as I say.</span>
   <cite class="text-right">This pattern library</cite>
 </blockquote>
 
-The framework uses modern best practices and targets browsers shipped within the past three years (<a href="meta-patterns/browser-compatibility.hmtl" class="">more on browser support</a>); though other browsers will function through the an implementation of [graceful degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement). The framework is also mobile responsive (Responsive Web Design), so you won't have to spend too much time adapting for mobile.
+The framework uses modern best practices and targets browsers shipped within the past three years (<a href="{{root}}websites/meta-patterns/browser-compatibility.html" class="">more on browser support</a>); though other browsers will function through the an implementation of [graceful degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement). The framework is also mobile responsive (Responsive Web Design), so you won't have to spend too much time adapting for mobile.
 
 To help us help you, we've used the Foundation Framework (version 6) as a baseline. Using this we get a robust baseline (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already be (or have) a developer with Foundation experience.
 
 We've taken care to make the implementation very passive, so if you don't want to use these features they won't likely get in your way.
 
-The easiest way to implement the style guide is to <a href="sample-site">follow the EBI boilerplate</a> -- use those HTML files as a template for your own pages. It contains the HTML for the EBI header, footer, place holders for your project name/logo and page content. And be sure to <a href="/EBI-Pattern-library/patterns/page-structure/" class="readmore">read up on the EMBL-EBI page strucutre</a>
+The easiest way to implement the style guide is to <a href="{{root}}websites/sample-site/">follow the EBI boilerplate</a> -- use those HTML files as a template for your own pages. It contains the HTML for the EBI header, footer, place holders for your project name/logo and page content. And be sure to <a href="{{root}}websites/meta-patterns/page-structure.html" class="readmore">read up on the EMBL-EBI page strucutre</a>
 
 ## Framework components
 
@@ -77,7 +54,7 @@ This framework functions similar to many front-end solutions: several files and 
           <a class="button secondary columns small-6 small-push-1" href="css/theme-embl-petrol.css">Custom CSS<br/><small> Colours and patterns specific to your service/site</small></a>
           <a class="button secondary columns small-8" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/">Optional foundation styles<br/>
           <small>Additional styling for modals, buttons, etc.</small></a>
-          <a class="button secondary columns small-4" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.1/fonts.css">EBI Icons<br/>
+          <a class="button secondary columns small-4" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css">EBI Icons<br/>
           <small>Functional and scientific</small></a>
           <a class="button primary columns small-12" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css">
             EBI base CSS styles<br/>
@@ -115,7 +92,7 @@ This framework functions similar to many front-end solutions: several files and 
 
 In short: add header markup, footer markup, CSS and JS. Then add content.
 
-To get started check out the structure of the <a href="sample-site">sample boiler plate page</a>.
+To get started check out the structure of the <a href="{{root}}websites/sample-site/">sample boiler plate page</a>.
 
 ## FAQs
 
