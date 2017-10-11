@@ -155,43 +155,27 @@ layout: blank
         <!-- Your menu structure should make a breadcrumb redundant, but if a breadcrump is needed uncomment the below -->
         <nav aria-label="You are here:" role="navigation">
           <ul class="breadcrumbs columns">
-            <li class="float-right elixir-badge">
-              <a href="#" data-toggle="example-dropdown-2"><img src="http://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/assorted/elixir.svg" alt="Part of the ELIXIR distributed infrastructure for life-science information." style="height: 1.2rem;"> Part of the ELIXIR infrastructure</a>
-            </li>
             <li><a href="../../">EBI Framework</a></li>
             <li><a href="../">Sample pages</a></li>
             <li>
               <span class="show-for-sr">Current: </span> ELIXIR Affiliate placement
             </li>
           </ul>
-          <div class="dropdown-pane callout row medium-collapse" id="example-dropdown-2" data-dropdown data-hover="true" data-hover-pane="true">
-            <div>
-              <a href="#" class="no-underline ">
-                <div class="small">This service is part of the ELIXIR distributed infrastructure for life-science information.</div>
-              </a>
-              <a class="readmore  elixir-color small" href="#">Learn more</a>
-            </div>
-          </div>
         </nav>
 
         <div class="small-12 medium-9 columns">
 
           <section>
-            <div class="callout warning">
-            <h2>Under development</h2>
-            This guidance is currently being developed as an effort in the Web Guidelines Committee, it is not yet final.
-            <cite>2017-01-18</cite>
-            </div>
             <h2>Affiliates</h2>
             <p>Most services require an area to place information and logos from your sponsors/affiliates/collaborators/endorsers. To ensure consistency across EMBL-EBI sites and services we work within the <a href="/EBI-Pattern-library/patterns/page-structure/">page structure guidance</a> and are mindful that display of these logos and information is consistent and understandable while keeping them visible but not obtrusive to the core reason a user visists a site: to use the service itself.</p>
 
             <p>Our sites often show a number of relationships with outside entities:</p>
             <dl>
-              <dt><h4>Parent organisation</h4></dt>
+              <dt><strong>Parent organisation</strong></dt>
               <dd>For EMBL-EBI compliant sites the parent organisation (EMBL-EBI) shows in <code>#masthead-black-bar</code> on the right side.</dd>
-              <dt><h4>Funders &amp; collaborators</h4></dt>
+              <dt><strong>Funders &amp; collaborators</strong></dt>
               <dd>These logos should be placed in the <code>#local-footer</code>, you can see an example in this page's footer.</dd>
-              <dt><h4>Endorsement affiliate</h4></dt>
+              <dt><strong>Endorsement affiliate</strong></dt>
               <dd>
                 <p>This relationshop can be highlighted in one of two places on a website, the top right or the local footer. ELIXIR -- as demonstrated in the top right and banner below -- is an example of an endorsement relationship that applies to some EMBL-EBI services.</p>
                 <p>Which placement (top right or lower banner) you should use will likely depend on the structure of your service. For services that use the breadcrumb, it may be appropriate for this badge to appear on most pages. If you use the lower banner, you may wish to limit its showing to your service homepage and the about pages.</p>
@@ -203,16 +187,16 @@ layout: blank
                     <li>When the user clicks on the graphic, they should learn something about what the affiliated organisation is.</li>
                     <li>They are quite rare and if you do have an endorsing affiliate, it's unlikely to be more than one.
                   </ul>
-
-
               </dd>
             </dl>
-            <p>We also recommend that services have an <code>/about/relationships</code> page. Such as page creates space to explain the nuance of any relationships, while also acting as truth about how the service functions with other parties.</p>
+
+            <h4>Recommendations</h4>
+            <p>Services should have a page at <code>/about/relationships</code> page for a consistent place to explain the nuance of any relationships, while also acting as truth about how the service functions with other parties.</p>
             <p>For questions about how best to integrate your relationships, you can reach out to <a href="//tsc.ebi.ac.uk/web-development">the Web Development team</a> or the <a href="//www.ebi.ac.uk/seqdb/confluence/display/WGC/Web+Guidelines+committee">Web Guidelines Committee</a>.</p>
 
             <h4>ELIXIR Banner</h4>
-            <p>Words on when to use it go here (COMING SOON). For identified EMBL-EBI services that are part of the ELIXIR network, this will be added by default through the <code>footer.js</code> include.</p>
-            <p>If you need to tweak the apperance, either background colours or to insert your site or service name, you can do so with local CSS:</p>
+            <p>For identified EMBL-EBI services that are part of the ELIXIR network, you should add the below banner with text appropriate to your relationship with ELIXIR (Note: As of October 2017 we are still awaiting final guidance on the text to be used).</p>
+            <p>If you need a different background colour or to insert your site or service name, you can do so with local CSS:</p>
 
               <pre class="code">
 /* to change the background colour */
@@ -230,33 +214,7 @@ layout: blank
         </div> <!-- /medium-9 -->
 
         <div class="small-12 medium-3 columns sidebar" data-sticky-container>
-
           <div class="sticky" data-sticky data-anchor="main-content-area"  data-options="marginTop:4;">
-
-         <!--    <button class="tiny button white-background secondary-color" type="button" data-toggle="example-dropdown-1"> <img src="//cfgbc.mf.uni-lj.si/images/ELIXIR_logo_white_background.png" alt="Part of the ELIXIR distributed infrastructure for life-science information." style="height: 1.2rem;"> Part of the ELIXIR infrastructure</button>
-            <div class="dropdown-pane callout elixir-background row medium-collapse" id="example-dropdown-1" data-dropdown data-hover="true" data-hover-pane="true">
-              <div>
-                <a href="#" class="no-underline white-color">
-                  <div class="small">This service is part of the ELIXIR distributed infrastructure for life-science information</div>
-                </a>
-                <a class="readmore  white-color small" href="#">Learn more</a>
-              </div>
-            </div>
--->
-<!--
-            <div class="callout row medium-collapse">
-              <div class="columns medium-4">
-                <img src="//cfgbc.mf.uni-lj.si/images/ELIXIR_logo_white_background.png" alt="Part of the ELIXIR distributed infrastructure for life-science information.">
-              </div>
-              <div class="columns medium-8 padding-top-large">
-                <a href="#" class="no-underline">
-                  <h6 class="elixir-color">Part of the ELIXIR infrastructure</h6>
-                  <div class="small">This service is part of the ELIXIR distributed infrastructure for life-science information</div>
-                </a>
-              </div>
-            </div>
--->
-
             <h4>Right sidebar</h4>
             <p>This is a sample item with a vertical menu.</p>
             <div>
@@ -268,7 +226,6 @@ layout: blank
               </ul>
             </div>
           </div>
-
         </div> <!-- /medium-3 -->
 
       </section>
@@ -295,7 +252,7 @@ layout: blank
     <!-- End suggested layout containers / #content -->
 
     <footer>
-      <div id="elixir-ribbon" class="elixir-ribbon margin-bottom-none callout secondary-background" style="background-color: rgb(79,138,156);">
+      <div id="elixir-ribbon" class="elixir-ribbon" style="background-color: rgb(79,138,156);">
         <div class="row">
           <div class="float-left elixir-logo-kite"></div>
           <h5 class="white-color padding-top-medium">
@@ -306,9 +263,9 @@ layout: blank
               This is part of the ELIXIR distributed infrastructure for life-science information.
               <a class="readmore" href="#">Learn more</a>
             </span>
-            <!-- <a class="small hide" id="show-less" data-toggle="elixir-affiliate show-more show-less" data-toggler=".hide"><span class="icon icon-functional" data-icon="x"></span></a> -->
+            <!-- Optional button to collapse the dialouge -->
+            <!-- <a class="small hide float-right" id="show-less" data-toggle="elixir-affiliate show-more show-less" data-toggler=".hide"><span class="icon icon-functional" data-icon="x"></span></a> -->
           </div>
-
         </div>
       </div>
       <div id="global-footer" class="global-footer">
@@ -330,6 +287,9 @@ layout: blank
         margin: 0;
       }
       li.elixir-badge a img { padding-right: 0.5rem; }
+      .elixir-ribbon {
+        padding: 1rem 0;
+      }
 
       .elixir-ribbon a:hover {
         color: #fff;
