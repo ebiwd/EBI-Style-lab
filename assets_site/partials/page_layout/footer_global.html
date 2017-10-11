@@ -38,7 +38,7 @@ function getRandomInt(min, max) {
 }
 
 var visInt = getRandomInt(0,9);
-console.log('showing vis type:',visInt);
+// console.log('showing vis type:',visInt);
 // visInt = 0;
 
 
@@ -69,9 +69,9 @@ document.addEventListener('DOMContentLoaded', function(){
   $('.masthead').css('background','none'); // turn off masthead background
   var vis1 = new DiffusionVis({
     target: '#masthead',
-    color1: [0,0,0,.19],
-    color2: [0,0,0,.2],
-    color3: [0,124,131,.4],
+    color1: [0,0,0,.2],
+    color2: [0,124,131,.4],
+    color3: [0,124,131,1],
     opacity: 1.0,
     timelimit: 100000,
     drawingType: visInt,
