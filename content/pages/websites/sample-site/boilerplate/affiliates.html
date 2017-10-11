@@ -195,6 +195,9 @@ layout: blank
             <p>For questions about how best to integrate your relationships, you can reach out to <a href="//tsc.ebi.ac.uk/web-development">the Web Development team</a> or the <a href="//www.ebi.ac.uk/seqdb/confluence/display/WGC/Web+Guidelines+committee">Web Guidelines Committee</a>.</p>
 
             <h4>ELIXIR Banner</h4>
+            <div class="callout warning">
+              This ELIXIR banner below is high-fidelity prototype and accurately reflects how the banner will look, but do not yet attempt to implement this code. A final solution should be available in middle October.
+            </div>
             <p>For identified EMBL-EBI services that are part of the ELIXIR network, you should add the below banner with text appropriate to your relationship with ELIXIR (Note: As of October 2017 we are still awaiting final guidance on the text to be used).</p>
             <p>If you need a different background colour or to insert your site or service name, you can do so with local CSS:</p>
 
@@ -205,8 +208,7 @@ layout: blank
 .elixir-ribbon { background: <span class="badge small" style="background:rgb(190,191,50)">&nbsp;</span> rgb(190,191,50); /* elixir green */ }
 .elixir-ribbon { background: <span class="badge small" style="background:rgb(79,138,156)">&nbsp;</span> rgb(79,138,156); /* elixir blue shade (default) */ }
 /* to use a custom name in "*THIS* is part of the ELIXIR infrastructure" */
-.elixir-banner-default-name { display: none; }
-.elixir-banner-custom-name:before { content: "MY WORDS HERE"; }
+[data attribute will be used]
 </pre>
 
           </section>
