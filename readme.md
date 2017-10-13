@@ -2,7 +2,7 @@
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg)](https://gitter.im/ebiwd/EBI-Framework)
 
 # EMBL-EBI Style Lab
-This is a collaborative effort. The EMBL-EBI Style Lab is a place to communicate how we use visual identity, code, and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
+This is a collaborative effort. The EMBL-EBI Style Lab is a place to communicate how we use visual identity, code and language to make better and more accessible services -- it exists because of pan-EMBL-EBI collaboration.
 
 There's not much to see on this page, [check out the site at www.ebi.ac.uk/style-lab/](https://www.ebi.ac.uk/style-lab/)
 
