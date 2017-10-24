@@ -18,35 +18,32 @@ body {
 }
 </style>
 
-{{> banner-elixir}}
 
 <div class="row" style="max-width: 1200px; margin: 0 auto; font-family: Helvetica, sans-serif; line-height: 1.5rem; padding-bottom: 1rem;">
 <div class="column">
 {{#markdown}}
-### Documentation
-
-To use, include these two lines:
+This should be placed in the footer of sites that are part of the ELIXIR network; you'll need to include these two lines:
 ```
-<div data-color="grey" data-name="This service" data-description="I am a super cool service" data-use-basic-styles="true" id="elixir-banner"></div>
+<div id="elixir-banner" data-color="grey" data-name="This service" data-description="I am a super cool service" data-use-basic-styles="true"></div>
 <script defer="defer" src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"></script>
 ```
 
-The `data` attributes are optional:
+There are optional `data` attributes:
 
-- `data-color`: set the background color; options:
-    - orange = rgb(244,125,32)
-    - grey = rgb(77,77,72)
-    - blue = rgb(190,191,50)
-    - green = rgb(79,138,156)
+- `data-color`: set the background color; options: orange, grey, blue, green
 - `data-name`: set part of the tite (data-name + "is part of the ELIXIR infrastructure")
 - `data-description`: set the text in the small line of text
 - `data-use-basic-styles`: if you have not loaded the Foundation Framework CSS, set to `true` and will inject a few lines of css for basic formatting
 
-[Try it on CodePen](https://codepen.io/khawkins98/pen/ZXdGQO?editors=1000).
+Get started:
+- [Try it on CodePen](https://codepen.io/khawkins98/pen/ZXdGQO?editors=1000)
+- [See an example implementation](https://wwwdev.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/affiliates.html)
 
 {{/markdown}}
 </div>
 </div>
+
+{{> banner-elixir}}
 
 </body>
 </html>
