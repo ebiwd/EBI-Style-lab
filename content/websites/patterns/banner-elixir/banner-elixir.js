@@ -9,10 +9,10 @@ function elixirBanner() {
 
       if (typeof divElixirBanner.dataset.color !== "undefined") {
         defaultColor = divElixirBanner.dataset.color;
-        defaultColor == 'orange' && 'rgb(244,125,32)';
-        defaultColor == 'grey' && 'rgb(77,77,72)';
-        defaultColor == 'blue' && 'rgb(190,191,50)';
-        defaultColor == 'green' && 'rgb(79,138,156)';
+        defaultColor = (defaultColor == 'orange' ? 'rgb(244,125,32)' : defaultColor);
+        defaultColor = (defaultColor == 'grey' ? 'rgb(77,77,72)' : defaultColor);
+        defaultColor = (defaultColor == 'blue' ? 'rgb(190,191,50)' : defaultColor);
+        defaultColor = (defaultColor == 'green' ? 'rgb(79,138,156)' : defaultColor);
       }
       if (typeof divElixirBanner.dataset.name !== "undefined") {
         defaultName = divElixirBanner.dataset.name;
