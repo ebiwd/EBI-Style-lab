@@ -18,24 +18,12 @@ But what tools are best to use to answer which questions? And how to use them wi
 We can't hope to answer all those questions, but we can help you to gain insight into initial strategy and next steps.
 {{/markdown}}
 
+<div
+
 <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
 
-<div class="callout medium-7 float-right margin-left-xlarge" markdown="1">
-  {{#markdown}}
-  #### A note on server side analytics
-
-  <p>This document focusses where where the EBI Visual Framework functions: the browser.</p>
-
-  <p>Not addressed much are server-side logs that record all transactions on EMBL-EBI services and make for a rich, granular and comprehensive resource on <em>all</em> utilisation. They are ideal for incident tracking, usage accounting, and other grant-level reporting. <a class="readmore" href="http://tsc.ebi.ac.uk/article/web-production/web-administration/where-find-web-traffic-reports">The web production team has more information on making the most of server resource</a></p>
-
-  Client-side tracking (Google Analytics, et al.) is a different species, offering further insights into user behaviour on pages: where did the user scroll to, what did they hover on, which of two links to the same HTML page did the user click?
-
-  It is possible to development methods to do these tasks with server-side analytics, but much as client-side analytics are poor to gain server insight, server-side analytics are often detached from client-side behaviours.
-  {{/markdown}}
-</div>
-
 {{#markdown}}
-### What website analytics tool is right for you?
+### Which client-side analytics tool is right for you?
 
 There are two widely chosen options for web analytics: [Google Analytics](https://www.google.com/url?q=http://www.google.com/analytics/&sa=D&ust=1490357443796000&usg=AFQjCNGJrMzPPlqR0fYgffvYWymfeNPSYw) (GA) or [Piwik](https://www.google.com/url?q=http://piwik.org/&sa=D&ust=1490357443797000&usg=AFQjCNG0ErNwERCnDn7y8-hTT5s2xkMh3Q). While there are other, less ubiquitous options such as [Clicky](https://www.google.com/url?q=https://clicky.com/&sa=D&ust=1490357443798000&usg=AFQjCNE99aQMQKDa4_js_IDTqAn-oHPBbw), [Open Web Analytics](https://www.google.com/url?q=http://www.openwebanalytics.com/&sa=D&ust=1490357443798000&usg=AFQjCNFbJQngsX49Em74JX2Tc_DwUDzQpg), or [eAnalytics](https://www.google.com/url?q=http://www.eanalytics.de/&sa=D&ust=1490357443799000&usg=AFQjCNGis-bMNmSJ2ChTz5ylQgb-YptBEQ), this article will focus solely on GA and Piwik.
 
@@ -68,7 +56,7 @@ To investigate the difference between these two options, Web Development ran a s
 </tr>
 </tbody></table>
 
-### Collected data
+#### Collected data
 
 <div class="callout">
   <h4>The short take-away</h4>
@@ -115,7 +103,7 @@ It's unclear why the GA numbers are lower. However there are theories.
 
 GA's interface felt easier to learn. There are useful help tips built into the data viewer, a mix of summarised data and visualisations, and finding information seemed easier. Piwik, in contrast has a lot of "hidden" functionality like the below options to view transitions, segmented data logs and more. They are only visible on mouseover.
 
- ![](/EBI-Pattern-library/static/images/analytics/image01.png)
+![](/EBI-Pattern-library/static/images/analytics/image01.png)
 
 GA has a lot of nice out of the box functionalities, the data presented on their interface felt actionable. Take for instance this "Behaviour Flow" (below). It visually shows where users entered the site and where they navigated to afterwards (for several pages).
 
@@ -125,7 +113,7 @@ Generating a similar chart in Piwik would be very manual and time intensive. It 
 
  ![](/EBI-Pattern-library/static/images/analytics/image03.png)Typically we found that Piwik's interface didn't show data in a form on which we could take action. Thus, data analysis in Piwik usually meant downloading information into excel and then doing additional number crunching.
 
-### Each options' unique benefit
+#### Each options' unique benefit
 
 <div class="callout">
   <h4>The short take-away</h4>
@@ -144,7 +132,7 @@ Piwik doesn't have additional data to add insights, but it does give you full an
 
 Piwik also offers much more flexibility. You can develop our own plugins; you have direct access to the MySQL database to do all kinds of statistics; you can even ignore "Do Not Track" setting to collect certain data ([Not recommended](https://www.google.com/url?q=http://piwik.org/docs/privacy/&sa=D&ust=1490357443841000&usg=AFQjCNFkBLxRRWyMD4mdtPxmppqf1_x1SQ) though!).
 
-### Cost of web analytics
+#### Cost of web analytics
 
 <div class="callout">
   <h4>The short take-away</h4>
@@ -155,6 +143,14 @@ Google will host the service for you. Thus no infrastructure is needed on your p
 
 Piwik is open source and free, but you need to have your own LAMP server on which to deploy it. This means a start-up cost to configure the server, and an ongoing cost to maintain it. As number of visitors increase (or decrease) it will be up to you to scale the server and deal with speeding up queries to the database. For teams with limited knowledge of LAMP servers, Piwik Cloud is an option with reasonable pricing options ([690€](https://www.google.com/url?q=https://piwik.pro/cloud/%23pricing&sa=D&ust=1490357443848000&usg=AFQjCNGA-TzpkqDmHL-8Uq0v0OJFNzmJAg) for 10mil actions). Unlike GA premium, Piwik Cloud is a hosting option, not a fuller service option.
 
+#### Implementing more robust client-side analytics
+Since you're probably using the EBI Visual framework, you can [make use of our integrated Custom JS Events pattern](websites/patterns/analytics-events.html).
+
+#### Coming soon
+Further items are planned in this series:
+1. Understanding success: if analytics is the answers, what are the questions? Closing the loop between what users are doing and how your content attempts to enable goals... Core content models.
+1. Digesting reports: How we can tie reporting API into our content models for [custom dashboards](https://docs.google.com/presentation/d/1k8m44Gc_sgOZvtQh5IuKRp5MR0oUqRpa1OBlFZ1hpdE/edit#slide=id.p) of success and failure metrics.
+
 ### Summary
 
 The short answer is both have their strengths and weakness, so there's no clear winner.
@@ -163,10 +159,16 @@ Rather, to choose a web analytics solution you should think about what data you 
 
 For further help, drop Web Development an e-mail <a href="mailto:www-dev@ebi.ac.uk">www-dev@ebi.ac.uk</a>
 
-### Note
-Further items are planned in this series:
-  1. User events: With [JS events](https://docs.google.com/document/d/1TuGMtbGcw3EOeFNGqc4ZP_faKJ7Fb65Weqa8b3WV0Go/edit#heading=h.l4372agxzzgh) we can greater insight into what users are clicking on under which conditions.
-  2. Understanding success: if analytics is the answers, what are the questions? Closing the loop between what users are doing and how your content attempts to enable goals... Core content models.
-  3. Digesting reports: How we can tie reporting API into our content models for [custom dashboards](https://docs.google.com/presentation/d/1k8m44Gc_sgOZvtQh5IuKRp5MR0oUqRpa1OBlFZ1hpdE/edit#slide=id.p) of success and failure metrics.
+
+
+### A word about server side analytics
+
+<p>This document focusses where where the EBI Visual Framework functions: the browser.</p>
+
+<p>Not addressed much are server-side logs that record all transactions on EMBL-EBI services and make for a rich, granular and comprehensive resource on <em>all</em> utilisation. They are ideal for incident tracking, usage accounting, and other grant-level reporting. <a class="readmore" href="http://tsc.ebi.ac.uk/article/web-production/web-administration/where-find-web-traffic-reports">The web production team has more information on making the most of server resource</a></p>
+
+Client-side tracking (Google Analytics, et al.) is a different species, offering further insights into user behaviour on pages: where did the user scroll to, what did they hover on, which of two links to the same HTML page did the user click?
+
+It is possible to development methods to do these tasks with server-side analytics, but much as client-side analytics are poor to gain server insight, server-side analytics are often detached from client-side behaviours.
 
 {{/markdown}}
