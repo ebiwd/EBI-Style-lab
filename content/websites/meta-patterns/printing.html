@@ -18,29 +18,29 @@ location: printing.html
 
 Here are four methods and tools to make a big difference.
 
-### Diagnose: Emulate print styles
+### 1. Diagnose: Emulate print styles
 
 Chrome can emulat the look of your site when printing -- and this lets you still inspect elements and tweaks CSS settings; <a href="https://stackoverflow.com/a/33878705/725343" class="external">more deails over here</a>
 
-### Setup: Tweak your styles for print
+### 2. Setup: Tweak your styles for print
 
 This is built in for those that use the full version of the EBI Visual framework.
 
 In general you'll want to hide background graphics, change font sizes and make text `#000` black.
 
-### Customise: Media queries
+### 3. Customise: Media queries
 
 Use media queries to optimise for your website's particular needs:
 
 ```
-@media print {
- /* All your print styles go here */
+            @media print {
+  /* All your print styles go here */
 }
 ```
 
 And ask yourself: how does the user's use case change when printing vs when it was on screen?
 
-### Hide it: Tweak for edge cases
+### 4. Hide it: Tweak for edge cases
 
 If you have content that only makes sense on screen (such as related article links), you can use `.hide-for-print` CSS class to, well, hide when printing.
 
