@@ -3,7 +3,7 @@ module.exports = function(path, type) {
   try {
     var githubpath = 'https://github.com/ebiwd/EBI-Style-lab/edit/master';
 
-    var classes = 'button small secondary edit-button float-right';
+    var classes = 'button small secondary edit-button float-right hide-for-print';
 
     if (type === 'section')
       return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/content/sections/' + path + '">Edit ' + type + '</a>';
