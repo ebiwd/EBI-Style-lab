@@ -78,9 +78,9 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime());
 
   setTimeout(function(){
-    jQuery('head').append('<link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" />\n');
-    jQuery('head').append('<link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" />\n');
-    jQuery('head').append('<link rel="stylesheet" href="//www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" />\n');
     console.log('CSS: Injected new ebi-global.css fonts.css and foundation.css');
     console.log('------------------\n');
   }, steppingTime());
