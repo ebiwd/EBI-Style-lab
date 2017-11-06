@@ -1,0 +1,919 @@
+---
+meta-title: Tocome
+title: Tocome
+layout: blank
+---
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Home < Expression Atlas &lt; EMBL-EBI</title>
+    <meta name="description" content="EMBL-EBI Expression Atlas, an open public repository of gene expression pattern data under different biological conditions">
+    <meta name="keywords" content="expression atlas, gene expression, baseline expression, differential expression, functional genomics, public repository, repository, bioinformatics, europe, institute">
+    <meta name="author" content="EMBL-EBI Expression Atlas development team: github.com/gxa/atlas/graphs/contributors">
+    <meta name="HandheldFriendly" content="true" />
+    <meta name="MobileOptimized" content="width" />
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="#70BDBD"> <!-- Android Chrome mobile browser tab color -->
+
+    <!-- Add information on the life cycle of this page -->
+    <meta name="ebi:owner" content="Irene Papatheodorou <irenep@ebi.ac.uk>">
+    <meta name="ebi:review-cycle" content="60">
+    <meta name="ebi:last-review" content="2017-02-01">
+    <meta name="ebi:expiry" content="2017-06-01">
+
+    <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+    <link rel="dns-prefetch" href="https://embl.de/">
+    <link rel="dns-prefetch" href="https://www.ebi.ac.uk/">
+    <link rel="dns-prefetch" href="https://www.ebi.ac.uk/arrayexpress/">
+
+    <!-- favicons generated at realfavicongenerator.net, and merged with https://github.com/ebiwd/EBI-Pattern-library/blob/gh-pages/sample-site/boilerplate/blank.html -->
+    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="/gxa/resources/favicons/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="/gxa/resources/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" href="/gxa/resources/favicons/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/gxa/resources/favicons/favicon-32x32.png" sizes="32x32" />
+
+    <link rel="icon" type="image/png" sizes="192×192" href="/gxa/resources/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+    <link rel="manifest" href="/gxa/resources/favicons/manifest.json" />
+
+    <!-- Apple icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/gxa/resources/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/gxa/resources/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/gxa/resources/favicons/apple-icon-144x144.png" /> <!-- For iPad retina (144px) -->
+    <link rel="apple-touch-icon-precomposed" href="/gxa/resources/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/gxa/resources/favicons/apple-touch-icon.png" />
+    <link rel="mask-icon" href="/gxa/resources/favicons/safari-pinned-tab.svg" color="#5bbad5" /> <!-- Safari icon for pinned tab -->
+
+    <!-- MS icons -->
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="msapplication-TileImage" content="/gxa/resources/favicons/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/gxa/resources/favicons/browserconfig.xml" />
+
+    <!-- CSS: implied media=all -->
+    <!-- CSS concatenated and minified via ant build script-->
+    <!-- <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all"> -->
+    <link rel="stylesheet" href="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all">
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all">
+
+    <!-- Use this CSS file for any custom styling -->
+    <!-- <link rel="stylesheet" href="css/custom.css" type="text/css" media="all"> -->
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/atlas.css" type="text/css" media="all">
+
+    <link rel="stylesheet" href="https://www.ebi.ac.uk/gxa/resources/css/foundation/theme-atlas.css" type="text/css" media="all">
+
+    <link rel="stylesheet" type="text/css" href="https://www.ebi.ac.uk/gxa/resources/js/lib/jquery-ui-1.12.1.custom/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="https://www.ebi.ac.uk/gxa/resources/js/lib/jquery-json-tag-editor/jquery.json-tag-editor.foundation.css" media="screen">
+    <!-- end CSS-->
+
+    <!-- All JavaScript at the bottom, except for jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+
+    <script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/babel-polyfill.min.js"></script>
+    <script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/fetch-polyfill.min.js"></script>
+</head>
+
+<body class="level2">
+<div id="skip-to">
+    <ul>
+        <li><a href="#content">Skip to main content</a></li>
+        <li><a href="#local-nav">Skip to local navigation</a></li>
+        <li><a href="#global-nav">Skip to EBI global navigation menu</a></li>
+        <li><a href="#global-nav-expanded">Skip to expanded EBI global navigation menu (includes all sub-sections)</a></li>
+    </ul>
+</div>
+
+
+
+<header id="masthead-black-bar" class="clearfix masthead-black-bar">
+    <nav class="row expanded">
+        <ul id="global-nav" class="menu">
+            <!-- set active class as appropriate -->
+        </ul>
+    </nav>
+</header>
+
+
+<div id="content">
+
+
+<div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="main-content-area:top" data-btm-anchor="main-content-area:bottom">
+        <div class="masthead-inner row expanded">
+            <div class="small-8 columns media-object">
+                <div class="show-for-medium media-object-section middle">
+                    <a href="/gxa/home/" title="Back to Expression Atlas homepage" class="clear">
+                        <img src="https://www.ebi.ac.uk/gxa/resources/images/foundation/logos/logo_atlas_transparent.png" alt="Expression Atlas logo">
+                    </a>
+                </div>
+                <div class="media-object-section middle">
+                    <h1><a href="/gxa/home/" title="Back to Expression Atlas homepage" class="clear">Expression Atlas</a></h1>
+                    <h4 class="show-for-large"><a href="/gxa/home/" title="Back to Expression Atlas homepage" class="clear">Gene expression across species and biological conditions</a></h4>
+                </div>
+            </div>
+
+            <div class="hide-for-small-only small-4 columns">
+                <!-- EBI Framework standard search -->
+                <form id="local-search" name="local-search" method="get" action="/gxa/search">
+                    <h4>Search this project</h4>
+                    <fieldset>
+                        <div class="input-group" style="margin-bottom: 0">
+                            <input type="text" name="geneQuery" id="local-searchbox">
+                            <div class="input-group-button">
+                                <input id="submit-searchbox" type="submit" value="1" class="button icon icon-functional">
+                            </div>
+                        </div>
+                        <small class="show-for-large">
+                            <!-- Include some example searchterms - keep them short and few. -->
+                            <span>Examples: <a href="/gxa/search?geneQuery=%5B%7B%22value%22%3A%22ASPM%22%7D%5D">ASPM</a>,
+                            <a href="/gxa/search?geneQuery=%5B%7B%22value%22%3A%22apoptosis%22%7D%5D">Apoptosis</a>,
+                            <a href="/gxa/search?geneQuery=%5B%7B%22value%22%3A%22ENSMUSG00000021789%22%7D%5D">ENSMUSG00000021789</a>,
+                            <a href="/gxa/search?geneQuery=%5B%7B%22value%22%3A%22zinc%20finger%22%7D%5D">zinc finger</a></span>
+                        </small>
+
+                    </fieldset>
+                </form>
+            </div>
+
+            <nav>
+                <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+                    <li><a href="/gxa/home">Home</a></li>
+                    <li><a href="/gxa/download.html">Download</a></li>
+                    <li><a href="/gxa/release-notes.html">Release notes</a></li>
+                    <li><a href="/gxa/FAQ.html">FAQ</a></li>
+                    <li><a href="/gxa/help/index.html">Help</a></li>
+                    <li><a href="/gxa/licence.html">Licence</a></li>
+                    <li><a href="/gxa/about.html">About</a></li>
+                    <li><a href="https://www.ebi.ac.uk/support/gxa" target="_blank">Feedback</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+</div>
+
+    <section id="main-content-area" class="margin-top-large margin-bottom-large" role="main">
+
+
+
+
+
+<div class="row expanded">
+    <div class="columns small-2">
+        <img src="https://www.ebi.ac.uk/gxa/resources/images/foundation/heatmap-hero.png">
+    </div>
+
+    <div class="columns small-10">
+        <h3>Exploring gene expression results across species under different biological conditions</h3>
+        <p>
+             Expression Atlas is an open science resource that gives users a powerful way to find information about gene and protein expression across species and biological conditions such as different tissues, cell types, developmental stages and diseases among others. Expression Atlas aims to help answering questions such as ‘where is a certain gene expressed?’ or ‘how does its expression change in a disease?’.
+        </p>
+        <!-- SP: customise animation  http://foundation.zurb.com/sites/docs/motion-ui.html-->
+        <div id="description-more" data-toggler=".is-visible" style="display:none;">
+            <p>
+                Expression Atlas provides gene expression results on more than 3,000 experiments (microarray and RNA-sequencing) from 40 different organisms, including metazoans and plants. Expression profiles of tissues from Human Protein Atlas, GTEx and FANTOM5, and of cancer cell lines from ENCODE, CCLE and Genentech projects can be explored in Expression Atlas. All data are manually curated, annotated to ontology terms allowing for much richer queries and re-analysed using standardised methods.
+            </p>
+
+            <p>
+                Expression Atlas visualises gene expression results using heatmaps showing gene expression levels across different biological conditions. Novel analyses and visualisations include: ‘enrichment’ in each differential comparison of GO terms, Reactome, Plant Reactome pathways and InterPro domains; hierarchical clustering (by baseline expression) of most variable genes and experimental conditions; and, for a given gene-condition, distribution of baseline expression across biological replicates.
+            </p>
+        </div>
+
+        <!-- Keep grouping otherwise button "is-visible" sets display:block to the less button -->
+        <div class="button-group float-left">
+            <a class="button" id="show-more" data-toggle="description-more show-more show-less" data-toggler=".hide" >Read more about Expression Atlas</a>
+            <a class="button" id="show-less" data-toggle="description-more show-more show-less" data-toggler=".is-visible" style="display:none;">Show less about Expression Atlas</a>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="row expanded margin-top-large">
+    <div class="small-12 columns">
+        <ul class="tabs" data-tabs id="search-tabs">
+            <li class="tabs-title is-active"><a href="#search-atlas" aria-selected="true">Search</a></li>
+            <li class="tabs-title"><a href="#search-gene-set-enrichment">Gene set enrichment</a></li>
+        </ul>
+
+        <div class="tabs-content" data-tabs-content="search-tabs">
+
+            <div class="tabs-panel is-active " id="search-atlas" style="background-color: #e6e6e6;">
+                <form method="get" action="/gxa/search" id="home-search-atlas-form">
+                    <div class="row expanded">
+                        <div class="small-12 medium-4 large-5 columns">
+                            <div class="row column">
+                                <label>Gene / Gene properties</label>
+                                <input id="home-search-gene-query-input" type="text" placeholder="Enter gene query…" name="geneQuery"/>
+                            </div>
+                            <div class="row column small margin-top-small">
+                                Examples: <a href='/gxa/search?geneQuery=[{"value":"REG1B"}]'>REG1B</a>,
+                                <a href='/gxa/search?geneQuery=[{"value":"zinc finger"}]'>zinc finger</a>,
+                                <a href='/gxa/search?geneQuery=[{"value":"O14777", "category":"uniprot"}]'>O14777 (UniProt)</a>,
+                                <a href='/gxa/search?geneQuery=[{"value":"GO:0010468", "category":"go"}]'>GO:0010468 (regulation of gene expression)</a>
+                            </div>
+                        </div>
+                        <div class="small-12 medium-4 large-2 columns">
+                            <label>Organism</label>
+                            <select id="organism" name="organism">
+                                <option value="Homo sapiens">Homo sapiens</option><option value="Mus musculus">Mus musculus</option><option value="Arabidopsis thaliana">Arabidopsis thaliana</option><option value="Rattus norvegicus">Rattus norvegicus</option><option value="Drosophila melanogaster">Drosophila melanogaster</option><option value="Oryza sativa Japonica Group">Oryza sativa Japonica Group</option>
+                                <option value="━━━━━━━━━━━━━━━━━" disabled="disabled">━━━━━━━━━━━━━━━━━</option>
+                                <option selected="true" value="">Any</option>
+                                <option value="anas platyrhynchos">Anas platyrhynchos</option><option value="anolis carolinensis">Anolis carolinensis</option><option value="anopheles gambiae">Anopheles gambiae</option><option value="arabidopsis lyrata">Arabidopsis lyrata</option><option value="arabidopsis thaliana">Arabidopsis thaliana</option><option value="aspergillus fumigatus">Aspergillus fumigatus</option><option value="bos taurus">Bos taurus</option><option value="brachypodium distachyon">Brachypodium distachyon</option><option value="brassica oleracea">Brassica oleracea</option><option value="brassica rapa">Brassica rapa</option><option value="caenorhabditis elegans">Caenorhabditis elegans</option><option value="canis familiaris">Canis familiaris</option><option value="chlorocebus sabaeus">Chlorocebus sabaeus</option><option value="ciona intestinalis">Ciona intestinalis</option><option value="ciona savignyi">Ciona savignyi</option><option value="danio rerio">Danio rerio</option><option value="dasypus novemcinctus">Dasypus novemcinctus</option><option value="drosophila melanogaster">Drosophila melanogaster</option><option value="equus caballus">Equus caballus</option><option value="gallus gallus">Gallus gallus</option><option value="glycine max">Glycine max</option><option value="gorilla gorilla">Gorilla gorilla</option><option value="homo sapiens">Homo sapiens</option><option value="hordeum vulgare">Hordeum vulgare</option><option value="macaca mulatta">Macaca mulatta</option><option value="medicago truncatula">Medicago truncatula</option><option value="monodelphis domestica">Monodelphis domestica</option><option value="mus musculus">Mus musculus</option><option value="musa acuminata">Musa acuminata</option><option value="ornithorhynchus anatinus">Ornithorhynchus anatinus</option><option value="oryctolagus cuniculus">Oryctolagus cuniculus</option><option value="oryza rufipogon">Oryza rufipogon</option><option value="oryza sativa">Oryza sativa</option><option value="ovis aries">Ovis aries</option><option value="pan troglodytes">Pan troglodytes</option><option value="papio anubis">Papio anubis</option><option value="physcomitrella patens">Physcomitrella patens</option><option value="pongo abelii">Pongo abelii</option><option value="populus trichocarpa">Populus trichocarpa</option><option value="rattus norvegicus">Rattus norvegicus</option><option value="saccharomyces cerevisiae">Saccharomyces cerevisiae</option><option value="schistosoma mansoni">Schistosoma mansoni</option><option value="schizosaccharomyces pombe">Schizosaccharomyces pombe</option><option value="solanum lycopersicum">Solanum lycopersicum</option><option value="solanum tuberosum">Solanum tuberosum</option><option value="sorghum bicolor">Sorghum bicolor</option><option value="sus scrofa">Sus scrofa</option><option value="tetraodon nigroviridis">Tetraodon nigroviridis</option><option value="theobroma cacao">Theobroma cacao</option><option value="triticum aestivum">Triticum aestivum</option><option value="vitis vinifera">Vitis vinifera</option><option value="xenopus tropicalis">Xenopus tropicalis</option><option value="yarrowia lipolytica">Yarrowia lipolytica</option><option value="zea mays">Zea mays</option>
+                            </select>
+                        </div>
+                        <div id="sample-properties-section" class="small-12 medium-4 large-5 columns">
+                            <div class="row column">
+                                <label>Biological conditions</label>
+                                <input id="home-search-condition-query-input" type="text" placeholder="Enter condition query…" name="conditionQuery" />
+                            </div>
+                            <div class="row column small margin-top-small">
+                                Examples: <a href='/gxa/search?conditionQuery=[{"value":"lung"}]'>lung</a>,
+                                <a href='/gxa/search?conditionQuery=[{"value":"leaf"}]'>leaf</a>,
+                                <a href='/gxa/search?conditionQuery=[{"value":"valproic acid"}]'>valproic acid</a>,
+                                <a href='/gxa/search?conditionQuery=[{"value":"cancer"}]'>cancer</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row expanded margin-top-large">
+                        <div class="small-12 columns">
+                            <input id="home-search-atlas-search-button" class="button" type="submit" value="Search"/>
+
+
+
+
+                            <input id="home-search-atlas-clear-button" class="secondary hollow button" type="button" value="Clear"/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="tabs-panel" id="search-gene-set-enrichment" style="background-color: #e6e6e6;">
+                <form action="genesetenrichment" method="get" id="home-genesetenrichment-atlas-form">
+                    <div class="row expanded">
+                        <div class="small-12 columns">
+                            <label>Provide a set of Ensembl gene identifiers to test enrichment against differentially expressed genes by comparison</label>
+                            <input class="margin-bottom-none" type="text" placeholder="Enter gene IDs…" name="query"/>
+                        </div>
+                    </div>
+
+                    <div class="row expanded">
+                        <div class="small-12 columns small margin-top-small">
+                            Example: <a
+                                href="/gxa/genesetenrichment?query=AT1G48030 AT1G53240 AT2G17130 AT2G20420 AT2G44350 AT2G47510 AT3G09810 AT3G15020 AT3G17240 AT3G27380 AT3G55410 AT3G60100 AT4G26910 AT4G35260 AT4G35650 AT4G35830 AT5G03290 AT5G08300 AT5G23250">
+                            AT1G48030 AT1G53240 AT2G17130 AT2G20420 AT2G44350 AT2G47510 AT3G09810 AT3G15020 AT3G17240 AT3G27380 AT3G55410 AT3G60100 AT4G26910 AT4G35260 AT4G35650 AT4G35830 AT5G03290 AT5G08300 AT5G23250</a>
+                        </div>
+                    </div>
+
+                    <div class="row expanded">
+                        <div class="small-12 columns margin-top-large">
+                            <input id="genesetenrichment-atlas-search-button" class="button" type="submit" value="Search"/>
+                        </div>
+                    </div>
+
+                    <div class="row expanded">
+                        <div class="small-12 columns">
+                            <a href="https://www.ebi.ac.uk/~rpetry/geteam/gsa/gsa_apispec.pdf">Gene Set Enrichment API documentation</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="row expanded margin-top-large" data-equalizer>
+    <div class="small-12 medium-12 large-6 columns">
+
+<div class="callout browse-by padding-bottom-for-button" data-equalizer-watch>
+    <ul class="tabs" data-tabs id="browse-by-tabs">
+        <li class="tabs-title is-active"><a href="#by-species" aria-selected="true">By species</a></li>
+        <li class="tabs-title"><a href="#by-animals">Animals</a></li>
+        <li class="tabs-title"><a href="#by-plants">Plants</a></li>
+        <li class="tabs-title"><a href="#by-fungi">Fungi</a></li>
+    </ul>
+
+    <div class="tabs-content" data-tabs-content="browse-by-tabs">
+        <div class="tabs-panel is-active" id="by-species"></div>
+        <div class="tabs-panel" id="by-animals"></div>
+        <div class="tabs-panel" id="by-plants"></div>
+        <div class="tabs-panel" id="by-fungi"></div>
+    </div>
+
+    <div class="row align-row-to-bottom">
+        <div class="small-6 small-centered columns margin-top-large">
+            <a id="viewAllLink" href='/gxa/experiments' class="button float-center">View all species</a>
+        </div>
+    </div>
+</div>
+
+<script src="https://www.ebi.ac.uk/gxa/resources/js-bundles/vendorCommons.bundle.js"></script>
+<script src="https://www.ebi.ac.uk/gxa/resources/js-bundles/expressionAtlasBrowseBySpecies.bundle.js"></script>
+
+<script>
+    var $viewAllLink = $('#viewAllLink');
+    $('#browse-by-tabs').on('change.zf.tabs', function() {
+        switch ($('#browse-by-tabs .tabs-title.is-active').text()) {
+            case 'Animals':
+                $viewAllLink.attr('href','/gxa/experiments?kingdom=animals');
+                break;
+            case 'Plants':
+                $viewAllLink.attr('href','/gxa/experiments?kingdom=plants');
+                break;
+            case 'Fungi':
+                $viewAllLink.attr('href','/gxa/experiments?kingdom=fungi');
+                break;
+            default:
+                $viewAllLink.attr('href','/gxa/experiments');
+                break;
+        }
+    });
+
+    expressionAtlasBrowseBySpecies.render({
+        atlasUrl: "https://www.ebi.ac.uk/gxa/",
+        speciesInfoList: [{"species":"Homo sapiens","kingdom":"animals","totalExperiments":1134,"baselineExperiments":30,"differentialExperiments":1104},{"species":"Mus musculus","kingdom":"animals","totalExperiments":911,"baselineExperiments":36,"differentialExperiments":875},{"species":"Arabidopsis thaliana","kingdom":"plants","totalExperiments":519,"baselineExperiments":6,"differentialExperiments":513},{"species":"Rattus norvegicus","kingdom":"animals","totalExperiments":137,"baselineExperiments":2,"differentialExperiments":135},{"species":"Drosophila melanogaster","kingdom":"animals","totalExperiments":119,"baselineExperiments":0,"differentialExperiments":119},{"species":"Oryza sativa Japonica Group","kingdom":"plants","totalExperiments":37,"baselineExperiments":4,"differentialExperiments":33}],
+        container: document.getElementById('by-species')
+    });
+    expressionAtlasBrowseBySpecies.render({
+        atlasUrl: "https://www.ebi.ac.uk/gxa/",
+        speciesInfoList : [{"species":"Homo sapiens","kingdom":"animals","totalExperiments":1134,"baselineExperiments":30,"differentialExperiments":1104},{"species":"Mus musculus","kingdom":"animals","totalExperiments":911,"baselineExperiments":36,"differentialExperiments":875},{"species":"Rattus norvegicus","kingdom":"animals","totalExperiments":137,"baselineExperiments":2,"differentialExperiments":135},{"species":"Drosophila melanogaster","kingdom":"animals","totalExperiments":119,"baselineExperiments":0,"differentialExperiments":119},{"species":"Caenorhabditis elegans","kingdom":"animals","totalExperiments":24,"baselineExperiments":1,"differentialExperiments":23},{"species":"Gallus gallus","kingdom":"animals","totalExperiments":20,"baselineExperiments":2,"differentialExperiments":18}],
+        container: document.getElementById('by-animals')
+    });
+    expressionAtlasBrowseBySpecies.render({
+        atlasUrl: "https://www.ebi.ac.uk/gxa/",
+        speciesInfoList : [{"species":"Arabidopsis thaliana","kingdom":"plants","totalExperiments":519,"baselineExperiments":6,"differentialExperiments":513},{"species":"Oryza sativa Japonica Group","kingdom":"plants","totalExperiments":37,"baselineExperiments":4,"differentialExperiments":33},{"species":"Zea mays","kingdom":"plants","totalExperiments":35,"baselineExperiments":8,"differentialExperiments":27},{"species":"Oryza sativa","kingdom":"plants","totalExperiments":31,"baselineExperiments":0,"differentialExperiments":31},{"species":"Vitis vinifera","kingdom":"plants","totalExperiments":20,"baselineExperiments":4,"differentialExperiments":16},{"species":"Glycine max","kingdom":"plants","totalExperiments":19,"baselineExperiments":6,"differentialExperiments":13}],
+        container: document.getElementById('by-plants')
+    });
+    expressionAtlasBrowseBySpecies.render({
+        atlasUrl: "https://www.ebi.ac.uk/gxa/",
+        speciesInfoList : [{"species":"Saccharomyces cerevisiae","kingdom":"fungi","totalExperiments":35,"baselineExperiments":0,"differentialExperiments":35},{"species":"Schizosaccharomyces pombe","kingdom":"fungi","totalExperiments":1,"baselineExperiments":0,"differentialExperiments":1}],
+        container: document.getElementById('by-fungi')
+    });
+</script>
+    </div>
+    <div class="small-12 medium-12 large-6 columns">
+
+
+
+<div class="callout experiment-list-latest padding-bottom-for-button" data-equalizer-watch>
+    <ul class="tabs" data-tabs id="experiments-tabs">
+        <li class="tabs-title is-active"><a href="#featured-experiments">Featured</a></li>
+        <li class="tabs-title"><a href="#latest-experiments" aria-selected="true">Latest experiments</a></li>
+    </ul>
+
+
+    <div class="tabs-content" data-tabs-content="experiments-tabs">
+
+
+
+        <div class="tabs-panel is-active" id="featured-experiments">
+            <div class="row margin-bottom-xxlarge">
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments?experimentSet=ENCODE">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/encode_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-4344">Human tissues</a><br>
+                            <a href="/gxa/experiments/E-GEOD-26284">Human cells</a>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments?experimentSet=BLUEPRINT">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/blueprint_logo.png"/>
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-4754">Plasma cells of tonsil</a><br>
+                            <a href="/gxa/experiments/E-MTAB-3819">Rare types of haemopoetic cells</a><br>
+                            <a href="/gxa/experiments/E-MTAB-3827">Common types of haemopoetic cells</a>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments?experimentSet=FANTOM5">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/fantom_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-3578">Mouse cells</a><br>
+                            <a href="/gxa/experiments/E-MTAB-3579">Mouse tissues</a><br>
+                            <a href="/gxa/experiments/E-MTAB-3358">Human tissues</a>
+                        </h6>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-xxlarge">
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments/E-PROT-3">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/human_protein_atlas_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-PROT-3">Human tissues</a>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments/E-MTAB-2770">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/ccle_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-2770">Cancer Cell Line Encyclopedia</a>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments?experimentSet=HipSci">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/hipsci_logo.png" />
+
+                        <h6>
+                            <a href="/gxa/experiments/E-PROT-5">Proteomics – Cell Lines</a><br>
+                            <a href="/gxa/experiments/E-MTAB-4748">RNA – Cell lines</a>
+                        </h6>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row margin-bottom-xxlarge">
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments/E-MTAB-5214">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/gtex_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-5214">Human tissues</a>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments?experimentSet=Pan-Cancer">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/pcawg_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-5200">PCAWG by disease</a><br>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/experiments?experimentSet=Pan-Cancer">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/wtsi_mgh_cancerrxgene_logo.png" />
+                        <h6>
+                            <a href="/gxa/experiments/E-MTAB-3983">Genomics of Drug Sensitivity in Cancer Project – Cell lines</a><br>
+                        </h6>
+                    </a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-4 columns combo text-center padding-top-medium">
+                    <a href="/gxa/baseline/experiments">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/baseline.png" />
+                        <h6>
+                            <a href="/gxa/baseline/experiments">All baseline experiments</a>
+                        </h6>
+                    </a>
+                </div>
+                <div class="small-4 columns combo text-center padding-top-medium end">
+                    <a href="/gxa/plant/experiments">
+                        <img class="margin-bottom-large experiment-thumbnail" src="https://www.ebi.ac.uk/gxa/resources/images/gramene_logo_big.png" />
+                        <h6>
+                            <a href="/gxa/plant/experiments">Plant experiments</a>
+                        </h6>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs-panel" id="latest-experiments">
+            <div class="row column">
+                <h5 class="margin-bottom-large">3,166 experiments</h5>
+
+                        <div class="media-object small combo padding-bottom-large padding-top-large padding-left-large margin-bottom-none">
+                            <a href="/gxa/experiments/E-MTAB-3774">
+                                <div class="media-object-section middle">
+
+
+
+                                            <span class="differential button-rd">D</span>
+
+
+                                </div>
+                                <div class="media-object-section middle">
+                                    <small>11-10-2017</small><br/>
+                                        Hepatic Deletion of Janus Kinase 2 Counteracts Inflammation, Oxidative Stress and Liver Cancer Formation in Growth Hormone Transgenic Mice
+
+
+
+                                            (6 contrasts) &ndash;
+
+
+                                    <em>Mus musculus</em>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="media-object small combo padding-bottom-large padding-top-large padding-left-large margin-bottom-none">
+                            <a href="/gxa/experiments/E-GEOD-60052">
+                                <div class="media-object-section middle">
+
+
+
+                                            <span class="differential button-rd">D</span>
+
+
+                                </div>
+                                <div class="media-object-section middle">
+                                    <small>10-10-2017</small><br/>
+                                        RNA-seq of primary tumors from 79 small cell lung cancer patients and 7 normal lung tissue
+
+
+
+                                            (1 contrasts) &ndash;
+
+
+                                    <em>Homo sapiens</em>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="media-object small combo padding-bottom-large padding-top-large padding-left-large margin-bottom-none">
+                            <a href="/gxa/experiments/E-GEOD-81089">
+                                <div class="media-object-section middle">
+
+
+
+                                            <span class="differential button-rd">D</span>
+
+
+                                </div>
+                                <div class="media-object-section middle">
+                                    <small>10-10-2017</small><br/>
+                                        RNA-seq of 199 non-small cell lung carcinoma patients and 19 paired normal lung tissues
+
+
+
+                                            (1 contrasts) &ndash;
+
+
+                                    <em>Homo sapiens</em>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="media-object small combo padding-bottom-large padding-top-large padding-left-large margin-bottom-none">
+                            <a href="/gxa/experiments/E-MTAB-5891">
+                                <div class="media-object-section middle">
+
+
+
+                                            <span class="differential button-rd">D</span>
+
+
+                                </div>
+                                <div class="media-object-section middle">
+                                    <small>10-10-2017</small><br/>
+                                        RNA-seq of wheat leaves and roots in response to Xanthomonas translucens infection
+
+
+
+                                            (2 contrasts) &ndash;
+
+
+                                    <em>Triticum aestivum</em>
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="media-object small combo padding-bottom-large padding-top-large padding-left-large margin-bottom-none">
+                            <a href="/gxa/experiments/E-GEOD-75011">
+                                <div class="media-object-section middle">
+
+
+
+                                            <span class="differential button-rd">D</span>
+
+
+                                </div>
+                                <div class="media-object-section middle">
+                                    <small>19-09-2017</small><br/>
+                                        RNA-seq of Th2 cells from subjects with allergic asthma, allergic rhinitis or healthy non-atopic subjects
+
+
+
+                                            (2 contrasts) &ndash;
+
+
+                                    <em>Homo sapiens</em>
+                                </div>
+                            </a>
+                        </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row align-row-to-bottom">
+        <div class="small-6 small-centered columns margin-top-large">
+            <a href='/gxa/experiments' class="button float-center">View all experiments</a>
+        </div>
+    </div>
+
+</div>
+
+    </div>
+</div>
+
+<div class="row expanded margin-top-large" data-equalizer>
+    <div class="small-12 medium-12 large-6 columns">
+
+
+<div class="callout tools" data-equalizer-watch>
+    <h4>Tools</h4>
+
+        <a href="https://github.com/nunofonseca/irap" target="_blank">
+            <div class="media-object">
+                <div class="media-object-section middle">
+                    <h3><span class="icon icon-generic" data-icon=":"></span></h3>
+                </div>
+                <div class="media-object-section middle">
+                    <p>
+                        <strong>iRAP: RNA-seq analysis tool</strong><br>
+                        A flexible pipeline for RNA-seq analysis that integrates many existing tools for filtering and
+                        mapping reads, quantifying expression and testing for differential expression. iRAP is used to
+                        process all RNA-seq data in Expression Atlas.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.ebi.ac.uk/fg/rnaseq/api/" target="_blank">
+            <div class="media-object">
+                <div class="media-object-section middle">
+                    <h3><span class="icon icon-functional" data-icon="A"></span></h3>
+                </div>
+                <div class="media-object-section middle">
+                    <p>
+                        <strong>RNASeq-er API: a gateway to systematically updated analysis of public RNA-Seq data</strong><br>
+                        The RNASeq-er REST API provides easy access to the results of the systematically updated and
+                        continually growing analysis of public RNA-seq data in the European Nucleotide Archive (ENA).
+                        The analysis of each sequencing run is performed by the EMBL-EBI's Gene Expression Team using
+                        the iRAP pipeline (see above).
+                    </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.bioconductor.org/packages/release/bioc/html/ExpressionAtlas.html" target="_blank">
+            <div class="media-object">
+                <div class="media-object-section middle">
+                    <h3><span class="icon icon-functional" data-icon="t"></span></h3>
+                </div>
+                <div class="media-object-section middle">
+                    <p>
+                        <strong>Expression Atlas R Package on Bioconductor</strong><br>
+                        Search and download pre-packaged data from Expression Atlas inside an R session. Raw counts are
+                        provided for RNA-seq datasets and normalized intensities are available for microarray
+                        experiments. Protocols describing how the data was generated and sample annotations are
+                        contained within the downloaded R objects.
+                    </p>
+                </div>
+            </div>
+        </a>
+
+</div>
+
+    </div>
+    <div class="small-12 medium-12 large-6 columns">
+
+
+<div class="callout publication-list" data-equalizer-watch>
+    <h4>Publications </h4>
+    <div class="row">
+        <div class="small-12 columns">
+            <a href="https://academic.oup.com/bioinformatics/article-lookup/doi/10.1093/bioinformatics/btx143" target="_blank">
+                <div class="media-object">
+                    <div class="media-object-section middle">
+                        <h3><span class="icon icon-conceptual" data-icon="l"></span></h3>
+                    </div>
+                    <div class="media-object-section middle">
+                        <p>The RNASeq-er API—a gateway to systematically updated analysis of public RNA-seq data<i>Bioinformatics</i>, 22 March 2017.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkv1045" target="_blank">
+                <div class="media-object">
+                    <div class="media-object-section middle">
+                        <h3><span class="icon icon-conceptual" data-icon="l"></span></h3>
+                    </div>
+                    <div class="media-object-section middle">
+                        <p>Expression Atlas update &ndash; an integrated database of gene and protein expression in humans, animals and plants. <br/><i>Nucleic Acids Research</i>, 19 October 2015.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0107026" target="_blank">
+                <div class="media-object">
+                    <div class="media-object-section middle">
+                        <h3><span class="icon icon-conceptual" data-icon="l"></span></h3>
+                    </div>
+                    <div class="media-object-section middle">
+                        <p>RNA-Seq Gene Profiling &ndash; A Systematic Empirical Comparison <br/><i>PLoS One</i>, 30 September 2014.</p>
+                    </div>
+                </div>
+            </a>
+
+            <a href="https://academic.oup.com/nar/article-lookup/doi/10.1093/nar/gkt1270" target="_blank">
+                <div class="media-object">
+                    <div class="media-object-section middle">
+                        <h3><span class="icon icon-conceptual" data-icon="l"></span></h3>
+                    </div>
+                    <div class="media-object-section middle">
+                        <p>Expression Atlas update &ndash; a database of gene and transcript expression from microarray and sequencing-based functional genomics experiments.<br/><i>Nucleic Acids Research</i>, 4 December 2013.</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+    </div>
+</div>
+
+<div class="text-center jumbo-news-container padding-top-xlarge padding-bottom-xlarge">
+
+
+<div class="row">
+    <div class="small-centered small-8 medium-4 columns">
+        <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" width="50"/>
+        <a class="twitter-timeline" href="https://twitter.com/ExpressionAtlas" data-tweet-limit="1" data-chrome="transparent noheader nofooter" data-border-color="#EEE">Tweets by ExpressionAtlas</a> <script async src="https://www.ebi.ac.uk//platform.twitter.com/widgets.js" charset="utf-8"></script>
+    </div>
+</div>
+
+</div>
+
+<script>
+    /* This is to prevent overlapping between boxes in home page */
+    $(document).ready(function() {
+        Foundation.reInit('equalizer');
+    });
+</script>
+
+
+    </section>
+
+
+<footer id="local-footer" class="local-footer row expanded">
+    <div class="small-12 small-centered medium-8 large-6 columns">
+        <div class="row small-up-1 medium-up-3">
+            <div class="column column-block margin-top-large margin-bottom-large text-center">
+                <h4 style="color:white">Experiments</h4>
+                <a href="/gxa/experiments?experimentType=baseline" target="_blank">Baseline experiments</a><br/>
+                <a href="/gxa/experiments?experimentType=differential" target="_blank">Differential experiments</a>
+            </div>
+
+            <div class="column column-block margin-top-large margin-bottom-large text-center">
+                <h4 style="color:white">Atlas</h4>
+                <a href="/gxa/release-notes.html" target="_blank">Release notes</a><br/>
+                <a href="/gxa/download.html" target="_blank">Download</a><br/>
+                <a href="/gxa/help/index.html" target="_blank">Help</a><br/>
+                <a href="/gxa/FAQ.html" target="_blank">FAQ</a><br/>
+                <a href="/gxa/about.html" target="_blank">About Atlas</a>
+            </div>
+
+            <div class="column column-block margin-top-large margin-bottom-large text-center">
+                <h4 style="color:white">Follow us</h4>
+                <a href="https://twitter.com/ExpressionAtlas" target="_blank">Twitter</a><br/>
+                <a href="https://www.ebi.ac.uk/support/gxa" target="_blank">Feedback</a><br/>
+                <a href="mailto:arrayexpress-atlas@ebi.ac.uk" target="_blank">Contact</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div>
+
+
+
+<div id="global-footer" class="global-footer">
+
+    <nav id="global-nav-expanded" class="row global-nav-expanded">
+        <div class="columns small-6 medium-2 ">
+            <a href="https://www.ebi.ac.uk/" title="EMBL-EBI"><span class="ebi-logo"></span></a>
+            <ul></ul>
+        </div>
+        <div class="columns small-6 medium-2 ">
+            <h5 class="services"><a class="services-color" href="https://www.ebi.ac.uk/services">Services</a></h5>
+            <ul>
+                <li class="first"><a href="https://www.ebi.ac.uk/services">By topic</a></li>
+                <li><a href="https://www.ebi.ac.uk/services/all">By name (A-Z)</a></li>
+                <li class="last"><a href="https://www.ebi.ac.uk/support">Help &amp; Support</a></li>
+            </ul>
+        </div>
+        <div class="columns small-6 medium-2 ">
+            <h5 class="research"><a class="research-color" href="https://www.ebi.ac.uk/research">Research</a></h5>
+            <ul>
+                <li><a href="https://www.ebi.ac.uk/research/publications">Publications</a></li>
+                <li><a href="https://www.ebi.ac.uk/research/groups">Research groups</a></li>
+                <li class="last"><a href="https://www.ebi.ac.uk/research/postdocs">Postdocs</a> &amp; <a href="https://www.ebi.ac.uk/research/eipp">PhDs</a></li>
+            </ul>
+        </div>
+        <div class="columns small-6 medium-2 ">
+            <h5 class="training"><a class="training-color" href="https://www.ebi.ac.uk/training">Training</a></h5>
+            <ul>
+                <li><a href="https://www.ebi.ac.uk/training/handson">Train at EBI</a></li>
+                <li><a href="https://www.ebi.ac.uk/training/roadshow">Train outside EBI</a></li>
+                <li><a href="https://www.ebi.ac.uk/training/online">Train online</a></li>
+                <li class="last"><a href="https://www.ebi.ac.uk/training/contact-us">Contact organisers</a></li>
+            </ul>
+        </div>
+        <div class="columns small-6 medium-2 ">
+            <h5 class="industry"><a class="industry-color" href="https://www.ebi.ac.uk/industry">Industry</a></h5>
+            <ul>
+                <li><a href="https://www.ebi.ac.uk/industry/private">Members Area</a></li>
+                <li><a href="https://www.ebi.ac.uk/industry/workshops">Workshops</a></li>
+                <li><a href="https://www.ebi.ac.uk/industry/sme-forum"><abbr title="Small Medium Enterprise">SME</abbr> Forum</a></li>
+                <li class="last"><a href="https://www.ebi.ac.uk/industry/contact">Contact Industry programme</a></li>
+            </ul>
+        </div>
+        <div class="columns small-6 medium-2 ">
+            <h5 class="about"><a class="ebi-color" href="https://www.ebi.ac.uk/about">About EMBL-EBI</a></h5>
+            <ul>
+                <li><a href="https://www.ebi.ac.uk/about/contact">Contact us</a></li>
+                <li><a href="https://www.ebi.ac.uk/about/events">Events</a></li>
+                <li><a href="https://www.ebi.ac.uk/about/jobs" title="Jobs, postdocs, PhDs...">Jobs</a></li>
+                <li class="first"><a href="https://www.ebi.ac.uk/about/news">News</a></li>
+                <li><a href="https://www.ebi.ac.uk/about/people">People &amp; groups</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="ebi-footer-meta" class="row ebi-footer-meta">
+        <p class="address">EMBL-EBI, Wellcome Genome Campus, Hinxton, Cambridgeshire, CB10 1SD, UK &nbsp; &nbsp; +44 (0)1223 49 44 44</p>
+        <p>Copyright © EMBL-EBI 2016 | EBI is an outstation of the <a href="http://www.embl.org/">European Molecular Biology Laboratory</a> | <a href="https://ebiwd.github.io/about/terms-of-use">Terms of use</a></p>
+    </section>
+
+</div>
+
+
+<!-- JavaScript -->
+<script defer="defer" src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+<script src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+<script src="https://wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+
+<!-- The Foundation theme JavaScript -->
+<script type="text/JavaScript">$(document).foundation();</script>
+<script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+<!-- JSON Tag Editor -->
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/jquery-json-tag-editor/jquery.caret.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/jquery-json-tag-editor/jquery.json-tag-editor.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/geneQueryTagEditorModule.js"></script>
+
+
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.17.0/URI.min.js"></script>
+
+
+<!-- Condition AUTOCOMPLETE -->
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/arrayexpress-autocomplete/jquery.caret-range-1.0.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/lib/arrayexpress-autocomplete/jquery.array-express.autocomplete-1.1.0.150319.js"></script>
+<script language="JavaScript" type="text/javascript" src="https://www.ebi.ac.uk/gxa/resources/js/conditionAutocompleteModule.js"></script>
+<script>
+    var contextPath = '/gxa/';
+    var geneQueryPlaceHolder = 'Enter gene query…';
+
+    geneQueryTagEditorModule.init('#local-searchbox', '', function(){}, geneQueryPlaceHolder, contextPath);
+    geneQueryTagEditorModule.init('#home-search-gene-query-input', '', function(){}, geneQueryPlaceHolder, contextPath);
+    conditionAutocompleteModule.init('#home-search-condition-query-input', function(){});
+
+    $('#home-search-atlas-clear-button').on('click' , function () {
+        // Remove all tags
+        var $atlasSearchInput = $('#home-search-gene-query-input'),
+            atlasSearchTags = $atlasSearchInput.jsonTagEditor('getTags')[0].tags;
+        atlasSearchTags.forEach(function (searchTag) {
+            $atlasSearchInput.jsonTagEditor('removeTag', searchTag.value);
+        });
+
+        var $conditionQuery = $('#home-search-condition-query-input'),
+            conditionQueryTags = $conditionQuery.jsonTagEditor('getTags')[0].tags;
+        conditionQueryTags.forEach(function (searchTag) {
+            $conditionQuery.jsonTagEditor('removeTag', searchTag.value);
+        });
+    });
+
+    $('#home-search-atlas-form').submit(function(event) {
+        var $atlasSearchInput = $('#home-search-gene-query-input'),
+            atlasSearchTags = $atlasSearchInput.jsonTagEditor('getTags')[0].tags;
+        $atlasSearchInput.val(JSON.stringify(atlasSearchTags));
+
+        var $conditionQuery = $('#home-search-condition-query-input'),
+            conditionQueryTags = $conditionQuery.jsonTagEditor('getTags')[0].tags;
+        $conditionQuery.val(JSON.stringify(conditionQueryTags));
+    });
+
+    $('#local-search').submit(function(event) {
+        var $atlasSearchInput = $('#local-searchbox'),
+            atlasSearchTags = $atlasSearchInput.jsonTagEditor('getTags')[0].tags;
+        $atlasSearchInput.val(JSON.stringify(atlasSearchTags));
+    });
+</script>
+
+</body>
+</html>
