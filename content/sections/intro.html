@@ -4,13 +4,13 @@ The lab is partly about reinforcing our shared identity, but it's mostly about l
 
 <div class="row "><div class="row">
 
-<div class="columns medium-9 padding-top-xlarge">
+<div class="columns medium-12 padding-top-xlarge">
 <h3><i class="padding-left-large icon icon-generic" data-icon="O"></i> Universal principals</h3>
-<div class="medium-up-3 clearfix padding-bottom-xlarge" data-equalizer data-equalize-on="medium">
+<div class="medium-up-4 clearfix padding-bottom-xlarge" data-equalizer data-equalize-on="medium">
 <div class="column">
 <a href="{{root}}general" class="block margin-bottom-large" data-equalizer-watch>
 {{#markdown}}
-#### Our basic style guide
+#### Logos, colours
 Our colours and high level information on the EMBL-EBI brand.
 {{/markdown}}
 </a>
@@ -20,14 +20,6 @@ Our colours and high level information on the EMBL-EBI brand.
 {{#markdown}}
 #### How to write
 Our collective writing voice, formatting and general style.
-{{/markdown}}
-</a>
-</div>
-<div class="column">
-<a href="{{root}}general/templates" class="block margin-bottom-large" data-equalizer-watch>
-{{#markdown}}
-#### Logos
-Get the EMBL and EMBL-EBI logos in PDF, PNG, SVG and other formats.
 {{/markdown}}
 </a>
 </div>
@@ -50,11 +42,11 @@ Maximise the effectivness of your content and see if it's working.
 </div>
 
 <h3 class=""><i class="padding-left-large icon icon-generic" data-icon="y"></i> Build websites</h3>
-<div class="medium-up-3 clearfix padding-bottom-xlarge" data-equalizer data-equalize-on="medium">
+<div class="medium-up-4 clearfix padding-bottom-xlarge" data-equalizer data-equalize-on="medium">
 <div class="column">
 <a href="{{root}}websites" class="block margin-bottom-large" data-equalizer-watch>
 {{#markdown}}
-#### EBI Websites basics
+#### EBI Website basics
 General guidance on building a site with the EMBL-EBI Visual Framework.
 {{/markdown}}
 </a>
@@ -86,7 +78,7 @@ Discover (and share) code and patterns for button grids, form submission, menu d
 </div>
 
 <h3 class=""><i class="padding-left-large icon icon-generic" data-icon=";"></i> Create documents</h3>
-<div class="medium-up-3 clearfix padding-bottom-xlarge" data-equalizer data-equalize-on="medium">
+<div class="medium-up-4 clearfix padding-bottom-xlarge" data-equalizer data-equalize-on="medium">
 <div class="column">
 <a href="{{root}}general/templates" class="block margin-bottom-large" data-equalizer-watch>
 {{#markdown}}
@@ -114,124 +106,8 @@ Download icon font sets to use on your computer.
 </div>
 
 
-
-<!-- </div> -->
-
-<!-- </div> -->
-
 </div>
 
-<div class="columns medium-3 column-underline">
-<div class="column margin-top-large callout white-color industry-background">
-  {{#markdown}}
-  **Contribute a pattern**<br/>
-  Learn how to edit text or add a reusable website pattern [by following this guide]({{root}}websites/patterns/howto/).
-
-  **Developer?**<br/>If you're a web developer that wants to build atop this platform, <a href="https://github.com/ebiwd/EBI-Style-lab/#ebi-style-lab" class="readmore">see the github readme</a>
-  {{/markdown}}
-</div>
-
-<div class="column padding-top-large">
-  {{#markdown}}
-  ##### What's being discussed
-  {{/markdown}}
-  <div id="github-issues"><cite>Loading...</cite></div>
-  <a href="https://github.com/ebiwd/EBI-Style-lab/issues" class="readmore">View all discussions</a>
-</div>
-<div class="column padding-top-large">
-  {{#markdown}}
-  ##### What's new
-  {{/markdown}}
-  <div id="github-commits"><cite>Loading...</cite></div>
-  <a href="https://github.com/ebiwd/EBI-Style-lab/commits/master" class="readmore">View all updates</a>
-</div>
-
-</div>
 
 
 </div></div><!-- ./row ./row -->
-
-{{{{raw}}}}
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.8/handlebars.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
-<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/locale/en-gb.js"></script> -->
-<script tryp="text/javascript">
-document.addEventListener('DOMContentLoaded', function(){
-  var DateFormats = {
-         short: " DD MMMM",
-         long: "dddd DD.MM.YYYY HH:mm"
-  };
-  Handlebars.registerHelper("formatDate", function(datetime, format) {
-    if (moment) {
-      // can use other formats like 'lll' too
-      format = DateFormats[format] || format;
-      return moment(datetime).format(format);
-    }
-    else {
-      return datetime;
-    }
-  });
-
-  var commitTemplate = '{{#each this}}'+
-      '<div class="padding-bottom-small">'+
-        '<h6 class="margin-bottom-none"><a href="{{link.href}}" target="_blank" class="">{{title}}</a></h6>'+
-        '<span class="label  secondary-color">by {{author.name}} on {{formatDate updated "short"}}</span>'+
-        // '<span class="label"></span>'+
-      '</div>'+
-    '{{/each}}';
-
-  var issueTemplate = '{{#each item}}'+
-      '<div class="padding-bottom-small">'+
-        '<h6 class="margin-bottom-none"><a href="{{link}}" target="_blank" class="">{{title}}</a></h6>'+
-        '<span class="label  secondary-color">{{formatDate pubDate "short"}}</span>'+
-        // '<span class="label"></span>'+
-      '</div>'+
-    '{{/each}}';
-
-  // feed processor
-  function feedImporter(feedUrl,template,destination){
-    this.feedUrl = feedUrl;
-    this.template = template;
-    this.destination = destination;
-  }
-  feedImporter.prototype.initAtom = function(){
-    function queryData(properties) {
-      $.ajax({
-        // here we use YQL to translate the RSS into JSON, but you could easily pass in your JSON here
-        url: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20atom%20where%20url%3D%22'+ encodeURIComponent(properties.feedUrl)+'%22limit%204&&format=json&diagnostics=false&_maxage=3600',
-        template:    properties.template,
-        destination: properties.destination
-      }).done( function(data) {
-        // here you need to map your JSON structure
-        var mappedData = data.query.results.entry,
-            template = Handlebars.compile(properties.template);
-        $(properties.destination).html(template(mappedData));
-      });
-    }
-    queryData(this); // bootstrap
-  }
-  feedImporter.prototype.initRSS = function(){
-    function queryData(properties) {
-      $.ajax({
-        // here we use YQL to translate the RSS into JSON, but you could easily pass in your JSON here
-        url: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%20rss%20where%20url%3D%22'+ encodeURIComponent(properties.feedUrl)+'%22limit%204&&format=json&diagnostics=false&_maxage=3600',
-        // url: 'https://query.yahooapis.com/v1/public/yql?q=select%20*%20from%feed%20where%20url%3D%22'+ encodeURIComponent(properties.feedUrl)+'%22limit%206&&format=json&diagnostics=false&_maxage=3600',
-        template:    properties.template,
-        destination: properties.destination
-      }).done( function(data) {
-        // here you need to map your JSON structure
-        // console.log(data.query.results);
-        var mappedData = data.query.results,
-            template = Handlebars.compile(properties.template);
-        $(properties.destination).html(template(mappedData));
-      });
-    }
-    queryData(this); // bootstrap
-  }
-  var githubCommits = new feedImporter("https://github.com/ebiwd/EBI-Style-lab/commits/master.atom",commitTemplate, "#github-commits").initAtom();
-  var githubIssues = new feedImporter("https://zapier.com/engine/rss/2403632/stylelab-issues",issueTemplate, "#github-issues").initRSS();
-
-}, false);
-</script>
-
-{{{{/raw}}}}
