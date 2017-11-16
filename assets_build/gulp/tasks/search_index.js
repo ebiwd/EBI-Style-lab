@@ -12,6 +12,7 @@ import gutil        from 'gulp-util';
 // import marked       from 'gulp-marked'
 // import pageJson     from 'gulp-page-json'
 import striptags    from 'striptags';
+import stripJs      from 'strip-js';
 
 // Load all Gulp plugins into one variable
 const $ = plugins();
@@ -92,7 +93,7 @@ function pageJson() {
 
       var body = text.match(/<body.[\s\S]*?>(.[\s\S]*?)body>/gi) + ' ';
         body = body.replace(/<body.[\s\S]*?>(.[\s\S]*?)<\/body>/gi, '$1');
-        body = striptags(body);
+        body = stripJs(striptags(body));
         body = body.replace(/\r?\n|\r/g, ''); // remove white space
         body = body.replace(/    /g, ' '); // remove white space
         body = body.replace(/   /g, ' '); // remove white space

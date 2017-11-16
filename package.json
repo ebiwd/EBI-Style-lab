@@ -53,6 +53,7 @@
     "require-dir": "^0.3.1",
     "rimraf": "^2.4.3",
     "sass-lint": "^1.10.2",
+    "strip-js": "^1.0.6",
     "striptags": "^3.0.1",
     "style-sherpa": "^1.0.0",
     "svg-injector": "^1.1.3",
