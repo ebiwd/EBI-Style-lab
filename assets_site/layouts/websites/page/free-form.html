@@ -47,9 +47,12 @@
 
           {{> building-block-preview}}
 
+          {{#if hide-download-link}}
+          {{else}}
           <div class="row column">
             <p class="complex-link">This pattern uses a more complex framework. Instead <a class="readmore" href="{{root}}files/building-blocks/{{block.datakey}}.zip">download the zip</a></p>
           </div>
+          {{/if}}
 
           <div class="building-block-related">
             <div class="row column">

@@ -3,7 +3,7 @@ tags:
   - banner
   - branding
 category: media
-description: For services that are part of the ELIXIR network.
+description: This should be placed in the footer of sites that are part of the ELIXIR network; you'll need to include two lines of code.
 versions:
   - 1.1.0, 1.2.0, 1.3.0
 author:

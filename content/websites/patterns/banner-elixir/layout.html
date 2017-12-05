@@ -1,6 +1,7 @@
 ---
 title: ELIXIR Banner
 layout: free-form
+hide-download-link: true
 ---
 <!DOCTYPE html>
 <html>
@@ -22,7 +23,6 @@ body {
 <div class="row" style="max-width: 1200px; margin: 0 auto; font-family: Helvetica, sans-serif; line-height: 1.5rem; padding-bottom: 1rem;">
 <div class="column">
 {{#markdown}}
-This should be placed in the footer of sites that are part of the ELIXIR network; you'll need to include these two lines:
 ```
 <div id="elixir-banner" data-color="grey" data-name="This service" data-description="I am a super cool service" data-more-information-link="https://www.elixir-europe.org/about-us/who-we-are/nodes/embl-ebi" data-use-basic-styles="true"></div>
 <script defer="defer" src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"></script>
@@ -36,9 +36,7 @@ There are optional `data` attributes:
 - `data-more-information-link`: by default the banner will point to a page at www.elixir-europe.org. If you would prefer to link to a custom page explaining your relationship with ELXIR, add the full URL here
 - `data-use-basic-styles`: if you have not loaded the Foundation Framework CSS, set to `true` and will inject a few lines of css for basic formatting
 
-Get started:
-- [Try it on CodePen](https://codepen.io/khawkins98/pen/ZXdGQO?editors=1000)
-- [See an example implementation](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/affiliates.html)
+[Try it on CodePen](https://codepen.io/khawkins98/pen/ZXdGQO?editors=1000) or [see an example implementation](https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/affiliates.html).
 
 {{/markdown}}
 </div>
