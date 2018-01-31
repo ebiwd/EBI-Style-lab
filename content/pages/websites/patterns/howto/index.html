@@ -118,17 +118,7 @@ Patterns are made to drop into any EBI Visual Framework project and work. Theref
 
 All are welcome to contribute patterns. Submissions are made through GitHub, with pull requests — or they can be e-mailed to <a class="external "href="mailto:www-dev@ebi.ac.uk">www-dev@ebi.ac.uk</a>
 
-You need to:
-1. Clone or download the repo from https://github.com/ebiwd/EBI-Style-lab
-2. Navigate to the repo
-3. `npm install`
-4. `bower install`
-5. `npm start`
-5. and `cd content/websites/patterns/`
-
-This will start the build system and watch for changes. When you save a change, the browser preview will refresh automatically.
-
-<h4 id="files" class="how-to-subheader">Submitting your pattern</h4>
+<h4 id="files" class="how-to-subheader">Pattern technical ingredients</h4>
 
 There are just a few simple files needed to submit your pattern.
 
@@ -139,9 +129,18 @@ There are just a few simple files needed to submit your pattern.
 - **YML:** You’ll want to describe your pattern and submit your name. A Yaml file uses a <code>.yml</code> file extension and is where the pattern name, description, tags and more are stored.
 - **Optional Layout HTML or SCSS:** The pattern should a stand-alone component that comes with no extra grid markup or containers. You can use an optional layout file to display the Blocks in a nicer way. <a href="#add-layout">See example below.</a>
 
-You’ll find the <code>building-blocks</code> folder in the root directory of the patterns project. This is where all the patterns that get displayed on the site live.
+<h4 id="setup" class="how-to-subheader">Getting setup</h4>
 
-<h4 id="banch" class="how-to-subheader">(Step 1) Create a New Branch:</h4>
+<h4 id="prerequistes" class="how-to-subheader">(Step 1) Install the prerequistes:</h4>
+
+1. Clone or download the repo from https://github.com/ebiwd/EBI-Style-lab
+1. Navigate to the repo
+1. `npm install`
+1. `bower install`
+1. `npm start`
+  - This will start the build system and watch for changes. When you save a change, the browser preview will refresh automatically.
+
+<h4 id="branch" class="how-to-subheader">(Step 2) Create a New Branch:</h4>
 
 Create a branch from which to submit your pattern from. This will allow you to submit a Pull Request when you’re done so that the Foundation team can review it, offer suggestions and merge it in.
 
@@ -150,64 +149,36 @@ In your terminal, checkout a new branch
 `git checkout -b your-branch-name`
 
 
-<h4 id="cli" class="how-to-subheader">(Step 2) Create a New, Unique Folder:</h4>
+<h4 id="cli" class="how-to-subheader">(Step 3) Create a New, Unique Folder:</h4>
 
-Create a new folder in the patterns folder. Name it the name of your pattern.
+1. Navigate to the collection of patterns `cd content/websites/patterns/`
+2. Create a new folder in the patterns folder. Name it the name of your pattern, a la `image-gallery`
+  - avoid using terms that describe the look and instead focus on what the thing does
 
-The name should contain the component or type of component it is. For example a card should have Card in the name or a sidebar layout should have Sidebar in the name.
-
-Example: article-card
+<h4 id="add" class="how-to-subheader">(Step 4) Make and fill in your files:</h4>
 
 All your files in the folder will have the same root name
 
-- article-card
-  - article-card.html
-  - article-card.scss
-  - article-card.js
-  - article-card.png
-  - article-card.yml
+- `content/websites/patterns/image-gallery/`
+  - `image-gallery/image-gallery.html`
+  - `image-gallery/image-gallery.scss` (optional)
+  - `image-gallery/image-gallery.js` (optional)
+  - `image-gallery/image-gallery.png`
+    1. Open your favorite image editing program
+    1. Make an artboard with dimensions of 370x255, and set the background to the color to <code>#E6E8EB</code>
+    1. Import the screenshot you took, and do your best to center it
+    1. Scale the screenshot as needed
+  - `image-gallery/image-gallery.yml`
+    - Make sure to add meaningful tags. Tags are important for many reasons, they not only tell people about the patterns but also help find others like it. Some examples: image, gallery, photos, captions, interactive.
+  - `image-gallery/layout.html` (advanced, optional)
+    - See guidance below
 
-<h4 id="add" class="how-to-subheader">(Step 3) Add your Block:</h4>
+{{/markdown}}
 
-In your pattern component folder, create your <code>.html</code>, <code>.scss</code>, <code>.js</code> and <code>.yml</code> pages.
-
-1. Create a HTML file
-  - Example: article-card.html
-  - Paste in your HTML
-  - Save
-1. Create a SCSS file
-  - Example: article-card.scss
-  - Paste in your SCSS or CSS
-  - Save
-1. Create an JS file (if applicable)
-  - Example: article-card.js
-  - Paste in your JS
-  - Save
-1. Create an YML file
-  - Example: article-card.yml
-  - Fill out your yml data
-  - Save
-  - Here is a .yml file template you can use: <a href="https://github.com/zurb/building-blocks/blob/master/building-block-sample.yml" target="_blank">Sample .yml file</a>
-  - Make sure to add meaningful tags. <a href="#tag-details">See tag details below</a>.
-1. Add your preview image
-  - Example: article-card.png
-  - Add the image to the <code>article-card</code> folder for this example.
-  - <a href="#img-guide">See image guidelines</a>
-
-
-</ol>
-
-Tags are important for many reasons. They not only tell people about the patterns, but they also help people find others like it.
-
-To make it easy, we put together a list of tags to use. You'll find the tag list here: <a href="http://zurb.us/2oND1JR" target="_blank">http://zurb.us/2oND1JR</a>
-
-**That’s it!**
-
-You can preview your new pattern on the homepage or go directly to it.
-
-Example URL: http://localhost:8000/websites/patterns/article-card.html
-
+<div class="row">
+<div class="callout medium-10 medium-push-1">
 <h4 id="add-layout" class="how-to-subheader">Optional Layout HTML or SCSS files.</h4>
+{{#markdown}}
 
 If needed, patterns can have an optional layout file that helps you display your patterns preview in a certain way, repeat the component, or inside a container. For example, our Article Card is one single card that fills the width of the container it's in. In order to keep it to a certain width and to repeat it several times without adding a ton of markup to the Article Card itself, we'll add a <code>layout.html</code> file.
 
@@ -228,47 +199,23 @@ Example:
 Note: adding a <code>layout.html</code> file will override the <code>containerClass</code> variable in your .yml file.
 
 Looking good?
-
-
-<h4 id="img-guide" class="how-to-subheader">Preview Images</h4>
-
-In order to make sure all the preview images look consistant and represent your patterns well, we put together some guidelines for submitting a good preview image. These are the images that belong in the cards on the patterns search results.
-
-Example of a good preview image:
-
-<img src="{{root}}assets/img/images/howto-previewimgexample.png" class="" height="" width="" alt="image of good pattern previews">
-
-Take a screenshot of your pattern with a background of <code>#E6E8EB</code>
-
-<div class="float-right medium-7 large-5 callout columns">
-<span class="label">Optional but nice to have</span>
-<p><img src="{{root}}assets/img/images/howto-layeredbb.png" class="" height="" width="" alt="image of layered states pattern"></p>
-<p>If your pattern has multiple states and would be hard to explain with just one image, take an image of the extra states and layer it on top of the first image so the important components of both are showing.</p>
+{{/markdown}}
+</div>
 </div>
 
-In your favorite image editing program, make an artboard with dimensions of 370x255, and set the background to the color to <code>#E6E8EB</code>
+{{#markdown}}
 
-Import the screenshot you took, and do your best to center it, while keeping it to about 80% of the width of the artboard
+<h4 id="add" class="how-to-subheader">(Step 5) Save and preview:</h4>
 
+As you save the pattern will be automatically compiled and inserted to the gallery; Example URL: [http://localhost:8000/websites/patterns/image-gallery.html](http://localhost:8000/websites/patterns/image-gallery.html)
 
-Export the image into the folder of your pattern, naming it the same name as the folder name.
-
-<h4 class="how-to-subheader">(Step 4) Submit It!:</h4>
+<h4 class="how-to-subheader">(Step 6) Submit It!:</h4>
 
 Now it’s time to submit your pattern. Make sure to add and commit your work. Then submit your Pull Request.
 
 <h4 id="review" class="how-to-subheader">Review Process</h4>
 
-Once you submit your pattern pull request, a member of the Foundation team will review it to add it in.
-
-Things we’ll be looking for:
-
-- An image
-- The pattern meets class naming guidelines
-- The pattern is responsive
-- The <code>.yml</code> file has the proper tags and description.
-
-Lastly, we merge in your Pull Request.
+Once you submit your pattern pull request, a member of the team will review it to add it in.
 {{/markdown}}
 
 </section>
