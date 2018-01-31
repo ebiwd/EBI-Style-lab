@@ -118,19 +118,6 @@ Patterns are made to drop into any EBI Visual Framework project and work. Theref
 
 All are welcome to contribute patterns. Submissions are made through GitHub, with pull requests — or they can be e-mailed to <a class="external "href="mailto:www-dev@ebi.ac.uk">www-dev@ebi.ac.uk</a>
 
-<h4 id="files" class="how-to-subheader">Pattern technical ingredients</h4>
-
-There are just a few simple files needed to submit your pattern.
-
-- **HTML:** Every pattern will need an HTML file to demonstrate the uniqueness of the component or layout.
-- **SCSS:** You’ll add your custom styles in a SCSS file. You only need your additional styles as Foundation is already being imported for you. SCSS files accept CSS or SCSS so you can format it either way.
-- **JS:** If your component uses custom JavaScript/jQuery you’ll create a JS file and add it there. Again, Foundation JS and jQuery are already included, so only your custom JS is needed if you used any.
-- **Image:** A preview image of your pattern. This will give people context on what the pattern is! See suggestions for great preview images. The thumbnail should be in a <code>.png</code> format.
-- **YML:** You’ll want to describe your pattern and submit your name. A Yaml file uses a <code>.yml</code> file extension and is where the pattern name, description, tags and more are stored.
-- **Optional Layout HTML or SCSS:** The pattern should a stand-alone component that comes with no extra grid markup or containers. You can use an optional layout file to display the Blocks in a nicer way. <a href="#add-layout">See example below.</a>
-
-<h4 id="setup" class="how-to-subheader">Getting setup</h4>
-
 <h4 id="prerequistes" class="how-to-subheader">(Step 1) Install the prerequistes:</h4>
 
 1. Clone or download the repo from https://github.com/ebiwd/EBI-Style-lab
@@ -157,20 +144,34 @@ In your terminal, checkout a new branch
 
 <h4 id="add" class="how-to-subheader">(Step 4) Make and fill in your files:</h4>
 
-All your files in the folder will have the same root name
+<div class="row">
+<div class="callout industry-background white-color medium-10 medium-push-1">
+<h3>Tip: Grab the template</h3>
+<p>There's a template pattern you copy-paste to get started. <a href="https://github.com/ebiwd/EBI-Style-lab/tree/master/content/websites/patterns/template" target="_blank" class="external">See the files on GitHub</a> or <a href="https://www.ebi.ac.uk/style-lab/files/building-blocks/template.zip" class="readmore">download it as a ZIP</a>
+</div>
+</div>
+
+There are just a few simple files needed to submit your pattern. All your files in the folder will have the same root name.
 
 - `content/websites/patterns/image-gallery/`
   - `image-gallery/image-gallery.html`
+    - Every pattern will need an HTML file to demonstrate the uniqueness of the component or layout.
   - `image-gallery/image-gallery.scss` (optional)
+    - You’ll add your custom styles in a SCSS file. You only need your additional styles as Foundation is already being imported for you. SCSS files accept CSS or SCSS so you can format it either way.
   - `image-gallery/image-gallery.js` (optional)
+    - If your component uses custom JavaScript/jQuery you’ll create a JS file and add it there. Again, Foundation JS and jQuery are already included, so only your custom JS is needed if you used any.
   - `image-gallery/image-gallery.png`
+    1. A preview image of your pattern. This will give people context on what the pattern is!
     1. Open your favorite image editing program
     1. Make an artboard with dimensions of 370x255, and set the background to the color to <code>#E6E8EB</code>
     1. Import the screenshot you took, and do your best to center it
     1. Scale the screenshot as needed
+    1. Be sure to save as a PNG
   - `image-gallery/image-gallery.yml`
+    - You’ll want to describe your pattern and submit your name. A Yaml file uses a <code>.yml</code> file extension and is where the pattern name, description, tags and more are stored.
     - Make sure to add meaningful tags. Tags are important for many reasons, they not only tell people about the patterns but also help find others like it. Some examples: image, gallery, photos, captions, interactive.
   - `image-gallery/layout.html` (advanced, optional)
+    - The pattern should a stand-alone component that comes with no extra grid markup or containers. You can use an optional layout file to display the Blocks in a nicer way.
     - See guidance below
 
 {{/markdown}}
