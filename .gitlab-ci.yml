@@ -21,11 +21,11 @@ stages:
 
 build:
   stage: build
-  image: simonvanderveldt/node-bower-gulp:6
+  image: ebiwd/node-bower-gulp:6
   before_script:
     - cd ${CI_PROJECT_DIR}
     - npm install --quiet
-    - bower install --quiet
+    - bower --allow-root install --quiet
   script:
     - npm run build
   cache:
@@ -51,7 +51,7 @@ deploy_dev: &deploy
     VMS: ${DEV_SERVER}
   stage: deploy
   script:
-    - for VM in ${VMS}; do 
+    - for VM in ${VMS}; do
         rsync -acv --delete-after ${CI_PROJECT_DIR}/dist/. ${SSH_OWNER}@${VM}:${DEST}/;
       done
   only:
@@ -60,7 +60,7 @@ deploy_dev: &deploy
     name: ${NAME}
     url: ${URL}
 
-deploy_live: 
+deploy_live:
   <<: *deploy
   only:
     - tags
