@@ -7,22 +7,21 @@ filter-dropdowns: false
 layout: static
 ---
 
+<div data-sticky-container>
+  <div class="top-bar" data-sticky data-margin-top="3" data-anchor="main-content-area" id="example-menu">
+    <div class="top-bar-left">
+      <ul class="menu no-underline" data-magellan>
+        <li>On this page:</li>
+        <li><a href="#what-is">What are patterns?</a></li>
+        <li><a href="#use">How to use a pattern</a></li>
+        <li><a href="#submit">Submitting your pattern</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
-<aside>
-<ul class="sidenav-bb" data-magellan data-deep-linking="true" >
-  - <a class="how-to-menu-item" href="#what-is">What is a pattern?</a>
-  - <a href="#use">How to use a pattern</a>
-  <!-- - <a href="#need">What Do I Need to Submit a pattern?</a> -->
-  - <a href="#submit">Submitting your pattern</a>
-  <!-- - <a href="#review">Review Process</a>
-  - <a href="#containerClass">Container Classes</a>
-  - <a href="#layout">Preview Layouts</a>
-  - <a href="#images">Preview Image</a>
-  - <a href="#classNaming">Class Naming</a>
-  - <a href="#tags">Tags</a> -->
-</ul>
-</aside>
 
+<br/>
 <!--what is a pattern-->
 
 <section id="what-is" data-magellan-target="what-is">
@@ -178,7 +177,7 @@ There are just a few simple files needed to submit your pattern. All your files 
 
 <div class="row">
 <div class="callout medium-10 medium-push-1">
-<h4 id="add-layout" class="how-to-subheader">Optional Layout HTML or SCSS files.</h4>
+<h4 id="add-layout" class="how-to-subheader">Optional Layout HTML file</h4>
 {{#markdown}}
 
 If needed, patterns can have an optional layout file that helps you display your patterns preview in a certain way, repeat the component, or inside a container. For example, our Article Card is one single card that fills the width of the container it's in. In order to keep it to a certain width and to repeat it several times without adding a ton of markup to the Article Card itself, we'll add a <code>layout.html</code> file.
@@ -191,15 +190,6 @@ Example:
 
 Here we used a Block Grid and included our pattern 3 times, one for each column. You can use the Panini handlebars include like this or paste the HTML in.
 
-You may need some CSS to ensure your pattern demo looks as good as possible. In that case you may create a <code>layout.scss</code> file to add custom styles.
-
-Example:
-
-<img src="{{root}}assets/img/images/howto-layoutscss.png" class="" height="" width="" alt="image of layered states pattern">
-
-Note: adding a <code>layout.html</code> file will override the <code>containerClass</code> variable in your .yml file.
-
-Looking good?
 {{/markdown}}
 </div>
 </div>
@@ -210,7 +200,7 @@ Looking good?
 
 As you save the pattern will be automatically compiled and inserted to the gallery; Example URL: [http://localhost:8000/websites/patterns/image-gallery.html](http://localhost:8000/websites/patterns/image-gallery.html)
 
-<h4 class="how-to-subheader">(Step 6) Submit It!:</h4>
+<h4 class="how-to-subheader">(Step 6) Submit:</h4>
 
 Now it’s time to submit your pattern. Make sure to add and commit your work. Then submit your Pull Request.
 
