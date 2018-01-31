@@ -1,8 +1,9 @@
-name: 'template'
+name: 'Pattern template'
 tags:
-  - visuals
+  - template
+  - boilerplate
 category: media
-description: .
+description: Use this as a boilerplate to make your own pattern for the EMBL-EBI Style Lab.
 versions:
   - 1.1.0
   - 1.2.0
