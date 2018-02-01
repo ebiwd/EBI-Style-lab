@@ -1,69 +1,66 @@
 ---
 meta-title: How to
 title: How to use and submit patterns
-cta: Patterns are coded UI components designed to be dropped into projects.
+cta: Patterns are coded UI components designed to be dropped into projects. The intent of patterns are to solve common patterns, scaffold faster, and integrate with your existing styles right out of the box.
 filter-nav: false
 filter-dropdowns: false
 layout: static
 ---
 
-<div data-sticky-container>
-  <div class="top-bar" data-sticky data-margin-top="3" data-anchor="main-content-area" id="example-menu">
-    <div class="top-bar-left">
-      <ul class="menu no-underline" data-magellan>
-        <li>On this page:</li>
-        <li><a href="#what-is">What are patterns?</a></li>
-        <li><a href="#use">How to use a pattern</a></li>
-        <li><a href="#submit">Submitting your pattern</a></li>
-      </ul>
-    </div>
-  </div>
-</div>
 
 
 <br/>
 <!--what is a pattern-->
 
-<section id="what-is" data-magellan-target="what-is">
-<h3 class="how-to-header">What are patterns?</h3>
-{{#markdown}}
+<div class="intro-unit ">
+  <h2 class="how-to-header">What are patterns?</h2>
+  <div class="row">
+  <div class="columns medium-6">
+  <h3 class="margin-bottom-none">Patterns are:</h3>
+  <ul>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> HTML, CSS, and JS snippets</li>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> Lightly styled components</li>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> Easy to extend or customize</li>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> Common solutions to layout or component challenges</li>
+  </ul>
+  </div>
+  <div class="columns medium-6">
+  <h3 class="margin-bottom-none">Patterns are NOT:</h3>
+  <ul>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Templates</li>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Themes</li>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Overly stylized</li>
+    <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Code that does not integrate with EBI Visual Framework</li>
+  </ul>
+  </div>
+  </div>
 
-Patterns are:
+  <div data-sticky-container>
+    <div class="top-bar" data-sticky data-margin-top="3" data-anchor="magellan-content" id="on-page-menu">
+      <div class="top-bar-left">
+        <ul class="menu no-underline" data-magellan>
+          <li>On this page:</li>
+          <li><a href="#use">How to use a pattern</a></li>
+          <li><a href="#submit">Submitting your pattern</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
-- HTML, CSS, and JS snippets that work on EMBL-EBI project
-- Lightly styled components
-- Easy to extend or customize
-- Common solutions to layout or component challenges that are not core to the Framework
-
-Patterns are NOT:
-
-- Templates
-- Themes
-- Overly stylized
-- Code that does not integrate with EBI Visual Framework
-
-In short: The intent of patterns are to solve common patterns, scaffold faster, and integrate with your existing styles right out of the box.
-
-<hr class="how-to-line">
-{{/markdown}}
-</section>
 
 <!--how to use-->
-
+<div id="magellan-content">
 <section id="use" data-magellan-target="use">
 {{#markdown}}
 
-### How To Use a pattern
+### How to use a pattern
 
 Patterns are easy to use in your projects whether you’re using a CSS version or the powerful ZURB Stack. Below, we’ve outlined how to get a pattern into your project in a snap and build faster.
 
 <h4 id="copy" class="how-to-subheader">(Option A) Copy it</h4>
 
 Like a pattern? You can copy the HTML and CSS/SCSS and JS (if applicable) from the pattern detail page. You’ll see a responsive preview and description at the top of the page. Below the preview you’ll find the code for the component.
-
-The HTML, CSS, and JS toggles let you focus on one section at a time if you’d like.
-
-<img src="{{root}}assets/img/images/top-section.png" class="" height="" width="" alt="">
 
 You can copy the the code from each code container using the handy copy button.
 
@@ -73,9 +70,6 @@ If you are using CSS vs SCSS, you can toggle to the compiled CSS using this hand
 
 <img src="{{root}}assets/img/images/css-section.png" class="" height="" width="" alt="">
 
-If you’re using the CSS version of Foundation, it’s best to add the CSS to your app.css file that is included with the downloaded Foundation CSS project. You can make any style overrides from there.
-
-If you’re using the ZURB Stack Sass version, a custom SCSS partial is the best place to add the pattern’s SCSS. The JS can be added to app.js. But if you’re a fan of optimization, we suggest you use the Foundation CLI install to do all this automatically for you. It’s rad!
 
 <h4 class="how-to-subheader" id="download-individual">(Option B) Download an individual pattern</h4>
 
@@ -210,3 +204,4 @@ Once you submit your pattern pull request, a member of the team will review it t
 {{/markdown}}
 
 </section>
+</div> <!-- / magellan-content -->
