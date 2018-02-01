@@ -1,6 +1,6 @@
 <div class="building-block-header">
   <div class="row align-top align-justify">
-    <div class="small-12 columns">
+    <div class="small-12 medium-7 large-8 columns">
       <div class="building-block-header-name-section">
         <h2 class="">{{block.name}}</h2>
         <h3 class="building-block-author">{{#if block.author.github}}<img src="https://github.com/{{block.author.github}}.png?size=30" class="avatar content-right" height="" width="" alt="">{{/if}}By
@@ -17,6 +17,12 @@
         {{/each}}
       </div>
       <p>{{block.description}}</p>
+    </div>
+    <div class="column small-12 medium-5 large-4">
+      <div class="callout industry-background white-color">
+        <h3>Contribute a pattern</h3>
+        <p>Have a great way of doing something, add it to the Style Lab. <a href="{{@root.root}}websites/patterns/howto#submit" class="readmore">Here's how</a></p>
+      </div>
     </div>
   </div>
 </div>
