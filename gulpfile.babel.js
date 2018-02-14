@@ -35,11 +35,10 @@ function loadConfig() {
 }
 
 // Get the latest icon font list
-// Todo: make a partial in the font repo to use
 gulp.task('updateIconFonts', function () {
   return download({
     file: "fonts.html",
-    url: "http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html"
+    url: "https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/partial.html"
   })
   //
   // return download("http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html")
