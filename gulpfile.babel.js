@@ -15,6 +15,7 @@ import _            from 'lodash';
 import requireDir   from 'require-dir';
 import stripCssComments from 'gulp-strip-css-comments';
 import download     from 'gulp-download-stream';
+import es           from "event-stream";
 // import gtb          from 'gulp-typescript-babel';
 
 // Load all Gulp plugins into one variable
@@ -35,21 +36,29 @@ function loadConfig() {
 }
 
 // Get the latest icon font list
-gulp.task('updateIconFonts', function () {
-  return download({
-    file: "fonts.html",
-    url: "https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/partial.html"
-  })
-  //
-  // return download("http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html")
-  // .pipe(replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1'))
-  // .pipe(replace(/.[\s\S]*?<section id="intro".*?>(.[\s\S]*?)/i, '$1'))
-  // .pipe(replace('</body>', ''))
-  // .pipe(replace('</html>', ''))
-  // .pipe(replace(/<footer.[\s\S]*?/g, '</div>'))
-    // <\/body>.[\s\S]*?html>
-    // .pipe(replace(/.*?<body.*?>(.*?)<\/body>.*?/g, 'testng $1'))
-    .pipe(gulp.dest("assets_site/partials/fonts"));
+gulp.task('updateIconFonts', function (done) {
+  es.merge([
+    download({
+      file: "fonts-v1_2.html",
+      url: "https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/partial.html"
+    })
+    // return download("http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html")
+    // .pipe(replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1'))
+    // .pipe(replace(/.[\s\S]*?<section id="intro".*?>(.[\s\S]*?)/i, '$1'))
+    // .pipe(replace('</body>', ''))
+    // .pipe(replace('</html>', ''))
+    // .pipe(replace(/<footer.[\s\S]*?/g, '</div>'))
+      // <\/body>.[\s\S]*?html>
+      // .pipe(replace(/.*?<body.*?>(.*?)<\/body>.*?/g, 'testng $1'))
+      .pipe(gulp.dest("assets_site/partials/fonts")),
+
+    download({
+      file: "fonts-v1_3.html",
+      url: "https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/partial.html"
+    })
+    .pipe(gulp.dest("assets_site/partials/fonts"))
+  ])
+  done();
 });
 
 // Lint task

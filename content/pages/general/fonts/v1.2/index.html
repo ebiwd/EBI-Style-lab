@@ -1,0 +1,92 @@
+---
+meta-title: EMBL-EBI Style Lab
+title: EMBL-EBI Icon fonts for the life sciences
+cta: EMBL-EBI has produced a robust set of icon fonts that represent actions and things common in our field, like databases; actions, like uploading; concepts, like gene expression; or platforms, like e-mail or Twitter.
+filter-nav: false
+filter-dropdowns: false
+layout: static
+location: /general/fonts/v1.2
+---
+
+<section id="intro" class="row" data-magellan-target="intro">
+  <div class="medium-8 columns">
+    <p>If you're in need of an icon for a squirrel, bucket, or something useful: <a href="https://docs.google.com/a/ebi.ac.uk/forms/d/e/1FAIpQLSe7_lFbhVdt-AJeGQChjkiab642nDkfKTVoNQRosPAKuBP3_g/viewform?c=0&w=1" class="readmore">Request an icon</a></p>
+
+    <h3>Using these fonts</h3>
+    <ul class="tabs" data-tabs id="using-icons-tabs">
+      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><i class="icon icon-generic" data-icon="N"></i> On a website</a></li>
+      <li class="tabs-title"><a href="#panel2"><i class="icon icon-generic" data-icon="S"></i> On a computer</a></li>
+      <li class="tabs-title"><a href="#panel3"><i class="icon icon-functional" data-icon="="></i> Other downloads</a></li>
+    </ul>
+    <div class="tabs-content" data-tabs-content="using-icons-tabs">
+      <div class="tabs-panel is-active" id="panel1">
+        <p>To use these on a website, include the fonts.css stylesheet listed below, and use the HTML code examples listed in the gallery further down the page.</p>
+        <ul>
+          <li>You can load the default CSS by linking to the v1.2 release at <a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css">ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css</a></li>
+          <ul>
+            <li>Code is homed at <a href="https://github.com/ebiwd/EBI-Icon-fonts">github.com/ebiwd/EBI-Icon-fonts</a></li>
+            <li>NPM users can get the code from <a href="https://www.npmjs.com/package/EBI-Icon-fonts">npmjs.com/package/EBI-Icon-fonts</a></li>
+            <li>React users that are working with the EBI Species icons should check out <a href="https://www.npmjs.com/package/react-ebi-species">react-ebi-species</a></li>
+          </ul>
+          <li>To make the icons appear, you need to include particular class and data-icon attributes in the relevant HTML element:
+            <p><code>&lt;strong&gt;&lt;i class="icon icon-generic" data-icon="4"&gt;&lt;/i&gt; This is an example icon&lt;/strong&gt;</code></p>
+            <p>The browser's CSS parser will read the data-icon parameter and use the icon pictogram corresponding to "4":</p>
+            <p><strong><i class="icon icon-generic" data-icon="4"></i> This is an example icon</strong></p>
+          </li>
+          <li>The EBI Visual framework no longer adds automatic padding to icons (in most scenarios), if you want to add padding, use the <a href="https://www.ebi.ac.uk/style-lab/websites/patterns/formatting.html">helper classes</a> or add <code>.icon-spacer</code> to the <code>.icon</code>'s element.</li>
+        </ul>
+      </div>
+      <div class="tabs-panel" id="panel2">
+        <p>If your computer does not already have these fonts installed, use the links to download TTF files. <a href="https://www.google.co.uk/search?q=how+do+i+install+ttf+fonts">Need help installing?</a></p>
+        <ul>
+          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/EBI-Conceptual/fonts/EBI-Conceptual.ttf">The Conceptual font</a>: icons for things like "DNA", "Chemical biology' and "Ontologies"</li>
+          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/EBI-Functional/fonts/EBI-Functional.ttf">The Functional font</a>: icons for "compare", "align", "approve", "download" and so forth.</li>
+          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/EBI-Generic/fonts/EBI-Generic.ttf">The Generic font</a>: icons for things like "info", "New", "link" and "location".</li>
+          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/EBI-SocialMedia/fonts/EBI-SocialMedia.ttf">Social Media</a>: handily enough, the Social Media font has icons for... social media!</li>
+          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/EBI-Species/fonts/EBI-Species.ttf">Species</a>: where you can find an icon for yeast.</li>
+          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/EBI-Chemistry/fonts/EBI-Chemistry.ttf">Chemistry</a>: you guessed it.</li>
+        </ul>
+        <p>NB: You can preview the icons below.</p>
+      </div>
+      <div class="tabs-panel" id="panel3">
+        <p>Need to do something else?</a></p>
+        <ul>
+          <li>SVGs: <a href="https://github.com/ebiwd/EBI-Icon-fonts/archive/v1.2-code.zip">Download this ZIP</a>, expand it and then open the "source" folder.</li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+
+  <div class="medium-4 columns">
+    <h3><i class="icon icon-generic" data-icon="h"></i> Need help?</h3>
+    <p><a href="https://github.com/ebiwd/EBI-Icon-fonts/issues" class="button readmore">Head to the issue queue</a></p>
+
+    <h3><i class="icon icon-generic" data-icon="}"></i> Just a bit of guidance?</h3>
+    <p>For more information on using fonts with the EMBL-EBI Visual Framework and making the most of the framework, <a class="readmore" href="https://ebi.ac.uk/style-lab/">view the EBI Style Lab</a></p>
+
+    <h3><i class="icon icon-generic" data-icon="&"></i> Looking for "Corporate" fonts?</h3>
+    <p>If you are making official EMBL-EBI documents, including slides and posters, it's best if you use Helvetica Neue Pro in your headings.</p>
+
+  </div>
+</section>
+
+<section id="icons" class="" data-magellan-target="icons">
+<!-- Include live filtering -->
+<script defer src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.1/libraries/LiveFilter/js/jquery.liveFilter.js"></script>
+<script type="text/javascript">
+  window.onload = function() {
+    $(document).ready(function() {
+      $('#thegallery').liveFilter({
+        fitlerTargetCustomDiv: 'tbody tr',
+        defaultText: '',
+        noMatches: ''
+      });
+    });
+  }
+</script>
+
+{{> fonts-v1_2}}
+
+</section>
