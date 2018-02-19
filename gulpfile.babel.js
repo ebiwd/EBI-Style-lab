@@ -312,12 +312,14 @@ function libraries() {
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
-function images() {
-  return gulp.src('content/assets/img/**/*')
+function images(done) {
+  gulp.src('content/assets/img/**/*')
     .pipe($.if(PRODUCTION, $.imagemin({
       progressive: true
     })))
     .pipe(gulp.dest(PATHS.dist + '/assets/img'));
+
+  done();
 }
 
 // Start a server with BrowserSync to preview the site in
