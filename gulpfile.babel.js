@@ -15,7 +15,8 @@ import _            from 'lodash';
 import requireDir   from 'require-dir';
 import stripCssComments from 'gulp-strip-css-comments';
 import download     from 'gulp-download-stream';
-import es           from "event-stream";
+import es           from 'event-stream';
+import print        from 'gulp-print';
 // import gtb          from 'gulp-typescript-babel';
 
 // Load all Gulp plugins into one variable
@@ -185,7 +186,9 @@ function metaPatternsPages() {
       // data: 'assets_site/data/',
       helpers: 'assets_build/panini_helpers/'
     }))
-    .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'));
+    .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'))
+    .pipe(print(filepath => `built metaPatternsPages: ${filepath}`));
+
 }
 
 gulp.task('meta-patterns', metaPatternsPages)
