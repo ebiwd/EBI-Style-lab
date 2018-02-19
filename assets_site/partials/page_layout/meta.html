@@ -13,9 +13,12 @@
 
 <!-- CSS: implied media=all -->
 <!-- CSS concatenated and minified via ant build script-->
-<!-- <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all" /> -->
 <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/{{#if framework-version}}v{{framework-version}}{{else}}v1.3{{/if}}/css/ebi-global.css" type="text/css" media="all" />
 <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/{{#if icon-version}}v{{icon-version}}{{else}}v1.2{{/if}}/fonts.css" type="text/css" media="all" />
+
+{{#ifequal framework-version 1.2}}
+<link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" media="all">
+{{/ifequal}}
 
 <!-- If you have a custom header image or colour -->
 <!--
