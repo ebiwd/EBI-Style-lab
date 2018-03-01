@@ -3,11 +3,12 @@
   <li class="{{#ifpage 'accessibility'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/accessibility.html">Accessibility</a></li>
   <li class="{{#ifpage 'analytics'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/analytics.html">Analytics</a></li>
   <li class="{{#ifpage 'browser-compatibility'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/browser-compatibility.html">Browser, screens</a></li>
+  <!-- <li class="{{#ifpage 'forms'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/forms.html">Forms</a></li> -->
   <li class="{{#ifpage 'printing'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/printing.html">Printing</a></li>
   <li class="{{#ifpage 'page-structure'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/page-structure.html">Page structure</a></li>
   <li class="{{#ifpage 'sample-site'}}active{{/ifpage}}"><a href="{{root}}websites/sample-site/">Sample pages</a></li>
   <li class="{{#ifpage 'search-guidelines'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
-  <li class="{{#ifpage 'usability'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/usability.html">Usability</a></li>
+  <li class="{{#ifpage 'usability'}}active{{/ifpage}} {{#ifequal submenu 'ux'}}active{{/ifequal}}"><a href="{{root}}websites/meta-patterns/usability.html">Usability</a></li>
   <li class="{{#ifpage 'core-content-spec'}}active{{/ifpage}}"><a href="{{root}}general/core-content-spec">Content-Action Model</a></li>
 {{/ifequal}}
 {{#ifequal submenu 'general'}}
@@ -16,3 +17,11 @@
 <li><a href="fonts">Fonts</a></li>
 {{/ifequal}}
 </ul>
+
+{{#ifequal submenu 'ux'}}
+<hr/>
+<ul id="" class="menu horizontal no-underline padding-bottom-xlarge hide-for-print" data-description="navigational">
+<li class="{{#ifpage 'usability'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/usability.html">UX & Usability topics</a></li>
+<li class="{{#ifpage 'forms'}}active{{/ifpage}}"><a href="{{root}}websites/meta-patterns/forms.html">Forms</a></li>
+</ul>
+{{/ifequal}}
