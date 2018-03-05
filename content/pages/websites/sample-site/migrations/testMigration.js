@@ -78,8 +78,8 @@ function testMigration(steppingTimeSpeed) {
   }, steppingTime());
 
   setTimeout(function(){
-    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/css/foundation.css" type="text/css" />\n');
-    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/css/ebi-global.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation.css" type="text/css" />\n');
+    jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" />\n');
     jQuery('head').append('<link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" />\n');
     console.log('CSS: Injected new ebi-global.css fonts.css and foundation.css');
     console.log('------------------\n');
@@ -101,12 +101,12 @@ function testMigration(steppingTimeSpeed) {
     // Define array of object pairs
     // [what we check for] [what we replace with]
     var colourPalettes = [
-                          { "original" : "link[href$=\"/embl-petrol-colours.css\"]",        "new" : "//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" },
-                          { "original" : "link[href$=\"/ebi-industry-colours.css\"]",       "new" : "//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-ebi-industry.css" },
-                          { "original" : "link[href$=\"/ebi-research.colour.css\"]",        "new" : "//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-ebi-research.css" },
-                          { "original" : "link[href$=\"/ebi-services-about-colours.css\"]", "new" : "//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-ebi-services-about.css" },
-                          { "original" : "link[href$=\"/ebi-training-colours.css\"]",       "new" : "//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-ebi-training.css" },
-                          { "original" : ".no-match", "new" : "//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/css/theme-embl-petrol.css" }
+                          { "original" : "link[href$=\"/embl-petrol-colours.css\"]",        "new" : "//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css" },
+                          { "original" : "link[href$=\"/ebi-industry-colours.css\"]",       "new" : "//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-ebi-industry.css" },
+                          { "original" : "link[href$=\"/ebi-research.colour.css\"]",        "new" : "//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-ebi-research.css" },
+                          { "original" : "link[href$=\"/ebi-services-about-colours.css\"]", "new" : "//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-ebi-services-about.css" },
+                          { "original" : "link[href$=\"/ebi-training-colours.css\"]",       "new" : "//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-ebi-training.css" },
+                          { "original" : ".no-match", "new" : "//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css" }
                         ];
     var i = 0;
     // which colour palette is used?
@@ -134,14 +134,14 @@ function testMigration(steppingTimeSpeed) {
 
   setTimeout(function(){
     // Add new JS
-    jQuery('head').append('<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/cookiebanner.js"></script>\n');
-    jQuery('head').append('<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foot.js"></script>\n');
-    jQuery('head').append('<script defer="defer" src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js"></script>\n');
+    jQuery('head').append('<script defer="defer" src="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/cookiebanner.js"></script>\n');
+    jQuery('head').append('<script defer="defer" src="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foot.js"></script>\n');
+    jQuery('head').append('<script defer="defer" src="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>\n');
 
     console.log('Javascript: I\'ve added three scripts:\n' +
-                '            //www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/cookiebanner.js\n' +
-                '            //www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foot.js\n' +
-                '            //www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/script.js\n'
+                '            //wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/cookiebanner.js\n' +
+                '            //wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foot.js\n' +
+                '            //wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js\n'
     );
     console.log('------------------\n');
   }, steppingTime());
@@ -436,8 +436,8 @@ function testMigration(steppingTimeSpeed) {
 
   setTimeout(function(){
     // The Foundation theme JavaScript
-    jQuery('head').append('<script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/libraries/foundation-6/js/foundation.js"></script>\n');
-    jQuery('head').append('<script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/js/foundationExtendEBI.js"></script>\n');
+    jQuery('head').append('<script src="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>\n');
+    jQuery('head').append('<script src="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>\n');
 
     console.log('Javascript: I\'ve added (but not executed) the Foundation JS. Invoke with runJS()');
     console.log('------------------\n');

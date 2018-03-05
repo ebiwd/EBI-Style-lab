@@ -40,7 +40,7 @@ layout: blank
 
   <!-- CSS: implied media=all -->
   <!-- CSS concatenated and minified via ant build script-->
-
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
   <link rel="stylesheet" href="https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
 
@@ -62,6 +62,31 @@ layout: blank
   <div id="skip-to">
     <a href="#content">Skip to main content</a>
   </div>
+
+
+    <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+      <nav class="row">
+        <ul id="global-nav" class="menu">
+          <!-- set active class as appropriate -->
+          <li class="home-mobile"><a href="//www.ebi.ac.uk"></a></li>
+          <li class="home active"><a href="//www.ebi.ac.uk">Property home</a></li>
+          <!-- <li class="search">
+            <a href="#" data-toggle="search-global-dropdown"><span class="show-for-small-only">Search</span></a>
+            <div id="search-global-dropdown" class="dropdown-pane" data-dropdown data-options="closeOnClick:true;">
+            Search box
+            </div>
+          </li> -->
+          <li class="float-right show-for-medium">
+            <button class="button secondary-background" type="button" data-toggle="mastehad-dropdown">Selector</button>
+            <div id="mastehad-dropdown" class="dropdown-pane" data-dropdown data-auto-focus="true">
+              <p>Dropdown</p>
+            </div>
+
+          </li>
+        </ul>
+      </nav>
+    </header>
+
 
   <!-- Suggested layout containers / #content -->
   <div id="content">
