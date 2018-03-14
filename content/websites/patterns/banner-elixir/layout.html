@@ -28,7 +28,7 @@ body {
 <script defer="defer" src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"></script>
 ```
 
-Optional `data` attributes:
+<br/>Optional `data` attributes:
 
 - `data-color`: set the background color; options: orange, grey, blue, green, none (black text on white)
 - `data-name`: set part of the tite (data-name + "is part of the ELIXIR infrastructure")
@@ -38,6 +38,12 @@ Optional `data` attributes:
 - `data-use-basic-styles`: if you have not loaded the Foundation Framework CSS, set to `true` and will inject a few lines of css for basic formatting
 
 [Try it on CodePen](https://codepen.io/khawkins98/pen/ZXdGQO?editors=1000) or <a href="https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/affiliates.html" class="extenral "target="_blank">see an example implementation</a>.
+
+If you are unable to insert the `div` in the appropriate spot, you can use JavaScript. Shown below with jQuery for brevity:
+
+```
+jQuery("<div id='elixir-banner' data-color='grey' data-name='This service' data-description=' am a super cool service' data-more-information-link='https://www.elixir-europe.org/about-us/who-we-are/nodes/embl-ebi' data-use-basic-styles='true'></div> <script defer='defer' src='https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js'></script>").insertBefore('#global-footer');
+```
 
 {{/markdown}}
 </div>
