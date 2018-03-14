@@ -1,16 +1,14 @@
-{{#markdown}}
-
-<div class="row collapse">
-  <p>You can further combine with <code>.float-left</code> or <code>.float-right</code> for a nice treatment, and size with, say, <code>.columns .medium-4</code> for a responsive effect.</p>
-  <p>Images will dynamically scale down to fit the container, but will not scale above their actual size.</p>
-  <p>This is the treatment you see to the right.</p>
-
-</div>
 
 <div class="row">
-  <div class="column">
-    {{> images}}
-  </div>
-</div>
+<div class="column large-8 large-push-2">
+{{#markdown}}
+We'll outline two basic approaches. In either case images will dynamically scale down to fit the container, but will not scale above their actual size.
+{{> images}}
+
+If you can't utilise the `figure` element, use the `.caption` class. For responsive you might add classes `medium-5.float-right.margin-left-large` to the parent div. As shown in the example.
+
+“Unless it follows a standard, a PDX model can only help one patient or one research facility,” explains Terry Meehan, Mouse Informatics Coordinator at EMBL-EBI and principal author. “For PDX models to make a real difference in the fight against cancer, and to reduce the number of animals used in research, we need to make existing models easy to find and access. This will accelerate the rate of scientific discovery and reduce unnecessary duplication.”
 
 {{/markdown}}
+</div>
+</div>

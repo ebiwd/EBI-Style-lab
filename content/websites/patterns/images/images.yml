@@ -4,7 +4,7 @@ tags:
   - visuals
   - images
 category: media
-description: For images inserted inside text areas, you can use make a div.thumbnail wrap an image and a div.caption to add subtle padding and spacing.
+description: Use a figure element to style images with captions. You can also use a legacy class to caption images.
 versions:
   - 1.1.0
 author:
