@@ -1,6 +1,6 @@
 ---
-meta-title: Tocome
-title: Tocome
+meta-title: EBI Visual Framework, lite
+title: EBI Visual Framework, lite
 layout: blank
 ---
 <!doctype html>
@@ -38,17 +38,9 @@ layout: blank
   <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
   <meta name="msapplication-TileImage" content="//wwwdev.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
 
-  <!-- CSS: implied media=all -->
-  <!-- CSS concatenated and minified via ant build script-->
-
-  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.css" type="text/css" media="all" />
-  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.min.css" type="text/css" media="all" />
+  <!-- <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.css" type="text/css" media="all" /> -->
   <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/fonts.css" type="text/css" media="all" />
-
-  <!-- Use this CSS file for any custom styling -->
-  <!--
-    <link rel="stylesheet" href="css/custom.css" type="text/css" media="all" />
-  -->
 
   <!-- If you have a custom header image or colour -->
   <!--
@@ -56,21 +48,10 @@ layout: blank
   <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
   -->
 
-    <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
   <!-- also inform ES so we can host your colour palette file -->
-  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css" type="text/css" media="all" />
-
-
-  <!--
-
-  -->
-
+  <!-- <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/theme-embl-petrol.css" type="text/css" media="all" /> -->
   <!-- end CSS-->
-
-
-
-
-
 </head>
 
 <body class="level2"><!-- add any of your classes or IDs -->
@@ -138,6 +119,7 @@ layout: blank
           <section>
             <h2>EBI Visual Framework, lite</h2>
             <p>Load just the basic styling and skip formatting for things like tabs, tables, and custom JS.</p>
+            <p>This page is built without using the full Zurb Foundation library. It uses <code>https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.css</code> in place of the normal <code>https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css</code></p>
           </section>
 
           <section>
@@ -153,10 +135,7 @@ layout: blank
             <ul>
               <li>foundation-lite.min.css (26.8KB)</li>
             </ul>
-
-
           </section>
-
 
           <section>
 
