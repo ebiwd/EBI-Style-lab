@@ -17,11 +17,59 @@ You won't find prescriptive solutions for every scenario, but you will get examp
   <cite class="text-right">This pattern library</cite>
 </blockquote>
 
-The framework uses modern best practices and targets browsers shipped within the past three years (<a href="{{root}}websites/meta-patterns/browser-compatibility.html" class="">more on browser support</a>); though other browsers will function through the an implementation of [graceful degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement).
+We use best practices and targets browsers shipped within the past three years (<a href="{{root}}websites/meta-patterns/browser-compatibility.html" class="">more on browser support</a>); though other browsers will function through the an implementation of [graceful degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement).
 
 To help us help you, we've used the [Foundation Framework](https://foundation.zurb.com/sites/docs/kitchen-sink.html#accordion) (version 6) as a baseline. Using this we get a robust baseline (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already be (or have) a developer with Foundation experience.
 
 Foundation is bundled by default, but [is not required]({{root}}websites/sample-site/integrations/lite.html).
+
+### Framework components
+
+This framework functions similar to many front-end solutions: several files and structures are used and generally can be implemented separately so you can use what you can or your own solution if required. We also leverage a NPM build process so there's no need to use all of the Foundation framework, if you don't need it.
+
+<div class="button-grid small-collapse margin-bottom-large" markdown="0">
+  <div class="columns">
+    <div class="row" style="position: relative;">
+      <div class="columns small-7">
+        <div class="row small-collapse">
+          <a class="button secondary columns small-6 small-push-1" href="css/theme-embl-petrol.css">Custom CSS<br/><small> Colours and patterns specific to your service/site</small></a>
+          <a class="button secondary columns small-8" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.css">Additional styles ebi-extras.css<br/>
+          <small>Modals, callouts, tabs: mostly from Foundation.</small></a>
+          <a class="button secondary columns small-4" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css">EBI Icons fonts.css<br/>
+          <small>Functional and scientific</small></a>
+          <a class="button primary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.css">
+            EBI base CSS styles ebi-lite.css<br/>
+            <small>EMBL-EBI look, colours</small></a>
+          <a class="button primary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation-lite.css">Base styling ebi-lite.css<br/>
+          <small>The base grid structure, core page styling</small></a>
+        </div>
+      </div>
+      <div class="columns small-5" style="position: absolute;bottom: 0;right: 0;">
+        <div class="row small-collapse" data-equalizer data-equalize-on="medium" style="position: relative;">
+          <div class="columns small-7" data-equalizer-watch>
+            <a class="button secondary columns small-10 small-push-1" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js">FoundationExtendEBI.js<br/>
+            <small>Foundation tweaks, jQuery value adds</small></a>
+            <a class="button secondary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js">foundation.js</a>
+            <a class="button secondary columns small-12" href="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">jQuery 1.10.2<br/><small>Or newer, or slightly older</small></a>
+          </div>
+          <div class="columns small-5" style="position: absolute;bottom: 0;right: 0;">
+            <!-- todo: come up with a pattern to bottom align columns, or do we hold out for v1.2 and switch to flex gird? http://foundation.zurb.com/sites/docs/flex-grid.html -->
+            <a class="button primary columns small-8 small-push-2" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js">EBI script.js</a>
+          </div>
+        </div>
+        <div class="row">
+          <a class="button primary columns small-12" href="#">JavaScript</a>
+        </div>
+      </div>
+    </div>
+  <a class="button primary columns small-12" href="{{root}}websites/meta-patterns/page-structure.html">Core HTML structure<br/><small>The basic HTML tag structure for the page (global-nav black bar, local-nav area, main content div, footer, etc)</small></a>
+  </div>
+</div>
+
+<p>
+<small>Stack legend</small> <span class="tag secondary-background white-color">Optional, but recommended</span> <span class="tag white-color">Required</span>
+</p>
+
 
 ### Implementing the EBI Visual Framework
 
@@ -71,57 +119,6 @@ Foundation is bundled by default, but [is not required]({{root}}websites/sample-
 
 {{#markdown}}
 
-### Framework components
-
-This framework functions similar to many front-end solutions: several files and structures are used and generally can be implemented separately so you can use what you can or your own solution if required. We also leverage a NPM build process so there's no need to use all of the Foundation framework, if you don't need it.
-
-<div class="button-grid small-collapse margin-bottom-large" markdown="0">
-  <div class="columns">
-    <div class="row" style="position: relative;">
-      <div class="columns small-7">
-        <div class="row small-collapse">
-          <a class="button secondary columns small-6 small-push-1" href="css/theme-embl-petrol.css">Custom CSS<br/><small> Colours and patterns specific to your service/site</small></a>
-          <a class="button secondary columns small-8" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.css">Optional foundation styles<br/>
-          <small>Additional styling for modals, buttons, etc.</small></a>
-          <a class="button secondary columns small-4" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css">EBI Icons<br/>
-          <small>Functional and scientific</small></a>
-          <a class="button primary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css">
-            EBI base CSS styles<br/>
-            <small>EMBL-EBI look, colours</small></a>
-          <a class="button primary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation-lite.css">Base styling<br/>
-          <small>The base grid structure, core page styling</small></a>
-        </div>
-      </div>
-      <div class="columns small-5" style="position: absolute;bottom: 0;right: 0;">
-        <div class="row small-collapse" data-equalizer data-equalize-on="medium" style="position: relative;">
-          <div class="columns small-7" data-equalizer-watch>
-            <a class="button secondary columns small-10 small-push-1" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js">FoundationExtendEBI.js<br/>
-            <small>Foundation tweaks, jQuery value adds</small></a>
-            <a class="button secondary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js">foundation.js</a>
-            <a class="button secondary columns small-12" href="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">jQuery 1.10.2<br/><small>Or newer, or slightly older</small></a>
-          </div>
-          <div class="columns small-5" style="position: absolute;bottom: 0;right: 0;">
-            <!-- todo: come up with a pattern to bottom align columns, or do we hold out for v1.2 and switch to flex gird? http://foundation.zurb.com/sites/docs/flex-grid.html -->
-            <a class="button primary columns small-8 small-push-2" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js">EBI script.js</a>
-          </div>
-        </div>
-        <div class="row">
-          <a class="button primary columns small-12" href="#">JavaScript</a>
-        </div>
-      </div>
-    </div>
-  <a class="button primary columns small-12" href="{{root}}websites/meta-patterns/page-structure.html">Core HTML structure<br/><small>The basic HTML tag structure for the page (global-nav black bar, local-nav area, main content div, footer, etc)</small></a>
-  </div>
-</div>
-
-<div class="columns medium-5 float-right text-right">
-  <small>Stack legend</small><br/>
-  <span class="tag secondary-background white-color">Optional, but recommended</span> <span class="tag white-color">Required</span>
-</div>
-
-In short: add header markup, footer markup, CSS and JS. Then add content.
-
-To get started check out the structure of the <a href="{{root}}websites/sample-site/">sample boiler plate page</a>.
 
 ### FAQs
 
