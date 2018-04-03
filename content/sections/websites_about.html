@@ -19,10 +19,6 @@ You won't find prescriptive solutions for every scenario, but you will get examp
 
 We use best practices and targets browsers shipped within the past three years (<a href="{{root}}websites/meta-patterns/browser-compatibility.html" class="">more on browser support</a>); though other browsers will function through the an implementation of [graceful degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement).
 
-To help us help you, we've used the [Foundation Framework](https://foundation.zurb.com/sites/docs/kitchen-sink.html#accordion) (version 6) as a baseline. Using this we get a robust baseline (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already be (or have) a developer with Foundation experience.
-
-Foundation is bundled by default, but [is not required]({{root}}websites/sample-site/integrations/lite.html).
-
 ### Framework components
 
 This framework functions similar to many front-end solutions: several files and structures are used and generally can be implemented separately so you can use what you can or your own solution if required. We also leverage a NPM build process so there's no need to use all of the Foundation framework, if you don't need it.
@@ -70,6 +66,9 @@ This framework functions similar to many front-end solutions: several files and 
 <small>Stack legend</small> <span class="tag secondary-background white-color">Optional, but recommended</span> <span class="tag white-color">Required</span>
 </p>
 
+To help us help you, we've used the [Foundation Framework](https://foundation.zurb.com/sites/docs/kitchen-sink.html#accordion) (version 6) as a baseline. Using this we get a robust baseline (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you'll be fortunate enough to already be (or have) a developer with Foundation experience.
+
+Foundation is bundled by default and **highly** encouraged, but [is not required]({{root}}websites/sample-site/integrations/lite.html). You can learn more about why we selected Foundation in the FAQ below.
 
 ### Implementing the EBI Visual Framework
 
@@ -77,11 +76,29 @@ This framework functions similar to many front-end solutions: several files and 
 
 <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
   <li class="accordion-item is-active" data-accordion-item>
-    <a href="#" class="accordion-title">Basic examples</a>
+    <a href="#" class="accordion-title">101 Basics: all developers should start here first</a>
     <div class="accordion-content" data-tab-content>
-      <p>The easiest way to implement is by <a href="{{root}}websites/sample-site/">using a boilerplate page</a>. These pages will give you the mandatory HTML structure for the EBI header, footer along with place holders for your project name/logo and page content.</p>
-
-      Be sure to <a href="{{root}}websites/meta-patterns/page-structure.html" class="readmore">read up on the EMBL-EBI page strucutre</a>
+{{#markdown}}
+1. <a href="{{root}}websites/meta-patterns/page-structure.html" class="">Read up on the EMBL-EBI page strucutre</a>.
+1. Pick <a href="{{root}}websites/sample-site/">a boilerplate page</a> to use as your basic starting point. <br/>These pages will give you the mandatory HTML structure for the EBI header, footer along with place holders for your project name/logo and page content.
+1. [Explore the "Further reading" below](#further-reading) for general guidance on building compliant EBI sites.
+1. As you begin to build out news feeds, login boxes, navigation, images with captions: [bookmark and consult the pattern library]({{root}}websites/patterns/) for templated options.
+{{/markdown}}
+    </div>
+  </li>
+  <li class="accordion-item" data-accordion-item>
+    <a href="#" class="accordion-title">Core files: where are they?</a>
+    <div class="accordion-content" data-tab-content>
+{{#markdown}}
+These are the core files that power the EBI Visual Framework:
+- Global core styles: <br/>[https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.min.css](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.min.css)
+  - Optionally available as split into two sub files:
+    - Lite version for sites that have another CSS framework: <br/>[https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.min.css](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.min.css)
+    - Extras, what was removed from ebi-lite.css: <br/>[https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.min.css](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.min.css)
+- Foundation JS:  <br/>[https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.min.js](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.min.js)
+- EBI Extinsions to Foundation JS:  <br/>[https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.min.js](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.min.js)
+- EBI Script.js for imporant things (cookie banner, global masthead, etc.)  <br/>[https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.min.js](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.min.js)
+{{/markdown}}
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
@@ -127,7 +144,7 @@ This framework functions similar to many front-end solutions: several files and 
 
 <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
   <li class="accordion-item is-active" data-accordion-item>
-    <a href="#" class="accordion-title">JavaScript</a>
+    <a href="#" class="accordion-title">JavaScript: Do I have to use jQuery?</a>
     <div class="accordion-content" data-tab-content>
 {{#markdown}}
 The EBI Visual Framework does not require jQuery, but using it will make things far easier. The boilerplate includes jQuery functionality by default, if you do not wish to use jQuery you will also need to remove references to the <code>foundation.js</code> and <code>FoundationExtendEBI.js</code> files.
@@ -135,20 +152,23 @@ The EBI Visual Framework does not require jQuery, but using it will make things 
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a href="#" class="accordion-title">Zurb Foundation Framework</a>
+    <a href="#" class="accordion-title">Zurb Foundation Framework and Bootstrap</a>
     <div class="accordion-content" data-tab-content>
 {{#markdown}}
+For new websites or major reworks, we recommend you consider using the included Foundation CSS and JS, as you'll get more benefit from the work done in this framework, encounter fewer bugs, and help EBI web services have a more consistent function and feel.
+
+While Bootstrap provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Zurb Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).
+
 - If you aren't able to use the included Foundation base CSS, use [`ebi-lite.css`](https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css)
 - If you're unable to make use of the Frameworks JS or CSS tooling, use this page as a guide for how your site should look, feel, function. There's no reason that can't be done with any framework be it Angular, Material Design, or vanilla CSS3.
-- For new websites or major reworks, we recommend you consider using the included Foundation CSS and JS, as you'll get more benefit from the work done in this framework, encounter fewer bugs, and help EBI web services have a more consistent function and feel.
 {{/markdown}}
     </div>
   </li>
   <li class="accordion-item" data-accordion-item>
-    <a href="#" class="accordion-title">Bootstrap and other frameworks</a>
+    <a href="#" class="accordion-title">Integrating with other CSS and JS frameworks</a>
     <div class="accordion-content" data-tab-content>
 {{#markdown}}
-While Bootstrap provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Zurb Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article's proposes).
+We've worked to make the EBI Visual Framework work well alongside other frameworks.
 
 Users of Angular, Bootstrap, and other opinionated implementations should look at the "Technical Integrations" on the [sample pages]({{root}}websites/sample-site/).
 {{/markdown}}
@@ -163,7 +183,7 @@ Users of Angular, Bootstrap, and other opinionated implementations should look a
 
 ### Need help?
 
-For questions about the background of this guide or a philosophical suggestion <a href="https://github.com/ebiwd/EBI-Pattern-library/issues">post to the issue queue</a> for discussion and support.
+For questions about the background of this guide or a philosophical suggestion <a href="https://github.com/ebiwd/EBI-Framework/issues">post to the issue queue</a> for discussion and support.
 
 Note that the <a href="//www.ebi.ac.uk/seqdb/confluence/display/WGC/Web+Guidelines+committee">EBI Web Guidelines Committee</a> is responsible for the governance and direction of the patterns and framework.
 
