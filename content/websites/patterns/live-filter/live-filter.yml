@@ -3,7 +3,7 @@ tags:
 - typography
 - search
 category: forms
-description: If you have mutliple rows of data you'd like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin
+description: If you have mutliple rows of data you'd like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin.
 versions:
   - 1.1.0, 1.2.0
 author:
