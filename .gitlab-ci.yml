@@ -22,6 +22,8 @@ stages:
 build:
   stage: build
   image: ebiwd/node-bower-gulp:6
+  tags:
+    - docker
   before_script:
     - cd ${CI_PROJECT_DIR}
     - npm install --quiet
@@ -38,6 +40,8 @@ build:
 
 #setup ssh keys
 .deploy_setup: &deploy_setup
+  tags:
+    - docker
   before_script:
     - add-ssh-key ${SSH_OWNER} "${SSH_OWNER_KEY}"
     - add-search-domain ebi.ac.uk
