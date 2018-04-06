@@ -92,6 +92,8 @@ function pageJson() {
       var title = text.match(/<title>(.*?)<\/title>/gi) + ' ';
         title = title.replace(/<title>(.*?)<\/title>/gi, '$1');
         title = title.replace('EMBL-EBI Style Lab <','');
+        title = title.replace('< EMBL-EBI Style Lab','');
+
 
       var body = text.match(/<body.[\s\S]*?>(.[\s\S]*?)body>/gi) + ' ';
         body = body.replace(/<body.[\s\S]*?>(.[\s\S]*?)<\/body>/gi, '$1');
