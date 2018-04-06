@@ -74,6 +74,7 @@ function pageJson() {
   gutil.log(gutil.colors.green('Prepping search JSON'));
   var output = 'var tipuesearch = {"pages": [';
 
+//'!./dist/**/*iframe.html'
   return gulp.src(['./dist/**/*.html'])
     .pipe(through.obj(function (file, enc, cb) {
       gutil.log(gutil.colors.green('Processing: ',file.path));
@@ -108,6 +109,7 @@ function pageJson() {
 
       // prep file path
       var localFilePath = file.path.split('/dist/')[1];
+      localFilePath = localFilePath.replace("-iframe.html",".html"); // index, but don't link into iframes
       output += '"url": "'+localFilePath+'"';
 
       // close the json entry
@@ -124,7 +126,6 @@ function pageJson() {
         process.exit(1)
       })
     );
-
 
   return output;
 }
