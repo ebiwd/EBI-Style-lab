@@ -28,5 +28,10 @@
 
 <!-- you can replace this with theme-[projectname].css. See http://www.ebi.ac.uk/web/style/colour for details of how to do this -->
 <!-- also inform ES so we can host your colour palette file -->
+{{#ifequal framework-version 1.2}}
+<link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/{{#if framework-version}}v{{framework-version}}{{else}}v1.3{{/if}}/css/theme-embl-petrol.css" type="text/css" media="all" />
+{{/ifequal}}
+{{#ifequal framework-version 1.3}}
 <!-- <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/{{#if framework-version}}v{{framework-version}}{{else}}v1.3{{/if}}/css/theme-embl-petrol.css" type="text/css" media="all" /> -->
+{{/ifequal}}
 <!-- end CSS-->
