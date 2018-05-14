@@ -1,14 +1,11 @@
-name: 'Dialouge modal'
+name: 'Foldable info tabs'
 tags:
-  - prompt
-  - messaging
-  - modal
-  - reveal
   - interactive
+  - accordian
+  - help
 category: containers
-description: For your obtrusive messaging needs.
+description: Add some contextual help.
 versions:
-  - 1.1.0
   - 1.2.0
   - 1.3.0
 author:
