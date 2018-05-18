@@ -1,38 +1,71 @@
----
-title: ELIXIR Banner
-layout: free-form
-hide-download-link: true
----
-<!DOCTYPE html>
-<html>
-<head>
-  <title>{{title}}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-<style>
-body {
-  /* Some basic reseets */
-  margin: 0;
-  padding: 0;
-}
-</style>
-
-
-{{#markdown}}
-Coming soon. For now see the development page at [codepen.io/khawkins98/pen/LmWpMV](https://codepen.io/khawkins98/pen/LmWpMV)
-
-{{/markdown}}
 
 <div class="row" style="max-width: 1200px; margin: 0 auto; font-family: Helvetica, sans-serif; line-height: 1.5rem; padding-bottom: 1rem;">
 <div class="column">
-{{#markdown}}
-{{/markdown}}
+  {{#markdown}}
+
+  ### About the banner
+
+  <p class="lead">The <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/">Web Guidelines Committee</a> and Web Development team have worked to replace the existing cookie banner with one compatible with EMBL-EBI’s Data Protection efforts.</p>
+
+  <strong>Tl;dr:</strong>If you’re using the <a href="https://www.ebi.ac.uk/style-lab/websites/">EBI Visual Framework</a> , don’t have a unique privacy policy and don’t use React or Angular, you don’t need to do anything else.
+
+  #### What is it?
+
+  <p>It’s a bit like a cookie banner 2.0. It persists on page views until accepted and will reappear if the data protection policy is updated. <a href="https://docs.google.com/document/d/1bplnPB1mryVH9X2HmdzWMxxAKcLVGj9PqV7ipwzj6bU/edit?usp=sharing">See a comparison here</a>.</p>
+
+  #### What’s it look like?
+
+  The development version <a class="readmore" href="https://wwwdev.ebi.ac.uk/style-lab/">is in use on the Style Lab</a> (also sceenshoted below)
+
+  <p><img height="83" src="https://lh5.googleusercontent.com/PDuXyfiy2nEfaKFZjKD8GFe3hn-akCAsK_6rPS4YHCd_DM7NU4KL5EENzcN45gZS4kCSlCdDKuO0P18iFoAgSBgL92zJfy4TL-fH20Yih9-MXBN_18pixva1PHTEEUdV-MvxGpHz" width="602" /></p>
+
+  ### How do I use it
+
+  If you’re using any version the EBI Visual Framework (v1.1, v1.2, or v1.3), you don’t need to do anything else. We’ll replace the cookie banner with this banner in time for 25 May 2018.
+
+  #### If you have a unique privacy policy and need to customise the text, links
+
+  You’ll just need to add a div#data-protection-message-configuration with your parameters and the banner will be built accordingly:
+
+  ```
+  <div id="data-protection-message-configuration"
+  data-message="Your message and links here."
+  data-service-id="myService" data-data-protection-version="0.1"></div>
+  ```
+
+  See further guidance at <a href="https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html">https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html</a>
+
+  #### If you use a JS framework (Angular, React, …) and the banner gets destroyed on page render
+
+  Re-invoke the banner on page build with `ebiFrameworkRunDataProtectionBanner();`
+
+  #### If you're not using the EBI Visual Framework:
+
+  This banner code will be automatically invoked for users of the EBI Visual Framework, sites still using compliance can add this JS code (still in development):
+
+  ```
+  console.warn('⚠️ This code is still under development, do not use in production. e-mail khawkins@ebi.ac.uk for guidance.');
+  var newDataProtectionNotificationBanner = document.createElement('script');
+  newDataProtectionNotificationBanner.src = 'https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/ebi-global-includes/script/5_ebiFrameworkNotificationBanner.js';
+  document.head.appendChild(newDataProtectionNotificationBanner);
+  setTimeout(ebiFrameworkRunDataProtectionBanner, 1200);
+  ```
+
+  ### How it works
+
+  Acceptance will be stored on the user's device with a cookie name automatically derived from the `service-id` and `data-protection-version`.
+
+  This sample implementation has been designed to be flexible and is currently being shown using the `ebi-lite.css` version. It will work the same using the full `ebi-global.css`
+
+  ### Demo
+  For an interactive demo, [see the sample CodePen](https://codepen.io/khawkins98/pen/LmWpMV).
+
+  ### I have an idea/concern/problem
+
+  Let us know! <a href="mailto:khawkins@ebi.ac.uk">khawkins@ebi.ac.uk</a> or [post to the GitHub issue](https://github.com/ebiwd/EBI-Framework/issues/137).
+
+  {{> banner-data-protection}}
+
+  {{/markdown}}
 </div>
 </div>
-
-{{> banner-data-protection}}
-
-</body>
-</html>
