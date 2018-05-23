@@ -25,13 +25,18 @@
 
   #### If you have a unique privacy policy and need to customise the text, links
 
-  You’ll just need to add a div#data-protection-message-configuration with your parameters and the banner will be built accordingly:
+  Add the code below and the banner will be built accordingly:
 
   ```
   {{> banner-data-protection}}
   ```
 
-  See further guidance at <a href="https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html">https://www.ebi.ac.uk/style-lab/websites/patterns/banner-data-protection.html</a>
+  Be sure to `data-service-id` to match the URL stub from [your Data Protection record in the ContentDB](at http://content.ebi.ac.uk/list-data-protection-records).
+
+  Advantages for doing this are:
+
+  1. Those URLs are by definition unique per privacy notice. Using these prevents two teams accidentally giving the same service-id, and consent getting muddled up.
+  2. In the future we want this component to automatically pull in the latest version number from the corresponding privacy notice. The API to do that will need the service-id to match between this code and the [EMBL-EBI Data Protection Engine](http://content.ebi.ac.uk/list-data-protection-records).
 
   #### If you use a JS framework (Angular, React, ...) and the banner gets destroyed on page render
 
