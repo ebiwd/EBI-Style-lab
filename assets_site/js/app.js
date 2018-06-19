@@ -143,3 +143,8 @@ $("#main-content-area h2, #main-content-area h3").each(function() {
 output +="</ul></nav>";
 
 $(".table-of-contents").html(output);
+
+// Set iframe height for patterns
+if ($('#building-block-iframe').length > 0) {
+  $('#building-block-iframe').css('min-height',document.getElementById('building-block-iframe').contentWindow.document.body.scrollHeight+'px')
+}

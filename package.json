@@ -19,7 +19,7 @@
     "browser-sync": "^2.10.0",
     "clipboard": "^1.6.1",
     "event-stream": "^3.3.4",
-    "gulp": "gulpjs/gulp#4.0",
+    "gulp": "github:gulpjs/gulp#4.0",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
     "gulp-cli": "^1.2.1",
