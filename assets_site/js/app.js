@@ -148,11 +148,15 @@ $(".table-of-contents").html(output);
 function setHeightOfPatternIframe() {
   var iframeHeightPadding = 5; // to prevent scrolling for 1px of margin or such
   if ($('#building-block-iframe').length > 0) {
-    $('#building-block-iframe').css('min-height',(document.getElementById('building-block-iframe').contentWindow.document.body.scrollHeight+iframeHeightPadding)+'px')
-    delayedCheckOfIframeHeight();
+    try {
+      $('#building-block-iframe').css('min-height',(document.getElementById('building-block-iframe').contentWindow.document.body.scrollHeight+iframeHeightPadding)+'px')
+    }
+    catch(error) {
+      setHeightOfPatternIframe(); // iframe probably wasn't fully loaded, try again
+      // console.error(error);
+    }
   }
 }
-setHeightOfPatternIframe();
 
 var resizeTimer;
 function delayedCheckOfIframeHeight() {
@@ -166,3 +170,4 @@ function delayedCheckOfIframeHeight() {
 $(window).on('resize', function(e) {
   delayedCheckOfIframeHeight();
 });
+delayedCheckOfIframeHeight();
