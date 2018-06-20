@@ -145,6 +145,24 @@ output +="</ul></nav>";
 $(".table-of-contents").html(output);
 
 // Set iframe height for patterns
-if ($('#building-block-iframe').length > 0) {
-  $('#building-block-iframe').css('min-height',document.getElementById('building-block-iframe').contentWindow.document.body.scrollHeight+'px')
+function setHeightOfPatternIframe() {
+  var iframeHeightPadding = 5; // to prevent scrolling for 1px of margin or such
+  if ($('#building-block-iframe').length > 0) {
+    $('#building-block-iframe').css('min-height',(document.getElementById('building-block-iframe').contentWindow.document.body.scrollHeight+iframeHeightPadding)+'px')
+    delayedCheckOfIframeHeight();
+  }
 }
+setHeightOfPatternIframe();
+
+var resizeTimer;
+function delayedCheckOfIframeHeight() {
+  clearTimeout(resizeTimer);
+  resizeTimer = setTimeout(function() {
+    setHeightOfPatternIframe();
+  }, 250);
+
+}
+// Resize after user has finished resizing a window
+$(window).on('resize', function(e) {
+  delayedCheckOfIframeHeight();
+});
