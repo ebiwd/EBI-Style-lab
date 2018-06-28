@@ -45,6 +45,11 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
   - To develop: run `npm start` to start the project and watch for changes. It will open in your browser at http://localhost:8000.
   - To build for deployment: run `npm run build`
 
+#### Special things
+
+- Pulling in the latest EBI Icon font samples:
+     - `gulp updateIconFonts`
+
 ---
 
 ## Versioning
