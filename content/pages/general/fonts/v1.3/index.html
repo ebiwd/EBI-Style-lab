@@ -24,72 +24,79 @@ document.addEventListener('DOMContentLoaded', function(){ $( document ).ready(fu
   </button>
 </div>
 
+<section id="intro" class="" data-magellan-target="intro">
 
-<section id="intro" class="row" data-magellan-target="intro">
-  <div class="medium-8 columns">
+  <div class="row">
+  <div class="columns medium-4">
+  {{#markdown}}
 
-{{#markdown}}
+  #### <i class="icon icon-common icon-new"></i> What's new in v1.3?
 
-### <i class="icon icon-common icon-new"></i> What's new in v1.3?
+  This version brings the most user-facing changes in several years as we've added in far more "common" icons and simplified the font stack.
 
-This version brings the most user-facing changes in several years as we've added in far more "common" icons and simplified the font stack.
+  The new EBI-Common font:
+  - Is a set of generic utility icons;
+  - Has many of the best icons from EBI-Social, EBI-Generic, EBI-Functional; and
+  - Has icons from Font Awesome (key codes are the [same as those on Font Awesome's gallery](https://fontawesome.com/icons?d=gallery&m=free)).
 
-The new EBI-Common font:
-- Is a set of generic utility icons;
-- Has many of the best icons from EBI-Social, EBI-Generic, EBI-Functional; and
-- Has icons from Font Awesome (key codes are the [same as those on Font Awesome's gallery](https://fontawesome.com/icons?d=gallery&m=free)).
+  For more background on the new EBI-Common font, <a href="https://github.com/ebiwd/EBI-Icon-fonts/issues/22" class="">see the notes</a>. There have also been a number of "under the hood" changes in v1.3. If you're a developer you can [read about those changes here](https://github.com/ebiwd/EBI-Icon-fonts/issues/21).
+  {{/markdown}}
+  </div>
 
-For more background on the new EBI-Common font, <a href="https://github.com/ebiwd/EBI-Icon-fonts/issues/22" class="">see the notes</a>. There have also been a number of "under the hood" changes in v1.3. If you're a developer you can [read about those changes here](https://github.com/ebiwd/EBI-Icon-fonts/issues/21).
-{{/markdown}}
+  <div class="columns medium-4">
+    <h4><a name="websites"></a><i class="icon icon-generic" data-icon="N"></i> Use on a website</h4>
+    <p>To use these on a website, include the fonts.css stylesheet listed below, and use the HTML code examples listed in the gallery further down the page.</p>
+    <ul>
+      <li>You can load the default CSS by linking to the v1.3 release at <a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css">ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css</a></li>
+      <ul>
+        <li>Code is homed at <a href="https://github.com/ebiwd/EBI-Icon-fonts">github.com/ebiwd/EBI-Icon-fonts</a></li>
+        <li>NPM users can get the code from <a href="https://www.npmjs.com/package/EBI-Icon-fonts">npmjs.com/package/EBI-Icon-fonts</a></li>
+        <li>React users that are working with the EBI Species icons should check out <a href="https://www.npmjs.com/package/react-ebi-species">react-ebi-species</a></li>
+      </ul>
+      <li>To make the icons appear, see the embed codes in the galery below.</li>
+      <li>If you want to add padding to the right side of an icon, use a <a href="https://www.ebi.ac.uk/style-lab/websites/patterns/formatting.html">helper class</a> or add <code>.icon-spacer</code> to the <code>.icon</code>'s element.</li>
+      <li>Need SVGs or PNGs? <a href="https://github.com/ebiwd/EBI-Icon-fonts/archive/v1.3-code.zip">Download this ZIP</a>, expand it and then open the "source" folder.</li>
+    </ul>
+  </div>
+  <div class="columns medium-4">
+    <h4><a name="desktop"></a><i class="icon icon-generic" data-icon="S"></i> Download to your computer</h4>
+    <p>If your computer does not already have these fonts installed, use the links to download TTF files. <a href="https://www.google.co.uk/search?q=how+do+i+install+ttf+fonts">Need help installing?</a></p>
+    <ul>
+      <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Common/fonts/EBI-Common.ttf">Common</a>: icons for things like "info", "New", "link", "location", "compare", "align", "approve", "download", social media and so on. <strong>Note:</strong> You should be gin using EBI-Common over the old EBI-Social, EBI-Generic, EBI-Functional icons.</li>
+      <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Conceptual/fonts/EBI-Conceptual.ttf">Conceptual</a>: icons for things like "DNA", "Chemical biology' and "Ontologies"</li>
+      <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Species/fonts/EBI-Species.ttf">Species</a>: where you can find an icon for yeast.</li>
+      <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Chemistry/fonts/EBI-Chemistry.ttf">Chemistry</a>: you guessed it.</li>
+      <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Functional/fonts/EBI-Functional.ttf">Functional</a>: icons for "compare", "align", "approve", "download" and so forth.</li>
+      <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Generic/fonts/EBI-Generic.ttf">Generic</a>: icons for things like "info", "New", "link" and "location".</li>
+      <li><span class="tag">Legacy</span> <a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-SocialMedia/fonts/EBI-SocialMedia.ttf">Social Media</a>: handily enough, the Social Media font has icons for... social media!</li>
+    </ul>
+  </div>
+  </div>
 
-    <h3><i class="icon icon-common" data-icon="ℹ"></i> Using these fonts</h3>
 
-    <div class="row">
-      <div class="columns medium-6 callout">
-        <h4><a name="websites"></a><i class="icon icon-generic" data-icon="N"></i> On a website</h4>
-        <p>To use these on a website, include the fonts.css stylesheet listed below, and use the HTML code examples listed in the gallery further down the page.</p>
-        <ul>
-          <li>You can load the default CSS by linking to the v1.3 release at <a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css">ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css</a></li>
-          <ul>
-            <li>Code is homed at <a href="https://github.com/ebiwd/EBI-Icon-fonts">github.com/ebiwd/EBI-Icon-fonts</a></li>
-            <li>NPM users can get the code from <a href="https://www.npmjs.com/package/EBI-Icon-fonts">npmjs.com/package/EBI-Icon-fonts</a></li>
-            <li>React users that are working with the EBI Species icons should check out <a href="https://www.npmjs.com/package/react-ebi-species">react-ebi-species</a></li>
-          </ul>
-          <li>To make the icons appear, see the embed codes in the galery below.</li>
-          <li>If you want to add padding to the right side of an icon, use a <a href="https://www.ebi.ac.uk/style-lab/websites/patterns/formatting.html">helper class</a> or add <code>.icon-spacer</code> to the <code>.icon</code>'s element.</li>
-          <li>Need SVGs or PNGs? <a href="https://github.com/ebiwd/EBI-Icon-fonts/archive/v1.3-code.zip">Download this ZIP</a>, expand it and then open the "source" folder.</li>
-        </ul>
-      </div>
-      <div class="columns medium-6 callout white-background">
-        <h4><a name="desktop"></a><i class="icon icon-generic" data-icon="S"></i> On a computer</h4>
-        <p>If your computer does not already have these fonts installed, use the links to download TTF files. <a href="https://www.google.co.uk/search?q=how+do+i+install+ttf+fonts">Need help installing?</a></p>
-        <ul>
-          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Common/fonts/EBI-Common.ttf">Common</a>: icons for things like "info", "New", "link", "location", "compare", "align", "approve", "download", social media and so on. <strong>Note:</strong> You should be gin using EBI-Common over the old EBI-Social, EBI-Generic, EBI-Functional icons.</li>
-          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Conceptual/fonts/EBI-Conceptual.ttf">Conceptual</a>: icons for things like "DNA", "Chemical biology' and "Ontologies"</li>
-          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Species/fonts/EBI-Species.ttf">Species</a>: where you can find an icon for yeast.</li>
-          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Chemistry/fonts/EBI-Chemistry.ttf">Chemistry</a>: you guessed it.</li>
-          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Functional/fonts/EBI-Functional.ttf">Functional</a>: icons for "compare", "align", "approve", "download" and so forth.</li>
-          <li><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-Generic/fonts/EBI-Generic.ttf">Generic</a>: icons for things like "info", "New", "link" and "location".</li>
-          <li><span class="tag">Legacy</span> <a href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/EBI-SocialMedia/fonts/EBI-SocialMedia.ttf">Social Media</a>: handily enough, the Social Media font has icons for... social media!</li>
-        </ul>
-      </div>
+  <div class="row medium-up-2 padding-top-xlarge padding-bottom-xlarge">
+    <div class="column">
+      <h3><i class="icon icon-generic" data-icon="h"></i> Need help?</h3>
+      <p><a href="https://github.com/ebiwd/EBI-Icon-fonts/issues" class="button readmore">Head to the issue queue</a></p>
+    </div>
+
+    <div class="column">
+      <h3><i class="icon icon-common icon-edit"></i> Need a new icon?</h3>
+      <p>If you're in need of an icon for a squirrel, bucket, or something useful: <a href="https://docs.google.com/a/ebi.ac.uk/forms/d/e/1FAIpQLSe7_lFbhVdt-AJeGQChjkiab642nDkfKTVoNQRosPAKuBP3_g/viewform?c=0&w=1" class="readmore">Request an icon</a></p>
+    </div>
+
+    <div class="column">
+      <h3><i class="icon icon-generic" data-icon="}"></i> Just a bit of guidance?</h3>
+      <p>For more information on using fonts with the EMBL-EBI Visual Framework and making the most of the framework, <a class="readmore" href="https://ebi.ac.uk/style-lab/">view the EBI Style Lab</a></p>
+    </div>
+
+    <div class="column">
+      <h3><i class="icon icon-generic" data-icon="&"></i> Looking for "Corporate" fonts?</h3>
+      <p>If you are making official EMBL-EBI documents, including slides and posters, it's best if you use Helvetica Neue Pro in your headings.</p>
     </div>
   </div>
 
-  <div class="medium-4 columns">
-    <h3><i class="icon icon-generic" data-icon="h"></i> Need help?</h3>
-    <p><a href="https://github.com/ebiwd/EBI-Icon-fonts/issues" class="button readmore">Head to the issue queue</a></p>
 
-    <h3><i class="icon icon-common icon-edit"></i> Need a new icon?</h3>
-    <p>If you're in need of an icon for a squirrel, bucket, or something useful: <a href="https://docs.google.com/a/ebi.ac.uk/forms/d/e/1FAIpQLSe7_lFbhVdt-AJeGQChjkiab642nDkfKTVoNQRosPAKuBP3_g/viewform?c=0&w=1" class="readmore">Request an icon</a></p>
-
-    <h3><i class="icon icon-generic" data-icon="}"></i> Just a bit of guidance?</h3>
-    <p>For more information on using fonts with the EMBL-EBI Visual Framework and making the most of the framework, <a class="readmore" href="https://ebi.ac.uk/style-lab/">view the EBI Style Lab</a></p>
-
-    <h3><i class="icon icon-generic" data-icon="&"></i> Looking for "Corporate" fonts?</h3>
-    <p>If you are making official EMBL-EBI documents, including slides and posters, it's best if you use Helvetica Neue Pro in your headings.</p>
-
-  </div>
 </section>
 
 <section id="icons" class="" data-magellan-target="icons">
