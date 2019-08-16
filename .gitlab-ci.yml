@@ -100,7 +100,8 @@ build_docker:
   before_script:
     - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
     - export CI_REGISTRY=dockerhub.ebi.ac.uk
-    - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA_SHORT
+    - export CI_PROJECT_PATH_L=$(echo $CI_PROJECT_PATH | tr '[:upper:]' '[:lower:]')
+    - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH_L:$CI_COMMIT_SHA_SHORT
   script:
     - mkdir -p $HOME/.kube
     - echo -n $KUBE_CONFIG | base64 -d > $HOME/.kube/config
