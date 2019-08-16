@@ -1,0 +1,10 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: style-lab
+spec:
+  template:
+    spec:
+      containers:
+        - name: style-lab
+          image: $IMAGE_NAME
