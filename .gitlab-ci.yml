@@ -86,7 +86,8 @@ build_docker:
   before_script:
     - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
     - export CI_REGISTRY=dockerhub.ebi.ac.uk
-    - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHA_SHORT
+    - export CI_PROJECT_PATH_L=$(echo $CI_PROJECT_PATH | tr '[:upper:]' '[:lower:]')
+    - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH_L:$CI_COMMIT_SHA_SHORT
   script:
     - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
     - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $IMAGE_NAME
