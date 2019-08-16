@@ -6,7 +6,7 @@ variables:
   DEV_DEST: /nfs/public/rw/webdevel/projects/static/test/wwwdev.ebi.ac.uk/style-lab
   DEV_URL: http://wwwdev.ebi.ac.uk/style-lab
 
-  PROD_SERVER: ebi-cli pg-001
+  PROD_SERVER: ebi-cli wp-p1m-14
   PROD_DEST: /nfs/public/rw/webdevel/projects/static/live/www.ebi.ac.uk/style-lab
   PROD_URL: http://www.ebi.ac.uk/style-lab
 
