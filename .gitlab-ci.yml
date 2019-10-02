@@ -23,10 +23,11 @@ stages:
 
 build:
   stage: build
-  image: ebiwd/node-bower-gulp:6
+  image: node:8
   tags:
     - docker
   before_script:
+    - npm install -g bower gulp
     - cd ${CI_PROJECT_DIR}
     - npm install --quiet
     - bower --allow-root install --quiet
@@ -76,9 +77,8 @@ deploy_live:
     DEST: ${PROD_DEST}
     VMS: ${PROD_SERVER}
 
-
-
 build_docker:
+  image: docker:stable
   stage: build
   tags:
     - dind
