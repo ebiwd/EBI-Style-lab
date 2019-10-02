@@ -1,6 +1,6 @@
 FROM node:8 as builder
 
-RUN npm install -g bower gulp 
+RUN npm install -g bower gulp
 
 WORKDIR /tmp
 

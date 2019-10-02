@@ -80,17 +80,15 @@ deploy_live:
 
 build_docker:
   stage: build
-  image:
-    name: gcr.io/kaniko-project/executor:debug
-    entrypoint: [""]
+  tags:
+    - dind
   before_script:
     - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
-    - export CI_REGISTRY=dockerhub.ebi.ac.uk
-    - export CI_PROJECT_PATH_L=$(echo $CI_PROJECT_PATH | tr '[:upper:]' '[:lower:]')
-    - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH_L:$CI_COMMIT_SHA_SHORT
+    - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
   script:
-    - echo "{\"auths\":{\"$CI_REGISTRY\":{\"username\":\"$CI_REGISTRY_USER\",\"password\":\"$CI_REGISTRY_PASSWORD\"}}}" > /kaniko/.docker/config.json
-    - /kaniko/executor --context $CI_PROJECT_DIR --dockerfile $CI_PROJECT_DIR/Dockerfile --destination $IMAGE_NAME
+    - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+    - docker build -t $IMAGE_NAME .
+    - docker push $IMAGE_NAME
 
 # Reusable template, requires the $KUBE_CONFIG and $NAMESPACE variables to be set
 # This subsitutes the environment variable $IMAGE_NAME in the overlay file, and deploys
@@ -100,9 +98,7 @@ build_docker:
   # Also the CI_REGISTRY variable is set incorrectly in GitLab - so exporting to correct value
   before_script:
     - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
-    - export CI_REGISTRY=dockerhub.ebi.ac.uk
-    - export CI_PROJECT_PATH_L=$(echo $CI_PROJECT_PATH | tr '[:upper:]' '[:lower:]')
-    - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH_L:$CI_COMMIT_SHA_SHORT
+    - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
   script:
     - mkdir -p $HOME/.kube
     - echo -n $KUBE_CONFIG | base64 -d > $HOME/.kube/config
