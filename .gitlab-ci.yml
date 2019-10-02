@@ -111,6 +111,8 @@ build_docker:
 
 deploy_to_hh_dev:
   stage: deploy_dev
+  only:
+    - master
   variables:
     NAMESPACE: static-sites-dev
     KUBE_CONFIG: $HH_KUBE_CONFIG
@@ -118,17 +120,44 @@ deploy_to_hh_dev:
 
 deploy_to_hx_dev:
   stage: deploy_dev
+  only:
+    - master
   variables:
     NAMESPACE: static-sites-dev
     KUBE_CONFIG: $HX_KUBE_CONFIG
+  <<: *deploy
+
+deploy_to_hh_wp_dev:
+  stage: deploy_dev
+  only:
+    - master
+  variables:
+    NAMESPACE: static-sites-dev
+    KUBE_CONFIG: $HH_WP_KUBE_CONFIG
+  <<: *deploy
+
+deploy_to_hx_wp_dev:
+  stage: deploy_dev
+  only:
+    - master
+  variables:
+    NAMESPACE: static-sites-dev
+    KUBE_CONFIG: $HX_WP_KUBE_CONFIG
+  <<: *deploy
+
+deploy_to_ehk_hx_dev:
+  stage: deploy_dev
+  only:
+    - master
+  variables:
+    NAMESPACE: static-sites-dev
+    KUBE_CONFIG: $EHK_HH_KUBE_CONFIG
   <<: *deploy
 
 deploy_to_hh_prod:
   stage: deploy_prod
   only:
     - tags
-  except:
-    - branches
   variables:
     NAMESPACE: static-sites-prod
     KUBE_CONFIG: $HH_KUBE_CONFIG
@@ -138,9 +167,34 @@ deploy_to_hx_prod:
   stage: deploy_prod
   only:
     - tags
-  except:
-    - branches
   variables:
     NAMESPACE: static-sites-prod
     KUBE_CONFIG: $HX_KUBE_CONFIG
+  <<: *deploy
+
+deploy_to_hh_wp_prod:
+  stage: deploy_prod
+  only:
+    - tags
+  variables:
+    NAMESPACE: static-sites-prod
+    KUBE_CONFIG: $HH_WP_KUBE_CONFIG
+  <<: *deploy
+
+deploy_to_hx_wp_prod:
+  stage: deploy_prod
+  only:
+    - tags
+  variables:
+    NAMESPACE: static-sites-prod
+    KUBE_CONFIG: $HX_WP_KUBE_CONFIG
+  <<: *deploy
+
+deploy_to_ehk_hx_prod:
+  stage: deploy_prod
+  only:
+    - tags
+  variables:
+    NAMESPACE: static-sites-prod
+    KUBE_CONFIG: $EHK_HH_KUBE_CONFIG
   <<: *deploy

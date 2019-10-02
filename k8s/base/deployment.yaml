@@ -7,6 +7,7 @@ spec:
   ports:
     - protocol: TCP
       port: 80
+      targetPort: 8080
   selector:
     app: style-lab
 ---
@@ -28,4 +29,4 @@ spec:
         - name: style-lab
           image: style-lab:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8080
