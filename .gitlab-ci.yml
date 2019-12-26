@@ -1,90 +1,17 @@
-image: ebiwd/alpine-ssh:3.6
-
-#project specific variables can be defined here, or overridden project settings
-variables:
-  DEV_SERVER: ebi-cli
-  DEV_DEST: /nfs/public/rw/webdevel/projects/static/test/wwwdev.ebi.ac.uk/style-lab
-  DEV_URL: http://wwwdev.ebi.ac.uk/style-lab
-
-  PROD_SERVER: ebi-cli wp-p1m-14
-  PROD_DEST: /nfs/public/rw/webdevel/projects/static/live/www.ebi.ac.uk/style-lab
-  PROD_URL: http://www.ebi.ac.uk/style-lab
-
-  SSH_OWNER: wd_adm
-
-# do not define here, put in project variables
-  SSH_OWNER_KEY: secret-key
-
 stages:
   - build
   - deploy
-  - deploy_dev
-  - deploy_prod
 
-build:
-  stage: build
-  image: node:8
-  tags:
-    - docker
-  before_script:
-    - npm install -g bower gulp
-    - cd ${CI_PROJECT_DIR}
-    - npm install --quiet
-    - bower --allow-root install --quiet
-  script:
-    - npm run build
-  cache:
-    paths:
-      - node_modules
-      - bower_components
-  artifacts:
-    paths:
-      - dist
-
-#setup ssh keys
-.deploy_setup: &deploy_setup
-  tags:
-    - docker
-  before_script:
-    - add-ssh-key ${SSH_OWNER} "${SSH_OWNER_KEY}"
-    - add-search-domain ebi.ac.uk
-
-deploy_dev: &deploy_vm
-  <<: *deploy_setup
-  variables:
-    NAME: dev
-    URL: ${DEV_URL}
-    DEST: ${DEV_DEST}
-    VMS: ${DEV_SERVER}
-  stage: deploy
-  script:
-    - for VM in ${VMS}; do
-        rsync -acv --delete-after ${CI_PROJECT_DIR}/dist/. ${SSH_OWNER}@${VM}:${DEST}/;
-      done
-  only:
-    - master
-  environment:
-    name: ${NAME}
-    url: ${URL}
-
-deploy_live:
-  <<: *deploy_vm
-  only:
-    - tags
-  variables:
-    NAME: live
-    URL: ${PROD_URL}
-    DEST: ${PROD_DEST}
-    VMS: ${PROD_SERVER}
+# Can't use the {::8} notation to get a short sha in the variables section, so exporting below
+before_script:
+  - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
+  - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA_SHORT
 
 build_docker:
   image: docker:stable
   stage: build
   tags:
     - dind
-  before_script:
-    - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
-    - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
   script:
     - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
     - docker build -t $IMAGE_NAME .
@@ -94,37 +21,14 @@ build_docker:
 # This subsitutes the environment variable $IMAGE_NAME in the overlay file, and deploys
 .template: &deploy
   image: ebiwd/alpine-ssh:latest
-  # Can't use the {::8} notation to get a short sha in the variables section, so exporting below
-  # Also the CI_REGISTRY variable is set incorrectly in GitLab - so exporting to correct value
-  before_script:
-    - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
-    - export IMAGE_NAME=$CI_REGISTRY_IMAGE/$CI_COMMIT_REF_SLUG:$CI_COMMIT_SHA
   script:
     - mkdir -p $HOME/.kube
     - echo -n $KUBE_CONFIG | base64 -d > $HOME/.kube/config
     - envsubst '$IMAGE_NAME' < k8s/overlays/caas/ci_image.yaml > file.tmp && mv file.tmp k8s/overlays/caas/ci_image.yaml
     - kubectl kustomize k8s/overlays/caas/ | kubectl --namespace=$NAMESPACE apply -f -
 
-deploy_to_hh_dev:
-  stage: deploy_dev
-  only:
-    - master
-  variables:
-    NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $HH_KUBE_CONFIG
-  <<: *deploy
-
-deploy_to_hx_dev:
-  stage: deploy_dev
-  only:
-    - master
-  variables:
-    NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $HX_KUBE_CONFIG
-  <<: *deploy
-
 deploy_to_hh_wp_dev:
-  stage: deploy_dev
+  stage: deploy
   only:
     - master
   variables:
@@ -133,7 +37,7 @@ deploy_to_hh_wp_dev:
   <<: *deploy
 
 deploy_to_hx_wp_dev:
-  stage: deploy_dev
+  stage: deploy
   only:
     - master
   variables:
@@ -141,35 +45,8 @@ deploy_to_hx_wp_dev:
     KUBE_CONFIG: $HX_WP_KUBE_CONFIG
   <<: *deploy
 
-deploy_to_ehk_hx_dev:
-  stage: deploy_dev
-  only:
-    - master
-  variables:
-    NAMESPACE: static-sites-dev
-    KUBE_CONFIG: $EHK_HH_KUBE_CONFIG
-  <<: *deploy
-
-deploy_to_hh_prod:
-  stage: deploy_prod
-  only:
-    - tags
-  variables:
-    NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $HH_KUBE_CONFIG
-  <<: *deploy
-
-deploy_to_hx_prod:
-  stage: deploy_prod
-  only:
-    - tags
-  variables:
-    NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $HX_KUBE_CONFIG
-  <<: *deploy
-
 deploy_to_hh_wp_prod:
-  stage: deploy_prod
+  stage: deploy
   only:
     - tags
   variables:
@@ -178,19 +55,10 @@ deploy_to_hh_wp_prod:
   <<: *deploy
 
 deploy_to_hx_wp_prod:
-  stage: deploy_prod
+  stage: deploy
   only:
     - tags
   variables:
     NAMESPACE: static-sites-prod
     KUBE_CONFIG: $HX_WP_KUBE_CONFIG
-  <<: *deploy
-
-deploy_to_ehk_hx_prod:
-  stage: deploy_prod
-  only:
-    - tags
-  variables:
-    NAMESPACE: static-sites-prod
-    KUBE_CONFIG: $EHK_HH_KUBE_CONFIG
   <<: *deploy
