@@ -188,7 +188,6 @@ function metaPatternsPages() {
     }))
     .pipe(gulp.dest(PATHS.dist+'/websites/meta-patterns'))
     .pipe(print(filepath => `built metaPatternsPages: ${filepath}`));
-
 }
 
 gulp.task('meta-patterns', metaPatternsPages)
