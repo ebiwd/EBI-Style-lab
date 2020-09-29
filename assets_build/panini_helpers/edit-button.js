@@ -12,7 +12,7 @@ module.exports = function(path, type) {
     if (type === 'page')
       return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/content/pages/' + path + '/index.html">Edit ' + type + '</a>';
     if (type === 'meta-pattern')
-      return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/content/websites/meta-patterns/' + path + 's">Edit ' + type + '</a>';
+      return '<a class="'+classes+'" targe="_blank" href="' + githubpath + '/content/websites/meta-patterns/' + path + '">Edit ' + type + '</a>';
   }
   catch(ex) {
     return null;

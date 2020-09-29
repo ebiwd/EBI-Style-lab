@@ -1,0 +1,127 @@
+---
+meta-title: Introducing the Visual Framework v1.4 and v2.0
+title: Introducing the Visual Framework v1.4 and v2.0
+cta: The Visual Framework 2.0 provides a new approach to reusability and compatibility. Existing services who cannot migrate can use the v1.4 update to more closely match the look of 2.0-based services.
+filter-nav: false
+filter-dropdowns: false
+layout: static
+pagetype: meta-pattern
+location: /websites/framework-next
+---
+
+<style>
+  /* redundant: don't show the announcment for this item on this page */
+  .notifications-js { display: none; }
+</style>
+
+<div class="row">
+  <div class="columns medium-8">
+    <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+
+{{#markdown}}
+
+In 2015, we made the EBI Visual Framework 1.1 to help ensure brand consistency and the easy use of modern web design best practices -- such as responsive design, iterative maintenance cycles, and UX-tested patterns -- across the diverse range of EMBL-EBI websites and services.
+
+In the coming years we refined the Framework with versions 1.2 and 1.3, and it continues to be a success by providing a tool set that gives you the EMBL-EBI look-and-feel and some UX baked and as written guidance. However the v1.x line does have shortcomings. 
+
+A common issue is the Foundation Framework as an underlying dependency. It is helpful as it supplies a robust library of elements like a page grid and buttons, however that choice makes it hard for services that want to use Bootstrap or already have other code that targets things like a `.button` class. 
+
+{{/markdown}}
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="columns medium-8">
+    
+{{#markdown}}
+
+## What's new in v2.0
+
+<span class="lead">
+
+  For services and sites that are new or are going through major redevelopments, you should use [the Visual Framework v2.0](https://visual-framework.github.io/vf-core/).
+
+</span>
+
+This is the version that will be actively maintained and cary the new EMBL and EMBL-EBI look and feel, it also has an improved approach to the diverse world of JS and CSS that scientific services use. 
+
+Highlights:
+
+- a "[CSS Modules](https://github.com/css-modules/css-modules)"-style: CSS classes are prefixed (`.vf-button`). This ensures you won't get accidental spillover of classes from the Visual Framework.
+- fully modular: each [button](https://www.npmjs.com/package/@visual-framework/vf-button), [grid](https://www.npmjs.com/package/@visual-framework/vf-grid), [tab](https://www.npmjs.com/package/@visual-framework/vf-tabs) or other component is a [self-contained npm-project](https://www.npmjs.com/search?q=%40visual-framework). This means you can use the prebuilt CSS and JS, or build your own mix of components to avoid "that one thing that doesn't work for you".
+- easy integration of "corporate" information: if you want to show EMBL/EMBL-EBI jobs, persons, news, publications, the VF 2.0 allows [HTML-import style embeds](https://visual-framework.github.io/vf-core//components/embl-content-hub-loader/index.html?q=contentHub).
+- updated UX approaches: the VF 2.0 uses a container-based approach to reduce cognitive load for users and improve engagement and task completion
+- EBI and beyond: a frequent problem of 1.x was how it was closely tied to the EMBL-EBI brand, making it of less use for services that wanted the UX lessons but not the EMBL-EBI brand. You can now bring you own colours and spacing through [design tokens](https://visual-framework.github.io/vf-core//components/vf-design-tokens/)
+
+### Related v2.0 links
+
+- [Visual Framework 2.0 welcome and documentation](https://visual-framework.github.io/vf-core/)
+- The [COVID-19 Data Portal](https://www.covid19dataportal.org/) uses v2.0
+- [Building your first page with the Visual Framework 2.0](https://www.allaboutken.com/posts/20191118-first-page-with-the-visual-framework.html)
+- [Example boilerplate](https://visual-framework.github.io/vf-core/patterns/scientific-service/)
+
+{{/markdown}}
+
+  </div>
+
+  <div class="columns medium-4">
+    <figure class="image"><img alt="An example EBI page." src="https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/embl-ebi-vf-v20.png?w=400&h=290&gravity=north" width="" class="">
+    <hr>
+    <img alt="An example EBI page." src="https://acxngcvroo.cloudimg.io/v7/https://www.embl.org/files/wp-content/uploads/embl-ebi-vf-v20.png?w=400&h=200&gravity=south" width="" class="">
+    <figcaption class="">An example EMBL-EBI microsite using the Visual Framework 2.0. It also make use of v1.4 for legacy compatibility.</figcaption>
+    </figure>
+  </div>
+
+</div>
+  
+<div class="row">
+
+  <div class="columns medium-8">
+
+{{#markdown}}
+
+## What's new in v1.4
+
+<span class="lead">
+
+  To aid in the transition we have created a non-breaking v1.4 update.
+
+</span>
+
+Not all sites and services will have the development capacity to update from 1.x to 2.0, so the v1.4 of the EBI VF will assist in the transition to the new VF 2.0 look. This release is designed as an easy change for existing sites and services while buying time or preventing the need to update 2.0 in many cases.
+
+v1.4 creates a visual sympathy between the 1.x architecture and 2.0 architecture and look. Here is an example boilerplate between 1.3 and 1.4:
+
+- [1.3 example](http://wwwdev.ebi.ac.uk/style-lab/websites/sample-site-v1.3/boilerplate/blank.html)
+- [1.4 example](https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/index.html)
+
+To test an upgrade you only need to replace the 1.3 references with 1.4:
+
+- [dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css](https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css)
+- [dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js](https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js)
+- [dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js](https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js)
+- note: as of this writing (2020-09-29) we have not yet release 1.4 on npm or the production cdn
+
+If you have a service running 1.2 or 1.3, try changing the CSS and JS to the aboves URLs and report any concern to [khawkins@ebi.ac.uk](mailto:khawkins@ebi.ac.uk) or [on GitHub](https://github.com/ebiwd/EBI-Framework/issues/162).
+
+### Related v1.4 links
+
+- [Boilerplates]({{root}}websites/sample-site/)
+- [GitHub issue on v1.4 planning](https://github.com/ebiwd/EBI-Framework/issues/162)
+
+## What's next
+
+As of September 2020, both v1.4 and v2.0 are under active development and we'll be hosting a series of consultative workshops to incorporate ideas and concerns. To register your interest email <a href="mailto:khawkins@ebi.ac.uk?subject=VF 1.4 and 2.0 workshop&body=Please let me know when you have a workshop on the VF 1.4 and 2.0. [Note: It would be helpful if you can list any websites you maintain.]">khawkins@ebi.ac.uk</a>.
+
+{{/markdown}}
+  </div>
+
+  <div class="columns medium-4">
+    <figure class="image"><img alt="The EBI Style Lab with v1.4." src="https://user-images.githubusercontent.com/928100/94437425-04af7400-019e-11eb-85f3-cf880a3c7afb.png" width="" class="">
+    <figcaption class="">The EBI Style Lab with v1.4, it is -- by design -- little changed but will help users that frequent between 2.0 and 1.4 sites. You only need replace "v1.3" with "v1.4".
+    </figcaption>
+    </figure>
+  </div>
+</div>
