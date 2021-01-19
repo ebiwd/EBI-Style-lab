@@ -415,8 +415,8 @@ layout: blank
       $(this.destination).html(html);
     };
 
-    newsLeadItem = new HandlebaRss("http://www.ebi.ac.uk/about/news/press.xml",  "#feed-template-news-lead-item","#news-lead-item").init();
-    newsUpdates =  new HandlebaRss("http://www.ebi.ac.uk/about/news/service.xml","#feed-template-news-updates",  "#news-updates"  ).init();
+    newsLeadItem = new HandlebaRss("https://www.ebi.ac.uk/about/news/press.xml",  "#feed-template-news-lead-item","#news-lead-item").init();
+    newsUpdates =  new HandlebaRss("https://www.ebi.ac.uk/about/news/service.xml","#feed-template-news-updates",  "#news-updates"  ).init();
 
     // $.getJSON('temp/events-common-fields-feed-upcoming-events.json', function(data) {
     // select json.title, json.bundle_name, json.path, json.short_description, json.starts from json where url='https://www.ebi.ac.uk/sites/ebi.ac.uk/files/data/events-common-fields-feed-upcoming-events.json' limit 6

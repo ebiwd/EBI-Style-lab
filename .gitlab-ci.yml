@@ -8,7 +8,7 @@ variables:
 
   PROD_SERVER: ebi-cli wp-p1m-14
   PROD_DEST: /nfs/public/rw/webdevel/projects/static/live/www.ebi.ac.uk/style-lab
-  PROD_URL: http://www.ebi.ac.uk/style-lab
+  PROD_URL: https://www.ebi.ac.uk/style-lab
 
   SSH_OWNER: wd_adm
 

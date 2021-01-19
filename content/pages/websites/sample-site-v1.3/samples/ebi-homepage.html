@@ -459,7 +459,7 @@ layout: blank
           return passedTest;
       }
 
-      // pull json from http://www.ebi.ac.uk/admin/structure/views/view/news_rollup/edit/page_1
+      // pull json from https://www.ebi.ac.uk/admin/structure/views/view/news_rollup/edit/page_1
       function getNewsData() {
         // $.getJSON("/feed.json?cachedate="+unixMinute, function(data) { // local testing
         $.getJSON("https://www.ebi.ac.uk/about/news/feed.json?cachedate="+unixMinute, function(data) {

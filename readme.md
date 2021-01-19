@@ -6,7 +6,7 @@
 The EMBL-EBI Style Lab complements the 1.x series of the Visual Framework, it is being superseded by version 2.
 
 - [Information on the Visual Framework version 2](https://stable.visual-framework.dev/)
-- [About the retirement of 1.x](http://www.ebi.ac.uk/style-lab/websites/framework-next/)
+- [About the retirement of 1.x](https://www.ebi.ac.uk/style-lab/websites/framework-next/)
 
 # EMBL-EBI Style Lab
 
@@ -20,7 +20,7 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
 
 ### Contents of the EMBL-EBI Style Lab
 
-- [General styling](http://www.ebi.ac.uk/style-lab/)
+- [General styling](httpss://www.ebi.ac.uk/style-lab/)
   - [Our basic style guide](https://www.ebi.ac.uk/style-lab/general/)
   - [Microsoft Word and PowerPoint templates](https://www.ebi.ac.uk/style-lab/general/templates/)
   - [Poster templates](https://www.ebi.ac.uk/style-lab/general/templates/)

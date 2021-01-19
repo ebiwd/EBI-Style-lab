@@ -43,7 +43,7 @@ gulp.task('updateIconFonts', function (done) {
       file: "fonts-v1_2.html",
       url: "https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.2/partial.html"
     })
-    // return download("http://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html")
+    // return download("https://www.ebi.ac.uk/web_guidelines/EBI-Icon-fonts/v1.2/index.html")
     // .pipe(replace(/.[\s\S]*?<body.*?>(.[\s\S]*?)/i, '$1'))
     // .pipe(replace(/.[\s\S]*?<section id="intro".*?>(.[\s\S]*?)/i, '$1'))
     // .pipe(replace('</body>', ''))

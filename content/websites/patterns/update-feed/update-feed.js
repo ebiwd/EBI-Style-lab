@@ -27,4 +27,4 @@ feedImporter.prototype.init = function(){
   }
   queryData(this); // bootstrap
 }
-newsUpdates = new feedImporter("http://www.ebi.ac.uk/about/news/service.xml",feedTemplate, "#news-updates").init();
+newsUpdates = new feedImporter("https://www.ebi.ac.uk/about/news/service.xml",feedTemplate, "#news-updates").init();
