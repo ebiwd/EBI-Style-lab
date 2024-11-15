@@ -18,7 +18,7 @@ RUN npm install --quiet && \
 	bower --allow-root install --quiet && \
 	npm run build
 
-FROM nginxinc/nginx-unprivileged:1.16.0-alpine
+FROM nginxinc/nginx-unprivileged:1.27-alpine
 
 COPY docker-assets/default.conf /etc/nginx/conf.d/default.conf
 COPY web/index.html /usr/share/nginx/html/index.html
