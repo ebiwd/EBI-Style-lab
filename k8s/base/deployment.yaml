@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   name: style-lab-service
+  labels:
+    app: style-lab-service
 spec:
   type: NodePort
   ports:
