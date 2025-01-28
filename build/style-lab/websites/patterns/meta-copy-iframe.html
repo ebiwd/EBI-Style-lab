@@ -1,0 +1,127 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Meta copy</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=8c587ee56f65267a7c81c986335b01ff">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/meta-copy/layout.css?rev=5082d4bc986afa22f44657ed0347ab9c">
+  <link rel="stylesheet" href="../../websites/patterns/meta-copy/meta-copy.css?rev=d2f012b04c5d7e5b8653faa3d000a18e">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <p>For EMBL-EBI pages there are few loose groups of metatags that are recommended for your pages.</p>
+  <h3 id="1-theming-metatags">1. Theming metatags</h3>
+  <p>These control the look of <a href="../../websites/meta-patterns/page-structure.html">the local masthead area</a>.</p>
+  <p>You could achieve a similar look through CSS, but this method offers more reusability and smoother updates in future changes and improvements.</p>
+  <div class="code-example"><pre><code class="html hljs">  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"ebi:head-color"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"#091314"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"ebi:head-image"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"//ebiwd.github.io/EBI-Framework/images/backgrounds/embl-ebi-background-4.jpg"</span>&gt;</span></code></pre></div><p>Recommended image size: 2462px wide, 322px high</p>
+  <h3 id="2-content-review-tags">2. Content review tags</h3>
+  <p>These metatags help ensure content <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WCC/Web+Content+Committee+Home">the Web Content Committee</a> can understand who owns content, and if content is still current.</p>
+  <p>(note: future improvements regarding granularity are expected druing 2018)</p>
+  <div class="code-example"><pre><code class="html hljs">  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"ebi:owner"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"John Doe"</span>&gt;</span> <span class="hljs-comment">&lt;!-- Who should be contacted about changes --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"ebi:review-cycle"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"30"</span>&gt;</span> <span class="hljs-comment">&lt;!-- In days, how often should the content be reviewed --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"ebi:last-review"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"2015-12-20"</span>&gt;</span> <span class="hljs-comment">&lt;!-- The last time the content was reviewed --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"ebi:expiry"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"2016-01-20"</span>&gt;</span> <span class="hljs-comment">&lt;!-- When this content is no longer relevant --&gt;</span></code></pre></div><h3 id="3-social-and-seo-tags">3. Social and SEO tags</h3>
+  <p>These are not specific to EMBL-EBI, but here is some starting guidance.</p>
+  <div class="code-example"><pre><code class="html hljs">  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"A short description of your page between 50–300 chararcter"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"og:type"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"website"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"og:site_name"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Your service name"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"og:url"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"https://your_url"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"og:title"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Page title &gt; EMBL-EBI"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">property</span>=<span class="hljs-value">"og:image"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"A card image for use on Facebook, others"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"twitter:card"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"summary_large_image"</span>&gt;</span>
+    <span class="hljs-comment">&lt;!-- Documentation: https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"twitter:site"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"@your_twitter_handle"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"twitter:creator"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"@individual_page_author_if_different"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"twitter:description"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"A short description separate from the page title."</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"twitter:image"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"https://image_url"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"dcterms.title"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Page title &gt; EMBL EBI"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"dcterms.type"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"Text"</span>&gt;</span> <span class="hljs-comment">&lt;!-- http://dublincore.org/documents/dcmi-terms/ --&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"dcterms.identifier"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"https://typicall_your_url/"</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">meta</span> <span class="hljs-attribute">name</span>=<span class="hljs-value">"dcterms.format"</span> <span class="hljs-attribute">content</span>=<span class="hljs-value">"text/html"</span>&gt;</span></code></pre></div><h4 id="further-reading">Further reading</h4>
+  <ul>
+  <li><a href="https://developers.facebook.com/docs/sharing/webmasters/">Facebook</a></li>
+  <li><a href="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards">Twitter</a></li>
+  <li><a href="https://moz.com/blog/seo-meta-tags">General SEO</a></li>
+  </ul>
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=1e9d5e697824a8f9c8bf184e3391e3ce"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/meta-copy/meta-copy.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

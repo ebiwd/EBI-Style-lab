@@ -1,0 +1,361 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Usability < EMBL-EBI Style Lab</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <meta name="rootpath" content="../../">
+  <meta name="bbfile" content="../../data/building-blocks.json">
+  <meta name="kitfile" content="../../data/kits.json">
+
+  <meta name="datafile" content="../../data/">
+  <meta name="rootpath" content="../../">
+  <meta name="datakey" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=@@hash">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class="">
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../">Overview</a></li>
+            <li class=""><a href="../../general">Universal principles</a></li>
+            <li class=""><a href="../../general/templates">Templates</a></li>
+            <li class=" active"><a href="../../websites/">Create websites</a></li>
+            <li class=""><a href="../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <div class="diffusion-visulisation" style="width: 100%; height: 40rem; margin-bottom: -40rem;"></div>
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+</div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+          <div id="main-results-container" class="row">
+            <ul id="" class="menu horizontal no-underline padding-top-medium hide-for-print" data-description="navigational">
+              <li class=""><a href="../../websites/meta-patterns/analytics.html">Analytics</a></li>
+              <li class=""><a href="../../websites/meta-patterns/browser-compatibility.html">Browser, screens</a></li>
+              <!-- <li class=""><a href="../../websites/meta-patterns/forms.html">Forms</a></li> -->
+              <li class=""><a href="../../websites/meta-patterns/printing.html">Printing</a></li>
+              <li class=""><a href="../../websites/meta-patterns/page-structure.html">Page structure</a></li>
+              <li class=""><a href="../../websites/sample-site/">Sample pages</a></li>
+              <li class=""><a href="../../websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
+              <li class="active active"><a href="../../websites/meta-patterns/usability.html">Usability</a></li>
+              <li class=""><a href="../../general/core-content-spec">Content-Action Model</a></li>
+            </ul>
+            
+            <hr/>
+            <ul id="" class="menu horizontal no-underline padding-bottom-xlarge hide-for-print" data-description="navigational">
+            <li class="active"><a href="../../websites/meta-patterns/usability.html">UX & Usability topics</a></li>
+            <li class=""><a href="../../websites/meta-patterns/accessibility.html">Accessibility</a></li>
+            <li class=""><a href="../../websites/meta-patterns/forms.html">Forms</a></li>
+            </ul>
+
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/websites/meta-patterns/usability.html">Edit meta-pattern</a>
+            <!-- <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/pages/usability.html/index.html">Edit page</a> -->
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/assets_site/layouts/static.html">Edit layout</a>
+            <div class="intro">
+              <h2>Usability</h2>
+              <p class="lead">This page gives you step-by-step information on how to improve the usability of your website. If you are developing a new service or doing a redesign, here&#x27;s what to do.</p>
+            </div>
+            
+            
+            
+            <div class="" markdown="1">
+             <a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/ucd_process_guidelines.png"><img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/ucd_process_guidelines.png" /></a>
+             <cite>Note: <a href="/EBI-Pattern-library/meta-patterns/accessibility/">Accessibility</a> issues should be considered throughout these steps.</cite>
+            </div>
+            
+            <br/><br/>
+            <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+            
+            <h3 id="stage-1-vision-and-define----scope-of-your-project">Stage 1: Vision and Define --&gt; scope of your project</h3>
+            <p>Within the team, we recommend that you put together a list of points that sum up the overall mission of the new design/redesign; refer to the <a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/vision_define_sheet.doc">Vision and define (mission) template document<span class="link-doc"></span></a>. This includes questions to help you create a mission list for your project. You should contact <a href="mailto:es-request@ebi.ac.uk">es-request@ebi.ac.uk</a> and make sure your GTL has let the Directors&#39; office know you are doing a redesign/ developing a new service.</p>
+            <h3 id="stage-2-user-research----characterise-your-users-and-their-stories">Stage 2: User Research --&gt; characterise your users and their stories</h3>
+            <p>Gather some basic information: What do users want from the site?, What questions they have when coming the site?, (If a redesign) What are the current features that work well? (and where do users get stuck?).</p>
+            <p>To find out about users:</p>
+            <ul>
+            <li>Conduct interviews to understand your users (by phone, email, surveys). Ask how, why and when would they use your service? You could include around 5-15 users at this point, to get a good idea - but speaking to as few as 2 or 3 can be helpful to get you thinking.</li>
+            <li>For a redesign, you could use web analytics statistics (link) for your pages. Check your help files and past user requests and try to understand your users&#39; profiles from these.</li>
+            <li>Summarise the feedback you have gathered, and use this to create a user profile (or 2 or 3) see <a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/EBI_persona_template.doc">template<span class="link-doc"></span></a> and <a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/EBI_persona_Abi.docx">example</a> (yours do not need to be as elaborate as this but you need to know basic use cases with examples). Templates for you to download and use for user profiles (aka &#39;personas&#39;) are here: <a href="//www.ebi.ac.uk/seqdb/confluence/download/attachments/16584495/personas.zip?version=1&amp;modificationDate=1325764746000">blank persona template</a></li>
+            </ul>
+            <h3 id="stage-3-design----basic-mock-ups--wireframes">Stage 3: Design --&gt; basic mock-ups / wireframes</h3>
+            <p>Once you have some ideas from user research and your user profiles - start sketching visual designs/ mock-ups for your site. Specifications/mock-ups should be shown to the web team before implementation (email <a href="mailto:es-request@ebi.ac.uk">es-request@ebi.ac.uk</a> to make a time).</p>
+            <p>Check out the competition: are there already similar services available elsewhere? Take a look at their websites and review what are they doing. Borrow good ideas. Try to create screens for the different layers of your site - focusing on the ones you expect to receive the most traffic first. Use mock-up software, like Balsamiq (example shown below) or PowerPoint. You can even just draw them on paper, see example. Note Balsamiq is a commercial software so you need to buy a license (<a href="http://www.balsamiq.com" rel="nofollow">http://www.balsamiq.com</a>).</p>
+            <p>Card sorting can help you design navigation and menus. For example, if you need to decide which data items to group together into a particular section, then card sorting helps you see how to groups things based on user expectations. See an example from <a href="http://www.optimalworkshop.com">OptimalSort</a>, a virtual card sorting service, for which EBI has an account (contact <a href="mailto:es-request@ebi.ac.uk">es-request@ebi.ac.uk</a>).</p>
+            <h3 id="stage-4-test-and-refine----usability-testing">Stage 4: Test and refine --&gt; usability testing</h3>
+            <p>Usability testing allows you to identify the problem areas of your design. It need not be elaborate and time-consuming to yield very useful results, but there are do&#39;s and don&#39;t&#39;s that you need to be aware of, in order to avoid biased results. For advice on how to run usability tests please contact the Web team (<a href="mailto:es-request@ebi.ac.uk">es-request@ebi.ac.uk</a>). Note usability testing is for a flow of steps through multiple webpage designs. It is NOT usually useful for a single page.</p>
+            <h4 id="how-to-run-a-usability-test-and-process-the-results----what-are-the-options">How to run a usability test and process the results --&gt;&nbsp; What are the options?</h4>
+            <ol>
+            <li>One-on-one testing (facilitator and user, sometimes with an observer, who may be the developer/designer)<ul>
+            <li>One user is watched as he/she answers questions and goes through the website.</li>
+            <li>This reveals difficult navigation in the current site (where users get stuck). It also shows places users want to click. Testing four or so users in this way can reveal major issues.</li>
+            </ul>
+            </li>
+            <li>Prototype testing (participants, facilitator)<ul>
+            <li>Divide participants into two groups, have them do the same tasks with two prototypes (each group uses one prototype, and rate the ease of the task and time it took to complete). This allows direct comparison of two prototypes subjectively.</li>
+            </ul>
+            </li>
+            <li>Remote &#39;virtual&#39; user testing<ul>
+            <li>Paper prototyping (usability testing with paper mockups): <img src="//www.ebi.ac.uk/seqdb/confluence/download/attachments/16584495/worddaved6085aa426c3d6d140132b51e41d0e3.png?version=1&modificationDate=1325761101000" height="365" width="495" alt="image" style="border: 0px;"></li>
+            </ul>
+            </li>
+            </ol>
+            <h4 id="how-can-we-find-people-to-take-part-in-usability-testing">How can we find people to take part in usability testing?</h4>
+            <p>To run usability testing you need to contact potential participants in external organisations. We suggest you give potential participants a brief description of what you want to do, how long it will take, and why you are doing it. Offer an incentive to attract participants, such as lunch or token gifts like Amazon shopping vouchers, etc. EMBL policy states that participants may not be paid for their time. Suggestions for ways to find people to contact for usability testing are:</p>
+            <ul>
+            <li>Contact people who have submitted help requests to your service.</li>
+            <li>Contact authors of scientific papers who have cited the use of your resource.</li>
+            <li>Ask your team/group leader for contacts, names of collaborators or previous colleagues.</li>
+            <li>EBI&#39;s Industry Programme may be able to contact our industry partners on your behalf.</li>
+            <li>Depending on the target audience, you may be able to speak to people at the Sanger Institute.</li>
+            </ul>
+            <h4 id="how-long-will-it-take-to-plan-and-run-usability-testing">How long will it take to plan and run usability testing?</h4>
+            <p>It depends on the project, but it usually takes 3-4 days to prepare the materials. We suggest planning a whole day to do the testing if you are visiting an external site, but it is possible to do ad hoc usability testing in a canteen or coffee shop for tests at short notice. Analysis and feedback can take a week or so.</p>
+            <h4 id="do-i-need-to-obtain-consent-from-the-participants">Do I need to obtain consent from the participants?</h4>
+            <p>Yes. You can download the consent form template <a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/EBI_media_consent_usability.doc">here<span class="link-doc"></span></a>. Contact the web team via <a href="mailto:es-request@ebi.ac.uk">es-request@ebi.ac.uk</a> to find out more.</p>
+            <h3 id="stage-5-implementation----stick-to-the-styleguide">Stage 5: Implementation --&gt; stick to the styleguide!</h3>
+            <p>You must adhere to the EBI style guide. If you feel that your site has exceptional requirements and thus cannot follow the visual guidelines, then you need to contact <a href="mailto:es-request@ebi.ac.uk">es-request@ebi.ac.uk</a> as early as possible to discuss solutions.</p>
+            
+            <div class="callout" markdown="1">
+            <h2 id="supplemental-downloads">Supplemental downloads</h2>
+            <p>The following documents may be helpful, they have been referred to in the sections above:</p>
+            <ul>
+            <li><a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/ucd_process_guidelines.png">Lifecycle diagram</a></li>
+            <li><a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/EBI_persona_Abi.docx">User profile (persona) example</a></li>
+            <li><a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/EBI_persona_template.doc">User profile (persona) template</a></li>
+            <li><a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/vision_define_sheet.doc">Vision and define (mission) template document</a></li>
+            <li><a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/vaughan_service_team/web_guidelines/EBI_media_consent_usability.doc">Usability testing consent form</a></li>
+            </ul>
+            </div>
+            
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+      </div>
+
+      <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+      <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 1.4 and 2.0 are coming', message: 'New services can make use of the Visual Framework 2.0. For existing services who cannot migrate, a 1.4 update is also available.<br/><a class="readmore" href="../../websites/framework-next/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../../assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>

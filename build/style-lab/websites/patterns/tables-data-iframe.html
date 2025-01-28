@@ -1,0 +1,203 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Data tables</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=e4894bb4db3f43933b65c20e0a6a7678">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/tables-data/layout.css?rev=dab2addd7c65e72cab03e5a985c74a45">
+  <link rel="stylesheet" href="../../websites/patterns/tables-data/tables-data.css?rev=ef5598fb0d82a3524aeaed913fbc492b">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <p>The basic data table can be implemented by adding two classes to the <code>table</code> tag: <code>.small</code> and <code>.data-table</code>. A third tag that might be useful is <code>.no-stripe</code> to remove the zebra striping.</p>
+  <p>Alternativley to adding <code>.data-table</code> there are a range of utility classes that can be used to assemble the desired look and feel:</p>
+  <ul>
+  <li>Smaller text: add a <code>.small</code> to the table tag, or any tr or td.</li>
+  <li>Disable tables from going 100% wide: add a <code>.width-auto</code> to the table tag.</li>
+  <li>Align text to top: add <code>.align-top</code> to the table tag or a td.</li>
+  <li>Remove striping: add <code>.no-stripe</code> to the table tag.</li>
+  <li>Change padding: add either of these classes to the table tage or td, <code>.padding-none</code> <code>.padding-small</code>.</li>
+  <li>Allow images to be stretched out of proportion: add <code>.stretch</code> to the image.</li>
+  </ul>
+  <p>Consider this <a href="https://www.ebi.ac.uk/chembl/drugstore">sample table from ChEMBL</a> which we have done with <code>table.small.data-table.no-stripe</code>:</p>
+  <div class="row"><div class="column">
+  <table class="small data-table no-stripe">
+    <thead>
+      <tr role="row">
+        <th colspan="1" role="columnheader">Parent Molecule</th>
+        <th colspan="1" role="columnheader">Synonyms</th>
+        <th colspan="1" role="columnheader">Phase</th>
+        <th colspan="1" role="columnheader">Research Codes</th>
+        <th colspan="1" role="columnheader">Applicants</th>
+        <th colspan="1" role="columnheader">USAN Stem</th>
+        <th colspan="1" role="columnheader">USAN Year</th>
+        <th colspan="1" role="columnheader">First Approval</th>
+        <th colspan="1" role="columnheader">ATC Code</th>
+        <th colspan="1" role="columnheader" style="width: 190px;">Icon</th>
+      </tr>
+    </thead>
+    <tbody aria-live="polite" aria-relevant="all" role="alert">
+      <tr class="odd">
+        <td>
+          <a href="https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL566315" class="no-underline"><img alt="Compound Image Not Available" height="100px" src="https://www.ebi.ac.uk/chembl/compound/displayimage/574221"></a><br>
+          CHEMBL566315
+        </td>
+        <td>Obeticholic acid (FDA, INN, USAN)</td>
+        <td>4</td>
+        <td>DSP-1747<br>
+        INT-747</td>
+        <td>Intercept Pharmaceuticals</td>
+        <td></td>
+        <td>2008</td>
+        <td class=" sorting_1">2016</td>
+        <td>A05AA04</td>
+        <td><img alt="CHEMBL566315 compound icon" border="0" src="https://www.ebi.ac.uk/chembltools/autoicon3/7,1,0,1,0,1,0,0,0,1" usemap="#imgmap574221"><map id="imgmap574221" name="imgmap574221">
+          <area alt="Drug Type: Natural Product-derived" class="drug-icon-imgmap" coords="1,1 37,37" href="#" shape="rect" title="Drug Type: Natural Product-derived">
+          <area alt="Rule of Five: Y" class="drug-icon-imgmap" coords="38,1 74,37" href="#" shape="rect" title="Rule of Five: Y">
+          <area alt="First In Class: N" class="drug-icon-imgmap" coords="75,1 111,37" href="#" shape="rect" title="First In Class: N">
+          <area alt="Chirality: Single Stereoisomer" class="drug-icon-imgmap" coords="112,1 148,37" href="#" shape="rect" title="Chirality: Single Stereoisomer">
+          <area alt="Prodrug: N" class="drug-icon-imgmap" coords="149,1 185,37" href="#" shape="rect" title="Prodrug: N">
+          <area alt="Oral: Y" class="drug-icon-imgmap" coords="1,40 37,75" href="#" shape="rect" title="Oral: Y">
+          <area alt="Parenteral: N" class="drug-icon-imgmap" coords="38,40 74,75" href="#" shape="rect" title="Parenteral: N">
+          <area alt="Topical: N" class="drug-icon-imgmap" coords="75,40 111,75" href="#" shape="rect" title="Topical: N">
+          <area alt="Black Box: N" class="drug-icon-imgmap" coords="112,40 148,75" href="#" shape="rect" title="Black Box: N">
+          <area alt="Availability Type: Prescription-only" class="drug-icon-imgmap" coords="149,40 185,75" href="#" shape="rect" title="Availability Type: Prescription-only">
+        </map></td>
+      </tr>
+      <tr class="even">
+        <td>
+          <a href="https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL607400" class="no-underline"><img alt="Compound Image Not Available" height="100px" src="https://www.ebi.ac.uk/chembl/compound/displayimage/609761"></a><br>CHEMBL607400
+        </td>
+        <td>Brivaracetam (FDA, INN, USAN)</td>
+        <td>4</td>
+        <td>UCB-34714</td>
+        <td>Ucb Inc<br>
+        Ubc Inc</td>
+        <td>-racetam</td>
+        <td>2005</td>
+        <td class=" sorting_1">2016</td>
+        <td>N03AX23</td>
+        <td><img alt="CHEMBL607400 compound icon" border="0" src="https://www.ebi.ac.uk/chembltools/autoicon3/1,1,0,1,0,1,1,0,0,1" usemap="#imgmap609761"><map id="imgmap609761" name="imgmap609761">
+          <area alt="Drug Type: Synthetic Small Molecule" class="drug-icon-imgmap" coords="1,1 37,37" href="#" shape="rect" title="Drug Type: Synthetic Small Molecule">
+          <area alt="Rule of Five: Y" class="drug-icon-imgmap" coords="38,1 74,37" href="#" shape="rect" title="Rule of Five: Y">
+          <area alt="First In Class: N" class="drug-icon-imgmap" coords="75,1 111,37" href="#" shape="rect" title="First In Class: N">
+          <area alt="Chirality: Single Stereoisomer" class="drug-icon-imgmap" coords="112,1 148,37" href="#" shape="rect" title="Chirality: Single Stereoisomer">
+          <area alt="Prodrug: N" class="drug-icon-imgmap" coords="149,1 185,37" href="#" shape="rect" title="Prodrug: N">
+          <area alt="Oral: Y" class="drug-icon-imgmap" coords="1,40 37,75" href="#" shape="rect" title="Oral: Y">
+          <area alt="Parenteral: Y" class="drug-icon-imgmap" coords="38,40 74,75" href="#" shape="rect" title="Parenteral: Y">
+          <area alt="Topical: N" class="drug-icon-imgmap" coords="75,40 111,75" href="#" shape="rect" title="Topical: N">
+          <area alt="Black Box: N" class="drug-icon-imgmap" coords="112,40 148,75" href="#" shape="rect" title="Black Box: N">
+          <area alt="Availability Type: Prescription-only" class="drug-icon-imgmap" coords="149,40 185,75" href="#" shape="rect" title="Availability Type: Prescription-only">
+        </map></td>
+      </tr>
+      <tr class="odd">
+        <td>
+          <a href="https://www.ebi.ac.uk/chembl/compound/inspect/CHEMBL1743034" class="no-underline"><img alt="Compound Image Not Available" height="100px" src="https://www.ebi.ac.uk/chembl/compound/displayimage/1121905"></a><br>CHEMBL1743034
+        </td>
+        <td>Ixekizumab (FDA, INN, USAN)</td>
+        <td>4</td>
+        <td>LY-2439821</td>
+        <td>Lilly<br>Eli Lilly And Co.</td>
+        <td>-mab</td>
+        <td>2010</td>
+        <td class=" sorting_1">2016</td>
+        <td></td>
+        <td><img alt="CHEMBL1743034 compound icon" border="0" src="https://www.ebi.ac.uk/chembltools/autoicon3/6,0,0,1,0,0,1,0,0,1" usemap="#imgmap1121905"><map id="imgmap1121905" name="imgmap1121905">
+          <area alt="Drug Type: Antibody" class="drug-icon-imgmap" coords="1,1 37,37" href="#" shape="rect" title="Drug Type: Antibody">
+          <area alt="Rule of Five: N" class="drug-icon-imgmap" coords="38,1 74,37" href="#" shape="rect" title="Rule of Five: N">
+          <area alt="First In Class: N" class="drug-icon-imgmap" coords="75,1 111,37" href="#" shape="rect" title="First In Class: N">
+          <area alt="Chirality: Single Stereoisomer" class="drug-icon-imgmap" coords="112,1 148,37" href="#" shape="rect" title="Chirality: Single Stereoisomer">
+          <area alt="Prodrug: N" class="drug-icon-imgmap" coords="149,1 185,37" href="#" shape="rect" title="Prodrug: N">
+          <area alt="Oral: N" class="drug-icon-imgmap" coords="1,40 37,75" href="#" shape="rect" title="Oral: N">
+          <area alt="Parenteral: Y" class="drug-icon-imgmap" coords="38,40 74,75" href="#" shape="rect" title="Parenteral: Y">
+          <area alt="Topical: N" class="drug-icon-imgmap" coords="75,40 111,75" href="#" shape="rect" title="Topical: N">
+          <area alt="Black Box: N" class="drug-icon-imgmap" coords="112,40 148,75" href="#" shape="rect" title="Black Box: N">
+          <area alt="Availability Type: Prescription-only" class="drug-icon-imgmap" coords="149,40 185,75" href="#" shape="rect" title="Availability Type: Prescription-only">
+        </map></td>
+      </tr>
+    </tbody>
+  </table>
+  </div></div>
+  
+  <p>For further discussion on data table styling, <a href="https://github.com/ebiwd/EBI-Framework/issues/65">see this issue</a>.</p>
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=6bd2e5448a052eb477abcb752959cdae"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/tables-data/tables-data.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

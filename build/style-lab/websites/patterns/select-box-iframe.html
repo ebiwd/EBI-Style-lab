@@ -1,0 +1,237 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Select box</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=18c71aec306a3f35bc144fb851e2d54e">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/select-box/layout.css?rev=1a0d565e9314714159b84423b30ab9b6">
+  <link rel="stylesheet" href="../../websites/patterns/select-box/select-box.css?rev=65793a3d10a95a311b1dfdac5105568b">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <p><a href="https://github.com/jshjohnson/Choices">Choices.js</a> is a lightweight, configurable select box/text input plugin. Similar to Select2 and Selectize but without the jQuery dependency.</p>
+  <p>To use:</p>
+  <ul>
+  <li>Include these two files:<div class="callout" markdown="1">
+  ``` html
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/Choices/assets/styles/css/choices.min.css">
+  <script src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/Choices/assets/scripts/dist/choices.min.js"></script>
+  ```
+  </div></li>
+  <li>On the <code>&lt;select&gt;</code> element, add class <code>.form-control</code></li>
+  <li>Invoke with the <code>Choices</code> function (view the source)</li>
+  <li>For further configuration options, visit the <a href="https://github.com/jshjohnson/Choices">Choices GitHub repo</a>.</li>
+  </ul>
+  <p>Known caveats:</p>
+  <ul>
+  <li>If you use <code>optgroup</code>, all <code>option</code> elements must be inside groups</li>
+  <li><code>label</code> elements <a href="https://github.com/jshjohnson/Choices/issues/57">cannot</a> wrap the <code>select</code></li>
+  </ul>
+  <div class="row"><div class="column">
+  <link rel="stylesheet" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/Choices/assets/styles/css/choices.min.css">
+  <script src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/libraries/Choices/assets/scripts/dist/choices.min.js"></script>
+  
+  <p><label for="choices-multiple-remove-button">Demo</label>
+  <select class="form-control" name="choices-multiple-remove-button" id="choices-multiple-remove-button" placeholder="This is a placeholder" multiple></p>
+  <option value="Dropdown item 1" selected>Dropdown item 1</option>
+  <option value="Dropdown item 2">Dropdown item 2</option>
+  <option value="Dropdown item 3">Dropdown item 3</option>
+  <option value="Dropdown item 4">Dropdown item 4</option>
+  </select>
+  
+  <!-- Single item -->
+  <div markdown="0">
+  <label for="topic">Single item selection</label>
+  <select name="topic" required id="topic" class="form-control">
+    <optgroup label="General">
+      <option value="EBI HELP: General Feedback" selected="selected">General Feedback or Please Select</option>
+      <option value="EBI HELP: Usability">Sign up for usability testing</option>
+    </optgroup>
+    <optgroup label="Genes, Genomes &amp; Variation">
+      <option value="EBI HELP: CRAM">CRAM</option>
+      <option value="EBI HELP: DGVa">Database of Genomic Variants archive (DGVa)</option>
+      <option value="EBI HELP: EMBL-Bank">EMBL-Bank</option>
+      <option value="EBI HELP: EMBL-SVA">ENA Sequence Version Archive (SVA)</option>
+      <option value="EBI HELP: EGA">European Genome-phenome Archive (EGA)</option>
+      <option value="EBI HELP: ENA">European Nucleotide Archive (ENA)</option>
+      <option value="EBI HELP: EVA">European Variation Archive (EVA)</option>
+      <option value="EBI HELP: IMGT/HLA">IMGT/HLA</option>
+      <option value="EBI HELP: IPD">Immuno Polymorphism Database (IPD)</option>
+      <option value="EBI HELP: Metagenomics">Metagenomics</option>
+      <option value="EBI HELP: Webin">Webin</option>
+    </optgroup>
+    <optgroup label="RNA, Protein &amp; Metabolite Expression">
+      <option value="EBI HELP: ArrayExpress">ArrayExpress</option>
+      <option value="EBI HELP: EGA">European Genome-phenome Archive (EGA)</option>
+      <option value="EBI HELP: GXA">Expression Atlas</option>
+      <option value="EBI HELP: MetabolLights">MetaboLights: Metabolomics archive and reference database</option>
+      <option value="EBI HELP: PRIDE">PRoteomics IDEntifications database (PRIDE)</option>
+    </optgroup>
+    <optgroup label="Protein Sequences, Families &amp; Motifs">
+      <option value="EBI HELP: Enzyme Portal">Enzyme Portal</option>
+      <option value="EBI HELP: GOA">Gene Ontology Annotation (UniProt-GOA)</option>
+      <option value="EBI HELP: IntEnz">Integrated relational Enzyme database (IntEnz)</option>
+      <option value="EBI HELP: InterPro">InterPro: protein sequence analysis &amp; classification</option>
+      <option value="EBI HELP: PRIDE">Proteomics Identifications database (PRIDE)</option>
+      <option value="EBI HELP: TreeFam">TreeFam - database of animal gene trees</option>
+      <option value="EBI HELP: UniProt">UniProt: The Universal Protein Resource</option>
+      <option value="EBI HELP: UniParc">UniProt Archive (UniParc)</option>
+      <option value="EBI HELP: UniSave">UniProtKB Sequence/Annotation Version Archive (UniSave)</option>
+    </optgroup>
+    <optgroup label="Molecular &amp; Cellular Structures">
+      <option value="EBI HELP: EMDB">Electron Microscopy Data Bank (EMDB)</option>
+      <option value="EBI HELP: PDB">Protein Data Bank (PDB)</option>
+      <option value="EBI HELP: PDBe">Protein Data Bank in Europe (PDBe)</option>
+      <option value="Thornton group: PDBsum">PDBsum</option>
+    </optgroup>
+    <optgroup label="Reactions, Interactions &amp; Pathways">
+      <option value="EBI HELP: BioModels">BioModels Database</option>
+      <option value="EBI HELP: IntAct">IntAct Molecular Interaction Database</option>
+      <option value="EBI HELP: Rhea">Rhea: Enzyme-catalysed reactions</option>
+      <option value="EBI HELP: SBO">Systems Biology Ontology (SBO)</option>
+    </optgroup>
+    <optgroup label="Chemogenomics &amp; Metabolomics">
+      <option value="EBI HELP: ChEBI">Chemical Entities of Biological Interest (ChEBI)</option>
+      <option value="EBI HELP: ChEMBL">ChEMBL: Bioactive data for drug discovery</option>
+      <option value="EBI HELP: Enzyme Portal">Enzyme Portal</option>
+      <option value="EBI HELP: MetabolLights">MetaboLights: Metabolomics archive and reference database</option>
+      <option value="EBI HELP: Rhea">Rhea: Enzyme-catalysed reactions</option>
+    </optgroup>
+    <optgroup label="Taxonomies &amp; Controlled Vocabularies">
+      <option value="EBI HELP: ChEBI">Chemical Entities of Biological Interest (ChEBI)</option>
+      <option value="EBI HELP: EFO">Experimental Factor Ontology (EFO)</option>
+      <option value="EBI HELP: GO">Gene Ontology (GO)</option>
+      <option value="EBI HELP: IntEnz">Integrated relational Enzyme database (IntEnz)</option>
+      <option value="EBI HELP: MIRIAM">MIRIAM Registry</option>
+      <option value="EBI HELP: QuickGO">QuickGO</option>
+      <option value="EBI HELP: SBO">Systems Biology Ontology (SBO)</option>
+    </optgroup>
+  
+    <optgroup label="Literature - Scientific Publications &amp; Patents">
+      <option value="EBI HELP: Europe PMC">Europe PubMed Central (Europe PMC)</option>
+      <option value="EBI HELP: Patent Data">Patent Databases</option>
+      <option value="EBI HELP: Whatizit">Whatizit</option>
+    </optgroup>
+  
+    <optgroup label="Cross-domain Tools &amp; Resources">
+      <option value="EBI HELP: BLAST">BLAST Sequence Search</option>
+      <!-- option value="EBI HELP: BioMart">BioMart</option -->
+      <option value="EBI HELP: Clustal">ClustalW Multiple Sequence Alignment</option>
+      <option value="EBI HELP: EBI Search">EBI Search</option>
+      <!-- option value="EBI HELP: Enzyme Portal">Enzyme Portal</option -->
+      <option value="EBI HELP: FASTA">FASTA Sequence Search</option>
+      <option value="EBI HELP: identifiers.org">identifiers.org</option>
+      <option value="EBI HELP: Patent Data">Patent Data</option>
+      <option value="EBI HELP: Web Services">Web Services</option>
+    </optgroup>
+  
+    <optgroup label="Misc.">
+      <option value="EBI HELP: Courses">Courses</option>
+      <option value="EBI HELP: Database Query">Database Query</option>
+      <option value="EBI HELP: Data Submission">Data Submission</option>
+      <option value="EBI HELP: Error Message">Error Message</option>
+      <option value="EBI HELP: Events Calendar">Events Calendar</option>
+      <option value="EBI HELP: Jobs">Jobs</option>
+      <option value="EBI HELP: Microarrays">Microarrays</option>
+      <option value="EBI HELP: PhD Program">PhD Program</option>
+      <option value="EBI HELP: Research">Research</option>
+      <option value="EBI HELP: Sequence Alignment">Sequence Alignment</option>
+      <option value="EBI HELP: Sequences">Sequences</option>
+      <option value="EBI HELP: Software Error">Software Error</option>
+      <option value="EBI HELP: Structures">Structures</option>
+      <option value="EBI HELP: Survey">Survey</option>
+      <option value="EBI HELP: Technical Services">Technical Services</option>
+      <option value="EBI HELP: Training &amp; Education">Training &amp; Education</option>
+      <option value="EBI HELP: Usability">Usability testing</option>
+      <option value="EBI HELP: Other">Other feedback</option>
+    </optgroup>
+  </select>
+  </div>
+  <span class="form-error">Please select a relevant topic.</span>
+  
+  
+  <!-- For syntax highlighting -->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.2/css/ebi-code.css">
+  </div></div>
+  
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=ef2259af0e7e0a66b86a9c90bd1257ef"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/select-box/select-box.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

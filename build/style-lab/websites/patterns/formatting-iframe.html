@@ -1,0 +1,192 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Formatting</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=9dd9b1eea06fd6bb3c94640df30ce2e9">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/formatting/layout.css?rev=310212d42b09212602c55ec5a483d398">
+  <link rel="stylesheet" href="../../websites/patterns/formatting/formatting.css?rev=de3ec40e118a7828df8ccadd09370184">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <table>
+    <thead>
+      <tr>
+        <th class="medium-2">Use</th>
+        <th class="medium-6">Sample</th>
+        <th>How to implement?</th>
+      </tr>
+    </thead>
+    <tboyd>
+      <tr>
+        <td>Citations</td>
+        <td><cite>Hi, I'm a <a href="#">citation</a>!</cite></td>
+        <td>HTML <span class="code">&lt;cite&gt;</span> element</td>
+      </tr>
+      <tr>
+        <td>Basic pullquotes</td>
+        <td><blockquote>I'm being quoted here, or maybe just highlighted?</blockquote></td>
+        <td>HTML <span class="code">&lt;blockquote&gt;</span> element. Consider combining with the grid classes and float-left or float-right for a highlight look.</td>
+      </tr>
+      <tr>
+        <td>Emphasis pullquotes</td>
+        <td><blockquote class="lead">I'm being quoted here and want to be noticed</blockquote></td>
+        <td>HTML <span class="code">&lt;blockquote&gt;</span> element with class <code>.lead</code>.</td>
+      </tr>
+      <tr>
+        <td>Emphasis pullquote with quotation mark and citation</td>
+        <td><blockquote class="lead quote">I'm being quoted here and want to be noticed. <cite class="text-right">Hi, I'm a <a href="#">citation</a>!</cite></blockquote></td>
+        <td>HTML <span class="code">&lt;blockquote&gt;</span> element with class <code>.lead</code> and <code>.quote</code>.</td>
+      </tr>
+      <tr>
+        <td>Small text</td>
+        <td><span class="small">I'm so small.</span></td>
+        <td>CSS class <code>.small</code></td>
+      </tr>
+      <tr>
+        <td>Re-sized text</td>
+        <td><span class="size-150">I'm 150%.</span></td>
+        <td>CSS class <code>.size-150</code>. This is avialable in 25% increments from 25% to 500%</td>
+      </tr>
+      <tr>
+        <td>Lead intro text</td>
+        <td><span class="lead">I'm some intro text.</span></td>
+        <td>CSS class <code>.lead</code></td>
+      </tr>
+      <tr>
+        <td>Read more</td>
+        <td><a href="#" class="readmore">Read more here</a></td>
+        <td>CSS class <code>.readmore</code></td>
+      </tr>
+      <tr>
+        <td>Read more (as a button)</td>
+        <td><a href="#" class="button readmore">Read more here</a></td>
+        <td>CSS class <code>.readmore</code> <code>.button</code></td>
+      </tr>
+      <tr>
+        <td>External link</td>
+        <td><a href="#" class="external" target="_blank">Read in another site</a></td>
+        <td>CSS class <code>.external</code>.<br/>These attributes <a href="https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/foundationExtendEBI.js#L435" class="external">can be added through a JS function</a>.</td>
+      </tr>
+      <tr>
+        <td>Serif text</td>
+        <td class="serif">For large narrative text areas, consider the CSS class <code>.serif</code> to use the "EB Garamond" font, which is also loaded by the font stylesheet.</td>
+        <td>CSS class <code>.serif</code></td>
+      </tr>
+      <tr>
+        <td>Serif text</td>
+        <td class="sans-serif">We use sans-serif by default, but maybe you need to force it for some reason?</td>
+        <td>CSS class <code>.sans-serif</code></td>
+      </tr>
+      <tr>
+        <td>Left aligned</td>
+        <td class="text-left">Left align your text.</td>
+        <td>CSS class <code>.text-left</code></td>
+      </tr>
+      <tr>
+        <td>Right aligned</td>
+        <td class="text-right">Right align your text.</td>
+        <td>CSS class <code>.text-right</code></td>
+      </tr>
+      <tr>
+        <td>Center aligned</td>
+        <td class="text-center">Center align your text.</td>
+        <td>CSS class <code>.text-center</code></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <p>More utility classes:</p>
+  <ul>
+  <li><code>.block</code> for <code>display:block;</code></li>
+  <li><code>.inline</code> for <code>display:inline;</code></li>
+  <li><code>.inline-block</code> for <code>display:inline-block;</code></li>
+  <li><code>.hide</code>, <code>.hidden</code> for <code>display:non;</code></li>
+  <li><code>.stretch</code> stretch an img&#39;s aspect ratio</li>
+  <li><code>.icon.icon-spacer</code> to add 0.5rem to the right side of an icon</li>
+  </ul>
+  <p>For more utlity classes <a href="https://github.com/ebiwd/EBI-Framework/blob/v1.3/css/ebi-css-build/_ebi_utility_styles.scss" class="extenral" target="_blank">see this Sass file</a>.</p>
+  <div class="row"><div class="column">
+  <div class="code-example"><pre><code class="html hljs"></code></pre></div></div></div>
+  
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=4905fd46820b82cc73bb49d6edbe308d"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/formatting/formatting.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

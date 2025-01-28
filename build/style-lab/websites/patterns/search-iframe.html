@@ -1,0 +1,159 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Search</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=8cad8cc80350d79d5fe5555d5b6b23cf">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/search/layout.css?rev=f37329b5c4b14ee574c775d9a503f1b6">
+  <link rel="stylesheet" href="../../websites/patterns/search/search.css?rev=2a3614bb87e85278320432f3cff40b83">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <div class="row"><div class="column">
+  <h3>Search in local masthead</h3>
+  <p>You may place your service search in the local masthead using this pattern. This is the most widely used approach, if you do so be sure to include the id <code>#local-search</code> on your <code>form</code> element.</p>
+  
+  <p>When your page contains an element with the id of <code>#local-search</code> or <code>#ebi_search</code>, the class <code>.no-global-search</code> will be added to the <code>body</code> tag and the black bar (gloabl-masthead) search will be disabled, as has happened on this page.</p>
+  
+  <div id="local-masthead" class="meta-background-color meta-background-image columns">
+    <header>
+      <div class="masthead row">
+        <!-- local-title -->
+        <div class="columns medium-7" id="local-title">
+          <h1><a href="#" title="Back to EMBL-EBI Style Lab homepage">Sample masthead</a></h1>
+        </div>
+        <!-- /local-title -->
+        <div class="columns medium-5">
+          <form id="local-search" name="local-search" action="[search-action]" method="post">
+            <fieldset>
+              <div class="input-group margin-bottom-none">
+                <input type="text" name="first" id="local-searchbox" placeholder="Search this service" class="input-group-field">
+                <div class="input-group-button">
+                  <input type="submit" name="submit" value="1" class="button icon icon-functional">
+                </div>
+              </div>
+              <small class="">
+                <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
+                <!-- <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span> | -->
+                <!-- Include some example searchterms - keep them short and few. -->
+                <a href="[search-url-1]">[search-1]</a>
+                <a href="[search-url-1]">[search-2]</a>
+                <a href="[search-url-1]">[search-3]</a>
+              </small>
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </header>
+  </div>
+  
+  <h3 class="padding-top-large">Standalone search</h3>
+  <p>If you want to place your site search inside your main content, use this pattern it's much the same as the above.</p>
+  
+  <div class="row">
+    <div class="columns medium-5 medium-push-2 callout">
+      <form id="content-search" name="content-search" action="[search-action]" method="post">
+        <h4>Search this project</h4>
+        <fieldset>
+          <div class="input-group margin-bottom-none">
+            <input type="text" name="first" id="content-searchbox" class="input-group-field">
+            <div class="input-group-button">
+              <input type="submit" name="submit" value="1" class="button icon icon-functional">
+            </div>
+          </div>
+          <small class="">
+            <!-- If your search is more complex than just a keyword search, you can link to an Advanced Search -->
+            <span class="adv"><a href="../search" id="adv-search" title="Advanced">Advanced</a></span>
+            |
+            <!-- Include some example searchterms - keep them short and few. -->
+            <a href="[search-url-1]">[search-1]</a>
+            <a href="[search-url-1]">[search-2]</a>
+            <a href="[search-url-1]">[search-3]</a>
+          </small>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  </div></div>
+  
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=4b0ce42221db3c5ee9f8a6d3448e966a"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/search/search.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+{{#markdown}}
+
+<p>For user-interactive and programatic table sorting, we integrate <a href="http://mottie.github.io/tablesorter/">Tablesorter</a>.</p>
+<p>To use the plugin you will need to:</p>
+<ol>
+  <li>Include <code>/libraries/tablesorter/jquery.tablesorter.min.js</code>. The file is not part of the default EBI Framework JS config.</li>
+  <li>Add the <code>.tablesorter</code> class to your table.</li>
+  <li>Ensure your table has a <code>thead</code> and <code>tbody</code>.</li>
+  <li>Give your table a CSS ID.</li>
+  <li>Invoke the plugin with JS, ala: <code>$(&#x22;#table-sort-demo&#x22;).tablesorter(); </code>
+</ol>
+
+<p>Here's a quick demo. Note that is supports the responsive table techniques.</p>
+
+<div class="row">
+  <div class="column">
+    {{> tables-sorting}}
+  </div>
+</div>
+
+<p>Tip: if the plugin isn't detecting your data type correctly, try telling the plugin of your data type and include Tablesorter's optional <code>jquery.metadata.js</code>.</p>
+
+{{/markdown}}

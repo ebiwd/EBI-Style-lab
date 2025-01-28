@@ -1,0 +1,458 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Accessibility < EMBL-EBI Style Lab</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <meta name="rootpath" content="../../">
+  <meta name="bbfile" content="../../data/building-blocks.json">
+  <meta name="kitfile" content="../../data/kits.json">
+
+  <meta name="datafile" content="../../data/">
+  <meta name="rootpath" content="../../">
+  <meta name="datakey" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=@@hash">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class="">
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../">Overview</a></li>
+            <li class=""><a href="../../general">Universal principles</a></li>
+            <li class=""><a href="../../general/templates">Templates</a></li>
+            <li class=" active"><a href="../../websites/">Create websites</a></li>
+            <li class=""><a href="../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <div class="diffusion-visulisation" style="width: 100%; height: 40rem; margin-bottom: -40rem;"></div>
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+</div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+          <div id="main-results-container" class="row">
+            <ul id="" class="menu horizontal no-underline padding-top-medium hide-for-print" data-description="navigational">
+              <li class=""><a href="../../websites/meta-patterns/analytics.html">Analytics</a></li>
+              <li class=""><a href="../../websites/meta-patterns/browser-compatibility.html">Browser, screens</a></li>
+              <!-- <li class=""><a href="../../websites/meta-patterns/forms.html">Forms</a></li> -->
+              <li class=""><a href="../../websites/meta-patterns/printing.html">Printing</a></li>
+              <li class=""><a href="../../websites/meta-patterns/page-structure.html">Page structure</a></li>
+              <li class=""><a href="../../websites/sample-site/">Sample pages</a></li>
+              <li class=""><a href="../../websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
+              <li class=" active"><a href="../../websites/meta-patterns/usability.html">Usability</a></li>
+              <li class=""><a href="../../general/core-content-spec">Content-Action Model</a></li>
+            </ul>
+            
+            <hr/>
+            <ul id="" class="menu horizontal no-underline padding-bottom-xlarge hide-for-print" data-description="navigational">
+            <li class=""><a href="../../websites/meta-patterns/usability.html">UX & Usability topics</a></li>
+            <li class="active"><a href="../../websites/meta-patterns/accessibility.html">Accessibility</a></li>
+            <li class=""><a href="../../websites/meta-patterns/forms.html">Forms</a></li>
+            </ul>
+
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/websites/meta-patterns/accessibility.html">Edit meta-pattern</a>
+            <!-- <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/pages/accessibility.html/index.html">Edit page</a> -->
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/assets_site/layouts/static.html">Edit layout</a>
+            <div class="intro">
+              <h2>Accessibility</h2>
+              <p class="lead">Imagine accidentally sitting on your glasses. Could you work without them? Would you be able to find and read information on the web? Now imagine breaking your arm: could you do everything you need to on your computer without a mouse or keyboard? Finally, imagine waking up tomorrow to discover you&#x27;re blind: could you still do your job? Web accessibility is about making sure that we can all use websites and web applications, regardless of our abilities.</p>
+            </div>
+              <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+            
+            <h4 id="how-do-i-improve-the-accessibility-of-my-service">How do I improve the accessibility of my service?</h4>
+            <p>To improve accessibility your site needs:</p>
+            <ul>
+            <li>clear content, straightforward language and a clear, simple layout</li>
+            <li>good navigation and the ability to know where you are within a site</li>
+            <li>meaningful and clear hyperlinks</li>
+            </ul>
+            <p>Accessibility is not a bolt-on activity or after-thought, but a core part of our design activities. The way to achieve accessibility objectives is through a process of inclusive design: Inclusive Design is neither a new genre of design, nor a separate specialism.</p>
+            <p>The following guidelines are grouped according to the 3 main phases of the design life cycle:</p>
+            <ol>
+            <li>Research</li>
+            <li>Design</li>
+            <li>Evaluation</li>
+            </ol>
+            <p>The design requirements are summarised as an <a href="//www.ebi.ac.uk/seqdb/confluence/download/attachments/16584495/accessibility_infographic.png?version=1&amp;modificationDate=1325852128000">Accessibility infographic</a> (see also here <a href="http://webaim.org/resources/designers/" rel="nofollow">http://webaim.org/resources/designers/</a>)</p>
+            <h3 id="1-research">1. Research</h3>
+            <ul>
+            <li>Define the target audiences<ul>
+            <li>The needs of target audiences ought to take precedence over the needs of other audiences. Defining a number of target audiences does not mean that everyone else is excluded; it just means that the requirements, design and testing activities will focus on these user groups as the most likely users of the web product.</li>
+            </ul>
+            </li>
+            <li>Analyse the needs of the target audiences<ul>
+            <li>Desk research into the general needs of the the website&#39;s or application&#39;s target audiences, taking special note of the general needs of disabled and older people.</li>
+            </ul>
+            </li>
+            </ul>
+            <h3 id="2-design">2. Design</h3>
+            <h4 id="provide-appropriate-alternative-text">Provide appropriate alternative text</h4>
+            <ul>
+            <li>Every non-text element needs a text alternative (alt text) that provides an equivalent to the image content.</li>
+            <li>Alt text should present the content and function, not necessarily a description, of an image.</li>
+            <li>If an image has no relevant content or function, is decorative, or the alternative text is provided in nearby text, then the image should have an empty alternative text value (alt=&quot;&quot;).</li>
+            <li>If an image is a link (or hotspot), the alt text must describe the link&#39;s function.</li>
+            <li>Avoid words like &quot;picture of,&quot; &quot;image of,&quot; or &quot;link to.&quot;</li>
+            <li>Use the fewest number of words necessary.</li>
+            <li>See: <a href="http://webaim.org/techniques/alttext/">http://webaim.org/techniques/alttext/</a></li>
+            </ul>
+            <h4 id="ensure-content-is-well-structured-and-clearly-written">Ensure content is well structured and clearly written</h4>
+            <ul>
+            <li>Use the simplest language appropriate for your content.</li>
+            <li>Organize your content using true headings (e.g. <code>&lt;h1&gt;</code> and <code>&lt;ul&gt;</code> lists).</li>
+            <li>Use empty (white) space to improve readability.</li>
+            <li>Use illustrations, icons, etc. to supplement text.</li>
+            <li>Check spelling, grammar and readability.</li>
+            </ul>
+            <h4 id="help-users-navigate-to-relevant-content">Help users navigate to relevant content</h4>
+            <ul>
+            <li>Provide a link that allows the user to skip over navigation to the main content in the page (<a href="http://webaim.org/techniques/skipnav/">http://webaim.org/techniques/skipnav/</a>)</li>
+            <li>Use true headings to organize content.</li>
+            </ul>
+            <h4 id="provide-headers-for-data-tables">Provide headers for data tables</h4>
+            <ul>
+            <li>Identify all data table headers using the <code>&lt;th&gt;</code> element.</li>
+            <li>Provide an appropriate scope attribute: <code>&lt;th scope=&quot;col&quot;&gt;</code> for column headers or <code>&lt;th scope=&quot;row&quot;&gt;</code> for row headers.</li>
+            <li>If appropriate, add a table <code>&lt;caption&gt;</code> for the data table.</li>
+            <li>See: <a href="http://webaim.org/techniques/tables/">http://webaim.org/techniques/tables/</a></li>
+            </ul>
+            <h4 id="do-not-rely-on-colour-alone-to-convey-meaning">Do not rely on colour alone to convey meaning</h4>
+            <ul>
+            <li>The use of colour can enhance comprehension, but do not use colour alone to convey information. Be especially cautious of red/green colour combinations.</li>
+            <li>Make sure that colour contrast is strong, especially between text and background.</li>
+            <li>See: <a href="http://www.webaim.org/articles/visual/colorblind/">http://www.webaim.org/articles/visual/colorblind/</a></li>
+            </ul>
+            <h4 id="ensure-users-can-complete-and-submit-all-forms">Ensure users can complete and submit all forms</h4>
+            <ul>
+            <li>Put form labels adjacent to or near their controls, so the labels are associated visually.</li>
+            <li>Use the &lt;label&gt; element to associate labels and controls.</li>
+            <li>Group similar elements (such as checkboxes or radio buttons) together using &lt;fieldset&gt;.</li>
+            <li>Clearly identify required form elements. Don&#39;t make a field required if it is not necessary. Ensure all directions and cues are readily accessible.</li>
+            <li>If there are errors in a form that has been submitted, alert the user in an accessible way (especially to a screen reader user) and make it easy to fix the incorrect information and resubmit the form.</li>
+            <li>See: <a href="http://webaim.org/techniques/forms/">http://webaim.org/techniques/forms/</a></li>
+            </ul>
+            <h4 id="ensure-links-make-sense-out-of-context">Ensure links make sense out of context</h4>
+            <ul>
+            <li>Avoid phrases like &quot;Click here&quot;, &quot;Here&quot;, &quot;More&quot;, &quot;More information&quot;, &quot;Read more&quot;, and &quot;Continue.&quot;</li>
+            <li>URLs as link text should usually be avoided, unless the URL is relevant content. In terms of bioinformatics, we can interpret this as link on names, not accession numbers. For example, &quot;<ins>Protein binding</ins> (GO:0005515)&quot; is better than &quot;<ins>GO:0005515</ins> (Protein binding)&quot; for:</li>
+            <li>Screen readers: hearing &quot;protein binding&quot; is more informative than hearing &quot;GO:0005515&quot; for people who are blind, partially-sighted or dyslexic</li>
+            <li>Search engines: Google, Bing and other search engines give extra weight to the words used in links, so people searching for &quot;protein binding&quot; or &quot;binding&quot; will be more likely to find your page</li>
+            <li>Training courses: it&#39;s easier and less error-prone to say &quot;click protein binding&quot; than &quot;click go-colon-zero-zero-zero-five-five-one-five&quot;.</li>
+            </ul>
+            <h4 id="other-accessibility-checks">Other accessibility checks</h4>
+            <ul>
+            <li>Ensure that the page is readable and usable when fonts are enlarged 200-300%.</li>
+            <li>Provide a descriptive page &lt;title&gt;.</li>
+            <li>When using scripting, ensure events are available with both mouse and keyboard. Make all scripted content and page updates/changes available to screen readers.</li>
+            <li>Limit pop-up windows and notify users when pop-ups are used.</li>
+            <li>Provide a descriptive title for all frames (e.g., <code>&lt;frame title=&quot;navigation&quot;&gt;</code>).</li>
+            <li>Follow HTML and CSS coding standards.</li>
+            </ul>
+            <h4 id="recommended-extra-checks">Recommended extra checks</h4>
+            <h5 id="ensure-accessibility-of-non-html-content">Ensure accessibility of non-HTML content</h5>
+            <ul>
+            <li>HTML content will almost always be more accessible than content in any other format.</li>
+            <li>PDF, Microsoft Word and PowerPoint files, OpenOffice.org, and Adobe Flash provide basic accessibility features.</li>
+            <li>Provide accessible alternatives when non-HTML content cannot be made fully accessible.</li>
+            <li>Test the accessibility of non-HTML content in assistive technologies.</li>
+            </ul>
+            <h5 id="caption-andor-provide-transcripts-for-media">Caption and/or provide transcripts for media</h5>
+            <ul>
+            <li>Videos and live audio must have captions and a transcript. A transcript is sufficient for archived audio.</li>
+            <li>Captions should be synchronized, equivalent and accessible.</li>
+            <li>See: <a href="http://webaim.org/techniques/captions/">http://webaim.org/techniques/captions/</a></li>
+            </ul>
+            <h3 id="3-evaluation">3. Evaluation</h3>
+            <h4 id="wave-web-accessibility-evaluation-too">WAVE web accessibility evaluation too;</h4>
+            <ul>
+            <li>Test your website or unpublished HTML automatically: <a href="http://wave.webaim.org/">http://wave.webaim.org/</a></li>
+            </ul>
+            <h4 id="disable-styles-and-linearise-tables">Disable styles and linearise tables</h4>
+            <ul>
+            <li>Styles can be disabled with the &quot;Web Developer toolbar&quot; extension for Firefox.</li>
+            <li>Ensure the reading order is logical.</li>
+            <li>Ensure content is still understandable and usable.</li>
+            </ul>
+            <h4 id="check-alternative-text">Check alternative text</h4>
+            <ul>
+            <li>Ensure alt text is succinct, but accurate and useful.</li>
+            <li>Using the Firefox Web Developer toolbar, select<ul>
+            <li>&quot;Display Alt Attributes.&quot; Is the alt text equivalent?</li>
+            <li>&quot;Replace Images With Alt Attributes.&quot; Does the alternative text make sense?</li>
+            </ul>
+            </li>
+            </ul>
+            <h4 id="verify-color-and-contrast">Verify color and contrast</h4>
+            <ul>
+            <li>Color contrast: <a href="http://webaim.org/resources/contrastchecker/">http://webaim.org/resources/contrastchecker/</a></li>
+            <li>Color-blindness: <a href="http://colorfilter.wickline.org/">http://colorfilter.wickline.org/</a></li>
+            </ul>
+            <h4 id="test-content-scaling">Test content scaling</h4>
+            <ul>
+            <li>Enlarge the font in your web browser to 200-300%. Is the page readable and usable? Is horizontal scrolling minimized?</li>
+            <li>Zoom the web page in your browser (enlarge fonts and images). Is text in images readable? Is contrast sufficient?</li>
+            </ul>
+            <h4 id="check-keyboard-accessibility">Check keyboard accessibility</h4>
+            <ul>
+            <li>Navigate the site using only the keyboard (Tab, Shift + Tab, Enter, etc.). Is all functionality available?</li>
+            <li>Is a &quot;skip navigation&quot; link available? (see webaim.org/techniques/skipnav/)</li>
+            <li>Make sure the navigation order is logical.</li>
+            <li>Is keyboard focus apparent?</li>
+            </ul>
+            <h4 id="form-accessibility-and-usability">Form accessibility and usability</h4>
+            <ul>
+            <li>Click on the form label. If the field gains focus, it is properly labeled.</li>
+            <li>Ensure that you can complete all forms without a mouse.</li>
+            <li>Are error recovery mechanisms present and easy-to-use? [Source: <a href="http://webaim.org/resources/evalquickref/%5D">http://webaim.org/resources/evalquickref/]</a></li>
+            </ul>
+            <h4 id="recommended-further-reading">Recommended further reading</h4>
+            <ul>
+            <li>Screen reader testing: focus on navigation, forms, and dynamic content. See the WebAIM tutorials on JAWS, the most popular screen reader (<a href="http://webaim.org/articles/jaws/">http://webaim.org/articles/jaws/</a>), and NVDA, a free and open-source screen reader <a href="http://webaim.org/articles/nvda/">http://webaim.org/articles/nvda/</a></li>
+            <li>Cognitive walkthrough on early designs or prototypes (to identify any potential accessibility problems with the visual or interaction design) and finished code (to identify any potential accessibility problems with the coding of those designs), using the same assistive technologies, browser settings and operating system settings as your target audiences.</li>
+            <li>User testing with representative users from the website or application&#39;s disabled and older target audiences attempting to achieve tasks based on user goals. This should be conducted on early designs or prototypes, and finished code.</li>
+            <li>Manual validation against the WCAG 2.0 checklist (<a href="http://webaim.org/standards/wcag/checklist/">http://webaim.org/standards/wcag/checklist/</a>)</li>
+            <li>Automatic validation of HTML (<a href="http://validator.w3.org">http://validator.w3.org</a>) and CSS (<a href="http://jigsaw.w3.org/css-validator">http://jigsaw.w3.org/css-validator</a>)</li>
+            </ul>
+            <h4 id="to-learn-more-about-accessibility">To learn more about accessibility</h4>
+            <ul>
+            <li>British Computer Society&#39;s Accessible Technology: A guide for IT professionals <a href="http://www.bcs.org/upload/pdf/accessible-technology.pdf">http://www.bcs.org/upload/pdf/accessible-technology.pdf</a></li>
+            <li>W3C&#39;s Web Accessibility Initiative <a href="http://www.w3.org/WAI/">http://www.w3.org/WAI/</a></li>
+            <li>British Standards Institute BS 8878:2010 Web accessibility – Code of practice <a href="http://shop.bsigroup.com/en/ProductDetail/?pid=000000000030180388">http://shop.bsigroup.com/en/ProductDetail/?pid=000000000030180388</a></li>
+            <li>WebAIM <a href="http://webaim.org">http://webaim.org</a></li>
+            <li>HTML5 accessibility <a href="http://html5accessibility.com/">http://html5accessibility.com/</a></li>
+            <li>Cambridge University&#39;s Inclusive Design Toolkit <a href="http://www.inclusivedesigntoolkit.com/">http://www.inclusivedesigntoolkit.com/</a></li>
+            </ul>
+            <h4 id="downloads">Downloads</h4>
+            <p><a href="//www.ebi.ac.uk/seqdb/confluence/download/attachments/16584495/accessibility_infographic.png?version=1&amp;modificationDate=1325852128000">Accessibility infographic</a> (see also at <a href="http://webaim.org/resources/designers/">http://webaim.org/resources/designers/</a>)</p>
+            
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+      </div>
+
+      <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+      <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 1.4 and 2.0 are coming', message: 'New services can make use of the Visual Framework 2.0. For existing services who cannot migrate, a 1.4 update is also available.<br/><a class="readmore" href="../../websites/framework-next/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../../assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>

@@ -1,0 +1,381 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Search guidelines < EMBL-EBI Style Lab</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <meta name="rootpath" content="../../">
+  <meta name="bbfile" content="../../data/building-blocks.json">
+  <meta name="kitfile" content="../../data/kits.json">
+
+  <meta name="datafile" content="../../data/">
+  <meta name="rootpath" content="../../">
+  <meta name="datakey" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=@@hash">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class="">
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../">Overview</a></li>
+            <li class=""><a href="../../general">Universal principles</a></li>
+            <li class=""><a href="../../general/templates">Templates</a></li>
+            <li class=" active"><a href="../../websites/">Create websites</a></li>
+            <li class=""><a href="../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <div class="diffusion-visulisation" style="width: 100%; height: 40rem; margin-bottom: -40rem;"></div>
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+</div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+          <div id="main-results-container" class="row">
+            <ul id="" class="menu horizontal no-underline padding-top-medium hide-for-print" data-description="navigational">
+              <li class=""><a href="../../websites/meta-patterns/analytics.html">Analytics</a></li>
+              <li class=""><a href="../../websites/meta-patterns/browser-compatibility.html">Browser, screens</a></li>
+              <!-- <li class=""><a href="../../websites/meta-patterns/forms.html">Forms</a></li> -->
+              <li class=""><a href="../../websites/meta-patterns/printing.html">Printing</a></li>
+              <li class=""><a href="../../websites/meta-patterns/page-structure.html">Page structure</a></li>
+              <li class=""><a href="../../websites/sample-site/">Sample pages</a></li>
+              <li class="active"><a href="../../websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
+              <li class=" "><a href="../../websites/meta-patterns/usability.html">Usability</a></li>
+              <li class=""><a href="../../general/core-content-spec">Content-Action Model</a></li>
+            </ul>
+            
+
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/websites/meta-patterns/search-guidelines.html">Edit meta-pattern</a>
+            <!-- <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/pages/search-guidelines.html/index.html">Edit page</a> -->
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/assets_site/layouts/static.html">Edit layout</a>
+            <div class="intro">
+              <h2>Search guidelines</h2>
+              <p class="lead">Several studies and books have been written on the subject of search and this list of guideline and recommendations simply represents a summary of what any search developer/designer at the EBI should know or at least be aware of.</p>
+            </div>
+            
+            <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+            
+            <h3 id="-global-search-vs-local-search"><a name="globalvslocal" id="globalvslocal"></a> Global search vs Local search</h3>
+            
+            <div class="row">
+            <div class="columns medium-6">
+            <div class="callout" markdown="1">
+            <h5 id="global-search">Global search</h5>
+            <p>Provided by EBI Search and covers all EBI indexed resources</p>
+            <img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/about_us_header.png" alt="Global search box" title="Global search box">
+            By default, the EBI search box appears in the `#global-masthead` and all searches are directed to EBI Search.
+            </div>
+            </div>
+            
+            <div class="columns medium-6">
+            <div class="callout" markdown="1">
+            <h5 id="local-search">Local search</h5>
+            <p>A search technology developed or picked by a service</p>
+            <img src="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/interpro_header.png" alt="Local search" title="Local search">
+            For local searach, a search box should be included in the `#local-masthead` and the search box in the global header disappears. All searches in the search box search the *local* resource.
+            
+            <p>Including a local search box will disable the global EBI Search in the <code>#global-masthead</code>.</p>
+            <p><a href="/EBI-Pattern-library/patterns/search/" class="readmore">Further guidance on local search boxes</a></p>
+            </div>
+            </div>
+            </div>
+            
+            <h4 id="expanded-guidance-on-a-local-service-search">Expanded guidance on a local service search</h4>
+            <ul>
+            <li><strong>Filters:</strong> Any filters or facets should appear on the left hand menu. (<a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/ebeye_search_result.png" target="\_blank">sample</a>)</li>
+            <li><strong>Search EBI as well:</strong> The local search should also perform a query using the EB-eye on all EBI resources and present those Global results on the right hand side of the results page. Each global result category will have a designated icon to facilitate quick visual recognition. (<a href="//www.ebi.ac.uk/sites/ebi.ac.uk/files/styleguide/images/interpro_search_results.png" target="\_blank">sample</a>)</li>
+            <li><strong>Empty search behaviour:</strong> If a user submits a search without inputing a query, the result page should indicate that no query was received and give some examples of typical searches.</li>
+            <li><strong>Service homepage search:</strong> On a service homepage the local service search may be placed in the main content area. (<a href="https://www.ebi.ac.uk/QuickGO-Beta/" target="\_blank">sample</a>)</li>
+            </ul>
+            <h3 id="improving-the-search-experience-for-your-users"><a name="improving" id="improving"></a>Improving the search experience for your users</h3>
+            <p>Search is usually the primary or secondary means of navigating a website. This is particularly true for the EBI with the huge amount of biological data available. Search is the only way users can access some of this information and they need to feel like they are always heading in the right direction.</p>
+            
+            <div class="callout columns medium-6 float-right" markdown="1">
+            <p>For more on the search best practices and search patterns</p>
+            <ul>
+            <li><a href="http://searchpatterns.org">Search Patterns</a> Peter Morville, Jeffery Callender <span class="label">Book</span></li>
+            <li><a href="http://searchuserinterfaces.com">Search User Interfaces</a> Marti A. Hearst <span class="label">Book</span></li>
+            <li><a href="http://isquared.wordpress.com">Information Interaction</a> <span class="label">Blog</span></li>
+            <li><a href="http://twigkit.com/blog/">The TwigKit Blog</a> <span class="label">Blog</span></li>
+            </ul>
+            </div>
+            <h4 id="four-principles-to-guide-the-user-search-experience">Four principles to guide the user search experience</h4>
+            <ol>
+            <li><p><strong><a name="Helpusersformulatetheirquery" id="Helpusersformulatetheirquery"></a> Help users formulate their query</strong></p>
+            <p> Every search requires input, but its always easier for the users to pick something from a list than it is to pull it out of thin air.</p>
+            <p> So, in general it is a good idea to give users some suggestions to help them get on the right foot. One way to achieve this is by using auto-completion. Autocomplete involves the search predicting a word or phrase that the user wants to type in without the user actually typing it in completely. Depending on the context, this can be based on most common search queries or simply on spelling suggestions. Every suggestion must result in one or more result hits and it is good practice to match the typed letters to the suggestions.</p>
+            <p> Another approach to searching data that is commonly used by a lot of people, and biologists in particular, is reusing saved searches. Indeed, scientists working on specific topics use the bookmark functionality of their web browser to save their search to be able to quickly come back to it later. That&#39;s why having bookmarkable result pages is an important aspect of the search experience that should not be overlooked.</p>
+            <p> Sometimes, but not very often, a simple search is not enough and users need a more advanced search interface to input their query. These intermediate to expert users need full control over the search engine. Such users typically have more than superficial knowledge about the items they are searching for. They may know the type of items and are set to search for a specific item they know or may not know exists.</p>
+            <p> Advanced search usually co-exists with a normal search box and offers additional functionality</p>
+            <ul>
+            <li><p>to control how the combined list of search terms is interpreted by the search engine (e.g. boolean operator AND, OR, NOT...)</p>
+            </li>
+            <li><p>to define the scope of the search (e.g. limit the search to particular item types or item properties)</p>
+            </li>
+            <li><p>and sometimes to allow users to control the way the results are presented (e.g. paging size, fields...)</p>
+            <p>However, depending on the type of data and the target audience, it&#39;s important to decide whether the advanced search is supposed to be a user-friendly query builder for novices or a power tool for experts because this will strongly influence the design of the search.</p>
+            </li>
+            </ul>
+            </li>
+            <li><p><strong><a name="Helpusersanalyseandreviewtheresults" id="Helpusersanalyseandreviewtheresults"></a> Help users analyse and review the results</strong></p>
+            <p> Once the users have submitted their initial query, they should be presented with a list of results to review.</p>
+            <p> People start analyzing the results by quickly scanning the page. Studies have shown that the top 3 results will draw 80% of the attention. So, it&#39;s important to make sure the best results appear first and most effort should be put toward optimizing the search algorithms. Depending on the context (i.e. data), these should take into account the relevancy (e.g. identifiers) as well as the timeliness (e.g. publication dates) of the results.</p>
+            <p> Another important aspect to take into consideration is the visual appearance of the results. The most important part of the result the user will look at first is the title. It is usually the link to the resource and for that reason must be descriptive, but not too long (7-12 words). Highlighting the matching terms in the results is also a good practice as it can help the eye quickly parse the results for important words.</p>
+            <p> It doesn&#39;t always make sense to offer thumbnails (or any visual elements), but if such an addition to search enhances the results, its worth considering. The same apply to custom interfaces based on the query type (e.g. a general search returning database specific results along side web results could use different rendering for both types).</p>
+            <p> In general, users don&#39;t like to dig into large quantities of information when conducting a search. It&#39;s better to display as little as possible per search result while still communicating the full idea of what each full entry will contain on it.</p>
+            <p> It&#39;s sometimes useful to structure the results by grouping them by similarity (e.g. images, videos, databases...).</p>
+            <p> Users can also benefit from federated searches, with multiple databases or collections being searched simultaneously and a single page summarising the results. But, note that this type of search adds some complexity that can be daunting for the users if not presented properly.</p>
+            <p> In particular contexts, and very often with bioinformatics data, the user&#39;s goal is not to retrieve the data but to perform an analysis with these data. In these situations, using actionable results (e.g. launch analysis tools buttons) has been proven to improve the user experience. However, one must be careful with the visual representation and the number actions included in the results. It&#39;s very important for the users to understand straight away what these actions are and what will happen if they use them. They can also easily be overwhelmed by an inferface clutered with unnecessary actions.</p>
+            </li>
+            <li><p><strong><a name="Helpusersrefineorreformulatetheirquery" id="Helpusersrefineorreformulatetheirquery"></a> Help users refine or reformulate their query</strong></p>
+            <p> After reviewing the results, users may find the answer they are looking for, click on one of the results for more information, give up unsuccessfully, or — what often happens — try a slightly different search. It&#39;s important to give them the opportunity to refine or even reformulate their initial query. In general, the result pages should always contain a search box, possibly including the initial search terms for manual query refinement.</p>
+            <p> When dealing with structured data, as it is often the case in bioinformatics, faceted navigation can be very beneficial. Faceted search has become a popular technique in commercial search applications, particularly for online retailers and libraries, because it allows users to explore by filtering available information. This can be a powerful technique for filtering results based on specific criteria (e.g. organisms, publication dates...), but it requires significant investments (Implementation, compute power...) so it should be used only if it adds a clear value for improving findability.</p>
+            <p> When it&#39;s relevant for the data, sorting results can be used as another form of filter to help users refine their query (e.g. sorting by dates).</p>
+            <p> Another technique (gaining in popularity) consists of showing the users new topics or examples of searches that are related to their initial query. These suggestions are usually derived from the content of the result pages but more complex algorithms can take into account the users&#39;s previous searches or even their general profile if such information is available. Just like faceted search, this requires significant investments and can potentially have undesirable effects (i.e. This rely heavily on the quality of the suggestions).</p>
+            </li>
+            <li><p><strong><a name="Helpusersrecovergracefully" id="Helpusersrecovergracefully"></a> Help users recover gracefully</strong></p>
+            <p> People use the search to find answers to questions or to retrieve data. So, the worse that can happen is for the interface not to return any result. Avoiding this is really important to keep the user&#39;s trust.</p>
+            <p> One solution to solve or at least limit this problem, is to expand the initial query to match additional documents. Query expansion involves techniques such as:</p>
+            <ul>
+            <li>Finding synonyms of words, and searching for the synonyms as well</li>
+            <li>Finding all the various morphological forms of words by stemming each word in the search query</li>
+            <li>Fixing spelling errors and automatically searching for the corrected form or suggesting it in the results</li>
+            <li>Re-weighting the terms in the original query</li>
+            </ul>
+            <p>However, it&#39;s important to notify the user if their initial query has been changed without asking them first, as this could lead to incorrect interpretation of the results.</p>
+            <p>Sometimes users also misuse the search interface and try to search with inappropriate query input (e.g. binary data, full dna sequences). In these situations, a good practice is to give them some hints about why the search can&#39;t work and possibly reference additional resources which could be more appropriate for the requested type of search.</p>
+            </li>
+            </ol>
+            <h3 id="presenting-result">Presenting result</h3>
+            <p>For guidance on how to present results to the users, see the <a class="readmore" href="//ebiwd.github.io/EBI-Pattern-library/sample-site/boilerplate/search-results.html">search result boilerplate page</a></p>
+            
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+      </div>
+
+      <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+      <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 1.4 and 2.0 are coming', message: 'New services can make use of the Visual Framework 2.0. For existing services who cannot migrate, a 1.4 update is also available.<br/><a class="readmore" href="../../websites/framework-next/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../../assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>

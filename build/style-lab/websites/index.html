@@ -1,0 +1,471 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Make websites < EMBL-EBI Style Lab</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <meta name="rootpath" content="../">
+  <meta name="bbfile" content="../data/building-blocks.json">
+  <meta name="kitfile" content="../data/kits.json">
+
+  <meta name="datafile" content="../data/">
+  <meta name="rootpath" content="../">
+  <meta name="datakey" content="">
+
+  <link rel="stylesheet" href="../assets/css/app.css?rev=@@hash">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class=" background-alt ">
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../">Overview</a></li>
+            <li class=""><a href="../general">Universal principles</a></li>
+            <li class=""><a href="../general/templates">Templates</a></li>
+            <li class="active active"><a href="../websites/">Create websites</a></li>
+            <li class=""><a href="../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <div class="diffusion-visulisation" style="width: 100%; height: 40rem; margin-bottom: -40rem;"></div>
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+</div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+          <div id="main-results-container" class="row">
+            <ul id="" class="menu horizontal no-underline padding-top-medium hide-for-print" data-description="navigational">
+              <li class=""><a href="../websites/meta-patterns/analytics.html">Analytics</a></li>
+              <li class=""><a href="../websites/meta-patterns/browser-compatibility.html">Browser, screens</a></li>
+              <!-- <li class=""><a href="../websites/meta-patterns/forms.html">Forms</a></li> -->
+              <li class=""><a href="../websites/meta-patterns/printing.html">Printing</a></li>
+              <li class=""><a href="../websites/meta-patterns/page-structure.html">Page structure</a></li>
+              <li class=""><a href="../websites/sample-site/">Sample pages</a></li>
+              <li class=""><a href="../websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
+              <li class=" "><a href="../websites/meta-patterns/usability.html">Usability</a></li>
+              <li class=""><a href="../general/core-content-spec">Content-Action Model</a></li>
+            </ul>
+            
+
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/websites/meta-patterns//websites">Edit meta-pattern</a>
+            <!-- <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/pages//websites/index.html">Edit page</a> -->
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/assets_site/layouts/static.html">Edit layout</a>
+            <div class="intro">
+              <h2>Make websites</h2>
+              <p class="lead">Browse through this guide to become familiar with the EMBL-EBI website &quot;personality&quot; and refer to it for guidance and code examples when building and extending your site&#x27;s functionality.</p>
+            </div>
+            
+            <div class="row">
+              <div class="columns">
+                <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/sections/websites_about.html">Edit section</a>
+                
+                <section id="overview" data-magellan-target="overview" >
+                
+                <p>You won&#39;t find prescriptive solutions for every scenario, but you will get examples and guidance on a wide range of pull quotes, form boxes, menus and more to show you how things should be done, including more complex things like <a href="../websites/meta-patterns/analytics.html">analytics</a> and <a href="../websites/meta-patterns/page-structure.html">page structure</a>.</p>
+                
+                <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+                
+                <blockquote class="float-right lead quote ebi-color">
+                  <span class="size-150">Do as I do, not as I say.</span>
+                  <cite class="text-right">The Style Lab</cite>
+                </blockquote>
+                
+                <p>We use best practices and targets browsers shipped within the past three years (<a href="../websites/meta-patterns/browser-compatibility.html" class="">more on browser support</a>); other browsers will function through <a href="https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement">graceful degradation</a>.</p>
+                <h3 id="framework-components">Framework components</h3>
+                <p>This framework functions similar to many front-end solutions: several files and structures are used and generally can be implemented separately so you can use what you can or your own solution if required. We also leverage a NPM build process so there&#39;s no need to use all of the Foundation framework, if you don&#39;t need it.</p>
+                <div class="button-grid small-collapse margin-bottom-large" markdown="0">
+                  <div class="columns">
+                    <div class="row" style="position: relative;">
+                      <div class="columns small-7">
+                        <div class="row small-collapse">
+                          <a class="button secondary columns small-6 small-push-1" href="css/theme-embl-petrol.css">Custom CSS<br/><small> Colours and patterns specific to your service/site</small></a>
+                          <a class="button secondary columns small-8" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.css">Additional styles ebi-extras.css<br/>
+                          <small>Modals, callouts, tabs: mostly from Foundation.</small></a>
+                          <a class="button secondary columns small-4" href="https://ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css">EBI Icons fonts.css<br/>
+                          <small>Functional and scientific</small></a>
+                          <a class="button primary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.css">
+                            EBI base CSS styles ebi-lite.css<br/>
+                            <small>EMBL-EBI look, colours</small></a>
+                          <a class="button primary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/css/foundation-lite.css">Base styling ebi-lite.css<br/>
+                          <small>The base grid structure, core page styling</small></a>
+                        </div>
+                      </div>
+                      <div class="columns small-5" style="position: absolute;bottom: 0;right: 0;">
+                        <div class="row small-collapse" data-equalizer data-equalize-on="medium" style="position: relative;">
+                          <div class="columns small-7" data-equalizer-watch>
+                            <a class="button secondary columns small-10 small-push-1" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js">FoundationExtendEBI.js<br/>
+                            <small>Foundation tweaks, jQuery value adds</small></a>
+                            <a class="button secondary columns small-12" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js">foundation.js</a>
+                            <a class="button secondary columns small-12" href="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">jQuery 1.10.2<br/><small>Or newer, or slightly older</small></a>
+                          </div>
+                          <div class="columns small-5" style="position: absolute;bottom: 0;right: 0;">
+                            <!-- todo: come up with a pattern to bottom align columns, or do we hold out for v1.2 and switch to flex gird? http://foundation.zurb.com/sites/docs/flex-grid.html -->
+                            <a class="button primary columns small-8 small-push-2" href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js">EBI script.js</a>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <a class="button primary columns small-12" href="#">JavaScript</a>
+                        </div>
+                      </div>
+                    </div>
+                  <a class="button primary columns small-12" href="../websites/meta-patterns/page-structure.html">Core HTML structure<br/><small>The basic HTML tag structure for the page (global-nav black bar, local-nav area, main content div, footer, etc)</small></a>
+                  </div>
+                </div>
+                
+                <p>
+                <small>Stack legend</small> <span class="tag secondary-background white-color">Optional, but recommended</span> <span class="tag white-color">Required</span>
+                </p>
+                
+                <p>To help us help you, we&#39;ve used the <a href="https://foundation.zurb.com/sites/docs/kitchen-sink.html#accordion">Foundation Framework</a> (version 6) as a baseline. Using this we get a robust baseline (tool tips, forms, sliders, and modal boxes) as well as technical guidance and extensive open source community testing -- and, perhaps, you&#39;ll be fortunate enough to already be (or have) a developer with Foundation experience.</p>
+                <p>Foundation is bundled by default and <strong>highly</strong> encouraged, but <a href="../websites/sample-site/integrations/lite.html">is not required</a>. You can learn more about why we selected Foundation in the FAQ below.</p>
+                <h3 id="implementing-the-ebi-visual-framework">Implementing the EBI Visual Framework</h3>
+                
+                <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title">101 Basics: all developers should start here first</a>
+                    <div class="accordion-content" data-tab-content>
+                <ol>
+                <li><a href="../websites/meta-patterns/page-structure.html" class="">Read up on the EMBL-EBI page strucutre</a>.</li>
+                <li>Pick <a href="../websites/sample-site/">a boilerplate page</a> to use as your basic starting point. <br/>These pages will give you the mandatory HTML structure for the EBI header, footer along with place holders for your project name/logo and page content.</li>
+                <li><a href="#further-reading">Explore the &quot;Further reading&quot; below</a> for general guidance on building compliant EBI sites.</li>
+                <li>As you begin to build out news feeds, login boxes, navigation, images with captions: <a href="../websites/patterns/">bookmark and consult the pattern library</a> for templated options.</li>
+                </ol>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Core files: where are they?</a>
+                    <div class="accordion-content" data-tab-content>
+                <p>These are the core files that power the EBI Visual Framework:</p>
+                <ul>
+                <li>Global core styles: <br/><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.min.css">https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.min.css</a><ul>
+                <li>Optionally available as split into two sub files:<ul>
+                <li>Lite version for sites that have another CSS framework: <br/><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.min.css">https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-lite.min.css</a></li>
+                <li>Extras, what was removed from ebi-lite.css: <br/><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.min.css">https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-extras.min.css</a></li>
+                </ul>
+                </li>
+                </ul>
+                </li>
+                <li>Foundation JS:  <br/><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.min.js">https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.min.js</a></li>
+                <li>EBI Extinsions to Foundation JS:  <br/><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.min.js">https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.min.js</a></li>
+                <li>EBI Script.js for imporant things (cookie banner, global masthead, etc.)  <br/><a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.min.js">https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.min.js</a></li>
+                </ul>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Want to build a deeper implementation?</a>
+                    <div class="accordion-content" data-tab-content>
+                <ul>
+                <li><a href="https://www.npmjs.com/package/ebi-framework">Compile this into your project with NPM</a></li>
+                <li><a href="https://github.com/ebiwd/Lifesciences-framework">Build a custom implementation with the Lifescience Framework</a></li>
+                <li><a href="http://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/styleguide/section-components.html">CSS documentation</a> <span class="label">In development</span> and <a href="https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/documenation.md#table-of-contents">JS documentation</a> <span class="label">In development</span></li>
+                </ul>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Updating an existing site?</a>
+                    <div class="accordion-content" data-tab-content>
+                <ul>
+                <li><a href="https://raw.githubusercontent.com/ebiwd/EBI-Pattern-library/gh-pages/sample-site/migrations/testMigration.js" class="readmore">Run a migration from the EBI-Compliance theme to v1.1</a></li>
+                <li><a href="https://github.com/ebiwd/EBI-Framework/issues/85" class="readmore">Updating from v1.1 to v1.2</a></li>
+                <li><a href="https://github.com/ebiwd/EBI-Framework/#details-on-upgrading" class="readmore">Updating from v1.2 to v1.3</a></li>
+                </ul>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Using a CMS or JS Framework?</a>
+                    <div class="accordion-content" data-tab-content>
+                <ul>
+                <li>For Drupal there is <a href="https://github.com/ebiwd/drupal_7_ebi_framework">a Drupal 7 theme you can use</a>.</li>
+                <li>For <a href="https://github.com/ebiwd/wordpress-ebi-visual-framework">WordPress there&#39;s also a theme</a>.</li>
+                <li>There&#39;s <a href="https://github.com/ebiwd/EBI-Framework-Angular/tree/develop-angular-4">an Angular 4 boilerplate</a>.</li>
+                <li>And if you like static sites and GitHub, <a href="https://github.com/ebiwd/EBI-Boilerplate-Jekyll">there&#39;s a Jekyll boilerplate</a>.</li>
+                </ul>
+                    </div>
+                  </li>
+                </ul>
+                
+                <h3 id="faqs">FAQs</h3>
+                
+                <ul class="accordion" data-responsive-accordion-tabs="accordion medium-tabs large-accordion">
+                  <li class="accordion-item is-active" data-accordion-item>
+                    <a href="#" class="accordion-title">JavaScript: Do I have to use jQuery?</a>
+                    <div class="accordion-content" data-tab-content>
+                <p>The EBI Visual Framework does not require jQuery, but using it will make things far easier. The boilerplate includes jQuery functionality by default, if you do not wish to use jQuery you will also need to remove references to the <code>foundation.js</code> and <code>FoundationExtendEBI.js</code> files.</p>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Zurb Foundation Framework and Bootstrap</a>
+                    <div class="accordion-content" data-tab-content>
+                <p>For new websites or major reworks, we recommend you consider using the included Foundation CSS and JS, as you&#39;ll get more benefit from the work done in this framework, encounter fewer bugs, and help EBI web services have a more consistent function and feel.</p>
+                <p>While Bootstrap provides a robust set of tooling and a broader use base, its base styling is more opinionated (121KB vs 43KB of minified baseline CSS). Zurb Foundation allows us to provide a slimmer and faster EBI theme layer. Further, non-jQuery using developers will find more benefit in a Foundation-powered ecosystem. For Bootstrap users unfamiliar with Foundation, you might <a href="https://www.codementor.io/css/tutorial/bootstrap-3-vs-foundation-5-front-end-framework-comparison">read this comparison</a> (note that it references the slightly older version of Foundation 5, but is substantially the same for the article&#39;s proposes).</p>
+                <ul>
+                <li>If you aren&#39;t able to use the included Foundation base CSS, use <a href="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css"><code>ebi-lite.css</code></a></li>
+                <li>If you&#39;re unable to make use of the Frameworks JS or CSS tooling, use this page as a guide for how your site should look, feel, function. There&#39;s no reason that can&#39;t be done with any framework be it Angular, Material Design, or vanilla CSS3.</li>
+                </ul>
+                    </div>
+                  </li>
+                  <li class="accordion-item" data-accordion-item>
+                    <a href="#" class="accordion-title">Integrating with other CSS and JS frameworks</a>
+                    <div class="accordion-content" data-tab-content>
+                <p>We&#39;ve worked to make the EBI Visual Framework work well alongside other frameworks.</p>
+                <p>Users of Angular, Bootstrap, and other opinionated implementations should look at the &quot;Technical Integrations&quot; on the <a href="../websites/sample-site/">sample pages</a>.</p>
+                    </div>
+                  </li>
+                </ul>
+                
+                </section>
+                
+                <section id="help" data-magellan-target="help">
+                <h3 id="need-help">Need help?</h3>
+                <p>For questions about the background of this guide or a philosophical suggestion <a href="https://github.com/ebiwd/EBI-Framework/issues">post to the issue queue</a> for discussion and support.</p>
+                <p>Note that the <a href="//www.ebi.ac.uk/seqdb/confluence/display/WGC/Web+Guidelines+committee">EBI Web Guidelines Committee</a> is responsible for the governance and direction of the patterns and framework.</p>
+                <h2 id="further-reading">Further reading</h2>
+                <p>These are concepts that will run throughout your website project.</p>
+                <ul>
+                <li><a href="meta-patterns/analytics.html">Analytics</a></li>
+                <li><a href="meta-patterns/browser-compatibility.html">Browser and screen compatibility</a></li>
+                <li><a href="meta-patterns/printing.html">Printing</a></li>
+                <li><a href="meta-patterns/page-structure.html">Page structure</a></li>
+                <li><a href="../websites/sample-site/">Sample pages</a></li>
+                <li><a href="meta-patterns/search-ebi-indexing.html">Search EBI indexing</a></li>
+                <li><a href="meta-patterns/search-guidelines.html">Search guidelines</a></li>
+                <li><a href="meta-patterns/search-seo.html">Search SEO</a></li>
+                <li><a href="general/core-content-spec.html">Content-Action Model</a></li>
+                <li><a href="meta-patterns/usability.html">Usability</a><ul>
+                <li><a href="meta-patterns/accessibility.html">Accessibility</a></li>
+                <li><a href="meta-patterns/forms.html">Forms</a></li>
+                </ul>
+                </li>
+                </ul>
+                </section>
+              </div>
+            </div>
+            
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+      </div>
+
+      <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+      <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 2.0', message: 'All services are recommended to make use of the new Visual Framework 2.0. This old version of EMBL-EBI Style Lab v1 is not supported anymore.<br/><a class="readmore" href="https://stable.visual-framework.dev/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+    });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>

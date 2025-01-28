@@ -1,0 +1,165 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Compact masthead</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=93635fa1964ed54c261dc82ef7334e77">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/masthead-compact/layout.css?rev=483f356879019405ce4a9ff7fb8c2b00">
+  <link rel="stylesheet" href="../../websites/patterns/masthead-compact/masthead-compact.css?rev=b15ad4d00d80fda3b579fa210abc1f62">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <div class="padding-bottom-large">
+  <header id="masthead" class="masthead compact-for-data" xdata-sticky data-sticky-on="large" xdata-top-anchor="content:top" xdata-btm-anchor="content:bottom">
+    <div class="masthead-inner row" data-tip="you may want to add .collapse here to make remove margins on the columns">
+      <!-- local-title -->
+      <div class="columns medium-7 large-3" id="local-title">
+        <h1><a href="#" title="Back to [service-name] homepage">
+          <img style="height: 40px;" class="padding-bottom-small" src="https://www.ebi.ac.uk/QuickGO/images/quickgo-logo3.622656dc.png" />
+          Service
+        </a></h1>
+      </div>
+      <!-- /local-title -->
+      <div class="column medium-5 large-3 large-push-6">
+        <form id="ebi_search" action="https://www.ebi.ac.uk/ebisearch/search.ebi">
+          <fieldset>
+            <div class="input-group margin-bottom-none margin-top-large">
+              <input id="query" class="input-group-field" title="EB-eye Search" tabindex="1" type="text" name="query" value="" size="35" maxlength="2048" placeholder="Search service" />
+              <div class="input-group-button">
+                <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1" />
+                <input id="allebi" type="hidden" name="db" value="allebi" checked="checked" />
+                <input type="hidden" name="requestFrom" value="ebi_index" />
+              </div>
+            </div>
+          </fieldset>
+          <!-- <p id="example" class="small">
+            Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+            <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+          </p> -->
+        </form>
+      </div>
+  
+      <!-- local-nav -->
+      <nav class="column large-6 large-pull-3">
+        <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+          <li class="active"><a href="../../">Overview</a></li>
+          <li><a data-open="modal-download">Download</a></li>
+          <li><a href="#">Support <i class="icon icon-generic" data-icon="x"></i></a></li>
+        </ul>
+        <ul class="dropdown menu float-right" data-description="tasks">
+          <li><a href="#"><span class="icon icon-functional" data-icon="l"></span> Login</a></li>
+        </ul>
+      </nav>
+      <!-- /local-nav -->
+    </div>
+  </header>
+  </div>
+  
+  <a href="#" class="button toggle-compact secondary">De-compact the masthead</a>
+  <span class="feedback code"></span>
+  <script>
+  document.onreadystatechange = function () {
+     if (document.readyState == "complete") {
+       $('.toggle-compact').click(function() {
+         $(this).html($(this).html() == 'De-compact the masthead' ? 'Compact the masthead' : 'De-compact the masthead');
+         $(this).toggleClass('secondary');
+         $('.feedback').html($('.feedback').html() == 'Added class .compact-disabled to .compact-for-data' ? 'Removed class .compact-disabled from .compact-for-data' : 'Added class .compact-disabled to .compact-for-data');
+         $('.compact-for-data').toggleClass('compact-disabled');
+        //  $('.masthead-inner.row').toggleClass('collapse');
+        event.preventDefault();
+       });
+   }
+  }
+  </script>
+  
+  <p>This pattern works by tweaking the standard <code>.masthead-inner</code>.</p>
+  <p>To enabele we add the responsive <code>.columns</code> classes and <code>.compact-for-data</code> is added to <code>header.masthead</code>. We can also add <code>.compact-disabled</code> to dynamically disable the responsive nature.</p>
+  <p>Some guidance:</p>
+  <ul>
+  <li>Only use this pattern on data orient pages. So don&#39;t use it on the landing page or about page.</li>
+  <li>We don&#39;t recommend using the <code>data-sticky-container</code> on the masthead, after all the focus is meant to be on the data.</li>
+  <li>You may want to add <code>.colapse</code> to <code>.masthead-inner.row</code> to remove margins on the child columns.</li>
+  <li>Don&#39;t use the sticky property for the global header</li>
+  </ul>
+  <p>In v1.2 we&#39;ve <a href="https://github.com/ebiwd/EBI-Framework/issues/21">already shaved 10px off the black bar</a>, but the need remains for a yet-thinner <code>div#masthead</code> on inside pages that are search-result or data focused. In all it&#39;s 56% thinner than the current look.</p>
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=aec8f77a3b5c89e7fea96e830b170827"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/masthead-compact/masthead-compact.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+.foldable-info-tabs > li {
+  margin-bottom: .5rem;
+  > a:hover {
+    background: #DDD;
+    color: #222;
+  }
+  > a:before {
+    font-family: 'EBI-Common';
+    content: "\003f";
+    margin-right: .5rem;
+
+  }
+  &.is-active > a:before {
+    content: "\0f11a";
+
+  }
+  > .accordion-content {
+  }
+}

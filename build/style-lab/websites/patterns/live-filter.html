@@ -1,0 +1,514 @@
+<!--  -->
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Live filtering</title>
+  <meta name="description" content="If you have mutliple rows of data you&#x27;d like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin."><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="Live filtering">
+  <meta name="og:title" content="Live filtering">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="If you have mutliple rows of data you&#x27;d like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin.">
+  <meta name="og:description" content="If you have mutliple rows of data you&#x27;d like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin.">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/websites/patterns/live-filter/live-filter.png">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/websites/patterns/live-filter/live-filter.png">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=9380bed008e046091f9ec930385e9c27">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class="level2"><!-- add any of your classes or IDs -->
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../">Overview</a></li>
+            <li class=""><a href="../../general">Universal principles</a></li>
+            <li class=""><a href="../../general/templates">Templates</a></li>
+            <li class=" "><a href="../../websites/">Create websites</a></li>
+            <li class=""><a href="../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+        
+        <nav aria-label="You are here:" role="navigation" class="">
+          <ul class="breadcrumbs">
+            <li><a href="../../forms.html">forms</a></li>
+            <li>Live filtering</li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+
+          <div class="building-block-header">
+            <div class="row align-top align-justify">
+              <div class="small-12 medium-7 large-8 columns">
+                <div class="building-block-header-name-section">
+                  <h2 class="">Live filtering</h2>
+                  <h3 class="building-block-author"><img src="https://github.com/khawkins98.png?size=30" class="avatar content-right" height="" width="" alt="">By
+                    <a href="https://github.com/khawkins98">Ken Hawkins</a>
+                  </h3>
+                </div>
+                <div class="padding-bottom-medium">
+                  <a href="../../websites/patterns?q=typography" class="tag margin-left-small">typography</a>
+                  <a href="../../websites/patterns?q=search" class="tag margin-left-small">search</a>
+                  <small>Requires EBI Visual Framework</small>
+                  <span class="label">1.1.0, 1.2.0, 1.3.0</span>
+                </div>
+                <p>If you have mutliple rows of data you&#x27;d like the use to be able to quickly sift through (perhaps combining with table sorting) we bundle the aptly named LiveFilter plugin.</p>
+              </div>
+              <div class="column small-12 medium-5 large-4">
+                <div class="callout industry-background white-color">
+                  <h3>Contribute a pattern</h3>
+                  <p>Have a great way of doing something, add it to the Style Lab. <a href="../../websites/patterns/howto#submit" class="readmore">Here's how</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="building-block-preview">
+            <div class="row align-center expanded building-block-iframe-wrapper ">
+              <iframe class="building-block-iframe" src="./live-filter-iframe.html" frameborder="0" id="building-block-iframe"></iframe>
+            </div>
+          </div>
+          <hr/>
+
+<!-- This is indented on purpose -->
+<div class="row">
+<h3 class="padding-left-small">Implementation code</h3>
+<p>
+  Get a zip with all the sample HTML and any spaecial CSS or JS needed:
+  <a class="readmore" href="../../files/building-blocks/live-filter.zip"><i class="icon icon-functional" data-icon="="></i> Download a ZIP file</a>
+  <a class="float-right secondary" target="_blank" href="../../websites/patterns/howto#use"><i class="icon icon-generic" data-icon="?"></i> More on how to use this</a>
+</p>
+<div class="building-block-code">
+  <!-- Code Menu -->
+  <style type="text/css">.code-box.is-active { width: 50%; }</style>
+
+  <!-- Code Preview -->
+  <div class="row expanded">
+    <!--html-->
+    <div id="codeBoxHTML" class="column code-box is-active">
+      <div class="code-box-header">
+        <div class="code-toggler inactive">HTML</div>
+        <button class="button docs-code-copy" data-clipboard>Copy</button>
+      </div>
+      <div class="code-box-script">
+<div class="code-example"><pre><code class="html hljs"><span class="hljs-comment">&lt;!-- Include live filtering --&gt;</span>
+<span class="hljs-comment">&lt;!-- Note that we've loaded this with "defer", this technique may not be appropriate for your uses. --&gt;</span>
+<span class="hljs-comment">&lt;!-- If not, load this JS after jQuery. --&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">defer</span>=<span class="hljs-value">"defer"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/LiveFilter/js/jquery.liveFilter.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>
+
+<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"livefilterdemo"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">""</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">h3</span>&gt;</span>Some content to scan<span class="hljs-tag">&lt;/<span class="hljs-title">h3</span>&gt;</span>
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group"</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"input-group-label"</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">i</span> <span class="hljs-attribute">data-icon</span>=<span class="hljs-value">"1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"icon icon-functional"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">i</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">input</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"filter clearable input-group-field"</span> <span class="hljs-attribute">type</span>=<span class="hljs-value">"text"</span> <span class="hljs-attribute">value</span>=<span class="hljs-value">""</span> /&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+
+  <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"row small-up-1 medium-up-2 large-up-3"</span> <span class="hljs-attribute">data-equalizer</span>&gt;</span>
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_container ng-scope live-filter-target-granularity column"</span> <span class="hljs-attribute">data-equalizer-watch</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-success ng-binding"</span>&gt;</span>0 citation<span class="hljs-comment">&lt;!-- ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.citedByCount != 1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-scope"</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/abstract/med/24455489"</span>&gt;</span>Evidence That GRIN2A Mutations in Melanoma Correlate with Decreased Survival.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_subdata small"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_authors"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;D'mello SA"</span>&gt;</span>
+            D'mello SA<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Flanagan JU"</span>&gt;</span>Flanagan JU<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Green TN"</span>&gt;</span>Green TN<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Leung EY"</span>&gt;</span>Leung EY<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Furneaux CE"</span>&gt;</span>Furneaux CE<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;During MJ"</span>&gt;</span>During MJ<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Finlay GJ"</span>&gt;</span>Finlay GJ<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Baguley BC"</span>&gt;</span>Baguley BC<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Kalev-Zylinska ML"</span>&gt;</span>Kalev-Zylinska ML<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_journal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=JOURNAL:&amp;quot;Front Oncol&amp;quot;"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span>&gt;</span>Front Oncol<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding"</span>&gt;</span>2014 3<span class="hljs-comment">&lt;!-- ngIf: citation.issue --&gt;</span>:333<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_source ng-binding"</span>&gt;</span>PMID:24455489 <span class="hljs-comment">&lt;!-- ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.pmcid"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding ng-scope"</span>&gt;</span>PMCID:PMC3888952<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngRepeat: citation in citations.all track by $index --&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_container ng-scope live-filter-target-granularity column"</span> <span class="hljs-attribute">data-equalizer-watch</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-success ng-binding"</span>&gt;</span>10 citation<span class="hljs-comment">&lt;!-- ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.citedByCount != 1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-scope"</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/abstract/med/24275569"</span>&gt;</span>An enzyme assisted RP-RPLC approach for in-depth analysis of human liver phosphoproteome.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_subdata small"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_authors"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Bian Y"</span>&gt;</span>
+            Bian Y<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Song C"</span>&gt;</span>Song C<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Cheng K"</span>&gt;</span>Cheng K<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Dong M"</span>&gt;</span>Dong M<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Wang F"</span>&gt;</span>Wang F<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Huang J"</span>&gt;</span>Huang J<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Sun D"</span>&gt;</span>Sun D<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Wang L"</span>&gt;</span>Wang L<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Ye M"</span>&gt;</span>Ye M<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Zou H"</span>&gt;</span>Zou H<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_journal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=JOURNAL:&amp;quot;J Proteomics&amp;quot;"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span>&gt;</span>J Proteomics<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding"</span>&gt;</span>2014 96<span class="hljs-comment">&lt;!-- ngIf: citation.issue --&gt;</span>:253-262<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_source ng-binding"</span>&gt;</span>PMID:24275569 <span class="hljs-comment">&lt;!-- ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngRepeat: citation in citations.all track by $index --&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_container ng-scope live-filter-target-granularity column"</span> <span class="hljs-attribute">data-equalizer-watch</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-success ng-binding"</span>&gt;</span>2 citation<span class="hljs-comment">&lt;!-- ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.citedByCount != 1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-scope"</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/abstract/med/23907581"</span>&gt;</span>Lys63-linked polyubiquitination of BRAF at lysine 578 is required for BRAF-mediated signaling.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_subdata small"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_authors"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;An L"</span>&gt;</span>
+            An L<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Jia W"</span>&gt;</span>Jia W<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Yu Y"</span>&gt;</span>Yu Y<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Zou N"</span>&gt;</span>Zou N<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Liang L"</span>&gt;</span>Liang L<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Li G"</span>&gt;</span>Li G<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Yang J"</span>&gt;</span>Yang J<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Zhang H"</span>&gt;</span>Zhang H<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_journal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=JOURNAL:&amp;quot;Sci Rep&amp;quot;"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span>&gt;</span>Sci Rep<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding"</span>&gt;</span>2013 3<span class="hljs-comment">&lt;!-- ngIf: citation.issue --&gt;</span>:2344<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_source ng-binding"</span>&gt;</span>PMID:23907581 <span class="hljs-comment">&lt;!-- ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.pmcid"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding ng-scope"</span>&gt;</span>PMCID:PMC3731650<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngRepeat: citation in citations.all track by $index --&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_container ng-scope live-filter-target-granularity column"</span> <span class="hljs-attribute">data-equalizer-watch</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-success ng-binding"</span>&gt;</span>14 citation<span class="hljs-comment">&lt;!-- ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.citedByCount != 1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-scope"</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/abstract/med/1630826"</span>&gt;</span>Chromosomal assignment of two human B-raf(Rmil) proto-oncogene loci: B-raf-1 encoding the p94Braf/Rmil and B-raf-2, a processed pseudogene.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_subdata small"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_authors"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Eychène A"</span>&gt;</span>
+            Eychène A<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Barnier JV"</span>&gt;</span>Barnier JV<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Apiou F"</span>&gt;</span>Apiou F<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Dutrillaux B"</span>&gt;</span>Dutrillaux B<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Calothy G"</span>&gt;</span>Calothy G<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_journal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=JOURNAL:&amp;quot;Oncogene&amp;quot;"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span>&gt;</span>Oncogene<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding"</span>&gt;</span>1992 7<span class="hljs-comment">&lt;!-- ngIf: citation.issue --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.issue"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding ng-scope"</span>&gt;</span>(8)<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.issue --&gt;</span>:1657-1660<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_source ng-binding"</span>&gt;</span>PMID:1630826 <span class="hljs-comment">&lt;!-- ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngRepeat: citation in citations.all track by $index --&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_container ng-scope live-filter-target-granularity column"</span> <span class="hljs-attribute">data-equalizer-watch</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-success ng-binding"</span>&gt;</span>54 citation<span class="hljs-comment">&lt;!-- ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.citedByCount != 1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-scope"</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/abstract/med/3043188"</span>&gt;</span>B-raf, a new member of the raf family, is activated by DNA rearrangement.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_subdata small"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_authors"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Ikawa S"</span>&gt;</span>
+            Ikawa S<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Fukui M"</span>&gt;</span>Fukui M<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Ueyama Y"</span>&gt;</span>Ueyama Y<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Tamaoki N"</span>&gt;</span>Tamaoki N<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Yamamoto T"</span>&gt;</span>Yamamoto T<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Toyoshima K"</span>&gt;</span>Toyoshima K<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_journal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=JOURNAL:&amp;quot;Mol Cell Biol&amp;quot;"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span>&gt;</span>Mol Cell Biol<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding"</span>&gt;</span>1988 8<span class="hljs-comment">&lt;!-- ngIf: citation.issue --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.issue"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding ng-scope"</span>&gt;</span>(6)<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.issue --&gt;</span>:2651-2654<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_source ng-binding"</span>&gt;</span>PMID:3043188 <span class="hljs-comment">&lt;!-- ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.pmcid"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding ng-scope"</span>&gt;</span>PMCID:PMC363468<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngRepeat: citation in citations.all track by $index --&gt;</span>
+
+    <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_container ng-scope live-filter-target-granularity column"</span> <span class="hljs-attribute">data-equalizer-watch</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"label label-success ng-binding"</span>&gt;</span>39 citation<span class="hljs-comment">&lt;!-- ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.citedByCount != 1"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-scope"</span>&gt;</span>s<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.citedByCount != 1 --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">h5</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_title"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/abstract/med/11410590"</span>&gt;</span>Serum- and glucocorticoid-inducible kinase SGK phosphorylates and negatively regulates B-Raf.<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">h5</span>&gt;</span>
+      <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_subdata small"</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_authors"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Zhang BH"</span>&gt;</span>
+            Zhang BH<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Tang ED"</span>&gt;</span>Tang ED<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Zhu T"</span>&gt;</span>Zhu T<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Greenberg ME"</span>&gt;</span>Greenberg ME<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Vojtek AB"</span>&gt;</span>Vojtek AB<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link"</span> <span class="hljs-attribute">target</span>=<span class="hljs-value">"_blank"</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=AUTH:&amp;quot;Guan KL"</span>&gt;</span>Guan KL<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_journal"</span>&gt;</span>
+          <span class="hljs-tag">&lt;<span class="hljs-title">a</span> <span class="hljs-attribute">href</span>=<span class="hljs-value">"//europepmc.org/search?query=JOURNAL:&amp;quot;J Biol Chem&amp;quot;"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_link ng-binding"</span>&gt;</span>J Biol Chem<span class="hljs-tag">&lt;/<span class="hljs-title">a</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding"</span>&gt;</span>2001 276<span class="hljs-comment">&lt;!-- ngIf: citation.issue --&gt;</span><span class="hljs-tag">&lt;<span class="hljs-title">span</span> <span class="hljs-attribute">ng-if</span>=<span class="hljs-value">"citation.issue"</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"ng-binding ng-scope"</span>&gt;</span>(34)<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span><span class="hljs-comment">&lt;!-- end ngIf: citation.issue --&gt;</span>:31620-31626<span class="hljs-tag">&lt;/<span class="hljs-title">span</span>&gt;</span>
+        <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+        <span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">class</span>=<span class="hljs-value">"epmc_citation_source ng-binding"</span>&gt;</span>PMID:11410590 <span class="hljs-comment">&lt;!-- ngIf: citation.pmcid --&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+      <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+    <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> <span class="hljs-comment">&lt;!-- end ngRepeat: citation in citations.all track by $index --&gt;</span>
+  <span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> <span class="hljs-comment">&lt;!-- /livefilter --&gt;</span>
+
+</code></pre></div>      </div>
+    </div>
+    <!--css-->
+    <div id="codeBoxStyles" class="column code-box">
+      <div class="code-box-header">
+        <div>
+          <button class="code-toggler is-active" id="scssToggle">SCSS</button>
+          <button class="code-toggler" id="cssToggle">CSS</button>
+        </div>
+        <button class="button docs-code-copy" data-clipboard>Copy</button>
+      </div>
+      <div class="code-block-toggle is-active code-box-script" id="codeBoxSCSS" data-toggler=".is-active">
+<div class="code-example"><pre><code class="scss hljs">
+</code></pre></div>      </div>
+      <div class="code-block-toggle code-box-script" id="codeBoxCSS">
+<div class="code-example"><pre><code class="css hljs">
+</code></pre></div>      </div>
+    </div>
+    <!--JS-->
+    <div id="codeBoxJS" class="column code-box">
+      <div class="code-box-header">
+        <div class="code-toggler inactive">JS</div>
+        <button class="button docs-code-copy" data-clipboard>Copy</button>
+      </div>
+      <div class="code-box-script">
+<div class="code-example"><pre><code class="js hljs"><span class="hljs-built_in">window</span>.addEventListener(<span class="hljs-string">'load'</span>,<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+  $(<span class="hljs-built_in">document</span>).ready(<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>) </span>{
+    $(<span class="hljs-string">'#livefilterdemo'</span>).liveFilter({
+      delay: <span class="hljs-number">200</span>, <span class="hljs-comment">// how long between keystroke and filter</span>
+      analyticsLogging: <span class="hljs-literal">false</span>, <span class="hljs-comment">// log to google analytics through foundationExtendEBI.js</span>
+      fitlerTargetCustomDiv: <span class="hljs-string">'div.live-filter-target-granularity'</span>,
+      defaultText: <span class="hljs-string">'Type to filter these paper references'</span>,
+      noMatches: <span class="hljs-string">'&lt;p&gt;No matching papers found.&lt;/p&gt;&lt;a class="button" href="#"&gt;You could add a link to advanced search&lt;/a&gt; '</span>
+      <span class="hljs-comment">// for further plugin option guidance, see: https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/LiveFilter/js/jquery.liveFilter.js</span>
+    });
+  });
+});
+
+</code></pre></div>      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+          <div class="building-block-related">
+            <div class="row column">
+              <h2 class="bb-related-title">Similar Building Blocks</h2>
+            </div>
+            <div class="row small-up-1 medium-up-2 large-up-3 scroll-container">
+              <div class="column column-block scroll-x">
+                <div class="hover-wrapper">
+                  <a href="../../websites/patterns/search.html" class="card-imghover-overlay">
+                    <div class="card card-building-block">
+                      <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/search/search.png);">
+                      </div>
+                      <div class="">
+                        <span class="label">forms</span>
+                        <h4>Search</h4>
+                      </div>
+                      <div class="">
+                        <div>
+                          <img src="https://github.com/khawkins98.png?size=30" class="avatar content-right" height="" width="" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="column column-block scroll-x">
+                <div class="hover-wrapper">
+                  <a href="../../websites/patterns/tabs.html" class="card-imghover-overlay">
+                    <div class="card card-building-block">
+                      <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/tabs/tabs.png);">
+                      </div>
+                      <div class="">
+                        <span class="label">forms</span>
+                        <h4>Tabs</h4>
+                      </div>
+                      <div class="">
+                        <div>
+                          <img src="https://github.com/khawkins98.png?size=30" class="avatar content-right" height="" width="" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <div class="column column-block scroll-x">
+                <div class="hover-wrapper">
+                  <a href="../../websites/patterns/form-large.html" class="card-imghover-overlay">
+                    <div class="card card-building-block">
+                      <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/form-large/form-large.png);">
+                      </div>
+                      <div class="">
+                        <span class="label">forms</span>
+                        <h4>Large form elements</h4>
+                      </div>
+                      <div class="">
+                        <div>
+                          <img src="https://github.com/khawkins98.png?size=30" class="avatar content-right" height="" width="" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="smedium-4 columns"></div>
+      </div>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 1.4 and 2.0 are coming', message: 'New services can make use of the Visual Framework 2.0. For existing services who cannot migrate, a 1.4 update is also available.<br/><a class="readmore" href="../../websites/framework-next/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../../assets_site/js/app.js?rev=176f423a9de990c531446ff9da8f019e"></script>
+</body>
+</html>

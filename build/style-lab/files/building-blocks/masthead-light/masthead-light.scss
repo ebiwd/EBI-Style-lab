@@ -1,0 +1,14 @@
+/* white on light masthead stlying */
+.masthead {
+  background-color: #eee;
+
+  .masthead-inner {
+    nav ul.menu li { border-right-color: #EEE; }
+    h1, h1 a, h4, p, a,
+    .menu > li > a { color: #666; }
+    .menu > li > a:hover { color: rgb(0,124,130); }
+    .menu > li.active-trail > a { background: rgb(0,124,130);; color: #fff }
+
+  }
+
+}

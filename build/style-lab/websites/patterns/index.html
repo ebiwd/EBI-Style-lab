@@ -1,0 +1,547 @@
+
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>index < Web patterns < EMBL-EBI Style Lab</title>
+  <meta name="description" content=""><!-- Describe what this page is about -->
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+  <meta name="bbfile" content="../../data/building-blocks.json">
+  <meta name="kitfile" content="../../data/kits.json">
+  <meta name="datafile" content="../../data/categories.json">
+  <meta name="rootpath" content="../../">
+  <meta name="datakey" content="index">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=e4f4e3483a120cb1b38e3342df7618a2">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class="level2"><!-- add any of your classes or IDs -->
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../">Overview</a></li>
+            <li class=""><a href="../../general">Universal principles</a></li>
+            <li class=""><a href="../../general/templates">Templates</a></li>
+            <li class=" "><a href="../../websites/">Create websites</a></li>
+            <li class=""><a href="../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <section id="main-content-area" role="main">
+      <div class="row columns">
+        
+      </div>
+      <div class="page-container row">
+        <h2>Web patterns</h2>
+        <p class="lead">Use these patterns to build your website functionality. Included are patterns for the EMBL-EBI Visual Framework (full and lite versions), they can be used with a mix of jQuery, Foundation, Bootstrap, Angular and other front-end tools.</p>
+        <div class="columns medium-10 medium-push-2">
+
+          <div class="">
+            <div class="">
+              <!--search container-->
+              <div class="bb-search-bar-container" id="bb-search-bar">
+                <div class="input-group">
+                  <span class="input-group-label"><i data-icon="1" class="icon icon-functional"></i></span>
+                  <input type="search" data-type="blocks" placeholder="Find a pattern" class="filter clearable input-group-field bb-search-bar">
+                </div>
+                <p class="bb-search-subtext"><span id="result-count">0</span> Results</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- removed -->
+
+
+          <div id="main-results-container">
+            <div class="row align-center filter-nav-dropdown show-for-medium">
+                <div class="medium-3 columns">
+                  <ul class="dropdown menu" data-dropdown-menu>
+                    <li>
+                      <a data-filter-current href="#">All versions</a>
+                      <ul class="menu">
+                        <li><a data-hide-active data-filter data-type="1.1" href="#">Version 1.1.X</a></li>
+                        <li><a data-hide-active data-filter data-type="1.2" href="#">Version 1.2.X</a></li>
+                        <li><a data-hide-active data-filter data-type="1.3" href="#">Version 1.3.X</a></li>
+                        <li><a class="hide" data-hide-active data-filter data-type="all" href="#">All Versions</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+                <div class="medium-3 columns">
+                  <ul class="dropdown menu" data-dropdown-menu>
+                    <li>
+                      <a data-sort-current href="#">Newest</a>
+                      <ul class="menu">
+                        <li><a data-hide-active data-sort data-type="newest" class="hide" href="#">Newest</a></li>
+                        <li><a data-hide-active data-sort data-type="oldest" href="#">Oldest</a></li>
+                        <li><a data-hide-active data-sort data-type="alphabetical" href="#">Alphabetical</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/banner-data-protection.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/banner-data-protection/banner-data-protection.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">media</span>
+                          <h4>Data Protection Banner</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/meta-copy.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/meta-copy/meta-copy.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">typography</span>
+                          <h4>Meta copy</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/menu-auto-highlight.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/menu-auto-highlight/menu-auto-highlight.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">navigation</span>
+                          <h4>Detect and highlight active menu item</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/update-feed.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/update-feed/update-feed.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">status</span>
+                          <h4>JSON-Powered Update Feed</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/cards-notification.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/cards-notification/cards-notification.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">containers</span>
+                          <h4>Notification cards</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/modal.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/modal/modal.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">containers</span>
+                          <h4>Dialouge modal</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/foldable-info-tabs.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/foldable-info-tabs/foldable-info-tabs.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">containers</span>
+                          <h4>Foldable info tabs</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/grid.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/grid/grid.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">containers</span>
+                          <h4>Grid and blocks</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/live-filter.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/live-filter/live-filter.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">forms</span>
+                          <h4>Live filtering</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/announcements.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/announcements/announcements.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">control</span>
+                          <h4>Announcements</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+                <!-- flattened version of building block with wrapper for use on client -->
+                <div class="column column-block">
+                  <div class="hover-wrapper">
+                    <a class="no-underline" href="../../websites/patterns/images.html" class="card-imghover-overlay">
+                      <div class="card card-building-block">
+                        <div class="card-img" style="background-image: url(../../assets/img/websites/patterns/images/images.png);">
+                        </div>
+                        <div class="">
+                          <span class="label">media</span>
+                          <h4>Images with captions</h4>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+            </div>
+            <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+                <li class="disabled"><i class="inject-me pagination-icon icon icon-functional" data-icon="<"></i></li>
+                <li class="current bb"><span class="show-for-sr">You're on page</span> 1</li>
+                <li><a href="index-2.html" aria-label="Page 2">2</a></li>
+                <li><a href="index-3.html" aria-label="Page 3">3</a></li>
+                <li><a href="index-4.html" aria-label="Page 4">4</a></li>
+                <li><a href="index-5.html" aria-label="Page 5">5</a></li>
+                <li class=""><a href="index-2.html" aria-label="Next page">
+                  <i class="inject-me pagination-icon icon icon-functional" data-icon=">"></i>
+                </a></li>
+            </ul>
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+        <div class="columns medium-2 medium-pull-10">
+          <div class="filter-nav-container">
+            <div class="filter-nav">
+              <div class="">
+                <ul class="menu vertical">
+                  <li>
+                    <a href="index.html" class="filter-nav-button  active">
+                      <img src="../../assets/img/icons/filter-all.svg" class="inject-me bb-filter-icons" height="" title="All" width="" alt="All items icon">
+                      All
+                    </a>
+                  </li>
+                  <li>
+                    <a href="typography.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-navigation.svg" class="inject-me bb-filter-icons" height="" title="Typography" width="" alt="typography icon">
+                      Typography
+                    </a>
+                  </li>
+                  <li>
+                    <a href="navigation.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-navigation.svg" class="inject-me bb-filter-icons" height="" title="Navigation" width="" alt="navigation icon">
+                      Navigation
+                    </a>
+                  </li>
+                  <li>
+                    <a href="status.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-status.svg" class="inject-me bb-filter-icons" height="" title="Status" width="" alt="status icon">
+                      Status
+                    </a>
+                  </li>
+                  <li>
+                    <a href="media.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-media.svg" class="inject-me bb-filter-icons" height="" title="Media" width="" alt="media icon">
+                      Media
+                    </a>
+                  </li>
+                  <li>
+                    <a href="containers.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-containers.svg" class="inject-me bb-filter-icons" height="" title="Containers" width="" alt="containers icon">
+                      Containers
+                    </a>
+                  </li>
+                  <li>
+                    <a href="forms.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-forms.svg" class="inject-me bb-filter-icons" height="" title="Forms" width="" alt="forms icon">
+                      Forms
+                    </a>
+                  </li>
+                  <li>
+                    <a href="control.html" class="filter-nav-button  ">
+                      <img src="../../assets/img/icons/filter-control.svg" class="inject-me bb-filter-icons" height="" title="Control" width="" alt="control icon">
+                      Control
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <!-- removed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 2.0', message: 'All services are recommended to make use of the new Visual Framework 2.0. This old version of EMBL-EBI Style Lab v1 is not supported anymore.<br/><a class="readmore" href="https://stable.visual-framework.dev/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+  <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+  <script src="../../assets_site/js/app.js?rev=4450d1d4d717fce2815ea19f4866e5a6"></script>
+</body>
+
+</body>
+</html>

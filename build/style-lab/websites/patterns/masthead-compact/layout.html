@@ -1,0 +1,35 @@
+<div class="padding-bottom-large">
+{{> masthead-compact}}
+</div>
+
+<a href="#" class="button toggle-compact secondary">De-compact the masthead</a>
+<span class="feedback code"></span>
+<script>
+document.onreadystatechange = function () {
+   if (document.readyState == "complete") {
+     $('.toggle-compact').click(function() {
+       $(this).html($(this).html() == 'De-compact the masthead' ? 'Compact the masthead' : 'De-compact the masthead');
+       $(this).toggleClass('secondary');
+       $('.feedback').html($('.feedback').html() == 'Added class .compact-disabled to .compact-for-data' ? 'Removed class .compact-disabled from .compact-for-data' : 'Added class .compact-disabled to .compact-for-data');
+       $('.compact-for-data').toggleClass('compact-disabled');
+      //  $('.masthead-inner.row').toggleClass('collapse');
+      event.preventDefault();
+     });
+ }
+}
+</script>
+
+{{#markdown}}
+This pattern works by tweaking the standard `.masthead-inner`.
+
+To enabele we add the responsive `.columns` classes and `.compact-for-data` is added to `header.masthead`. We can also add `.compact-disabled` to dynamically disable the responsive nature.
+
+Some guidance:
+- Only use this pattern on data orient pages. So don't use it on the landing page or about page.
+- We don't recommend using the `data-sticky-container` on the masthead, after all the focus is meant to be on the data.
+- You may want to add `.colapse` to `.masthead-inner.row` to remove margins on the child columns.
+- Don't use the sticky property for the global header
+
+In v1.2 we've [already shaved 10px off the black bar](https://github.com/ebiwd/EBI-Framework/issues/21), but the need remains for a yet-thinner `div#masthead` on inside pages that are search-result or data focused. In all it's 56% thinner than the current look.
+
+{{/markdown}}

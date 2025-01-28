@@ -1,0 +1,351 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>The Content-Action Model < EMBL-EBI Style Lab</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <meta name="rootpath" content="../../">
+  <meta name="bbfile" content="../../data/building-blocks.json">
+  <meta name="kitfile" content="../../data/kits.json">
+
+  <meta name="datafile" content="../../data/">
+  <meta name="rootpath" content="../../">
+  <meta name="datakey" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=@@hash">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class=" background-alt ">
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../">Overview</a></li>
+            <li class=""><a href="../../general">Universal principles</a></li>
+            <li class=""><a href="../../general/templates">Templates</a></li>
+            <li class=" active"><a href="../../websites/">Create websites</a></li>
+            <li class=""><a href="../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <div class="diffusion-visulisation" style="width: 100%; height: 40rem; margin-bottom: -40rem;"></div>
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+</div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+          <div id="main-results-container" class="row">
+            <ul id="" class="menu horizontal no-underline padding-top-medium hide-for-print" data-description="navigational">
+              <li class=""><a href="../../websites/meta-patterns/analytics.html">Analytics</a></li>
+              <li class=""><a href="../../websites/meta-patterns/browser-compatibility.html">Browser, screens</a></li>
+              <!-- <li class=""><a href="../../websites/meta-patterns/forms.html">Forms</a></li> -->
+              <li class=""><a href="../../websites/meta-patterns/printing.html">Printing</a></li>
+              <li class=""><a href="../../websites/meta-patterns/page-structure.html">Page structure</a></li>
+              <li class=""><a href="../../websites/sample-site/">Sample pages</a></li>
+              <li class=""><a href="../../websites/meta-patterns/search-guidelines.html">Search guidelines</a></li>
+              <li class=" "><a href="../../websites/meta-patterns/usability.html">Usability</a></li>
+              <li class=""><a href="../../general/core-content-spec">Content-Action Model</a></li>
+            </ul>
+            
+
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/websites/meta-patterns//general/core-content-spec">Edit meta-pattern</a>
+            <!-- <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/pages//general/core-content-spec/index.html">Edit page</a> -->
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/assets_site/layouts/static.html">Edit layout</a>
+            <div class="intro">
+              <h2>The Content-Action Model</h2>
+              <p class="lead">How to keep a website&#x27;s various parts dancing to the same beat? And doing the job they&#x27;re meant to do?</p>
+            </div>
+            
+            <p>From downloading PDFs, submitting data, searching, analysing, or just getting the user to think of EMBL-EBI as great place: web pages are made to encourage and facilitate user behaviour. To get results we utilise content, actions, user types and goals — but the role of each constituent part is not always clear, nor is the combined effectiveness.</p>
+            <p>To monitor and understand we utilise the <a href="https://work.allaboutken.com/posts/20180122-content-action-model.html">Content-Action Model (CAM)</a>. The method deconstructs our web &quot;experiences&quot; into a series a triples so we can individually validate and evaluate the component parts.</p>
+            <div class="callout table-of-contents"><h3>On this page</h3><p>Loading...</p></div>
+            
+            <h3 id="how">How</h3>
+            <p>The tool we use to make our Content-Action Models is currently a document template (more on that below) that asks about our goals from different — but interconnected — angles. In effect, we deconstruct hypothesis about what we intend to achieve and track success and change.</p>
+            <p><a href="https://work.allaboutken.com/posts/20180122-content-action-model.html#cam-record-contents">CAM record contents</a>:</p>
+            <blockquote>
+            <ol>
+            <li><strong>Organisational documentation:</strong> a firm organisational record about the agreed purpose of a portion of a website (such as an /about section)</li>
+            </ol>
+            </blockquote>
+            <ol>
+            <li><strong>Itemisation of components and actions:</strong> specific components for each section; including:</li>
+            <li><strong>Overall purpose:</strong> informed by organisational priorities and UX research<ol>
+            <li>URLs</li>
+            <li>Goals (user and organisation)</li>
+            <li>User types (prioritised)</li>
+            <li>Content (and who will make it)</li>
+            <li>Preceding and following actions (what pages and actions)</li>
+            <li>Organisational placement (which parts of the organisation are surfaced)</li>
+            <li>Organisation purpose (how does the content map to overall mission purposes in tone or external focus)</li>
+            <li>Content owner (who is “responsible” for the content overall)</li>
+            </ol>
+            </li>
+            <li><strong>Relations between components:</strong> which user types are seeking this goal, and which content supports it?</li>
+            <li><strong>Relations across CAM Records:</strong> how this content relates to the content, goals or users in other parts of the website (e.g. jobs page). This exposes areas that may need new CAM for Web Systems record.</li>
+            <li><strong>Record of change and knowledge transfer:</strong> to avoid repeating previous missteps, and enable knowledge handover. The importance of capturing this cannot be overstated.</li>
+            <li><strong>Truth through perspectives:</strong> by asking the same question from many different perspectives, expose gaps/missed opportunities (e.g. website content, external content) or prioritise areas for improvement (e.g. page components that are surplus to requirements).</li>
+            </ol>
+            <h3 id="making-your-cam-records">Making your CAM records</h3>
+            <figure class="callout columns medium-7 float-right small-12 margin-left-large">
+              <h3><i class="icon icon-common" data-icon="&#x3b;"></i> Grab the template</h3>
+              <p>Already know how to use the CAM, <a href="https://docs.google.com/document/d/1N8jU9EiRWHKN6h5PUpFmlWNA_pYN8e-5TAQBuD9UZ2Q/edit?usp=sharing">here's the template</a>.</p>
+            <iframe style="width:100%; margin: 0; border: 1px solid #eee; min-height: 400px" src="https://docs.google.com/document/d/e/2PACX-1vQeZoW5Vq5ALtYi546DqsRvWOsu8anO0xS8fKJB6NUTQV12e0bCvgMTMacvqVfWY1aQkwJHzdiufF28/pub?embedded=true"></iframe>
+            <figcaption><a href="https://docs.google.com/document/d/1N8jU9EiRWHKN6h5PUpFmlWNA_pYN8e-5TAQBuD9UZ2Q/edit?usp=sharing" target="_blank" class="button external margin-bottom-none"><i class="icon icon-common" data-icon="&#x3b;"></i> Open the template in Google Docs</a></figcaption>
+            </figure>
+            
+            <ol>
+            <li>Let us guide you<ul>
+            <li>If this is your first time using the CAM we can help you understand how best to use it: <a href="mailto:khawkins@ebi.ac.uk">khawkins@ebi.ac.uk</a> or <a href="mailto:www-dev@ebi.ac.uk">www-dev@ebi.ac.uk</a></li>
+            </ul>
+            </li>
+            <li>Use the template<ul>
+            <li><a href="https://docs.google.com/document/d/1N8jU9EiRWHKN6h5PUpFmlWNA_pYN8e-5TAQBuD9UZ2Q/edit?usp=sharing" class="external">Use the Google Doc template as a quick start</a></li>
+            </ul>
+            </li>
+            </ol>
+            <h3 id="future-plans">Future plans?</h3>
+            <p>Working with the Web Content Committee, Communications, Training, Web Development and other teams, this model has been evolving since the end of 2016. Here is what we have planned for the next evolution:</p>
+            <ol>
+            <li>Visualise the data we&#39;ve collected.<ul>
+            <li>CAM records share connections. We can use those connections to see a bird&#39;s eye view of pathways between records and see which ecosystems are performing as expected.</li>
+            </ul>
+            </li>
+            <li>Performance measurement<ul>
+            <li>By looking at the documented content and associated goals, we can use tools like Google Analytics to measure more than time on page, and begin to measure real success.</li>
+            </ul>
+            </li>
+            <li>A relational database tool<ul>
+            <li>The Google Doc template is an interim step and we&#39;re building out a relational tool (currently we&#39;re evaluating Coda.io).</li>
+            </ul>
+            </li>
+            </ol>
+            <p>You can <a class="external" href="https://work.allaboutken.com/posts/20180122-content-action-model.html">learn more about the Content-Action Model and our plans in this blog post</a></p>
+            
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+      </div>
+
+      <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+      <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 1.4 and 2.0 are coming', message: 'New services can make use of the Visual Framework 2.0. For existing services who cannot migrate, a 1.4 update is also available.<br/><a class="readmore" href="../../websites/framework-next/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../../assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>

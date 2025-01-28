@@ -1,0 +1,71 @@
+{{#markdown}}
+Start by adding an element with a class of <code>.row</code> to create a horizontal block fo columns. Then add <code>div.columns</code> within that row (you can use <code>.column</code> or <code>.columns</code>&mdash;the only difference is grammar). Specify the widths of each column with the <code>.small-#</code>, <code>.medium-#</code>, and <code>.large-#</code> classes.
+
+The EBI Framework uses a 12 column grid.
+
+```
+{{> grid}}
+```
+
+And that gives us:
+{{> grid}}
+
+By using <code>.medium-</code> the two columns automatically expand to full width on small screens (mobile devices). For further background and demonstration, <a class="readmore" href="http://foundation.zurb.com/sites/docs/grid.html">view the Foundation documentation on grids</a>.
+
+### Block grids
+
+You can also make use of Foundation's [block grids](https://foundation.zurb.com/sites/docs/grid.html#block-grids) if you have content in a repetable rows, such as thumbnails:
+
+<div class="row small-up-2 medium-up-3 large-up-4">
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+</div>
+
+The code:
+```
+<div class="row small-up-2 medium-up-3 large-up-4">
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+  <div class="column column-block">
+    <img src="https://placehold.it/600x100">
+  </div>
+</div>
+```
+
+
+#### EBI Customisations
+
+- **Collapse column padding:** In addtion to using the Foundation <code>.no-collapse</code> option on grid rows, we've found that our layouts benefit from collapsing column padding in some locations. Remove right or left padding by giving the <code>div.column</code> a <code>.no-pad-right</code> or <code>.no-pad-left</code>
+
+
+
+{{/markdown}}

@@ -1,0 +1,469 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>How to use and submit patterns < EMBL-EBI Style Lab</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="bioinformatics, europe, institute" /><!-- 3 to 10 keywords about the content of this page (not the whole project) -->
+  <meta name="author" content="EMBL-EBI" /><!-- Your [project-name] here -->
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="MobileOptimized" content="width" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#70BDBD" /> <!-- Android Chrome mobile browser tab color -->
+
+  <!-- Add information on the life cycle of this page -->
+  <meta name="ebi:owner" content="John Doe" /> <!-- Who should be contacted about changes -->
+  <meta name="ebi:review-cycle" content="30" /> <!-- In days, how often should the content be reviewed -->
+  <meta name="ebi:last-review" content="2015-12-20" /> <!-- The last time the content was reviewed -->
+  <meta name="ebi:expiry" content="2016-01-20" /> <!-- When this content is no longer relevant -->
+  <meta name="twitter:title" content="">
+  <meta name="og:title" content="">
+  <meta name="og:type" content="website">
+  <meta name="twitter:description" content="">
+  <meta name="og:description" content="">
+  <meta name="twitter:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+  <meta name="og:image" content="http://foundation.zurb.com/building-blocks/assets/img/kits//">
+
+  <!-- If you link to any other sites frequently, consider optimising performance with a DNS prefetch -->
+  <link rel="dns-prefetch" href="//www.ebi.ac.uk" />
+  <meta name="rootpath" content="../../../">
+  <meta name="bbfile" content="../../../data/building-blocks.json">
+  <meta name="kitfile" content="../../../data/kits.json">
+
+  <meta name="datafile" content="../../../data/">
+  <meta name="rootpath" content="../../../">
+  <meta name="datakey" content="">
+
+  <link rel="stylesheet" href="../../../assets/css/app.css?rev=@@hash">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+</head>
+<body class=" background-alt ">
+  <div id="skip-to">
+    <a href="#content">Skip to main content</a>
+  </div>
+  
+  <header id="masthead-black-bar" class="clearfix masthead-black-bar">
+  </header>
+  <div data-sticky-container>
+    <header id="masthead" class="masthead" data-sticky data-sticky-on="large" data-top-anchor="content:top" data-btm-anchor="content:bottom">
+      <div class="masthead-inner row">
+        <!-- local-title -->
+        <div class="columns medium-6" id="local-title">
+          <h1><a href="../../../" title="Back to EMBL-EBI Style Lab homepage"><i class="icon icon-functional" data-icon="A"></i> EMBL-EBI Style Lab</a></h1>
+        </div>
+        <div class="columns medium-6 text-right">
+          <div class="">
+            <form id="ebi_search" action="../../../search">
+              <fieldset>
+                <div class="input-group margin-bottom-none margin-top-large">
+                  <input type="text" name="q" id="tipue_search_input" class="input-group-field" pattern=".{3,}" tabindex="1" title="At least 3 characters" placeholder="Search the Style Lab" required>
+                  <div class="input-group-button">
+                    <input id="search_submit" class="button icon icon-functional" tabindex="2" type="submit" name="submit1" value="1">
+                  </div>
+                </div>
+              </fieldset>
+              <!-- <p id="example" class="small">
+                Examples: <a href="/ebisearch/search.ebi?db=allebi&amp;requestFrom=ebi_index&amp;query=blast">blast</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=keratin&amp;requestFrom=ebi_index">keratin</a>, <a href="/ebisearch/search.ebi?db=allebi&amp;query=bfl1&amp;requestFrom=ebi_index">bfl1</a>
+                <a class="float-right" href="#"><span class="icon icon-generic" data-icon="("></span> advanced search</a>
+              </p> -->
+            </form>
+          </div>
+        </div>
+        <!-- /local-title -->
+        <!-- local-nav -->
+        <nav>
+          <ul id="local-nav" class="dropdown menu float-left" data-description="navigational">
+            <li class=""><a href="../../../">Overview</a></li>
+            <li class=""><a href="../../../general">Universal principles</a></li>
+            <li class=""><a href="../../../general/templates">Templates</a></li>
+            <li class=" "><a href="../../../websites/">Create websites</a></li>
+            <li class=""><a href="../../../websites/patterns/">Web patterns</a></li>
+            <li class=""><a href="../../../general/fonts/">Icon fonts</a></li>
+            <li><a href="https://github.com/ebiwd/EBI-Framework/issues/new" target="_blank">Support</a></li>
+          </ul>
+        </nav>
+        <!-- /local-nav -->
+      </div>
+    </header>
+  </div>
+  <!-- The EMBL-EBI Style Lab is in development and content is still being migrated and updated. <a class="readmore" href="https://github.com/ebiwd/EBI-Style-lab/issues">Please share feedback here</a> -->
+  <!-- <div class="row padding-top-large">
+    <div class="row callout info">
+      <h3>You're seeing a preview</h3>
+      The EBI Style lab is using a development version of the <a href="https://github.com/ebiwd/EBI-Framework/issues/103">forthcoming EBI Visual framework v1.3</a> and <a href="https://github.com/ebiwd/EBI-Framework/issues/119">the CDN for JS and CSS assets</a>; follow those links to learn more.
+    </div>
+  </div> -->
+  <div id="content">
+    <!-- Suggested layout containers -->
+    <div class="diffusion-visulisation" style="width: 100%; height: 40rem; margin-bottom: -40rem;"></div>
+    <section id="main-content-area" class="" role="main">
+      <div class="row columns">
+</div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="page-container">
+          <div id="main-results-container" class="row">
+            <ul id="" class="menu horizontal no-underline padding-top-medium hide-for-print" data-description="navigational">
+            </ul>
+            
+
+            
+            <!-- <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/content/pages/undefined/index.html">Edit page</a> -->
+            <a class="button small secondary edit-button float-right hide-for-print" targe="_blank" href="https://github.com/ebiwd/EBI-Style-lab/edit/master/assets_site/layouts/static.html">Edit layout</a>
+            <div class="intro">
+              <h2>How to use and submit patterns</h2>
+              <p class="lead">Patterns are coded UI components designed to be dropped into projects. The intent of patterns are to solve common patterns, scaffold faster, and integrate with your existing styles right out of the box.</p>
+            </div>
+            
+            
+            
+            <br/>
+            <!--what is a pattern-->
+            
+            <div class="intro-unit ">
+              <h2 class="how-to-header">What are patterns?</h2>
+              <div class="row">
+              <div class="columns medium-6">
+              <h3 class="margin-bottom-none">Patterns are:</h3>
+              <ul>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> HTML, CSS, and JS snippets</li>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> Lightly styled components</li>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> Easy to extend or customize</li>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="/"></span> Common solutions to layout or component challenges</li>
+              </ul>
+              </div>
+              <div class="columns medium-6">
+              <h3 class="margin-bottom-none">Patterns are NOT:</h3>
+              <ul>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Templates</li>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Themes</li>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Overly stylized</li>
+                <li class="icon-bullet"><span class="icon icon-functional" data-icon="x"></span> Code that does not integrate with EBI Visual Framework</li>
+              </ul>
+              </div>
+              </div>
+            
+              <div data-sticky-container>
+                <div class="top-bar" data-sticky data-margin-top="3" data-anchor="magellan-content" id="on-page-menu">
+                  <div class="top-bar-left">
+                    <ul class="menu no-underline" data-magellan>
+                      <li>On this page:</li>
+                      <li><a href="#use">How to use a pattern</a></li>
+                      <li><a href="#submit">Submitting your pattern</a></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            
+            <!--how to use-->
+            <div id="magellan-content">
+            <section id="use" data-magellan-target="use">
+            <h3 id="how-to-use-a-pattern">How to use a pattern</h3>
+            <p>Patterns are easy to use in your projects whether you’re using a CSS version or the powerful ZURB Stack. Below, we’ve outlined how to get a pattern into your project in a snap and build faster.</p>
+            <h4 id="copy" class="how-to-subheader">(Option A) Copy it</h4>
+            
+            <p>Like a pattern? You can copy the HTML and CSS/SCSS and JS (if applicable) from the pattern detail page. You’ll see a responsive preview and description at the top of the page. Below the preview you’ll find the code for the component.</p>
+            <p>You can copy the the code from each code container using the handy copy button.</p>
+            <img src="../../../assets/img/images/copy-section.png" class="" height="" width="" alt="">
+            
+            <p>If you are using CSS vs SCSS, you can toggle to the compiled CSS using this handy toggle:</p>
+            <img src="../../../assets/img/images/css-section.png" class="" height="" width="" alt="">
+            
+            
+            <h4 class="how-to-subheader" id="download-individual">(Option B) Download an individual pattern</h4>
+            
+            <p>You can can download the files needed for the pattern. Click the download button and you’ll get:</p>
+            <ul>
+            <li>Individual HTML files</li>
+            <li>Individual CSS files for each</li>
+            <li>Individual SCSS files in case you want to manually add them to a Sass project</li>
+            <li>Individual JS files (if applicable)</li>
+            </ul>
+            <!-- <h4 class="how-to-subheader" id="download-kit" >(Option 4) Download a pattern Kit</h4>
+            
+            Looking to start with a pattern kit? Kits are large collections of patterns that are matched to each other for a specific type of Site, App, or use case. To save you time over the copy/paste method of individual patterns, you can download a zip file of the kit. For each pattern, it will come with:
+            
+            <ul>
+            - Individual HTML files
+            - Individual CSS files for each
+            - Individual SCSS files in case you want to manually add them to a Sass project
+            - Individual JS files (if applicable)
+            </ul>
+            
+            Again, if you’re using the ZURB Stack, the Foundation CLI can do this for you. -->
+            
+            <h4 class="how-to-subheader" id="dependencies" >Dependencies</h4>
+            
+            <p>Patterns are made to drop into any EBI Visual Framework project and work. Therefore Foundation is a dependency (needs it to work as expected). You&#39;ll also want to check you&#39;re using a corresponding and compatible version of the EBI Visual Framework.</p>
+            </section>
+            
+            <hr class="how-to-line">
+            <!--submitting-->
+            
+            <section id="submit" data-magellan-target="submit" >
+            <h3 class="how-to-header">How do I submit a pattern?</h3>
+            
+            <!-- <div class="responsive-embed widescreen">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/PKr0ItjFeX0" frameborder="0" allowfullscreen></iframe>
+            </div> -->
+            
+            <p>All are welcome to contribute patterns. Submissions are made through GitHub, with pull requests — or they can be e-mailed to &lt;a class=&quot;external &quot;href=&quot;mailto:<a href="mailto:&#119;&#x77;&#x77;&#45;&#100;&#x65;&#x76;&#x40;&#101;&#98;&#105;&#46;&#97;&#x63;&#46;&#117;&#x6b;">&#119;&#x77;&#x77;&#45;&#100;&#x65;&#x76;&#x40;&#101;&#98;&#105;&#46;&#97;&#x63;&#46;&#117;&#x6b;</a>&quot;&gt;<a href="mailto:&#x77;&#119;&#x77;&#x2d;&#100;&#101;&#x76;&#64;&#101;&#x62;&#x69;&#46;&#97;&#x63;&#x2e;&#x75;&#x6b;">&#x77;&#119;&#x77;&#x2d;&#100;&#101;&#x76;&#64;&#101;&#x62;&#x69;&#46;&#97;&#x63;&#x2e;&#x75;&#x6b;</a></a></p>
+            <h4 id="prerequistes" class="how-to-subheader">(Step 1) Install the prerequistes:</h4>
+            
+            <ol>
+            <li>Clone or download the repo from <a href="https://github.com/ebiwd/EBI-Style-lab">https://github.com/ebiwd/EBI-Style-lab</a></li>
+            <li>Navigate to the repo</li>
+            <li><code>npm install</code></li>
+            <li><code>bower install</code></li>
+            <li><code>npm start</code><ul>
+            <li>This will start the build system and watch for changes. When you save a change, the browser preview will refresh automatically.</li>
+            </ul>
+            </li>
+            </ol>
+            <h4 id="branch" class="how-to-subheader">(Step 2) Create a New Branch:</h4>
+            
+            <p>Create a branch from which to submit your pattern from. This will allow you to submit a Pull Request when you’re done so that the Foundation team can review it, offer suggestions and merge it in.</p>
+            <p>In your terminal, checkout a new branch</p>
+            <p><code>git checkout -b your-branch-name</code></p>
+            <h4 id="cli" class="how-to-subheader">(Step 3) Create a New, Unique Folder:</h4>
+            
+            <ol>
+            <li>Navigate to the collection of patterns <code>cd content/websites/patterns/</code></li>
+            <li>Create a new folder in the patterns folder. Name it the name of your pattern, a la <code>image-gallery</code><ul>
+            <li>avoid using terms that describe the look and instead focus on what the thing does</li>
+            </ul>
+            </li>
+            </ol>
+            <h4 id="add" class="how-to-subheader">(Step 4) Make and fill in your files:</h4>
+            
+            <div class="row">
+            <div class="callout industry-background white-color medium-10 medium-push-1">
+            <h3>Tip: Grab the template</h3>
+            <p>There's a template pattern you copy-paste to get started. <a href="https://github.com/ebiwd/EBI-Style-lab/tree/master/content/websites/patterns/template" target="_blank" class="external">See the files on GitHub</a> or <a href="https://www.ebi.ac.uk/style-lab/files/building-blocks/template.zip" class="readmore">download it as a ZIP</a>
+            </div>
+            </div>
+            
+            <p>There are just a few simple files needed to submit your pattern. All your files in the folder will have the same root name.</p>
+            <ul>
+            <li><code>content/websites/patterns/image-gallery/</code><ul>
+            <li><code>image-gallery/image-gallery.html</code><ul>
+            <li>Every pattern will need an HTML file to demonstrate the uniqueness of the component or layout.</li>
+            </ul>
+            </li>
+            <li><code>image-gallery/image-gallery.scss</code> (optional)<ul>
+            <li>You’ll add your custom styles in a SCSS file. You only need your additional styles as Foundation is already being imported for you. SCSS files accept CSS or SCSS so you can format it either way.</li>
+            </ul>
+            </li>
+            <li><code>image-gallery/image-gallery.js</code> (optional)<ul>
+            <li>If your component uses custom JavaScript/jQuery you’ll create a JS file and add it there. Again, Foundation JS and jQuery are already included, so only your custom JS is needed if you used any.</li>
+            </ul>
+            </li>
+            <li><code>image-gallery/image-gallery.png</code><ol>
+            <li>A preview image of your pattern. This will give people context on what the pattern is!</li>
+            <li>Open your favorite image editing program</li>
+            <li>Make an artboard with dimensions of 370x255, and set the background to the color to <code>#E6E8EB</code></li>
+            <li>Import the screenshot you took, and do your best to center it</li>
+            <li>Scale the screenshot as needed</li>
+            <li>Be sure to save as a PNG</li>
+            </ol>
+            </li>
+            <li><code>image-gallery/image-gallery.yml</code><ul>
+            <li>You’ll want to describe your pattern and submit your name. A Yaml file uses a <code>.yml</code> file extension and is where the pattern name, description, tags and more are stored.</li>
+            <li>Make sure to add meaningful tags. Tags are important for many reasons, they not only tell people about the patterns but also help find others like it. Some examples: image, gallery, photos, captions, interactive.</li>
+            </ul>
+            </li>
+            <li><code>image-gallery/layout.html</code> (advanced, optional)<ul>
+            <li>The pattern should a stand-alone component that comes with no extra grid markup or containers. You can use an optional layout file to display the Blocks in a nicer way.</li>
+            <li>See guidance below</li>
+            </ul>
+            </li>
+            </ul>
+            </li>
+            </ul>
+            
+            <div class="row">
+            <div class="callout medium-10 medium-push-1">
+            <h4 id="add-layout" class="how-to-subheader">Optional Layout HTML file</h4>
+            <p>If needed, patterns can have an optional layout file that helps you display your patterns preview in a certain way, repeat the component, or inside a container. For example, our Article Card is one single card that fills the width of the container it&#39;s in. In order to keep it to a certain width and to repeat it several times without adding a ton of markup to the Article Card itself, we&#39;ll add a <code>layout.html</code> file.</p>
+            <p>Create a <code>layout.html</code> file inside your patterns folder. So for our example, it will go in the <code>article-card</code> folder.</p>
+            <p>Example:</p>
+            <img src="../../../assets/img/images/howto-layouthtml.png" class="" height="" width="" alt="image of layered states pattern">
+            
+            <p>Here we used a Block Grid and included our pattern 3 times, one for each column. You can use the Panini handlebars include like this or paste the HTML in.</p>
+            </div>
+            </div>
+            
+            <h4 id="add" class="how-to-subheader">(Step 5) Save and preview:</h4>
+            
+            <p>As you save the pattern will be automatically compiled and inserted to the gallery; Example URL: <a href="http://localhost:8000/websites/patterns/image-gallery.html">http://localhost:8000/websites/patterns/image-gallery.html</a></p>
+            <h4 class="how-to-subheader">(Step 6) Submit:</h4>
+            
+            <p>Now it’s time to submit your pattern. Make sure to add and commit your work. Then submit your Pull Request.</p>
+            <h4 id="review" class="how-to-subheader">Review Process</h4>
+            
+            <p>Once you submit your pattern pull request, a member of the team will review it to add it in.</p>
+            
+            </section>
+            </div> <!-- / magellan-content -->
+            
+          </div>
+          <div id="search-results-container">
+            <div class="kit-container"></div>
+            <div class="row small-up-1 medium-up-2 large-up-3 card-container">
+            </div>
+          </div>
+          <div class="reveal preview-modal" id="preview-modal" data-reveal>
+            <div class="preview-widget">
+            <img src="http://placehold.it/600x300" class="" height="" width="100%" alt="">
+            </div>
+            <button class="close-button" data-close aria-label="Close modal" type="button">
+              <span>Close</span>
+            </button>
+            <a class="preview-link" href="building-block.html">See the Code</a>
+          </div>
+        </div>
+      </div>
+
+      <script type='text/handlebars' id='building-block-card'><!-- flattened version of building block with wrapper for use on client -->
+<div class="column column-block">
+  <div class="hover-wrapper">
+    <a class="no-underline" href="../../{{href}}" class="card-imghover-overlay">
+      <div class="card card-building-block">
+        <div class="card-img" style="background-image: url(../../{{thumb}});">
+        </div>
+        <div class="">
+          <span class="label">{{#if category}}{{category}}{{else}}Category{{/if}}</span>
+          <h4>{{#if name}}{{name}}{{else}}Showcase Card{{/if}}</h4>
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+</script>
+      <script type='text/handlebars' id='kit-card'><div class="column row">
+  <div class="kit-card"{{#if background}}style="background:{{background}};"{{/if}}>
+    <div class="row">
+      <!--header and CTA-->
+      <div class="kit-card-summary column small-12 medium-6">
+        <h2 class="kit-card-header">{{#if name}}{{name}}{{else}}E-Commerce Kit{{/if}}</h2>
+        <p class="kit-card-sub-header">{{#if short_description}}{{short_description}}{{else}}{{description}}{{/if}}</p>
+
+        <button class="button" type="button" data-toggle="example-dropdown">Download <div class="arrow-down"></div></button>
+        <div class="dropdown-pane" id="example-dropdown" data-dropdown data-auto-focus="true">
+          <!-- <div class="dropdown-foundation">
+            <div class="dropdown-header">
+              <p class="dropdown-title">Install with Foundation CLI</p>
+              <a href="#"><img class="dropdown-help"src="{{@root.root}}assets/img/icons/help.svg" alt=""></a>
+            </div>
+            <div class="input-group">
+              <input class="input-group-field dropdown-input" type="text" value="foundation kits install {{datakey}}">
+              <div class="input-group-button">
+                <input type="Copy" data-copy-input class="button dropdown-copy" value="Copy">
+              </div>
+            </div>
+          </div> -->
+          <a class="" href="{{@root.root}}files/kits/{{datakey}}.zip">Download Zip</a>
+        </div>
+        <a class="kit-card-secondary" href="{{href}}">See Details</a>
+        <div class="kit-card-link">
+        <a class="kit-card-link-text" href="#">How do I use this?</a>
+        </div>
+      </div>
+
+
+      <!--kit card visual and hover effect-->
+      <div class="kit-card-visual column small-12 medium-6">
+        <img class="kit-card-visual-img" src="{{@root.root}}assets/img/{{#if images.card}}kits/{{datakey}}/{{images.card}}{{else}}{{/if}}" alt="kit building blocks image">
+      </div>
+    </div>
+  </div>
+</div>
+</script>
+    </section>
+
+    <!-- Optional local footer (insert citation / project-specific copyright / etc here -->
+    <footer id="local-footer" class="local-footer" role="local-footer">
+      <div class="row">
+        <div class="">
+          <div class="reference padding-top-large padding-bottom-large small">The EBI Visual Framework and Pattern library are maintained by <a href="https://github.com/ebiwd">Web Development</a> and overseen by <a href="https://www.ebi.ac.uk/seqdb/confluence/display/WGC/Meeting+notes">the Web Guidelines Committee</a>.</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- End optional local footer -->
+  </div>
+  <!-- End suggested layout containers / #content -->
+  <footer>
+    <div id="global-footer" class="global-footer">
+      <nav id="global-nav-expanded" class="global-nav-expanded row">
+        <!-- Footer will be automatically inserted by footer.js -->
+      </nav>
+      <section id="ebi-footer-meta" class="ebi-footer-meta row">
+        <!-- Footer meta will be automatically inserted by footer.js -->
+      </section>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/script.js"></script>
+  
+  <!-- The Foundation theme JavaScript -->
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <!-- Style Lab announcements -->
+  <script>
+  document.addEventListener('DOMContentLoaded', function(){
+  /**
+   * Once an announcement has been matched to the current page, show it (if there is one).
+   * @param {Object} message - The message you wish to show on the page.
+   * @param {string} message.headline - The headline to show (text)
+   * @param {string} message.message - The contents of the message (HTML)
+   * @param {string} [message.priority = 'callout'] - Optional class to add to message box. 'alert', 'warning', 'industry-background white-color'
+   * @example
+   *   ebiInjectAnnouncements({ headline: 'Your headline here', message: 'this', priority: 'alert' });
+   */
+  
+  ebiInjectAnnouncements({ headline: 'The Visual Framework 1.4 and 2.0 are coming', message: 'New services can make use of the Visual Framework 2.0. For existing services who cannot migrate, a 1.4 update is also available.<br/><a class="readmore" href="../../../websites/framework-next/">Learn more about the new versions and how to use them</a>', priority: 'notification' });
+  });
+  </script>
+  
+  <!-- Google Analytics details... -->
+  <!-- Change UA-XXXXX-X to be your site's ID -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+  
+  <script src="../../../assets_site/js/app.js?rev=@@hash"></script>
+</body>
+</html>

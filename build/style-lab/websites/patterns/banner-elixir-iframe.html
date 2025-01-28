@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ELIXIR Banner</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<style>
+body {
+  /* Some basic reseets */
+  margin: 0;
+  padding: 0;
+}
+</style>
+
+
+<div class="row" style="max-width: 1200px; margin: 0 auto; font-family: Helvetica, sans-serif; line-height: 1.5rem; padding-bottom: 1rem;">
+<div class="column">
+<div class="code-example"><pre><code class="html hljs"><span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"elixir-banner"</span> <span class="hljs-attribute">data-color</span>=<span class="hljs-value">"grey"</span> <span class="hljs-attribute">data-name</span>=<span class="hljs-value">"This service"</span> <span class="hljs-attribute">data-description</span>=<span class="hljs-value">"I am a super cool service"</span> <span class="hljs-attribute">data-more-information-link</span>=<span class="hljs-value">"https://www.elixir-europe.org/about-us/who-we-are/nodes/embl-ebi"</span> <span class="hljs-attribute">data-use-basic-styles</span>=<span class="hljs-value">"true"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">defer</span>=<span class="hljs-value">"defer"</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">"https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span></code></pre></div><p><br/>Optional <code>data</code> attributes:</p>
+<ul>
+<li><code>data-color</code>: set the background color; options: orange, grey, blue, green, none (black text on white)</li>
+<li><code>data-name</code>: set part of the tite (data-name + &quot;is part of the ELIXIR infrastructure&quot;)</li>
+<li><code>data-use-cdr-logo</code>: use the ELIXIR CDR logo instead of the <a href="https://www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/assorted/elixir_kitemark-60px.png">kitemark</a></li>
+<li><code>data-description</code>: set the text in the small line of text</li>
+<li><code>data-more-information-link</code>: by default the banner will point to a page at <a href="http://www.elixir-europe.org">www.elixir-europe.org</a>. If you would prefer to link to a custom page explaining your relationship with ELXIR, add the full URL here</li>
+<li><code>data-use-basic-styles</code>: if you have not loaded the Foundation Framework CSS, set to <code>true</code> and will inject a few lines of css for basic formatting</li>
+</ul>
+<p><a href="https://codepen.io/khawkins98/pen/ZXdGQO?editors=1000">Try it on CodePen</a> or <a href="https://www.ebi.ac.uk/style-lab/websites/sample-site/boilerplate/affiliates.html" class="extenral" target="_blank">see an example implementation</a>.</p>
+<p>If you are unable to insert the <code>div</code> in the appropriate spot, you can use JavaScript. Shown below with jQuery for brevity:</p>
+<div class="code-example"><pre><code class="html hljs">jQuery("<span class="hljs-tag">&lt;<span class="hljs-title">div</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">'elixir-banner'</span> <span class="hljs-attribute">data-color</span>=<span class="hljs-value">'grey'</span> <span class="hljs-attribute">data-name</span>=<span class="hljs-value">'This service'</span> <span class="hljs-attribute">data-description</span>=<span class="hljs-value">' am a super cool service'</span> <span class="hljs-attribute">data-more-information-link</span>=<span class="hljs-value">'https://www.elixir-europe.org/about-us/who-we-are/nodes/embl-ebi'</span> <span class="hljs-attribute">data-use-basic-styles</span>=<span class="hljs-value">'true'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-title">div</span>&gt;</span> <span class="hljs-tag">&lt;<span class="hljs-title">script</span> <span class="hljs-attribute">defer</span>=<span class="hljs-value">'defer'</span> <span class="hljs-attribute">src</span>=<span class="hljs-value">'https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js'</span>&gt;</span><span class="undefined"></span><span class="hljs-tag">&lt;/<span class="hljs-title">script</span>&gt;</span>").insertBefore('#global-footer');</code></pre></div></div>
+</div>
+
+<div id="elixir-banner" data-color="grey" data-name="This service" data-description="I am a super cool service" data-use-basic-styles="false" data-use-cdr-logo="false"></div>
+
+<!-- <script defer="defer" src="./banner-elixir/banner-elixir.js"></script> -->
+<script defer="defer" src="https://ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/elixirBanner.js"></script>
+<link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/css/ebi-global.css" type="text/css" media="all" />
+
+</body>
+</html>
+

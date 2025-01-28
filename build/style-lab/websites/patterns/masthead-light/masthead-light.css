@@ -1,0 +1,23 @@
+
+
+.masthead {
+  background-color: #eee;
+}
+
+.masthead .masthead-inner nav ul.menu li {
+  border-right-color: #EEE;
+}
+
+.masthead .masthead-inner h1, .masthead .masthead-inner h1 a, .masthead .masthead-inner h4, .masthead .masthead-inner p, .masthead .masthead-inner a,
+.masthead .masthead-inner .menu > li > a {
+  color: #666;
+}
+
+.masthead .masthead-inner .menu > li > a:hover {
+  color: #007c82;
+}
+
+.masthead .masthead-inner .menu > li.active-trail > a {
+  background: #007c82;
+  color: #fff;
+}

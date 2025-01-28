@@ -1,0 +1,48 @@
+<div class="columns medium-5 float-right">
+  <img src="{{root}}assets/img/websites/patterns/analytics-events/analytics-events.png" style="border: 1px solid #ddd"/>
+  <small>You'll be able to see how users are clicking in the various areas, and on which specific links — not based just on the target URL.</small>
+</div>
+{{#markdown}}
+
+
+When you load and invoke [`foundationExtendEBI.js`](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/foundationExtendEBI.js), the script will check if you use Google Analytics and, if so, provide deeper insight into link clicks and certain key combos.
+
+These events will be sent [as JS Events to your Google Analytics account](https://developers.google.com/analytics/devguides/collection/analyticsjs/events).
+
+Here's the abilities you get:
+- Logs in-page ctrl+f and command+f search invocations
+- Tracks links in divs with
+   - `.track-with-analytics-events`: Manually tracked area + link name
+   - `.masthead-black-bar`: Black bar + link name
+   - `.masthead`: Masthead + link name
+   - `.related ul`: Popular + link name
+   - `.with-overlay`: Highlight box + link name
+   - `#global-footer`: Footer + link name
+   - `#global-search`: Global Search + link name
+   - `#local-search`: Local search + link name
+   - `.analytics-content-intro` and `.intro-unit`: Intro + link name
+   - `.analytics-content-sidebar`: Sidebar + link name
+   - `.analytics-content-left`: Left content + link name
+   - `.analytics-content-right`: Right content + link name
+   - `.analytics-content-footer`: Content footer + link name
+   - `.analytics-content-main`: Main content + link name
+
+If you're not seeing the events in your account:
+- Be sure you have divs using the above classes (they can be nested inside eachother)
+- The script should be adding the class `.google-analytics-loaded` to your `body` element
+- You can run `jQuery('body').addClass('verbose-analytics');` in your web console for debugging info
+
+If you'd like to extend the code, copy the code from [`ebiGaIndicateLoaded()`](https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/foundationExtendEBI.js#L12) and add events in the fashion of:
+``` js
+jQuery("body.google-analytics-loaded .my-custom-area").on('mousedown', 'a, button', function(e) {
+  analyticsTrackInteraction(e.target,'Custom tracked area');
+});
+```
+
+If you don't use Google Analytics and use a different solution (suchas Piwik) this method should be easy to adapt.
+
+{{/markdown}}
+
+<div class="row"><div class="column">
+{{> analytics-events}}
+</div></div>

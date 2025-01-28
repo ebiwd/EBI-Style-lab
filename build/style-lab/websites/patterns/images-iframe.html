@@ -1,0 +1,122 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Images with captions</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=7d97d1978f466c3ab4de1d2cd038c504">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/images/layout.css?rev=808fe51aa118ed8ec50c6963b78b69ed">
+  <link rel="stylesheet" href="../../websites/patterns/images/images.css?rev=08c2601a1da2543d22a4faf6e3259282">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  
+  <div class="row">
+  <div class="column large-8 large-push-2">
+  <p>We&#39;ll outline two basic approaches. In either case images will dynamically scale down to fit the container, but will not scale above their actual size.</p>
+  <h4 id="using-semantic-figures-with-figcaptions">Using semantic figures with figcaptions</h4>
+  <figure class="image float-right">
+    <img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/external_relations/images/wide-imagery/Bitcoin_challenge_credit_WUYTS_Sander_v_EMBL-EBI_780x400.jpg" alt="Alt text." title="Title here." width="350">
+    <figcaption>A fixed <code>figure.image > figcaption</code>. Not responsive, but we only need set the image's width attribute.</figcaption>
+  </figure>
+  
+  <p>“Unless it follows a standard, a PDX model can only help one patient or one research facility,” explains Terry Meehan, Mouse Informatics Coordinator at EMBL-EBI and principal author. “For PDX models to make a real difference in the fight against cancer, and to reduce the number of animals used in research, we need to make existing models easy to find and access. This will accelerate the rate of scientific discovery and reduce unnecessary duplication.”</p>
+  <p>“Unless it follows a standard, a PDX model can only help one patient or one research facility,” explains Terry Meehan, Mouse Informatics Coordinator at EMBL-EBI and principal author. “For PDX models to make a real difference in the fight against cancer, and to reduce the number of animals used in research, we need to make existing models easy to find and access. This will accelerate the rate of scientific discovery and reduce unnecessary duplication.”</p>
+  <div class="columns float-right medium-5">
+  <figure class="image"><img alt="Why are PDX models important in cancer research? How can standards make them even more useful? Why should users get involved? Terry Meehan of EMBL-EBI explains." src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/external_relations/images/wide-imagery/Bitcoin_challenge_credit_WUYTS_Sander_v_EMBL-EBI_780x400.jpg" width="" class="">
+  <figcaption class="">A responsive <code>figure &gt; figcaption</code> wrapped in a <code>div.columns.float-right.medium-5</code></figcaption>
+  </figure>
+  </div>
+  
+  <p>“Unless it follows a standard, a PDX model can only help one patient or one research facility,” explains Terry Meehan, Mouse Informatics Coordinator at EMBL-EBI and principal author. “For PDX models to make a real difference in the fight against cancer, and to reduce the number of animals used in research, we need to make existing models easy to find and access. This will accelerate the rate of scientific discovery and reduce unnecessary duplication.”</p>
+  <p>“Unless it follows a standard, a PDX model can only help one patient or one research facility,” explains Terry Meehan, Mouse Informatics Coordinator at EMBL-EBI and principal author. “For PDX models to make a real difference in the fight against cancer, and to reduce the number of animals used in research, we need to make existing models easy to find and access. This will accelerate the rate of scientific discovery and reduce unnecessary duplication.”</p>
+  <h4 id="legacy-class-based-captions">Legacy class-based captions</h4>
+  <div class="medium-5 float-right margin-left-large">
+    <img src="https://www.ebi.ac.uk/sites/ebi.ac.uk/files/groups/external_relations/images/wide-imagery/Bitcoin_challenge_credit_WUYTS_Sander_v_EMBL-EBI_780x400.jpg" alt="Alt text." title="Title here.">
+    <p class="caption">A simple legacy `.caption`. Note this is also wrapped in a `div.medium-5.float-right.margin-left-large`.</p>
+  </div>
+  
+  <p>If you can&#39;t utilise the <code>figure</code> element, use the <code>.caption</code> class. For responsive you might add classes <code>medium-5.float-right.margin-left-large</code> to the parent div. As shown in the example.</p>
+  <p>“Unless it follows a standard, a PDX model can only help one patient or one research facility,” explains Terry Meehan, Mouse Informatics Coordinator at EMBL-EBI and principal author. “For PDX models to make a real difference in the fight against cancer, and to reduce the number of animals used in research, we need to make existing models easy to find and access. This will accelerate the rate of scientific discovery and reduce unnecessary duplication.”</p>
+  </div>
+  </div>
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=9b67c695191aa32c8389ea938596b8f1"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/images/images.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

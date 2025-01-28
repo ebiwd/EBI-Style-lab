@@ -1,0 +1,253 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Lists</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=3caa6800e788576678d2bb69ec1554c3">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/lists/layout.css?rev=237ed773930e12c1b8886c1dd32ede29">
+  <link rel="stylesheet" href="../../websites/patterns/lists/lists.css?rev=04db7c3c134edb4ea05758be0ff777de">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <h3 id="leaders-list">Leaders list</h3>
+  <p>Good for a table of statistics, or contents.</p>
+  
+  
+  <div class="callout columns">
+    <ul class="leaders serif">
+      <li>
+        <span>Sample row</span>
+        <span>61.7%</span>
+      </li>
+      <li>
+        <span>Sample row</span>
+        <span>61.7%</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="row">
+  
+    <div class="columns medium-6">
+      <h3>Unordered lists</h3>
+      <p>Use an unordered list to... list things, if the order of the items doesn't matter.</p>
+  
+      <ul>
+        <li>List item with a much longer description or more content.</li>
+        <li>List item</li>
+        <li>List item
+          <ul>
+            <li>Nested list item</li>
+            <li>Nested list item</li>
+            <li>Nested list item</li>
+          </ul>
+        </li>
+        <li>List item</li>
+        <li>List item</li>
+      </ul>
+    </div>
+  
+    <div class="columns medium-6">
+  
+      <h3>Ordered lists</h3>
+      <p>Use an ol when creating a list where the order of the items is important, like ranking pizza toppings from best to worst.</p>
+  
+      <ol>
+        <li>Cheese (essential)</li>
+        <li>Pepperoni</li>
+        <li>Bacon
+          <ol>
+            <li>Normal bacon</li>
+            <li>Canadian bacon</li>
+          </ol>
+        </li>
+        <li>Sausage</li>
+        <li>Onions</li>
+        <li>Mushrooms</li>
+      </ol>
+    </div>
+  
+  </div>
+  
+  <h3>No-bullet list</h3>
+  <p>Think bullets are for chumps? Use class <code>.no-bullet</code>.</p>
+  
+  <div class="callout">
+    <ul class="no-bullet">
+      <li>List item with a much longer description or more content.</li>
+      <li>List item</li>
+      <li>List item</li>
+      <li>List item</li>
+    </ul>
+  </div>
+  
+  <h3>Definition list</h2>
+  <p>A definition list (<code>&lt;dl&gt;</code>) is used to display name-value pairs, like metadata or a dictionary definition. Each term (<code>&lt;dt&gt;</code>) is paired with one or more definitions (<code>&lt;dd&gt;</code>).</p>
+  
+  <div class="callout">
+    <dl>
+      <dt>Time</dt>
+      <dd>The indefinite continued progress of existence and events in the past, present, and future regarded as a whole.</dd>
+      <dt>Space</dt>
+      <dd>A continuous area or expanse that is free, available, or unoccupied.</dd>
+      <dd>The dimensions of height, depth, and width within which all things exist and move.</dd>
+    </dl>
+  </div>
+  
+  <h3>Icon list</h2>
+  <p>Want to use the font icons as your "bullet"? Add the class <code>.icon-bullet</code> to your <code>&lt;li&gt;</code> and then insert the icon code at the start of list item.</p>
+  
+  <div class="callout">
+    <ul>
+      <li class="icon-bullet"><span class="icon icon-socialmedia" data-icon="X"></span> List item with a much longer description or more content because text is the way to go when doing a really long list item.</li>
+      <li>No icon</li>
+      <li class="icon-bullet"><span class="icon icon-species" data-icon="D"></span> A dolphin list item</li>
+      <li>List item</li>
+    </ul>
+  </div>
+  
+  <h3>Horizontal list (AKA: pagers)</h2>
+  <p>Have items you want to show horizontall and a using the grid layout is too much, here are a few of techniques:</p>
+  
+  <h4>Horizontal items</h4>
+  <p>Combine a <code>ul</code> with class <code>.inline</code>.</p>
+  
+  <div class="callout sans-serif">
+    <ul class="inline">
+      <li><a href="#">Test item</a></li>
+      <li><a href="#" class="active">Active item</a></li>
+      <li><a href="#">Third item</a></li>
+      <li><a href="#"><span class="icon icon-species" data-icon="D"></span> A dolphin!</a></li>
+    </ul>
+  </div>
+  
+  <h4>Badge</h4>
+  <div class="row">
+    <div class="columns medium-7">
+      <p>Combine a <code>ul</code> with class <code>.inline</code>, then give your <code>li</code> a <code>.badge</code>.</p>
+  
+      <p>The <code>.lead</code> class on the <code>ul</code> bumps up the size of the font.</p>
+    </div>
+  
+    <div class="columns medium-5 callout">
+      <ul class="inline lead">
+        <li><a href="#" class="secondary badge">2</a></li>
+        <li><a href="#" class="success badge">3</a></li>
+        <li><a href="#" class="alert badge">A</a></li>
+        <li><a href="#" class="warning badge"><span class="icon icon-species" data-icon="D"></span></a></li>
+      </ul>
+    </div>
+  </div>
+  
+  <h4>Pager</h4>
+  <div class="">
+    <ul class="pagination text-center" role="navigation" aria-label="Pagination">
+      <li class="pagination-previous disabled">Previous</li>
+      <li class="current"><span class="show-for-sr">You're on page</span> 1</li>
+      <li><a href="#" aria-label="Page 2">2</a></li>
+      <li><a href="#" aria-label="Page 3">3</a></li>
+      <li><a href="#" aria-label="Page 4">4</a></li>
+      <li class="ellipsis"></li>
+      <li><a href="#" aria-label="Page 12">12</a></li>
+      <li><a href="#" aria-label="Page 13">13</a></li>
+      <li class="pagination-next"><a href="#" aria-label="Next page">Next</a></li>
+    </ul>
+  </div>
+  
+  <h4>Read more links</h4>
+  <p>You can read more as a button, if it's a primary call to action, or a link, if it's not as important.</p>
+  
+  <div data-equalizer>
+  
+    <div class="columns small-6 callout" data-equalizer-watch>
+      <h6>High priority read more links</h6>
+      <a href="#" class="readmore button">Read more</a>
+    </div>
+  
+    <div class="columns small-6 callout" data-equalizer-watch>
+      <h6>Lower priority read more links</h6>
+      <a href="#" class="readmore">Read more</a>
+    </div>
+  
+  </div>
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=24cf3d24803fb1d03c83a25e85c151e5"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/lists/lists.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>

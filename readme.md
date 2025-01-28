@@ -40,6 +40,12 @@ The EMBL-EBI Style Lab is a collaborative space that also shares the latest guid
 
 ### How do I develop on my local machine
 
+**UPDATED** - This repo code is outdated and not able to make any modifications. So we have [`build`](./build/) folder which is dump of existing compiled code and same is deployed on K8s cluster. No changes are recommended in this repo going forward.
+
+You can just view on local by running - `docker-compose up -d` and access http://localhost:8000/style-lab
+
+**OLD STEPS** - As below 
+
 1. Your computer needs:
   - [NodeJS](https://nodejs.org/en/)
   - [Git](https://git-scm.com/)

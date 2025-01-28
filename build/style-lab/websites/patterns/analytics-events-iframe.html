@@ -1,0 +1,142 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>EMBL-EBI Style Lab < Analytics custom events</title>
+  <meta name="description" content="">
+
+  <link rel="stylesheet" href="../../assets/css/app.css?rev=78fc335bff79d58c260cae19511c18df">
+  <!-- If you have custom icon, replace these as appropriate.
+       You can generate them at realfavicongenerator.net -->
+  <link rel="icon" type="image/x-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon.ico" />
+  <link rel="icon" type="image/png" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="192×192" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/android-chrome-192x192.png" /> <!-- Android (192px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-114x114.png" /> <!-- For iPhone 4 Retina display (114px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-72x72.png" /> <!-- For iPad (72px) -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-144x144.png" /> <!-- For iPad retinat (144px) -->
+  <link rel="apple-touch-icon-precomposed" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/apple-icon-57x57.png" /> <!-- For iPhone (57px) -->
+  <link rel="mask-icon" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/images/logos/EMBL-EBI/favicons/safari-pinned-tab.svg" color="#ffffff" /> <!-- Safari icon for pinned tab -->
+  <meta name="msapplication-TileColor" content="#2b5797" /> <!-- MS Icons -->
+  <meta name="msapplication-TileImage" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.2/images/logos/EMBL-EBI/favicons/mstile-144x144.png" />
+  
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.4/css/ebi-global.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Icon-fonts/v1.3/fonts.css" type="text/css" media="all" />
+  
+  
+  <!-- If you have a custom header image or colour -->
+  <!--
+  <meta name="ebi:masthead-color" content="#000" />
+  <meta name="ebi:masthead-image" content="//www.ebi.ac.uk/web_guidelines/EBI-Framework/images/backgrounds/embl-ebi-background.jpg" />
+  -->
+  
+  <!-- you can replace this with theme-[projectname].css. See https://www.ebi.ac.uk/web/style/colour for details of how to do this -->
+  <!-- also inform ES so we can host your colour palette file -->
+  <!-- end CSS-->
+
+  <style>
+    body {
+      padding: 16px;
+      border-top: 1px solid #ccc;
+    }
+
+    @media screen and (min-width: 64em) {
+      body {
+        padding: 50px;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="../../websites/patterns/analytics-events/layout.css?rev=7b1158b8d7e2275d67e115f58e6b0cdd">
+  <link rel="stylesheet" href="../../websites/patterns/analytics-events/analytics-events.css?rev=526f83da6433be3989059fc23ef0bcba">
+</head>
+<body>
+  <h3>Demonstration and documentation</h3>
+  <div class="columns medium-5 float-right">
+    <img src="../../assets/img/websites/patterns/analytics-events/analytics-events.png" style="border: 1px solid #ddd"/>
+    <small>You'll be able to see how users are clicking in the various areas, and on which specific links — not based just on the target URL.</small>
+  </div>
+  <p>When you load and invoke <a href="https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/foundationExtendEBI.js"><code>foundationExtendEBI.js</code></a>, the script will check if you use Google Analytics and, if so, provide deeper insight into link clicks and certain key combos.</p>
+  <p>These events will be sent <a href="https://developers.google.com/analytics/devguides/collection/analyticsjs/events">as JS Events to your Google Analytics account</a>.</p>
+  <p>Here&#39;s the abilities you get:</p>
+  <ul>
+  <li>Logs in-page ctrl+f and command+f search invocations</li>
+  <li>Tracks links in divs with<ul>
+  <li><code>.track-with-analytics-events</code>: Manually tracked area + link name</li>
+  <li><code>.masthead-black-bar</code>: Black bar + link name</li>
+  <li><code>.masthead</code>: Masthead + link name</li>
+  <li><code>.related ul</code>: Popular + link name</li>
+  <li><code>.with-overlay</code>: Highlight box + link name</li>
+  <li><code>#global-footer</code>: Footer + link name</li>
+  <li><code>#global-search</code>: Global Search + link name</li>
+  <li><code>#local-search</code>: Local search + link name</li>
+  <li><code>.analytics-content-intro</code> and <code>.intro-unit</code>: Intro + link name</li>
+  <li><code>.analytics-content-sidebar</code>: Sidebar + link name</li>
+  <li><code>.analytics-content-left</code>: Left content + link name</li>
+  <li><code>.analytics-content-right</code>: Right content + link name</li>
+  <li><code>.analytics-content-footer</code>: Content footer + link name</li>
+  <li><code>.analytics-content-main</code>: Main content + link name</li>
+  </ul>
+  </li>
+  </ul>
+  <p>If you&#39;re not seeing the events in your account:</p>
+  <ul>
+  <li>Be sure you have divs using the above classes (they can be nested inside eachother)</li>
+  <li>The script should be adding the class <code>.google-analytics-loaded</code> to your <code>body</code> element</li>
+  <li>You can run <code>jQuery(&#39;body&#39;).addClass(&#39;verbose-analytics&#39;);</code> in your web console for debugging info</li>
+  </ul>
+  <p>If you&#39;d like to extend the code, copy the code from <a href="https://github.com/ebiwd/EBI-Framework/blob/v1.3/js/foundationExtendEBI.js#L12"><code>ebiGaIndicateLoaded()</code></a> and add events in the fashion of:</p>
+  <div class="code-example"><pre><code class="js hljs">jQuery(<span class="hljs-string">"body.google-analytics-loaded .my-custom-area"</span>).on(<span class="hljs-string">'mousedown'</span>, <span class="hljs-string">'a, button'</span>, <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">e</span>) </span>{
+    analyticsTrackInteraction(e.target,<span class="hljs-string">'Custom tracked area'</span>);
+  });</code></pre></div><p>If you don&#39;t use Google Analytics and use a different solution (suchas Piwik) this method should be easy to adapt.</p>
+  
+  <div class="row"><div class="column">
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script defer="defer" src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="https://dev.ebi.emblstatic.net/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+  
+  <div class="track-with-analytics-events">
+    <a href="#">My trackable link</a>
+  </div>
+  </div></div>
+  
+  <!-- <script src="../../assets_site/js/app.js?rev=7244fbbf2e9413edcb5ae6fd268c93d7"></script> -->
+
+  <script defer="defer" src="../../websites/patterns/analytics-events/analytics-events.js"></script>
+  <!-- JavaScript -->
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+  <!--
+  <script>window.jQuery || document.write('<script src="../js/libs/jquery-1.10.2.min.js"><\/script>')</script>
+  -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <!-- Your custom JavaScript file scan go here... change names accordingly -->
+  <!--
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/plugins.js"></script>
+  <script defer="defer" src="//www.ebi.ac.uk/web_guidelines/js/script.js"></script>
+  -->
+
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/script.js"></script>
+
+  <!-- The Foundation theme JavaScript -->
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/libraries/foundation-6/js/foundation.js"></script>
+  <script src="//www.ebi.ac.uk/web_guidelines/EBI-Framework/v1.3/js/foundationExtendEBI.js"></script>
+  <script type="text/JavaScript">$(document).foundation();</script>
+  <script type="text/JavaScript">$(document).foundationExtendEBI();</script>
+
+  <!-- Google Analytics details... -->
+  <script type="text/javascript">!function(e,a,n,t,i,o,c){e.GoogleAnalyticsObject=i,e[i]=e[i]||function(){(e[i].q=e[i].q||[]).push(arguments)},e[i].l=1*new Date,o=a.createElement(n),c=a.getElementsByTagName(n)[0],o.async=1,o.src="//www.google-analytics.com/analytics.js",c.parentNode.insertBefore(o,c)}(window,document,"script",0,"ga"),ga("create","UA-629242-1",{cookieDomain:"auto"}),ga("require","linkid","linkid.js"),ga("set","anonymizeIp",!0),ga("send","pageview");</script>
+
+  <script type="text/JavaScript">
+  // all iframe links should open in parent tab or new window
+  $(window).load(function(){
+    $('a[href^="http"]').not('a[href*=#]').attr('target','_blank');
+    $('a[href^="../"]').not('a[href*=#]').attr('target','_parent');
+  });
+  </script>
+
+
+</body>
+</html>
