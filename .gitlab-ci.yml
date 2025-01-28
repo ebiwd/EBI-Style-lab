@@ -7,7 +7,8 @@ variables:
 # Can't use the {::8} notation to get a short sha in the variables section, so exporting below
 before_script:
   - export CI_COMMIT_SHA_SHORT=${CI_COMMIT_SHA::8}
-  - export IMAGE_NAME=$CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
+  - export CUSTOM_PROJECT_PATH=$(echo $CI_PROJECT_PATH | tr '[:upper:]' '[:lower:]')
+  - export IMAGE_NAME=$CI_REGISTRY/$CUSTOM_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
 
 stages:
   - build
@@ -37,7 +38,6 @@ container_scanning:
     # https://docs.gitlab.com/ee/user/application_security/container_scanning/index.html#overriding-the-container-scanning-template
     # https://docs.gitlab.com/ee/user/application_security/container_scanning/#vulnerability-allowlisting
     GIT_STRATEGY: fetch
-    IMAGE_NAME: $CI_REGISTRY/$CI_PROJECT_PATH:$CI_COMMIT_SHORT_SHA-$CI_PIPELINE_ID
     CS_IMAGE: $IMAGE_NAME
     CS_DOCKERFILE_PATH: $CI_PROJECT_DIR/Dockerfile
     SECURE_LOG_LEVEL: "debug"
